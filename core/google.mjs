@@ -1,5 +1,5 @@
 // Google APIs (Search Console, Play Developer) with one service account, no packages: a signed JWT swapped for a token.
-// GOOGLE_SERVICE_ACCOUNT holds the account's JSON key. Add the account's email as a user in Search Console and in
+// GOOGLE_SERVICE_ACCOUNT holds the account's JSON key, as is or base64-encoded (one line, easier to paste). Add the account's email as a user in Search Console and in
 // Play Console (Users and permissions, "View app information" and "Reply to reviews").
 import { createSign } from "node:crypto";
 
@@ -13,11 +13,16 @@ export function jwt(key, scope, now = Math.floor(Date.now() / 1000)) {
   return `${head}.${body}.${sig}`;
 }
 
+export function readKey(value) {
+  const v = value.trim();
+  return JSON.parse(v.startsWith("{") ? v : Buffer.from(v, "base64").toString("utf8"));
+}
+
 export async function token(scope, env = process.env) {
   if (!env.GOOGLE_SERVICE_ACCOUNT) throw new Error("GOOGLE_SERVICE_ACCOUNT not set");
   const hit = tokens.get(scope);
   if (hit && hit.until > Date.now()) return hit.value;
-  const key = JSON.parse(env.GOOGLE_SERVICE_ACCOUNT);
+  const key = readKey(env.GOOGLE_SERVICE_ACCOUNT);
   const res = await fetch("https://oauth2.googleapis.com/token", {
     method: "POST", headers: { "content-type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({ grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer", assertion: jwt(key, scope) }),

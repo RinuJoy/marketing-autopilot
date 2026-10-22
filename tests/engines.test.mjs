@@ -88,3 +88,10 @@ test("weekly report lists what is off and the week's to-dos", () => {
   assert.match(text, /Next month: Exams/);
   assert.match(text, /paddle: PADDLE_API_KEY not set/);
 });
+
+test("the Google key can be pasted as JSON or base64", async () => {
+  const { readKey } = await import("../core/google.mjs");
+  const key = { client_email: "a@b.iam.gserviceaccount.com", private_key: "x\ny" };
+  assert.deepEqual(readKey(JSON.stringify(key, null, 2)), key);
+  assert.deepEqual(readKey(" " + Buffer.from(JSON.stringify(key)).toString("base64") + "\n"), key);
+});
