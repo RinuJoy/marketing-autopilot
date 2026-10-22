@@ -1,0 +1,14 @@
+{
+  "name": "marketing-autopilot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "One marketing automation setup shared by all of Rinu's apps. Each app plugs in with app.json and an adapter.",
+  "type": "module",
+  "bin": { "autopilot": "bin/autopilot.mjs" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node bin/autopilot.mjs check --all"
+  },
+  "engines": { "node": ">=22" },
+  "license": "UNLICENSED"
+}
