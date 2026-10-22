@@ -1,0 +1,40 @@
+{
+ "id": "_template",
+ "name": "My new app",
+ "site": "https://awayline.co.uk/",
+ "itemPages": false,
+ "source": { "path": "../awayline", "repo": "RinuJoy/awayline" },
+ "tagline": "Every away day, there and back: live fixtures, the last train home and a pub stop",
+ "promise": "Know you'll get home before you book.",
+ "stores": { "play": null, "appStore": null },
+ "contact": null,
+ "owner": null,
+ "languages": ["en"],
+ "prices": {},
+ "brand": { "colour": "#1d4ed8", "logo": null },
+ "neverSay": ["guaranteed", "#1", "best app", "official app of"],
+ "channels": [
+  { "id": "youtube", "kind": "youtube", "auto": true, "perDay": 1, "time": "18:00",
+    "title": "{title}: last train home and the away pub", "maxTitle": 100,
+    "text": "{summary}\n\n{factsList}\n\nPlan your away day: {link}\n#awayday #efl #shorts" },
+  { "id": "facebook", "kind": "facebook", "auto": false, "perDay": 1, "time": "12:00",
+    "text": "{title}\n\n{factsList}\n\nPlan the trip and the last train home: {link}" },
+  { "id": "x", "kind": "x", "auto": false, "perDay": 1, "time": "10:00", "max": 280,
+    "text": "{title}: {facts.0}. {facts.1}. Last train home sorted: {link}" },
+  { "id": "bluesky", "kind": "bluesky", "auto": true, "perDay": 1, "time": "10:30", "max": 300,
+    "text": "{title}: {facts.0}. Plan it: {link}" }
+ ],
+ "directories": [
+  { "name": "AlternativeTo", "url": "https://alternativeto.net/software/add/" },
+  { "name": "Product Hunt", "url": "https://www.producthunt.com/posts/new" },
+  { "name": "Indie Hackers", "url": "https://www.indiehackers.com/products/new" }
+ ],
+ "seasons": [
+  { "name": "Fixture lists out", "months": [6, 7], "tags": ["ground"] },
+  { "name": "Season opener", "months": [8], "tags": ["ground"] },
+  { "name": "Christmas and New Year fixtures", "months": [12], "tags": ["ground"] },
+  { "name": "Run-in and play-offs", "months": [4, 5], "tags": ["ground"] }
+ ],
+ "report": { "to": "env:REPORT_EMAIL", "sources": ["searchConsole"] },
+ "competitors": []
+}

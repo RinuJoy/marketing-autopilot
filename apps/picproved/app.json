@@ -1,0 +1,52 @@
+{
+ "id": "picproved",
+ "name": "Picproved",
+ "site": "https://picproved.com/",
+ "itemPages": true,
+ "source": { "path": "../picproved", "repo": "RinuJoy/Picproved" },
+ "tagline": "Passport, visa, ID and exam photos to each country's official rules",
+ "promise": "No ads. No subscription. Pay once per photo.",
+ "stores": { "play": "app.picproved", "appStore": null },
+ "contact": "support@picproved.com",
+ "owner": "Dorin D Souza, trading as Picproved (UK)",
+ "languages": ["en", "hi", "bn", "ta", "te", "mr", "gu", "kn", "ml", "pa", "ur", "ar", "es", "fr", "pt", "de", "ru", "tr", "id", "zh"],
+ "prices": { "GBP": [3.99, 6.99, 12.99], "USD": [4.99, 8.99, 15.99], "EUR": [4.49, 7.99, 14.99], "INR": [null, 199, 499] },
+ "brand": { "colour": "#0f766e", "logo": "https://picproved.com/icons/icon-512.png" },
+ "neverSay": ["100% acceptance", "guaranteed", "guarantee", "#1", "best app", "free passport photo", "beautif", "smooth skin"],
+ "channels": [
+  { "id": "youtube", "kind": "youtube", "auto": true, "perDay": 1, "time": "17:00",
+    "title": "{title}: size and rules in 20 seconds", "maxTitle": 100,
+    "text": "{summary}\n\n{factsList}\n\nMake yours on your phone: {link}\n\nOfficial rules: {sourceUrl}\n\n{promise}\n#passportphoto #visaphoto #shorts" },
+  { "id": "facebook", "kind": "facebook", "auto": false, "perDay": 1, "time": "12:00",
+    "text": "{title}\n\n{factsList}\n\nCheck and make yours on your phone: {link}\n{promise}" },
+  { "id": "instagram", "kind": "instagram", "auto": false, "perDay": 1, "time": "18:00",
+    "text": "{title} ✅\n\n{factsList}\n\nLink in bio. {promise}\n#passportphoto #visaphoto #{countryTag}" },
+  { "id": "threads", "kind": "threads", "auto": false, "perDay": 1, "time": "09:00", "max": 500,
+    "text": "{title}: {facts.0}. {summary} {link}" },
+  { "id": "bluesky", "kind": "bluesky", "auto": true, "perDay": 1, "time": "09:30", "max": 300,
+    "text": "{title}: {facts.0}. Make one on your phone: {link}" }
+ ],
+ "directories": [
+  { "name": "AlternativeTo", "url": "https://alternativeto.net/software/add/" },
+  { "name": "Product Hunt", "url": "https://www.producthunt.com/posts/new" },
+  { "name": "SaaSHub", "url": "https://www.saashub.com/submit" },
+  { "name": "Indie Hackers", "url": "https://www.indiehackers.com/products/new" },
+  { "name": "BetaList", "url": "https://betalist.com/submit" },
+  { "name": "Uneed", "url": "https://www.uneed.best/submit-a-tool" }
+ ],
+ "seasons": [
+  { "name": "US DV lottery entry", "months": [10, 11], "ids": ["us-dv"] },
+  { "name": "Indian exam forms (UPSC, SSC, NTA, banks)", "months": [1, 2, 3], "tags": ["exam"], "countries": ["IN"] },
+  { "name": "Renew passports before summer", "months": [2, 3, 4], "ids": ["uk-passport-digital", "uk-passport-print", "uk-passport-baby", "ie-passport", "us-passport", "ca-renewal"] },
+  { "name": "Schengen summer trips", "months": [3, 4, 5, 6], "ids": ["schengen"] },
+  { "name": "Hajj and Umrah", "months": [3, 4, 5], "ids": ["sa-evisa"] },
+  { "name": "Student visas", "months": [5, 6, 7, 8], "ids": ["uk-visa", "us-visa", "ca-visa", "au-visa", "nz-visa"] },
+  { "name": "Winter trips to India (OCI, e-Visa)", "months": [9, 10, 11], "ids": ["in-oci", "in-evisa", "in-passport"] },
+  { "name": "Lunar New Year travel", "months": [12, 1], "ids": ["cn-visa", "cn-visa-print", "vn-evisa", "kr-keta"] }
+ ],
+ "report": { "to": "env:REPORT_EMAIL", "sources": ["paddle", "searchConsole", "play"] },
+ "competitors": [
+  { "name": "PhotoAiD", "play": "online.passportphoto.visa.id.app" },
+  { "name": "Smartphone iD", "play": null }
+ ]
+}
