@@ -5,14 +5,18 @@
 //               { secs, title, sub?, chips?[], shot?, pan?: [fromY, toY] (CSS px down the captured screen), theme? };
 //               a scene with a shot shows it in a phone under the caption, one without is a big text card.
 // Every video ends on a card with the site address. The text carries the message, so the videos work with the sound
-// off. --music <folder> mixes in a licensed track quietly; without it the track is silent and music is added in the
-// platform's own app when posting.
+// off. --music <folder> mixes in a licensed track; without it the track is silent and music is added in the
+// platform's own app when posting. --voice <command> reads each scene's `say` line aloud with a text-to-speech command
+// (called as `<command> <out.wav> <voice name> <text>`, see tools/say-kokoro.py); a scene grows to fit its line and the
+// music drops under the voice. The app's videos.mjs may export `voice` = { name, pronounce: { word: "how to say it" } }.
 // Frames are drawn one by one (no screen recording), so the timing is exact however slow the machine.
 // Writes out/<app>/videos/<id>.mp4, <id>.txt (title, description, tags for the upload) and <id>-sheet.jpg (one frame
 // a second, for checking by eye). Needs Playwright and ffmpeg. --only <id> makes one video.
 import { createRequire } from "node:module";
 import { spawn, execFileSync } from "node:child_process";
 import { readFile, readdir, mkdir, writeFile, access } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { serve } from "../core/serve.mjs";
@@ -120,12 +124,33 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
   </script></body></html>`;
 }
 
-// Sound: a music track (looped, quiet, faded out over the last 1.5 s) when one is given, else silence.
-const ffmpegArgs = (file, secs, music) => ["-v", "error", "-y", "-f", "image2pipe", "-framerate", String(FPS), "-i", "-",
-  ...(music ? ["-stream_loop", "-1", "-i", music, "-af", `volume=0.45,afade=t=in:d=0.5,afade=t=out:st=${Math.max(0, secs - 1.5)}:d=1.5`] : ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]),
-  "-map", "0:v", "-map", "1:a", "-t", String(secs), "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", music ? "128k" : "64k", "-movflags", "+faststart", file];
+// Sound: a music track (looped, levelled so tracks match, faded out over the last 1.5 s) when one is given, else
+// silence; with a voiceover, each line starts at its moment and the music sits well under it.
+function ffmpegArgs(file, secs, music, lines = []) {
+  const fade = `afade=t=in:d=0.5,afade=t=out:st=${Math.max(0, secs - 1.5)}:d=1.5`;
+  const bed = music ? `[1:a]loudnorm=I=${lines.length ? -28 : -18}:TP=-2:LRA=11,aresample=44100,aformat=channel_layouts=stereo,${fade}[m]` : "[1:a]anull[m]";
+  const said = lines.map((l, i) => `[${i + 2}:a]aresample=44100,aformat=channel_layouts=stereo,adelay=${Math.round(l.at * 1000)}:all=1[v${i}]`);
+  const mix = lines.length ? [...said, `${lines.map((_, i) => `[v${i}]`).join("")}amix=inputs=${lines.length}:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=7,aresample=44100[vo]`,
+    "[m][vo]amix=inputs=2:normalize=0:duration=first[a]"] : ["[m]anull[a]"];
+  return ["-v", "error", "-y", "-f", "image2pipe", "-framerate", String(FPS), "-i", "-",
+    ...(music ? ["-stream_loop", "-1", "-i", music] : ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]),
+    ...lines.flatMap(l => ["-i", l.file]),
+    "-filter_complex", [bed, ...mix].join(";"), "-map", "0:v", "-map", "[a]", "-t", String(secs),
+    "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", music || lines.length ? "128k" : "64k", "-movflags", "+faststart", file];
+}
 
-async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots, file, music }) {
+// One spoken line as a WAV (kept, so a re-run only speaks changed lines) and how long it lasts.
+function speak(cmd, voice, text, dir) {
+  const said = Object.entries(voice.pronounce || {}).reduce((t, [w, how]) => t.replace(new RegExp(`\\b${w}\\b`, "g"), how), text);
+  const file = join(dir, createHash("sha1").update(`${voice.name}\n${said}`).digest("hex").slice(0, 16) + ".wav");
+  if (!existsSync(file)) execFileSync(cmd, [file, voice.name || "", said], { stdio: ["ignore", "ignore", "inherit"] });
+  return { file, secs: Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file]).toString()) };
+}
+// A scene with a line lasts at least the line plus a breath either side, in half seconds.
+export const fitLine = (secs, said) => Math.max(secs, Math.ceil((VOICE_IN + said + 0.45) * 2) / 2);
+const VOICE_IN = 0.35;
+
+async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots, file, music, lines }) {
   const html = stageHTML({ scenes, theme, font, logo, qr });
   const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   const page = await ctx.newPage();
@@ -134,7 +159,7 @@ async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots
   await page.route(base + "__shot/**", async r => r.fulfill({ contentType: "image/png", body: await readFile(shots[decodeURIComponent(new URL(r.request().url()).pathname.slice(8, -4))]) }));
   await page.goto(base + "__stage");
   await page.evaluate(() => window.ready);
-  const ff = spawn("ffmpeg", ffmpegArgs(file, length(scenes), music), { stdio: ["pipe", "inherit", "inherit"] });
+  const ff = spawn("ffmpeg", ffmpegArgs(file, length(scenes), music, lines), { stdio: ["pipe", "inherit", "inherit"] });
   const done = new Promise((ok, no) => ff.on("close", c => c ? no(new Error("ffmpeg exited " + c)) : ok()));
   const frames = Math.round(length(scenes) * FPS);
   for (let f = 0; f < frames; f++) {
@@ -148,7 +173,7 @@ async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots
   return frames;
 }
 
-export async function run(app, { only, music } = {}) {
+export async function run(app, { only, music, voice } = {}) {
   const def = join(app.dir, "videos.mjs");
   try { await access(def); } catch { return { summary: "no videos.mjs for this app", files: [], problems: [] }; }
   const mod = await import(pathToFileURL(def).href);
@@ -173,14 +198,26 @@ export async function run(app, { only, music } = {}) {
     // --music <folder>: the tracks in it (mp3, m4a, wav) take turns, one per video in list order.
     const tracks = music ? (await readdir(music)).filter(f => /\.(mp3|m4a|wav|ogg)$/i.test(f)).sort().map(f => join(music, f)) : [];
     if (music && !tracks.length) problems.push(`no music files in ${music}`);
+    const spoken = { name: "", ...(mod.voice || {}) }, said = join(out, "voice");
+    if (voice) await mkdir(said, { recursive: true });
     for (const v of list) {
-      const scenes = timeline(withEnd(v, app.config));
+      let scenes = withEnd(v, app.config), lines = [];
+      if (voice) {
+        const end = scenes[scenes.length - 1];
+        end.say ??= v.endSay ?? mod.endSay;
+        const clips = scenes.map(s => s.say ? speak(voice, spoken, s.say, said) : null);
+        scenes = timeline(scenes.map((s, i) => clips[i] ? { ...s, secs: fitLine(s.secs, clips[i].secs) } : s));
+        lines = scenes.flatMap((s, i) => clips[i] ? [{ file: clips[i].file, at: s.at + VOICE_IN }] : []);
+        if (length(scenes) > 57) problems.push(`${v.id}: ${length(scenes)}s with the voiceover, over a minute`);
+        const quiet = v.scenes.filter(s => !s.say).length;
+        if (quiet) problems.push(`${v.id}: ${quiet} scene(s) with no line to say`);
+      } else scenes = timeline(scenes);
       if (scenes.some(s => (s.shot && !shots[s.shot]) || (s.photo && !shots[s.photo]))) continue;
       const file = join(out, v.id + ".mp4");
       const track = tracks.length ? tracks[mod.videos.indexOf(v) % tracks.length] : null;
-      const frames = await renderVideo(browser, { base, scenes, theme: v.theme || "green", font, logo, qr, shots, file, music: track });
+      const frames = await renderVideo(browser, { base, scenes, theme: v.theme || "green", font, logo, qr, shots, file, music: track, lines });
       kit.ffmpeg("-i", file, "-vf", "fps=1,scale=270:-1,tile=8x" + Math.ceil(frames / FPS / 8), "-frames:v", "1", join(out, v.id + "-sheet.jpg"));
-      const text = `Title: ${v.title}\n\nDescription:\n${v.description}\n\n${(v.tags || []).map(t => "#" + t).join(" ")}\n\nLength: ${length(scenes)} s. ${track ? "Music: " + track.split("/").pop() : "Silent: add music in the app when you post."}\n`;
+      const text = `Title: ${v.title}\n\nDescription:\n${v.description}\n\n${(v.tags || []).map(t => "#" + t).join(" ")}\n\nLength: ${length(scenes)} s. ${track ? "Music: " + track.split("/").pop() : "Silent: add music in the app when you post."}${lines.length ? ` AI voiceover (${spoken.name || "text to speech"}): tick "altered or synthetic content" on YouTube and the AI label on Instagram and TikTok.` : ""}\n`;
       await writeFile(join(out, v.id + ".txt"), text);
       files.push(file);
       console.log("made", v.id, length(scenes) + "s");

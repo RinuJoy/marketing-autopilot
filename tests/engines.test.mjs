@@ -123,3 +123,11 @@ test("video scenes add up, end on the site card, and each has time to be read", 
   const { videos } = await import("../apps/picproved/videos.mjs");
   for (const pv of videos) assert.deepEqual(checkVideo(pv), [], pv.id);
 });
+
+test("a voiced scene grows to fit its line, and every Picproved scene has one", async () => {
+  const { fitLine } = await import("../engines/video.mjs");
+  assert.equal(fitLine(4, 2), 4);
+  assert.equal(fitLine(4, 4.1), 5);
+  const { videos } = await import("../apps/picproved/videos.mjs");
+  for (const v of videos) assert.ok(v.scenes.every(s => s.say), v.id);
+});
