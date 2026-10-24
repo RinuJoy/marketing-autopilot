@@ -5,13 +5,14 @@
 //               { secs, title, sub?, chips?[], shot?, pan?: [fromY, toY] (CSS px down the captured screen), theme? };
 //               a scene with a shot shows it in a phone under the caption, one without is a big text card.
 // Every video ends on a card with the site address. The text carries the message, so the videos work with the sound
-// off; they have a silent sound track, and music is added in the platform's own app when posting.
+// off. --music <folder> mixes in a licensed track quietly; without it the track is silent and music is added in the
+// platform's own app when posting.
 // Frames are drawn one by one (no screen recording), so the timing is exact however slow the machine.
 // Writes out/<app>/videos/<id>.mp4, <id>.txt (title, description, tags for the upload) and <id>-sheet.jpg (one frame
 // a second, for checking by eye). Needs Playwright and ffmpeg. --only <id> makes one video.
 import { createRequire } from "node:module";
 import { spawn, execFileSync } from "node:child_process";
-import { readFile, mkdir, writeFile, access } from "node:fs/promises";
+import { readFile, readdir, mkdir, writeFile, access } from "node:fs/promises";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { serve } from "../core/serve.mjs";
@@ -44,7 +45,7 @@ export function checkVideo(v, shotNames) {
   for (const s of v.scenes) {
     const words = `${s.title || ""} ${s.sub || ""} ${(s.chips || []).join(" ")}`.split(/\s+/).filter(Boolean).length;
     if (s.secs < 1 + words / 4.5) p.push(`${v.id}: "${s.title}" has ${words} words for ${s.secs}s`);
-    if (s.shot && shotNames && !shotNames.includes(s.shot)) p.push(`${v.id}: no shot "${s.shot}"`);
+    for (const k of [s.shot, s.photo]) if (k && shotNames && !shotNames.includes(k)) p.push(`${v.id}: no shot "${k}"`);
   }
   return p;
 }
@@ -52,14 +53,16 @@ export function checkVideo(v, shotNames) {
 function stageHTML({ scenes, theme, font, logo, qr }) {
   const pw = 640, bezel = 15, sw = pw - 2 * bezel, bar = Math.round(sw * 24 / 360), apph = Math.round(sw * 760 / 360), r = 76;
   const scene = (s, i) => {
-    const cls = `scene ${s.theme || theme}${s.shot ? " has-shot" : " card"}${s.end ? " end" : ""}`;
+    const cls = `scene ${s.theme || theme}${s.shot || s.photo ? " has-shot" : " card"}${s.end ? " end" : ""}`;
     const chips = (s.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join("");
     const head = s.end ? `<div class="brand">${logo}</div>` : "";
     const code = s.end && qr ? `<div class="qr"><div>${qr}</div><span>Scan to open</span></div>` : "";
     const phone = s.shot ? `<div class="phone" style="width:${pw}px;padding:${bezel}px;border-radius:${r}px">
       <div class="screen" style="height:${apph + bar}px;border-radius:${r - bezel}px"><div class="status" style="height:${bar}px"><span>9:41</span><i class="punch"></i><span>●●● ▮</span></div>
       <div class="win" style="height:${apph}px"><img class="shot" src="/__shot/${esc(s.shot)}.png"></div></div></div>` : "";
-    return `<section class="${cls}" id="s${i}"><header class="cap">${head}<h1>${esc(s.title || "")}</h1>${s.sub ? `<p>${esc(s.sub)}</p>` : ""}${chips ? `<div class="chips">${chips}</div>` : ""}${code}</header>${phone}</section>`;
+    // A photo on its own, as a print lying on the scene (the photo as taken, before the app has touched it).
+    const print = s.photo ? `<div class="slide"><div class="print"><img class="photo" src="/__shot/${esc(s.photo)}.png"></div></div>` : "";
+    return `<section class="${cls}" id="s${i}"><header class="cap">${head}<h1>${esc(s.title || "")}</h1>${s.sub ? `<p>${esc(s.sub)}</p>` : ""}${chips ? `<div class="chips">${chips}</div>` : ""}${code}</header>${phone}${print}</section>`;
   };
   return `<!doctype html><html><head><meta charset="utf-8"><style>
   ${font ? `@font-face { font-family: "Brand"; src: url(${font}) format("woff2"); font-weight: 400 800; }` : ""}
@@ -89,6 +92,9 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
   .status { display: flex; align-items: center; justify-content: space-between; padding: 0 44px; font-size: 22px; font-weight: 700; color: #111; background: #f4f6f3; position: relative; }
   .punch { position: absolute; left: 50%; top: 50%; width: 26px; height: 26px; transform: translate(-50%, -50%); border-radius: 50%; background: #0b0f14; }
   .win { position: relative; overflow: hidden; }
+  .slide { position: absolute; left: 0; right: 0; top: 600px; }
+  .print { margin: 0 auto; width: 660px; padding: 22px; background: #fff; border-radius: 14px; transform: rotate(-3deg); box-shadow: 0 40px 70px -25px rgba(0,0,0,.5); }
+  .print .photo { display: block; width: 100%; border-radius: 4px; }
   .shot { display: block; width: 100%; will-change: transform; }
   </style></head><body>${scenes.map(scene).join("")}
   <script>
@@ -102,7 +108,7 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
       el.style.opacity = on || (i === S.length - 1 && u >= s.secs) ? Math.min(1, u / 0.3 + (i === 0 ? 1 : 0)) : 0;
       el.style.zIndex = i;
       if (!on) return;
-      const cap = el.querySelector(".cap"), ph = el.querySelector(".phone"), a = ease(u / 0.5);
+      const cap = el.querySelector(".cap"), ph = el.querySelector(".phone, .slide"), a = ease(u / 0.5);
       cap.style.transform = "translateY(" + (1 - a) * 50 + "px)";
       if (ph) ph.style.transform = "translateY(" + (1 - ease(u / 0.6)) * 160 + "px)";
       el.querySelectorAll(".chip").forEach((c, j) => { const b = ease((u - 0.5 - j * 0.25) / 0.3); c.style.opacity = b; c.style.transform = "scale(" + (0.85 + 0.15 * b) + ")"; });
@@ -114,10 +120,12 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
   </script></body></html>`;
 }
 
-const ffmpegArgs = file => ["-v", "error", "-y", "-f", "image2pipe", "-framerate", String(FPS), "-i", "-", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-  "-shortest", "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "64k", "-movflags", "+faststart", file];
+// Sound: a music track (looped, quiet, faded out over the last 1.5 s) when one is given, else silence.
+const ffmpegArgs = (file, secs, music) => ["-v", "error", "-y", "-f", "image2pipe", "-framerate", String(FPS), "-i", "-",
+  ...(music ? ["-stream_loop", "-1", "-i", music, "-af", `volume=0.45,afade=t=in:d=0.5,afade=t=out:st=${Math.max(0, secs - 1.5)}:d=1.5`] : ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]),
+  "-map", "0:v", "-map", "1:a", "-t", String(secs), "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", music ? "128k" : "64k", "-movflags", "+faststart", file];
 
-async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots, file }) {
+async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots, file, music }) {
   const html = stageHTML({ scenes, theme, font, logo, qr });
   const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
   const page = await ctx.newPage();
@@ -126,7 +134,7 @@ async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots
   await page.route(base + "__shot/**", async r => r.fulfill({ contentType: "image/png", body: await readFile(shots[decodeURIComponent(new URL(r.request().url()).pathname.slice(8, -4))]) }));
   await page.goto(base + "__stage");
   await page.evaluate(() => window.ready);
-  const ff = spawn("ffmpeg", ffmpegArgs(file), { stdio: ["pipe", "inherit", "inherit"] });
+  const ff = spawn("ffmpeg", ffmpegArgs(file, length(scenes), music), { stdio: ["pipe", "inherit", "inherit"] });
   const done = new Promise((ok, no) => ff.on("close", c => c ? no(new Error("ffmpeg exited " + c)) : ok()));
   const frames = Math.round(length(scenes) * FPS);
   for (let f = 0; f < frames; f++) {
@@ -140,7 +148,7 @@ async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots
   return frames;
 }
 
-export async function run(app, { only } = {}) {
+export async function run(app, { only, music } = {}) {
   const def = join(app.dir, "videos.mjs");
   try { await access(def); } catch { return { summary: "no videos.mjs for this app", files: [], problems: [] }; }
   const mod = await import(pathToFileURL(def).href);
@@ -155,20 +163,24 @@ export async function run(app, { only } = {}) {
   const files = [];
   try {
     const kit = { browser, base, src: app.src, raw, PHONE, ffmpeg: (...a) => execFileSync("ffmpeg", ["-v", "error", "-y", ...a]),
-      need: new Set(list.flatMap(v => v.scenes.map(s => s.shot).filter(Boolean))) };
+      need: new Set(list.flatMap(v => v.scenes.flatMap(s => [s.shot, s.photo]).filter(Boolean))) };
     const shots = await mod.shots(kit);
     problems.push(...list.flatMap(v => checkVideo(v, Object.keys(shots))).filter(p => /no shot/.test(p)));
     const font = mod.font ? `data:font/woff2;base64,${(await readFile(join(app.src, mod.font))).toString("base64")}` : null;
     const logo = mod.logo ? (await readFile(join(app.src, mod.logo), "utf8")).replace(/<\?xml[^>]*>/, "") : "";
     // A QR code on the end card (an SVG kept with the app's videos), so a video seen on another screen can be scanned.
     const qr = mod.qr ? (await readFile(join(app.dir, mod.qr), "utf8")).replace(/<\?xml[^>]*>/, "").replace(/width="(\d+)" height="(\d+)"/, 'viewBox="0 0 $1 $2" width="100%" height="100%"') : "";
+    // --music <folder>: the tracks in it (mp3, m4a, wav) take turns, one per video in list order.
+    const tracks = music ? (await readdir(music)).filter(f => /\.(mp3|m4a|wav|ogg)$/i.test(f)).sort().map(f => join(music, f)) : [];
+    if (music && !tracks.length) problems.push(`no music files in ${music}`);
     for (const v of list) {
       const scenes = timeline(withEnd(v, app.config));
-      if (scenes.some(s => s.shot && !shots[s.shot])) continue;
+      if (scenes.some(s => (s.shot && !shots[s.shot]) || (s.photo && !shots[s.photo]))) continue;
       const file = join(out, v.id + ".mp4");
-      const frames = await renderVideo(browser, { base, scenes, theme: v.theme || "green", font, logo, qr, shots, file });
+      const track = tracks.length ? tracks[mod.videos.indexOf(v) % tracks.length] : null;
+      const frames = await renderVideo(browser, { base, scenes, theme: v.theme || "green", font, logo, qr, shots, file, music: track });
       kit.ffmpeg("-i", file, "-vf", "fps=1,scale=270:-1,tile=8x" + Math.ceil(frames / FPS / 8), "-frames:v", "1", join(out, v.id + "-sheet.jpg"));
-      const text = `Title: ${v.title}\n\nDescription:\n${v.description}\n\n${(v.tags || []).map(t => "#" + t).join(" ")}\n\nLength: ${length(scenes)} s. Add music in the app when you post.\n`;
+      const text = `Title: ${v.title}\n\nDescription:\n${v.description}\n\n${(v.tags || []).map(t => "#" + t).join(" ")}\n\nLength: ${length(scenes)} s. ${track ? "Music: " + track.split("/").pop() : "Silent: add music in the app when you post."}\n`;
       await writeFile(join(out, v.id + ".txt"), text);
       files.push(file);
       console.log("made", v.id, length(scenes) + "s");

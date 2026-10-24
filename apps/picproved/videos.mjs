@@ -101,6 +101,42 @@ export async function shots({ browser, base, src, raw, PHONE, ffmpeg, need }) {
     await snap(page, name, { full: true });
     await page.context().close();
   }
+  // "Will this photo pass?": a tour face cut out and set on a plain cream wall with room around it (the tour photos
+  // themselves are cropped too tight for a passport frame), then made to fail one rule. Each is put in the UK passport
+  // editor; the editor and its score are the shots `<name>-editor` and `<name>-checks`.
+  const WALL = "color=c=0xe6e1d6:s=1200x1400:d=1", TILT = "rotate=12*PI/180:c=none:ow=rotw(12*PI/180):oh=roth(12*PI/180)";
+  const PEOPLE = {
+    good: [41, ""], dark: [41, ",eq=brightness=-0.35:contrast=0.7:gamma=0.7"], blur: [41, ",gblur=sigma=5"],
+    tilt: [41, "", TILT], smile: [6, ""], glasses: [28, ""],
+  };
+  const person = name => {
+    const [n, after, turn] = PEOPLE[name], cut = join(raw, `cut-${n}.png`), file = join(raw, `person-${name}.png`);
+    if (!existsSync(cut)) ffmpeg("-i", join(src, `icons/tour/face-${n}-cut.webp`), "-vf", "scale=iw*3:-2:flags=lanczos", "-frames:v", "1", cut);
+    ffmpeg("-f", "lavfi", "-i", WALL, "-i", cut, "-filter_complex", `[1]${turn || "null"}[p];[0][p]overlay=(W-w)/2:H-h${turn ? "+40" : ""}${after}`, "-frames:v", "1", file);
+    return file;
+  };
+  for (const name of Object.keys(PEOPLE)) {
+    if (!["-editor", "-checks", "-photo"].some(k => want(name + k))) continue;
+    const page = await phone();
+    await editor(page, "uk-passport-digital", person(name));
+    out[name + "-photo"] = join(raw, `person-${name}.png`);
+    await snap(page, name + "-editor");
+    await checks(page); await snap(page, name + "-checks");
+    await page.context().close();
+  }
+  // The pay sheet as a buyer sees it once payments are on (the app's test mode), for the price video.
+  if (want("price")) {
+    const page = await phone();
+    await page.goto(base + "shop-test");
+    await page.waitForFunction(() => /Orders and keys/.test(document.body.innerText));
+    await editor(page, "uk-passport-digital", person("good"));
+    await page.click('button:has-text("Save photo")');
+    await page.waitForSelector(".paysheet");
+    await page.evaluate(() => { document.documentElement.style.scrollBehavior = "auto"; scrollTo(0, 0); document.querySelectorAll(".paysheet .callout.warn").forEach(e => e.remove()); });
+    await page.waitForTimeout(800);
+    await snap(page, "price");
+    await page.context().close();
+  }
   return out;
 }
 
@@ -205,6 +241,75 @@ export const videos = [
       { secs: 5, shot: "print", theme: "soft", title: "Save a 6×4 sheet", chips: ["Cut marks", "PDF or JPG"] },
       { secs: 4, title: "Print it as a normal 6×4", sub: "At any supermarket kiosk" },
       { secs: 4.5, title: "Cut along the marks", sub: "Check one against a bank card first" },
+    ],
+  },
+  {
+    id: "pass-dark", title: "Will this photo pass? Taken in a dim room",
+    description: `Will this UK passport photo pass? Face too dark. Light in front of you. Face a window in daylight. No flash.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-dark").replace("/?", "/doc/uk-passport-digital?")}`,
+    tags: [...tags.uk, "passportrejected"],
+    scenes: [
+      { secs: 3.5, theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
+      { secs: 4, photo: "dark-photo", theme: "soft", title: "Taken in a dim room" },
+      { secs: 4.5, shot: "dark-checks", title: "Face too dark", sub: "Likely to be rejected" },
+      { secs: 4.5, title: "Light in front of you", sub: "Face a window in daylight. No flash." },
+      { secs: 4, shot: "good-checks", theme: "soft", title: "Ready to submit", chips: ["10 of 10 checks"] },
+    ],
+  },
+  {
+    id: "pass-blur", title: "Will this photo pass? Phone moved a little",
+    description: `Will this UK passport photo pass? Photo looks blurry. Hold the phone still. More light, and tap your face to focus.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-blur").replace("/?", "/doc/uk-passport-digital?")}`,
+    tags: [...tags.uk, "passportrejected"],
+    scenes: [
+      { secs: 3.5, theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
+      { secs: 4, photo: "blur-photo", theme: "soft", title: "Phone moved a little" },
+      { secs: 4.5, shot: "blur-checks", title: "Photo looks blurry", sub: "Not a clear likeness" },
+      { secs: 4.5, title: "Hold the phone still", sub: "More light, and tap your face to focus." },
+      { secs: 4, shot: "good-checks", theme: "soft", title: "Ready to submit", chips: ["10 of 10 checks"] },
+    ],
+  },
+  {
+    id: "pass-tilt", title: "Will this photo pass? Head tilted to one side",
+    description: `Will this UK passport photo pass? Big tilt. Head straight, chin level. Look straight at the camera.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-tilt").replace("/?", "/doc/uk-passport-digital?")}`,
+    tags: [...tags.uk, "passportrejected"],
+    scenes: [
+      { secs: 3.5, theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
+      { secs: 4, photo: "tilt-photo", theme: "soft", title: "Head tilted to one side" },
+      { secs: 4.5, shot: "tilt-checks", title: "Big tilt", sub: "The shoulders end up slanted" },
+      { secs: 4.5, title: "Head straight, chin level", sub: "Look straight at the camera." },
+      { secs: 4, shot: "good-checks", theme: "soft", title: "Ready to submit", chips: ["10 of 10 checks"] },
+    ],
+  },
+  {
+    id: "pass-smile", title: "Will this photo pass? A friendly smile",
+    description: `Will this UK passport photo pass? Expression not neutral. Mouth closed, no smile. Babies and children under 6 are let off.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-smile").replace("/?", "/doc/uk-passport-digital?")}`,
+    tags: [...tags.uk, "passportrejected"],
+    scenes: [
+      { secs: 3.5, theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
+      { secs: 4, photo: "smile-photo", theme: "soft", title: "A friendly smile" },
+      { secs: 4.5, shot: "smile-checks", title: "Expression not neutral", sub: "UK passports want a neutral face" },
+      { secs: 4.5, title: "Mouth closed, no smile", sub: "Babies and children under 6 are let off." },
+    ],
+  },
+  {
+    id: "pass-glasses", title: "Will this photo pass? Wearing glasses",
+    description: `Will this UK passport photo pass? Possible glasses. Take them off. Unless you have a medical reason.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-glasses").replace("/?", "/doc/uk-passport-digital?")}`,
+    tags: [...tags.uk, "passportrejected"],
+    scenes: [
+      { secs: 3.5, theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
+      { secs: 4, photo: "glasses-photo", theme: "soft", title: "Wearing glasses" },
+      { secs: 4.5, shot: "glasses-checks", title: "Possible glasses", sub: "UK passports don't allow glasses" },
+      { secs: 4.5, title: "Take them off", sub: "Unless you have a medical reason." },
+    ],
+  },
+  {
+    id: "uk-pp-price", title: "Passport photo price: booth or phone?",
+    description: `Photo booths and shops often charge £10 to £15 for passport photos. Picproved is £5.99 for one person in every size the document needs, with a print sheet, checked before you pay.\nCheck the current price: ${link("uk-pp-price").replace("/?", "/pricing?")}`,
+    tags: [...tags.uk, "moneysavinguk"],
+    scenes: [
+      { secs: 4, theme: "dark", title: "Passport photos: £10 to £15 at a booth or shop" },
+      { secs: 5, shot: "good-editor", theme: "soft", title: "Or take it at home", sub: "Checked against the official rules" },
+      { secs: 5, shot: "price", title: "£5.99", chips: ["Every size", "Print sheet", "No subscription"] },
+      { secs: 4.5, title: "Rejected?", sub: "Tell us within 90 days. Free redo and a refund." },
     ],
   },
 ];
