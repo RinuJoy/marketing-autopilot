@@ -16,7 +16,19 @@ export async function gather(app, { env = process.env, fetchers = {} } = {}) {
   await tryIt("paddle", () => f.paddle(app.config, { env }));
   await tryIt("searchConsole", () => f.searchConsole(app.config, { dimension: "page", env }));
   await tryIt("play", () => f.play(app.config, { env }));
+  const focus = app.config.focus;
+  if (focus && data.paddle) await tryIt("focus", () => f.paddle(app.config, { env, since: focus.from }));
   return { data, off };
+}
+
+// The audience the app is aiming at first (app.json "focus"): orders from that country for those documents since the
+// focus began, against the target to reach by the review date.
+export function focusLine(focus, orders, date = new Date()) {
+  const n = orders.filter(o => o.country === focus.country && focus.docs.some(d => o.doc.startsWith(d))).length;
+  const left = Math.ceil((new Date(focus.review) - date) / (7 * 864e5));
+  const head = `## Focus: ${focus.name}: ${n} of ${focus.target} orders since ${focus.from}`;
+  if (left > 0) return { n, text: `${head}\n\nReview on ${focus.review}, ${left} week${left === 1 ? "" : "s"} left.` };
+  return { n, due: true, text: `${head}\n\nReview is due (${focus.review}). ${n >= focus.target ? "Target reached: keep the focus." : `Under target: ${focus.else}.`}` };
 }
 
 export function compose(app, items, { data, off }, date = new Date()) {
@@ -39,6 +51,11 @@ export function compose(app, items, { data, off }, date = new Date()) {
     const open = r.filter(x => !x.answered && x.text);
     s.push(`## Play reviews this week: ${r.length}${avg ? `, average ${avg.toFixed(1)}★` : ""}`);
     if (open.length) todo.push(`Approve ${open.length} review replies (out/${app.name}/reply-drafts.md).`);
+  }
+  if (app.config.focus && data.focus) {
+    const f = focusLine(app.config.focus, data.focus.orders || [], date);
+    s.push(f.text);
+    if (f.due) todo.unshift(`Decide the focus: ${f.n} of ${app.config.focus.target} ${app.config.focus.name} orders.`);
   }
   s.push(`## Season\n\nThis month: ${now.active.join("; ") || "nothing special"}.\nNext month: ${soon.active.join("; ") || "nothing special"}.`);
   if (soon.items.size) todo.push(`Get next month's ${soon.items.size} in-season items ready: ${[...soon.items.keys()].slice(0, 5).join(", ")}.`);

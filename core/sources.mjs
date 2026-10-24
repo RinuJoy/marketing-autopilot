@@ -23,11 +23,12 @@ export async function playReviews(config, { env } = {}) {
   });
 }
 
-// Paddle: completed transactions in the last 7 days, by country and currency.
-export async function paddleSales(config, { env = process.env, days = 7 } = {}) {
+// Paddle: completed transactions in the last 7 days (or since a date), by country and currency, plus each order's
+// country and the document it was for (custom_data.doc, which Picproved's Worker sets).
+export async function paddleSales(config, { env = process.env, days = 7, since: from } = {}) {
   if (!env.PADDLE_API_KEY) throw new Error("PADDLE_API_KEY not set");
   const base = env.PADDLE_ENV === "sandbox" ? "https://sandbox-api.paddle.com" : "https://api.paddle.com";
-  const since = new Date(Date.now() - days * 864e5).toISOString();
+  const since = from ? new Date(from).toISOString() : new Date(Date.now() - days * 864e5).toISOString();
   let url = `${base}/transactions?status=completed&created_at[GT]=${encodeURIComponent(since)}&per_page=200&include=address`, list = [];
   for (let page = 0; url && page < 20; page++) {
     const res = await fetch(url, { headers: { authorization: `Bearer ${env.PADDLE_API_KEY}` } });
@@ -36,13 +37,14 @@ export async function paddleSales(config, { env = process.env, days = 7 } = {}) 
     list = list.concat(j.data || []);
     url = j.meta?.pagination?.has_more ? j.meta.pagination.next : null;
   }
-  const by = {};
+  const by = {}, orders = [];
   for (const t of list) {
     const country = t.address?.country_code || t.billing_details?.address?.country_code || "??";
     const cur = t.currency_code, total = Number(t.details?.totals?.grand_total || 0) / 100;
     by[country] ??= { sales: 0, money: {} };
     by[country].sales++;
     by[country].money[cur] = (by[country].money[cur] || 0) + total;
+    orders.push({ country, doc: t.custom_data?.doc || "", at: t.created_at });
   }
-  return { count: list.length, byCountry: by };
+  return { count: list.length, byCountry: by, orders };
 }
