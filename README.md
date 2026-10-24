@@ -3,7 +3,8 @@
 One marketing automation setup shared by all of Rinu's apps. Each app plugs in with two files:
 
 - `apps/<app>/app.json`: name, site, store ids, prices, languages, channels and their post templates, seasons,
-  directories, words never to use.
+  directories, words never to use, and an optional `focus`: the audience to win first, counted in the Monday
+  report (orders from one country for some documents since a date, against a target by a review date).
 - `apps/<app>/adapter.mjs`: turns the app's own data into **items** (anything worth its own page, post or video).
   Picproved's items are its documents (read from `js/presets.js`), Awayline's are the away grounds (from
   `data/clubs.json` and `data/grounds.json`). The fields are in `core/item.mjs`.
@@ -42,7 +43,7 @@ need in `state/<app>/` (committed, so next week can compare).
 | `search-opportunities` | Pages Google shows often but people rarely click, to retitle | `GOOGLE_SERVICE_ACCOUNT` (Search Console) | Weekly |
 | `search-ideas` | What people search about each item that no page answers yet | Open internet | Monthly |
 | `reply-drafts` | A draft reply for each unanswered Play review, never posted by itself | `GOOGLE_SERVICE_ACCOUNT` (Play Console) | Daily or weekly |
-| `weekly-report` | Sales by country, Google clicks, Play reviews, season, and the 3 things to do this week | `PADDLE_API_KEY`, `GOOGLE_SERVICE_ACCOUNT`, `BREVO_API_KEY`, `MAIL_FROM`, `REPORT_EMAIL` | Mondays |
+| `weekly-report` | Sales by country, the focus count, Google clicks, Play reviews, season, and the 3 things to do this week | `PADDLE_API_KEY`, `GOOGLE_SERVICE_ACCOUNT`, `BREVO_API_KEY`, `MAIL_FROM`, `REPORT_EMAIL` | Mondays |
 
 Every key is optional: an engine whose key is missing says "not switched on" and carries on.
 

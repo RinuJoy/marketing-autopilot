@@ -12,7 +12,7 @@ import { urlsFromSitemap } from "../engines/indexnow.mjs";
 import { pick } from "../engines/search-opportunities.mjs";
 import { uncovered } from "../engines/search-ideas.mjs";
 import { draft } from "../engines/reply-drafts.mjs";
-import { compose } from "../engines/weekly-report.mjs";
+import { compose, focusLine } from "../engines/weekly-report.mjs";
 
 const item = (id, extra = {}) => ({ id, title: `Item ${id}`, summary: "Facts.", url: `https://x.test/doc/${id}`, country: "GB", countryName: "United Kingdom",
   facts: ["35×45 mm", "White background"], questions: [], sources: [{ label: "gov", url: "https://gov.test/a" }], tags: ["visa"], ...extra });
@@ -87,6 +87,20 @@ test("weekly report lists what is off and the week's to-dos", () => {
   assert.match(text, /## This week\n\n1\. Rewrite the title/);
   assert.match(text, /Next month: Exams/);
   assert.match(text, /paddle: PADDLE_API_KEY not set/);
+});
+
+test("the focus line counts the target country's orders for its documents", () => {
+  const focus = { name: "Indians in the UK", from: "2026-10-24", review: "2027-01-31", country: "GB", docs: ["in-", "sig-oci"], target: 30, else: "switch" };
+  const orders = [{ country: "GB", doc: "in-oci" }, { country: "GB", doc: "sig-oci" }, { country: "GB", doc: "uk-passport-digital" }, { country: "US", doc: "in-oci" }];
+  const a = focusLine(focus, orders, new Date("2026-11-01"));
+  assert.equal(a.n, 2);
+  assert.match(a.text, /2 of 30 orders since 2026-10-24/);
+  assert.match(a.text, /13 weeks left/);
+  const b = focusLine(focus, orders, new Date("2027-02-01"));
+  assert.ok(b.due);
+  assert.match(b.text, /Under target: switch/);
+  const text = compose({ name: "demo", config: { ...config, focus } }, [item("a")], { data: { focus: { orders } }, off: [] }, new Date("2027-02-01"));
+  assert.match(text, /## This week\n\n1\. Decide the focus: 2 of 30/);
 });
 
 test("the Google key can be pasted as JSON or base64", async () => {
