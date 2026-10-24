@@ -9,8 +9,9 @@ export const font = "fonts/plus-jakarta-sans-latin.woff2";
 export const logo = "icons/logo.svg";
 export const qr = "qr-video.svg";   // https://picproved.com/?utm_source=qr&utm_medium=video
 // The voiceover (--voice tools/say-google.mjs): Google Chirp 3 HD voices, British English, and Indian English (a mix of
-// women's and men's voices) on the videos for Indians in the UK; and how to say the letters it might read as words.
-export const voice = { name: "en-GB-Chirp3-HD-Kore", pronounce: { OCI: "O C I", ICAO: "I K O", VFS: "V F S", JPEG: "jay peg" } };
+// women's and men's voices) on the videos for Indians in the UK; and how to say the letters it might read as words
+// (Google already spells OCI and VFS out).
+export const voice = { name: "en-GB-Chirp3-HD-Kore", pronounce: { ICAO: "I K O", JPEG: "jay peg" } };
 export const endSay = "Link in the description.";
 
 const UK = { locale: "en-GB", timezoneId: "Europe/London" };
