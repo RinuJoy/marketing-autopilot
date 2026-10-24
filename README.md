@@ -43,6 +43,7 @@ need in `state/<app>/` (committed, so next week can compare).
 | `search-opportunities` | Pages Google shows often but people rarely click, to retitle | `GOOGLE_SERVICE_ACCOUNT` (Search Console) | Weekly |
 | `search-ideas` | What people search about each item that no page answers yet | Open internet | Monthly |
 | `reply-drafts` | A draft reply for each unanswered Play review, never posted by itself | `GOOGLE_SERVICE_ACCOUNT` (Play Console) | Daily or weekly |
+| `video` | 30-second vertical Shorts made from the real app (screens in a phone, big rule text, QR end card), from `apps/<app>/videos.mjs`; `--only <id>` for one, `--music <folder>` for music, `--voice tools/say-kokoro.py` for an AI voiceover of each scene's `say` line | Playwright and ffmpeg (run it where they are installed) | When a new video is written |
 | `weekly-report` | Sales by country, the focus count, Google clicks, Play reviews, season, and the 3 things to do this week | `PADDLE_API_KEY`, `GOOGLE_SERVICE_ACCOUNT`, `BREVO_API_KEY`, `MAIL_FROM`, `REPORT_EMAIL` | Mondays |
 
 Every key is optional: an engine whose key is missing says "not switched on" and carries on.

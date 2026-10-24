@@ -109,3 +109,25 @@ test("the Google key can be pasted as JSON or base64", async () => {
   assert.deepEqual(readKey(JSON.stringify(key, null, 2)), key);
   assert.deepEqual(readKey(" " + Buffer.from(JSON.stringify(key)).toString("base64") + "\n"), key);
 });
+
+test("video scenes add up, end on the site card, and each has time to be read", async () => {
+  const { timeline, withEnd, length, checkVideo } = await import("../engines/video.mjs");
+  const v = { id: "demo", scenes: [{ secs: 4, title: "One two three" }, { secs: 2, title: "A much longer line of text than two seconds allows for anyone", shot: "x" }] };
+  const all = timeline(withEnd(v, { site: "https://x.test/" }));
+  assert.deepEqual(all.map(s => s.at), [0, 4, 6]);
+  assert.equal(all.at(-1).title, "x.test");
+  assert.equal(length(all), 9);
+  const p = checkVideo(v, ["y"]);
+  assert.ok(p.some(x => /has 12 words for 2s/.test(x)));
+  assert.ok(p.some(x => /no shot "x"/.test(x)));
+  const { videos } = await import("../apps/picproved/videos.mjs");
+  for (const pv of videos) assert.deepEqual(checkVideo(pv), [], pv.id);
+});
+
+test("a voiced scene grows to fit its line, and every Picproved scene has one", async () => {
+  const { fitLine } = await import("../engines/video.mjs");
+  assert.equal(fitLine(4, 2), 4);
+  assert.equal(fitLine(4, 4.1), 5);
+  const { videos } = await import("../apps/picproved/videos.mjs");
+  for (const v of videos) assert.ok(v.scenes.every(s => s.say), v.id);
+});

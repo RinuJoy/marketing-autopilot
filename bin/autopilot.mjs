@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// node bin/autopilot.mjs <engine> --app <name> [--all] [--live] [--days 90]
+// node bin/autopilot.mjs <engine> --app <name> [--all] [--live] [--days 90] [--only <video id>] [--music <folder>] [--voice <tts command>]
 // Engines write to out/<app>/ and keep what they need to remember in state/<app>/. Nothing is posted or emailed
 // without --live.
 import { loadApp, listApps } from "../core/app.mjs";
 
-const ENGINES = ["check", "seasons", "post-bank", "publish", "rule-watch", "launch-kit", "llms-txt", "indexnow", "search-ideas", "search-opportunities", "reply-drafts", "weekly-report"];
+const ENGINES = ["check", "seasons", "post-bank", "publish", "rule-watch", "launch-kit", "llms-txt", "indexnow", "search-ideas", "search-opportunities", "reply-drafts", "weekly-report", "video"];
 const args = process.argv.slice(2), engine = args[0];
 const flag = n => args.includes("--" + n);
 const opt = n => { const i = args.indexOf("--" + n); return i >= 0 ? args[i + 1] : undefined; };
@@ -20,7 +20,7 @@ const { run } = await import(`../engines/${engine}.mjs`);
 let failed = false;
 for (const name of apps) {
   try {
-    const r = await run(await loadApp(name), { live: flag("live"), days: opt("days") ? Number(opt("days")) : undefined });
+    const r = await run(await loadApp(name), { live: flag("live"), days: opt("days") ? Number(opt("days")) : undefined, only: opt("only"), music: opt("music"), voice: opt("voice") });
     console.log(`\n== ${engine} · ${name}: ${r.summary}`);
     if (r.text && !flag("quiet")) console.log(r.text);
     for (const f of r.files || []) console.log("wrote " + f);
