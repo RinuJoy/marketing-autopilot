@@ -8,7 +8,8 @@
 // off. --music <folder> mixes in a licensed track; without it the track is silent and music is added in the
 // platform's own app when posting. --voice <command> reads each scene's `say` line aloud with a text-to-speech command
 // (called as `<command> <out.wav> <voice name> <text>`, see tools/say-kokoro.py); a scene grows to fit its line and the
-// music drops under the voice. The app's videos.mjs may export `voice` = { name, pronounce: { word: "how to say it" } }.
+// music drops under the voice. The app's videos.mjs may export `voice` = { name, pronounce: { word: "how to say it" } }; a video's own `voice` names
+// a different voice for that video.
 // Frames are drawn one by one (no screen recording), so the timing is exact however slow the machine.
 // Writes out/<app>/videos/<id>.mp4, <id>.txt (title, description, tags for the upload) and <id>-sheet.jpg (one frame
 // a second, for checking by eye). Needs Playwright and ffmpeg. --only <id> makes one video.
@@ -205,7 +206,7 @@ export async function run(app, { only, music, voice } = {}) {
       if (voice) {
         const end = scenes[scenes.length - 1];
         end.say ??= v.endSay ?? mod.endSay;
-        const clips = scenes.map(s => s.say ? speak(voice, spoken, s.say, said) : null);
+        const clips = scenes.map(s => s.say ? speak(voice, { ...spoken, name: v.voice || spoken.name }, s.say, said) : null);
         scenes = timeline(scenes.map((s, i) => clips[i] ? { ...s, secs: fitLine(s.secs, clips[i].secs) } : s));
         lines = scenes.flatMap((s, i) => clips[i] ? [{ file: clips[i].file, at: s.at + VOICE_IN }] : []);
         if (length(scenes) > 57) problems.push(`${v.id}: ${length(scenes)}s with the voiceover, over a minute`);
@@ -217,7 +218,7 @@ export async function run(app, { only, music, voice } = {}) {
       const track = tracks.length ? tracks[mod.videos.indexOf(v) % tracks.length] : null;
       const frames = await renderVideo(browser, { base, scenes, theme: v.theme || "green", font, logo, qr, shots, file, music: track, lines });
       kit.ffmpeg("-i", file, "-vf", "fps=1,scale=270:-1,tile=8x" + Math.ceil(frames / FPS / 8), "-frames:v", "1", join(out, v.id + "-sheet.jpg"));
-      const text = `Title: ${v.title}\n\nDescription:\n${v.description}\n\n${(v.tags || []).map(t => "#" + t).join(" ")}\n\nLength: ${length(scenes)} s. ${track ? "Music: " + track.split("/").pop() : "Silent: add music in the app when you post."}${lines.length ? ` AI voiceover (${spoken.name || "text to speech"}): tick "altered or synthetic content" on YouTube and the AI label on Instagram and TikTok.` : ""}\n`;
+      const text = `Title: ${v.title}\n\nDescription:\n${v.description}\n\n${(v.tags || []).map(t => "#" + t).join(" ")}\n\nLength: ${length(scenes)} s. ${track ? "Music: " + track.split("/").pop() : "Silent: add music in the app when you post."}${lines.length ? ` AI voiceover (${v.voice || spoken.name || "text to speech"}): tick "altered or synthetic content" on YouTube and the AI label on Instagram and TikTok.` : ""}\n`;
       await writeFile(join(out, v.id + ".txt"), text);
       files.push(file);
       console.log("made", v.id, length(scenes) + "s");

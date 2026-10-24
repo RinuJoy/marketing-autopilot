@@ -8,7 +8,8 @@ import { existsSync } from "node:fs";
 export const font = "fonts/plus-jakarta-sans-latin.woff2";
 export const logo = "icons/logo.svg";
 export const qr = "qr-video.svg";   // https://picproved.com/?utm_source=qr&utm_medium=video
-// The voiceover (--voice): a British voice, and how to say the letters and brand it would otherwise read as words.
+// The voiceover (--voice): British English, and Indian English (Kokoro's Hindi voices) on the videos for Indians in
+// the UK, and how to say the letters and brand it would otherwise read as words.
 export const voice = { name: "bf_emma", pronounce: { OCI: "O C I", ICAO: "I K O", VFS: "V F S", JPEG: "jay peg" } };
 export const endSay = "Link in the description.";
 
@@ -148,7 +149,7 @@ const link = c => `https://picproved.com/?utm_source=youtube&utm_medium=shorts&u
 
 export const videos = [
   {
-    id: "uk-in-oci", title: "OCI photo from the UK: why your UK passport photo won't work",
+    id: "uk-in-oci", voice: "hf_alpha", title: "OCI photo from the UK: why your UK passport photo won't work",
     description: `OCI from the UK: a square upload under 200 KB on a light (not bright white) background, two 2×2 inch prints for VFS UK, and a wide signature file.\nVFS UK OCI checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nMake yours: ${link("uk-in-oci").replace("/?", "/oci-pack?")}`,
     tags: ["OCI", "OCIcard", ...tags.in],
     scenes: [
@@ -161,7 +162,7 @@ export const videos = [
     ],
   },
   {
-    id: "uk-in-passport", title: "Indian passport renewal in the UK: the 630×810 photo rule",
+    id: "uk-in-passport", voice: "hm_omega", title: "Indian passport renewal in the UK: the 630×810 photo rule",
     description: `Indian passport renewal from the UK: upload exactly 630×810 px JPEG under 250 KB, white background, no glasses; two matching prints for VFS (ask VFS for the size).\nVFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/\nMake yours: ${link("uk-in-passport").replace("/?", "/nri-passport/gb?")}`,
     tags: ["IndianPassport", "VFS", "passportrenewal", ...tags.in],
     scenes: [
@@ -174,7 +175,7 @@ export const videos = [
     ],
   },
   {
-    id: "uk-in-newborn", title: "Baby born in the UK? The two photos for an Indian passport",
+    id: "uk-in-newborn", voice: "hf_alpha", title: "Baby born in the UK? The two photos for an Indian passport",
     description: `Indian passport for a baby born in the UK: register the birth at the High Commission within a year (35×35 mm square, light non-white background, £19), then the passport through VFS (ICAO photo on white).\nHCI London: https://www.hcilondon.gov.in/page/children-eligible/\nMake both photos: ${link("uk-in-newborn").replace("/?", "/newborn-passport?")}`,
     tags: ["newbornpassport", "newmum", "newdad", ...tags.in],
     scenes: [
@@ -186,7 +187,7 @@ export const videos = [
     ],
   },
   {
-    id: "uk-in-family", title: "One India trip, three different photos",
+    id: "uk-in-family", voice: "hf_beta", title: "One India trip, three different photos",
     description: `The three photo rules a British-Indian family meets: UK passport 35×45 mm cream or grey, OCI square on a light background, Indian passport white at 630×810 px.\nSources on each page: ${link("uk-in-family").replace("/?", "/living/indians-in-uk?")}`,
     tags: ["OCI", "IndianPassport", ...tags.in, "ukpassport"],
     scenes: [
@@ -198,7 +199,7 @@ export const videos = [
     ],
   },
   {
-    id: "uk-in-apostille", title: "The OCI mistake that isn't the photo",
+    id: "uk-in-apostille", voice: "hm_omega", title: "The OCI mistake that isn't the photo",
     description: `VFS UK OCI checklist (Oct 2025): certificates issued outside India need a paper apostille (no e-apostille), and ages 12 to 70 give biometrics.\nhttps://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nOCI pack: ${link("uk-in-oci-apostille").replace("/?", "/oci-pack?")}`,
     tags: ["OCI", "apostille", ...tags.in],
     scenes: [
