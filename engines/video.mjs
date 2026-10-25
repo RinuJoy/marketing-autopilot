@@ -9,14 +9,16 @@
 // platform's own app when posting. --voice <command> reads each scene's `say` line aloud with a text-to-speech command
 // (called as `<command> <out.wav> <voice name> <text>`, see tools/say-kokoro.py); a scene grows to fit its line and the
 // music drops under the voice. The app's videos.mjs may export `voice` = { name, pronounce: { word: "how to say it" } }; a video's own `voice` names
-// a different voice for that video.
+// a different voice for that video. --clips <folder> lets a scene play a short film clip full-screen behind its
+// caption: { clip: "<file name without .mp4>", clipFrom?: seconds into the clip }; the clip's last frame holds if
+// the scene runs longer, and a scene whose clip isn't there falls back to a text card.
 // Frames are drawn one by one (no screen recording), so the timing is exact however slow the machine.
 // Writes out/<app>/videos/<id>.mp4, <id>.txt (title, description, tags for the upload) and <id>-sheet.jpg (one frame
 // a second, for checking by eye). Needs Playwright and ffmpeg. --only <id> makes one video.
 import { createRequire } from "node:module";
 import { spawn, execFileSync } from "node:child_process";
 import { readFile, readdir, mkdir, writeFile, access } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
@@ -58,7 +60,7 @@ export function checkVideo(v, shotNames) {
 function stageHTML({ scenes, theme, font, logo, qr }) {
   const pw = 640, bezel = 15, sw = pw - 2 * bezel, bar = Math.round(sw * 24 / 360), apph = Math.round(sw * 760 / 360), r = 76;
   const scene = (s, i) => {
-    const cls = `scene ${s.theme || theme}${s.shot || s.photo ? " has-shot" : " card"}${s.end ? " end" : ""}`;
+    const cls = `scene ${s.clip ? "dark has-clip" : s.theme || theme}${s.shot || s.photo ? " has-shot" : s.clip ? "" : " card"}${s.end ? " end" : ""}`;
     const chips = (s.chips || []).map(c => `<span class="chip">${esc(c)}</span>`).join("");
     const head = s.end ? `<div class="brand">${logo}</div>` : "";
     const code = s.end && qr ? `<div class="qr"><div>${qr}</div><span>Scan to open</span></div>` : "";
@@ -67,7 +69,8 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
       <div class="win" style="height:${apph}px"><img class="shot" src="/__shot/${esc(s.shot)}.png"></div></div></div>` : "";
     // A photo on its own, as a print lying on the scene (the photo as taken, before the app has touched it).
     const print = s.photo ? `<div class="slide"><div class="print"><img class="photo" src="/__shot/${esc(s.photo)}.png"></div></div>` : "";
-    return `<section class="${cls}" id="s${i}"><header class="cap">${head}<h1>${esc(s.title || "")}</h1>${s.sub ? `<p>${esc(s.sub)}</p>` : ""}${chips ? `<div class="chips">${chips}</div>` : ""}${code}</header>${phone}${print}</section>`;
+    const film = s.clip ? `<div class="film"><img class="frame" alt=""></div>` : "";
+    return `<section class="${cls}" id="s${i}">${film}<header class="cap">${head}<h1>${esc(s.title || "")}</h1>${s.sub ? `<p>${esc(s.sub)}</p>` : ""}${chips ? `<div class="chips">${chips}</div>` : ""}${code}</header>${phone}${print}</section>`;
   };
   return `<!doctype html><html><head><meta charset="utf-8"><style>
   ${font ? `@font-face { font-family: "Brand"; src: url(${font}) format("woff2"); font-weight: 400 800; }` : ""}
@@ -101,18 +104,32 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
   .print { margin: 0 auto; width: 660px; padding: 22px; background: #fff; border-radius: 14px; transform: rotate(-3deg); box-shadow: 0 40px 70px -25px rgba(0,0,0,.5); }
   .print .photo { display: block; width: 100%; border-radius: 4px; }
   .shot { display: block; width: 100%; will-change: transform; }
+  .film { position: absolute; inset: 0; overflow: hidden; background: #000; }
+  .film .frame { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+  .film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.62) 0%, rgba(0,0,0,.35) 32%, rgba(0,0,0,0) 55%); }
+  .has-clip .cap { z-index: 1; text-shadow: 0 4px 24px rgba(0,0,0,.45); }
   </style></head><body>${scenes.map(scene).join("")}
   <script>
-  const S = ${JSON.stringify(scenes.map(s => ({ at: s.at, secs: s.secs, pan: s.pan || null })))}, k = ${sw / 360};
+  const S = ${JSON.stringify(scenes.map(s => ({ at: s.at, secs: s.secs, pan: s.pan || null, frames: s.frames || 0 })))}, k = ${sw / 360};
   const ease = ${ease.toString()};
   const els = S.map((_, i) => document.getElementById("s" + i));
-  window.render = t => {
+  // A clip scene shows frame n of its clip at /__clip/<scene>/<n>.jpg, waiting until it is drawn, with a slow push in.
+  const film = async (el, i, s, u) => {
+    const img = el.querySelector(".frame"), n = Math.min(s.frames - 1, Math.max(0, Math.floor(u * ${FPS})));
+    img.style.transform = "scale(" + (1.02 + 0.06 * Math.min(1, u / s.secs)) + ")";
+    if (img.dataset.n === String(n)) return;
+    img.dataset.n = n; img.src = "/__clip/" + i + "/" + n + ".jpg";
+    await img.decode();
+  };
+  window.render = async t => {
+    const wait = [];
     S.forEach((s, i) => {
       const el = els[i], u = t - s.at, on = u >= -0.001 && u < s.secs;
       // Each scene fades in over 0.3 s on top of the last; the last one stays until the end.
       el.style.opacity = on || (i === S.length - 1 && u >= s.secs) ? Math.min(1, u / 0.3 + (i === 0 ? 1 : 0)) : 0;
       el.style.zIndex = i;
       if (!on) return;
+      if (s.frames) wait.push(film(el, i, s, u));
       const cap = el.querySelector(".cap"), ph = el.querySelector(".phone, .slide"), a = ease(u / 0.5);
       cap.style.transform = "translateY(" + (1 - a) * 50 + "px)";
       if (ph) ph.style.transform = "translateY(" + (1 - ease(u / 0.6)) * 160 + "px)";
@@ -120,8 +137,9 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
       const img = el.querySelector(".shot");
       if (img && s.pan) { const p = ease((u - 0.7) / Math.max(0.5, s.secs - 1.4)); img.style.transform = "translateY(" + -(s.pan[0] + (s.pan[1] - s.pan[0]) * p) * k + "px)"; }
     });
+    await Promise.all(wait);
   };
-  window.ready = Promise.all([...document.images].map(i => i.decode())).then(() => document.fonts.ready);
+  window.ready = Promise.all([...document.images].filter(i => i.src).map(i => i.decode())).then(() => document.fonts.ready);
   </script></body></html>`;
 }
 
@@ -151,6 +169,21 @@ function speak(cmd, voice, text, dir) {
 export const fitLine = (secs, said) => Math.max(secs, Math.ceil((VOICE_IN + said + 0.45) * 2) / 2);
 const VOICE_IN = 0.35;
 
+// A scene's clip as JPEG frames at the video's frame rate, from clipFrom for as long as the scene (or the clip) lasts.
+function clipFrames(src, s, dir) {
+  const file = join(src, s.clip + ".mp4");
+  if (!existsSync(file)) return null;
+  const at = join(dir, `${s.clip}-${s.clipFrom || 0}-${s.secs}`);
+  if (!existsSync(join(at, "0.jpg"))) {
+    execFileSync("mkdir", ["-p", at]);
+    // A clip shorter than its scene plays slower, up to half speed, before its last frame holds.
+    const left = Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file]).toString()) - (s.clipFrom || 0);
+    const slow = Math.min(2, Math.max(1, s.secs / left));
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-ss", String(s.clipFrom || 0), "-i", file, "-t", String(s.secs / slow), "-vf", `setpts=${slow.toFixed(3)}*PTS,fps=${FPS}`, "-q:v", "2", "-start_number", "0", join(at, "%d.jpg")]);
+  }
+  return { at, frames: readdirSync(at).filter(f => f.endsWith(".jpg")).length };
+}
+
 async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots, file, music, lines }) {
   const html = stageHTML({ scenes, theme, font, logo, qr });
   const ctx = await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 });
@@ -158,6 +191,8 @@ async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots
   await page.route(base + "__stage", r => r.fulfill({ contentType: "text/html", body: html }));
   // The stage asks for /__shot/<name>.png; those are the captures, not files of the app.
   await page.route(base + "__shot/**", async r => r.fulfill({ contentType: "image/png", body: await readFile(shots[decodeURIComponent(new URL(r.request().url()).pathname.slice(8, -4))]) }));
+  await page.route(base + "__clip/**", async r => { const [, i, n] = new URL(r.request().url()).pathname.match(/__clip\/(\d+)\/(\d+)\.jpg$/);
+    r.fulfill({ contentType: "image/jpeg", body: await readFile(join(scenes[i].film, n + ".jpg")) }); });
   await page.goto(base + "__stage");
   await page.evaluate(() => window.ready);
   const ff = spawn("ffmpeg", ffmpegArgs(file, length(scenes), music, lines), { stdio: ["pipe", "inherit", "inherit"] });
@@ -174,7 +209,7 @@ async function renderVideo(browser, { base, scenes, theme, font, logo, qr, shots
   return frames;
 }
 
-export async function run(app, { only, music, voice } = {}) {
+export async function run(app, { only, music, voice, clips } = {}) {
   const def = join(app.dir, "videos.mjs");
   try { await access(def); } catch { return { summary: "no videos.mjs for this app", files: [], problems: [] }; }
   const mod = await import(pathToFileURL(def).href);
@@ -214,6 +249,12 @@ export async function run(app, { only, music, voice } = {}) {
         if (quiet) problems.push(`${v.id}: ${quiet} scene(s) with no line to say`);
       } else scenes = timeline(scenes);
       if (scenes.some(s => (s.shot && !shots[s.shot]) || (s.photo && !shots[s.photo]))) continue;
+      scenes = scenes.map(s => {
+        if (!s.clip) return s;
+        const got = clips && clipFrames(clips, s, join(out, "clips"));
+        if (!got) { problems.push(`${v.id}: no clip "${s.clip}"${clips ? "" : " (no --clips folder)"}, shown as a text card`); const { clip, ...card } = s; return card; }
+        return { ...s, film: got.at, frames: got.frames };
+      });
       const file = join(out, v.id + ".mp4");
       const track = tracks.length ? tracks[mod.videos.indexOf(v) % tracks.length] : null;
       const frames = await renderVideo(browser, { base, scenes, theme: v.theme || "green", font, logo, qr, shots, file, music: track, lines });

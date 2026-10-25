@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// node bin/autopilot.mjs <engine> --app <name> [--all] [--live] [--days 90] [--only <video id>] [--music <folder>] [--voice <tts command>]
+// node bin/autopilot.mjs <engine> --app <name> [--all] [--live] [--days 90] [--only <video id>] [--music <folder>] [--voice <tts command>] [--clips <folder>]
 // Engines write to out/<app>/ and keep what they need to remember in state/<app>/. Nothing is posted or emailed
 // without --live.
 import { loadApp, listApps } from "../core/app.mjs";
@@ -20,7 +20,7 @@ const { run } = await import(`../engines/${engine}.mjs`);
 let failed = false;
 for (const name of apps) {
   try {
-    const r = await run(await loadApp(name), { live: flag("live"), days: opt("days") ? Number(opt("days")) : undefined, only: opt("only"), music: opt("music"), voice: opt("voice") });
+    const r = await run(await loadApp(name), { live: flag("live"), days: opt("days") ? Number(opt("days")) : undefined, only: opt("only"), music: opt("music"), voice: opt("voice"), clips: opt("clips") });
     console.log(`\n== ${engine} · ${name}: ${r.summary}`);
     if (r.text && !flag("quiet")) console.log(r.text);
     for (const f of r.files || []) console.log("wrote " + f);
