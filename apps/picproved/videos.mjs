@@ -146,15 +146,15 @@ export async function shots({ browser, base, src, raw, PHONE, ffmpeg, need }) {
 }
 
 const tags = { in: ["IndiansInUK", "BritishIndian", "NRI"], uk: ["ukpassport", "passportphoto"] };
-const link = c => `https://picproved.com/?utm_source=youtube&utm_medium=shorts&utm_campaign=${c}`;
+// Links in Shorts descriptions can't be clicked, so they are short addresses people can type (24 Oct 2026).
 
 export const videos = [
   {
     id: "uk-in-oci", voice: "en-IN-Chirp3-HD-Aoede", title: "OCI photo from the UK: why your UK passport photo won't work",
-    description: `OCI from the UK: a square upload under 200 KB on a light (not bright white) background, two 2×2 inch prints for VFS UK, and a wide signature file.\nVFS UK OCI checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nMake yours: ${link("uk-in-oci").replace("/?", "/oci-pack?")}`,
+    description: `OCI from the UK: a square upload under 200 KB on a light (not bright white) background, two 2×2 inch prints for VFS UK, and a wide signature file.\nVFS UK OCI checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nMake yours: picproved.com/oci-pack\nFree while we launch, £5.99 after.`,
     tags: ["OCI", "OCIcard", ...tags.in],
     scenes: [
-      { secs: 4, say: "Getting OCI for the kids before India this winter? Your UK passport photo won't work.", title: "Your UK passport photo won't work for OCI", sub: "Flying to India this winter?" },
+      { clip: "clip-1-airport", secs: 4, say: "Getting OCI for the kids before India this winter? Your UK passport photo won't work.", title: "Your UK passport photo won't work for OCI", sub: "Flying to India this winter?" },
       { secs: 5.5, say: "OCI wants a square, not the 35 by 45 booth size. And the upload must be under 200 kilobytes.", shot: "oci-editor", theme: "soft", title: "OCI wants a square", sub: "Not the 35×45 mm UK booth size", chips: ["Square upload", "Under 200 KB"] },
       { secs: 5, say: "Use a light background, but not bright white. No border.", shot: "oci-rules", title: "Light background, not bright white", chips: ["No border", "Face about 80%"] },
       { secs: 5.5, say: "For VFS UK, bring two prints at 2 by 2 inches, the same as the upload.", shot: "oci-pack", theme: "soft", pan: [300, 600], title: "Prints for VFS UK", sub: "Two 2×2 inch photos, the same as the upload" },
@@ -164,10 +164,10 @@ export const videos = [
   },
   {
     id: "uk-in-passport", voice: "en-IN-Chirp3-HD-Charon", title: "Indian passport renewal in the UK: the 630×810 photo rule",
-    description: `Indian passport renewal from the UK: upload exactly 630×810 px JPEG under 250 KB, white background, no glasses; two matching prints for VFS (ask VFS for the size).\nVFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/\nMake yours: ${link("uk-in-passport").replace("/?", "/nri-passport/gb?")}`,
+    description: `Indian passport renewal from the UK: upload exactly 630×810 px JPEG under 250 KB, white background, no glasses; two matching prints for VFS (ask VFS for the size).\nVFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/\nMake yours: picproved.com/nri-passport/gb\nFree while we launch, £5.99 after.`,
     tags: ["IndianPassport", "VFS", "passportrenewal", ...tags.in],
     scenes: [
-      { secs: 4, say: "Renewing your Indian passport in the UK, and the photo won't upload?", title: "Indian passport photo upload failing?", sub: "Renewing in the UK?" },
+      { clip: "clip-2-passport-hands", clipFrom: 2.5, secs: 4, say: "Renewing your Indian passport in the UK, and the photo won't upload?", title: "Indian passport photo upload failing?", sub: "Renewing in the UK?" },
       { secs: 5, say: "It must be exactly 630 by 810 pixels, a JPEG under 250 kilobytes.", shot: "passport-editor", theme: "soft", title: "Exactly 630 × 810 pixels", chips: ["JPEG", "Under 250 KB"] },
       { secs: 5.5, say: "Since 2025 it's ICAO style. White background, no glasses.", shot: "passport-rules", title: "ICAO style since 2025", chips: ["White background", "No glasses", "Face 80–85%"] },
       { secs: 4.5, say: "Wear a dark top. A white shirt disappears into the background.", theme: "dark", title: "Wear a dark top", sub: "A white shirt disappears into the white background" },
@@ -177,7 +177,7 @@ export const videos = [
   },
   {
     id: "uk-in-newborn", voice: "en-IN-Chirp3-HD-Kore", title: "Baby born in the UK? The two photos for an Indian passport",
-    description: `Indian passport for a baby born in the UK: register the birth at the High Commission within a year (35×35 mm square, light non-white background, £19), then the passport through VFS (ICAO photo on white).\nHCI London: https://www.hcilondon.gov.in/page/children-eligible/\nMake both photos: ${link("uk-in-newborn").replace("/?", "/newborn-passport?")}`,
+    description: `Indian passport for a baby born in the UK: register the birth at the High Commission within a year (35×35 mm square, light non-white background, £19), then the passport through VFS (ICAO photo on white).\nHCI London: https://www.hcilondon.gov.in/page/children-eligible/\nMake both photos: picproved.com/newborn-passport\nFree while we launch, £5.99 after.`,
     tags: ["newbornpassport", "newmum", "newdad", ...tags.in],
     scenes: [
       { secs: 4.5, say: "Baby born in the UK? An Indian passport needs two different photos.", title: "Baby born in the UK?", sub: "An Indian passport needs two different photos" },
@@ -189,10 +189,10 @@ export const videos = [
   },
   {
     id: "uk-in-family", voice: "en-IN-Chirp3-HD-Puck", title: "One India trip, three different photos",
-    description: `The three photo rules a British-Indian family meets: UK passport 35×45 mm cream or grey, OCI square on a light background, Indian passport white at 630×810 px.\nSources on each page: ${link("uk-in-family").replace("/?", "/living/indians-in-uk?")}`,
+    description: `The three photo rules a British-Indian family meets: UK passport 35×45 mm cream or grey, OCI square on a light background, Indian passport white at 630×810 px.\nSources on each page: picproved.com/living/indians-in-uk\nFree while we launch, £5.99 after.`,
     tags: ["OCI", "IndianPassport", ...tags.in, "ukpassport"],
     scenes: [
-      { secs: 4, say: "Flying to India from the UK? One trip, three different photos.", title: "One India trip, three different photos" },
+      { clip: "clip-1-airport", clipFrom: 1.5, secs: 4, say: "Flying to India from the UK? One trip, three different photos.", title: "One India trip, three different photos" },
       { secs: 4.5, say: "UK passport: 35 by 45, cream or light grey.", shot: "uk-editor", theme: "soft", title: "UK passport", chips: ["35×45 mm", "Cream or light grey"] },
       { secs: 4.5, say: "OCI: a square, on a light background, not white.", shot: "oci-editor", title: "OCI", chips: ["Square", "Light, not white"] },
       { secs: 4.5, say: "Indian passport: white, and 630 by 810 pixels to upload.", shot: "passport-editor", theme: "soft", title: "Indian passport", chips: ["White", "630×810 px"] },
@@ -201,7 +201,7 @@ export const videos = [
   },
   {
     id: "uk-in-apostille", voice: "en-IN-Chirp3-HD-Leda", title: "The OCI mistake that isn't the photo",
-    description: `VFS UK OCI checklist (Oct 2025): certificates issued outside India need a paper apostille (no e-apostille), and ages 12 to 70 give biometrics.\nhttps://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nOCI pack: ${link("uk-in-oci-apostille").replace("/?", "/oci-pack?")}`,
+    description: `VFS UK OCI checklist (Oct 2025): certificates issued outside India need a paper apostille (no e-apostille), and ages 12 to 70 give biometrics.\nhttps://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nOCI pack: picproved.com/oci-pack\nFree while we launch, £5.99 after.`,
     tags: ["OCI", "apostille", ...tags.in],
     scenes: [
       { secs: 4, say: "Applying for OCI in the UK? This mistake isn't the photo.", theme: "dark", title: "The OCI mistake that isn't the photo" },
@@ -213,7 +213,7 @@ export const videos = [
   },
   {
     id: "uk-pp-home", title: "UK passport photo at home in two minutes",
-    description: `UK online passport photo rules and how to take it at home.\nOfficial rules: https://www.gov.uk/photos-for-passports\nCheck it before you upload: ${link("uk-pp-home").replace("/?", "/doc/uk-passport-digital?")}`,
+    description: `UK online passport photo rules and how to take it at home.\nOfficial rules: https://www.gov.uk/photos-for-passports\nCheck it before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "moneysavinguk"],
     scenes: [
       { secs: 4.5, say: "Renewing your UK passport online? Don't pay for a photo. Take it at home.", title: "Don't pay for a UK passport photo", sub: "Renewing online? Take it at home." },
@@ -225,7 +225,7 @@ export const videos = [
   },
   {
     id: "uk-pp-rejected", title: "5 reasons passport photos get rejected",
-    description: `The five most common passport photo mistakes and how to fix each one at home.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours: ${link("uk-pp-rejected")}`,
+    description: `The five most common passport photo mistakes and how to fix each one at home.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours: picproved.com\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "travelhacks"],
     scenes: [
       { secs: 4, say: "Passport photo rejected? It's usually one of these five.", theme: "dark", title: "5 reasons passport photos get rejected" },
@@ -239,18 +239,18 @@ export const videos = [
   },
   {
     id: "uk-pp-print-sheet", title: "Print your own passport photos on one 6×4",
-    description: `Save a 6×4 print sheet with cut marks and print it at any photo kiosk.\n${link("uk-pp-print-sheet").replace("/?", "/print-sheet?")}`,
+    description: `Save a 6×4 print sheet with cut marks and print it at any photo kiosk.\npicproved.com/print-sheet\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "moneysaving", "lifehack"],
     scenes: [
       { secs: 4.5, say: "Print your own passport photos on one 6 by 4.", title: "Print your own passport photos", sub: "One 6×4 print at any photo kiosk" },
       { secs: 5, say: "Save a 6 by 4 sheet with cut marks.", shot: "print", theme: "soft", title: "Save a 6×4 sheet", chips: ["Cut marks", "PDF or JPG"] },
-      { secs: 4, say: "Print it as a normal 6 by 4 at any supermarket kiosk.", title: "Print it as a normal 6×4", sub: "At any supermarket kiosk" },
+      { clip: "clip-4-printing", secs: 4, say: "Print it as a normal 6 by 4 at any supermarket kiosk.", title: "Print it as a normal 6×4", sub: "At any supermarket kiosk" },
       { secs: 4.5, say: "Cut along the marks, and check one against a bank card first.", title: "Cut along the marks", sub: "Check one against a bank card first" },
     ],
   },
   {
     id: "pass-dark", title: "Will this photo pass? Taken in a dim room",
-    description: `Will this UK passport photo pass? Face too dark. Light in front of you. Face a window in daylight. No flash.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-dark").replace("/?", "/doc/uk-passport-digital?")}`,
+    description: `Will this UK passport photo pass? Face too dark. Light in front of you. Face a window in daylight. No flash.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "passportrejected"],
     scenes: [
       { secs: 3.5, say: "Will this photo pass? A UK passport photo, taken at home.", theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
@@ -262,7 +262,7 @@ export const videos = [
   },
   {
     id: "pass-blur", title: "Will this photo pass? Phone moved a little",
-    description: `Will this UK passport photo pass? Photo looks blurry. Hold the phone still. More light, and tap your face to focus.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-blur").replace("/?", "/doc/uk-passport-digital?")}`,
+    description: `Will this UK passport photo pass? Photo looks blurry. Hold the phone still. More light, and tap your face to focus.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "passportrejected"],
     scenes: [
       { secs: 3.5, say: "Will this photo pass? A UK passport photo, taken at home.", theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
@@ -274,7 +274,7 @@ export const videos = [
   },
   {
     id: "pass-tilt", title: "Will this photo pass? Head tilted to one side",
-    description: `Will this UK passport photo pass? Big tilt. Head straight, chin level. Look straight at the camera.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-tilt").replace("/?", "/doc/uk-passport-digital?")}`,
+    description: `Will this UK passport photo pass? Big tilt. Head straight, chin level. Look straight at the camera.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "passportrejected"],
     scenes: [
       { secs: 3.5, say: "Will this photo pass? A UK passport photo, taken at home.", theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
@@ -286,7 +286,7 @@ export const videos = [
   },
   {
     id: "pass-smile", title: "Will this photo pass? A friendly smile",
-    description: `Will this UK passport photo pass? Expression not neutral. Mouth closed, no smile. Babies and children under 6 are let off.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-smile").replace("/?", "/doc/uk-passport-digital?")}`,
+    description: `Will this UK passport photo pass? Expression not neutral. Mouth closed, no smile. Babies and children under 6 are let off.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "passportrejected"],
     scenes: [
       { secs: 3.5, say: "Will this photo pass? A UK passport photo, taken at home.", theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
@@ -297,7 +297,7 @@ export const videos = [
   },
   {
     id: "pass-glasses", title: "Will this photo pass? Wearing glasses",
-    description: `Will this UK passport photo pass? Possible glasses. Take them off. Unless you have a medical reason.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: ${link("pass-glasses").replace("/?", "/doc/uk-passport-digital?")}`,
+    description: `Will this UK passport photo pass? Possible glasses. Take them off. Unless you have a medical reason.\nUK rules: https://www.gov.uk/photos-for-passports\nCheck yours before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "passportrejected"],
     scenes: [
       { secs: 3.5, say: "Will this photo pass? A UK passport photo, taken at home.", theme: "dark", title: "Will this photo pass?", sub: "UK passport, taken at home" },
@@ -308,7 +308,7 @@ export const videos = [
   },
   {
     id: "uk-pp-price", title: "Passport photo price: booth or phone?",
-    description: `Photo booths and shops often charge £10 to £15 for passport photos. Picproved is £5.99 for one person in every size the document needs, with a print sheet, checked before you pay.\nCheck the current price: ${link("uk-pp-price").replace("/?", "/pricing?")}`,
+    description: `Photo booths and shops often charge £10 to £15 for passport photos. Picproved is £5.99 for one person in every size the document needs, with a print sheet, checked before you pay.\nCheck the current price: picproved.com/pricing\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "moneysavinguk"],
     scenes: [
       { secs: 4, say: "Passport photos can cost 10 to 15 pounds at a booth or shop.", theme: "dark", title: "Passport photos: £10 to £15 at a booth or shop" },
