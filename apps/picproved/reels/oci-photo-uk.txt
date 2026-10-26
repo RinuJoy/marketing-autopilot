@@ -12,7 +12,7 @@ endSay: Make both at picproved dot com.
 voice.kokoro: bf_isabella
 voice.google: en-IN-Chirp3-HD-Aoede
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
-pronounce: OCI=O.C.I.; JPEG=jay peg; VFS=V.F.S.
+pronounce: JPEG=jay peg
 ---
 show: title
 text: UK passport photo for OCI?
