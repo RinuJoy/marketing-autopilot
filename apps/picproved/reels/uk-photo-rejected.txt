@@ -33,6 +33,6 @@ show: list ✗ Glasses on | ✗ Hair over your eyes
 text: Numbers 3 and 4
 say: Three, glasses. Take them off unless you have to. Four, hair over your eyes.
 ---
-show: photo face=45 bg=light size=4x5px dims=off mark=tick on=closed label="No filters, no edits"
+show: photo face=33 bg=light size=4x5px dims=off mark=tick on=closed label="No filters, no edits"
 text: Number 5: filters
 say: Five. Beauty filters or edits. Keep it unaltered, with a plain face and your mouth closed.

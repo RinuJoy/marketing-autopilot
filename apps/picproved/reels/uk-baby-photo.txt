@@ -19,7 +19,7 @@ text: Baby's first UK passport?
 sub: The photo rules are different
 say: Baby's first UK passport? The photo rules are different.
 ---
-show: photo face=44 bg=cream size=35x45mm mark=tick on=above
+show: photo face=25 bg=cream size=35x45mm mark=tick on=above
 text: Lie them on a plain sheet
 say: Lie them on a plain, light sheet, and take it from above.
 ---
