@@ -14,7 +14,7 @@ voice.google: en-GB-Chirp3-HD-Kore
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
-clip: stock-instant-photos
+clip: stock-instant-photos-face
 text: She used last year's photo
 sub: UK passport renewal
 say: Grace renewed her passport with a photo from last summer. She looked exactly the same. It still got held up.
