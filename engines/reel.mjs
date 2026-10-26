@@ -199,13 +199,21 @@ function visual(s, rel, assets) {
   return "";
 }
 
+// A long address breaks after the domain, and the path shrinks so it fits on one line (about 23 characters at 84 px).
+function siteHTML(site) {
+  const cut = site.indexOf("/");
+  if (site.length <= 24 || cut < 0) return esc(site);
+  const path = site.slice(cut);
+  return `${esc(site.slice(0, cut))}<br><span style="font-size:${Math.min(84, Math.floor(1950 / path.length))}px;white-space:nowrap">${esc(path)}</span>`;
+}
+
 function sceneHTML(s, i, assets, site) {
   // rel("word"): when that word is said in this scene, in seconds from the scene's start.
   const rel = w => { const k = bare(w || ""); const x = k && s.words.find(o => bare(o.w) === k); return x ? x.s - s.at : null; };
   const head = s.text ? `<h1 class="${s.show.type === "title" || s.end ? "big" : ""}">${words(s.text).map((w, j) => `<span data-fx="word" data-at="${(0.05 + j * 0.07).toFixed(2)}">${esc(w)}</span>`).join(" ")}</h1>` : "";
   const sub = s.sub ? `<p class="sub" data-fx="up" data-at="0.45">${esc(s.sub)}</p>` : "";
   if (s.end) return `<section class="scene end" id="s${i}"><div class="logo" data-fx="pop" data-at="0.05">${assets.logo}</div>
-    <h1 class="site" data-fx="up" data-at="0.25">${esc(site)}</h1>${sub}${assets.qr ? `<div class="qr" data-fx="pop" data-at="0.6"><div>${assets.qr}</div><span>Scan to open</span></div>` : ""}</section>`;
+    <h1 class="site" data-fx="up" data-at="0.25">${siteHTML(site)}</h1>${sub}${assets.qr ? `<div class="qr" data-fx="pop" data-at="0.6"><div>${assets.qr}</div><span>Scan to open</span></div>` : ""}</section>`;
   // A scene with a film clip plays it full screen behind the words, darkened at the top and bottom so they read.
   const film = s.frames ? `<div class="film"><img class="frame" alt=""></div>` : "", cls = s.frames ? " has-clip" : "";
   if (s.show.type === "title") return `<section class="scene hook${cls}" id="s${i}">${film}<div class="hookbox">${head}${sub}</div></section>`;

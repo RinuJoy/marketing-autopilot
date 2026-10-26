@@ -1,0 +1,34 @@
+# Story: Pakistani passport renewal from the UK. Facts as on picproved.com/living/pakistanis-in-uk (checked Oct 2026):
+# DGI&P online passport renewal (dgip.gov.pk/eServices/online-passport.php), Pakistan High Commission London MRP page.
+title: Renewing your Pakistani passport from the UK? Don't use your UK photo
+description: Pakistani passport renewal online from the UK: the photo is colour, on a white background, 350 x 467 pixels, JPEG, uploaded on the DGI&P renewal portal. A UK passport photo is cream or light grey, so take a new one. Online renewal is for passports that have expired or have less than a year left. For a first or lost passport, book the High Commission, where staff take the photo.
+description: DGI&P: https://dgip.gov.pk/eServices/online-passport.php
+description: Make yours: picproved.com/living/pakistanis-in-uk
+description: Free while we launch, £5.99 after.
+description: Footage: Michael Burrows on Pexels.
+tags: PakistanisInUK, PakistaniPassport, BritishPakistani, NICOP, passportrenewal, overseasPakistanis
+end: picproved.com/living/pakistanis-in-uk
+endSub: Every Pakistani photo, from the UK
+endSay: Make yours at picproved dot com.
+voice.kokoro: bm_george
+voice.google: en-GB-Chirp3-HD-Puck
+voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
+pronounce: JPEG=jay peg
+---
+show: title
+clip: stock-phone-pk
+text: Pakistani passport renewal?
+sub: From the UK
+say: Bilal in Bradford is renewing his Pakistani passport online. He nearly uploaded his UK passport photo.
+---
+show: compare face=32 bg=grey,white mark=cross,tick UK photo | Pakistani renewal
+text: It needs white
+say: But the renewal photo needs a white background. A UK photo is cream or light grey.
+---
+show: number value="350 × 467" unit="pixels, JPEG"
+text: The upload size
+say: It's uploaded at 350 by 467 pixels, as a JPEG.
+---
+show: list ✓ Online: expired or under a year left | ✓ First or lost: book the High Commission
+text: Online or in person?
+say: Online renewal is for passports that have expired or have less than a year left. First or lost passport? Book the High Commission, and staff take the photo.
