@@ -19,7 +19,7 @@ const ukDigital = { id: "uk-passport-digital", url: "https://www.gov.uk/photos-f
 const inEvisa = { id: "in-evisa", url: "https://indianvisaonline.gov.in/visa/instruction.html", file: "js/presets.js", mm: [51, 51], px: [600, 600], head: [0.49, 0.69], bg: ["white"], kb: [10, 300], notes: ["JPEG, 10 to 300 KB"] };
 
 test("the number reader finds sizes, file limits, head size, background and how recent", () => {
-  assert.deepEqual(extract(page("gov-uk-passport.before")), { mm: [], px: [[600, 750]], kb: [50, 10240], headMm: [], headPct: [], bg: ["lightcolour"], valid: ["1 month"] });
+  assert.deepEqual(extract(page("gov-uk-passport.before")), { mm: [], px: [[600, 750]], kb: [50, 10240], docKb: [], headMm: [], headPct: [], bg: ["lightcolour"], valid: ["1 month"] });
   const iv = extract(page("india-evisa.before"));
   assert.deepEqual([iv.kb, iv.headMm, iv.bg], [[10, 300], [[25, 35]], ["lightcolour", "white"]]);
   const t = extract("Photo 35mm x 45mm (or 3.5 x 4.5 cm), 2 x 2 inches for the US, 45mm high and 35mm wide. Face 70-80% of the photo. Taken within the last 6 months. File 10 to 250 KB, at most 2 MB. Plain white or off-white background, not blue.");
@@ -29,6 +29,18 @@ test("the number reader finds sizes, file limits, head size, background and how 
   assert.deepEqual(t.bg, ["offwhite", "white"]);
   assert.deepEqual(t.valid, ["6 months"]);
   assert.deepEqual(diffFacts(extract("Size 35 x 45 mm."), extract("Size 40 x 50 mm.")), { mm: { removed: [[35, 45]], added: [[40, 50]] } });
+});
+
+test("the e-Visa page's passport-scan PDF limit is kept apart from the photo limit, and 1 MB matches 1000 KB", () => {
+  const f = extract(page("india-evisa-tvoa"));
+  assert.deepEqual([f.kb, f.docKb], [[10, 1024], [10, 300]]);
+  const t = { ...inEvisa, kb: [10, 1000], notes: ["JPEG, 10 KB to 1 MB"] };
+  const doc = propose({ url: t.url, label: "e-Visa", before: page("india-evisa-tvoa"), after: page("india-evisa-tvoa").replace(/Maximum 300 KB/g, "Maximum 500 KB"), targets: [t], bgKeys: BG });
+  assert.equal(doc.kind, "unmapped");
+  assert.match(doc.unmapped.join(), /document file size: was 300 KB; now 500 KB/);
+  const photo = propose({ url: t.url, label: "e-Visa", before: page("india-evisa-tvoa"), after: page("india-evisa-tvoa").replace("Maximum 1 MB", "Maximum 2 MB"), targets: [t], bgKeys: BG });
+  assert.deepEqual(photo.changes[0].fields, { kb: [10, 2048] });
+  assert.deepEqual(photo.changes[0].swap, [["1 MB", "2 MB"]]);
 });
 
 test("a file-size change on gov.uk becomes a fix for the document that uses it, notes included", () => {
