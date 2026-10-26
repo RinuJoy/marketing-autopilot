@@ -89,6 +89,20 @@ test("weekly report lists what is off and the week's to-dos", () => {
   assert.match(text, /paddle: PADDLE_API_KEY not set/);
 });
 
+test("the report shows website visits from Cloudflare Web Analytics", async () => {
+  const { webVisits } = await import("../core/sources.mjs");
+  await assert.rejects(webVisits(config, { env: {} }), /CLOUDFLARE_API_TOKEN/);
+  let sent;
+  const fetch = async (url, o) => (sent = JSON.parse(o.body), { ok: true, json: async () => ({ data: { viewer: { accounts: [{
+    total: [{ count: 120, sum: { visits: 80 } }], pages: [{ count: 50, dimensions: { requestPath: "/doc/in-oci" } }], countries: [{ count: 90, dimensions: { countryName: "GB" } }],
+  }] } } }) });
+  const w = await webVisits({ ...config, site: "https://x.test/" }, { env: { CLOUDFLARE_API_TOKEN: "t", CLOUDFLARE_ACCOUNT_ID: "a" }, fetch });
+  assert.equal(sent.variables.host, "x.test");
+  assert.deepEqual(w, { views: 120, visits: 80, pages: [{ key: "/doc/in-oci", views: 50 }], countries: [{ key: "GB", views: 90 }] });
+  const text = compose({ name: "demo", config }, [item("a")], { data: { webVisits: w }, off: [] }, new Date("2026-10-12"));
+  assert.match(text, /## Website: 80 visits, 120 page views\n\n- Top pages: \/doc\/in-oci 50\n- Countries: GB 90/);
+});
+
 test("the focus line counts the target country's orders for its documents", () => {
   const focus = { name: "Indians in the UK", from: "2026-10-24", review: "2027-01-31", country: "GB", docs: ["in-", "sig-oci"], target: 30, else: "switch" };
   const orders = [{ country: "GB", doc: "in-oci" }, { country: "GB", doc: "sig-oci" }, { country: "GB", doc: "uk-passport-digital" }, { country: "US", doc: "in-oci" }];
