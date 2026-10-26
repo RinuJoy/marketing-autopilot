@@ -259,6 +259,7 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
   .film .frame { width: 100%; height: 100%; object-fit: cover; }
   .film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,12,22,.72) 0%, rgba(5,12,22,.25) 34%, rgba(5,12,22,0) 50%, rgba(5,12,22,.2) 62%, rgba(5,12,22,.78) 100%); }
   .has-clip h1, .has-clip .sub { text-shadow: 0 4px 26px rgba(0,0,0,.55); }
+  .has-clip .list li { background: rgba(5,12,22,.66); }
   .has-clip .sub { padding: 10px 28px; border-radius: 999px; background: rgba(5,12,22,.62); text-shadow: none; }
   .has-clip .hookbox { top: 170px; height: 560px; }
   .brandline, .bar { z-index: 50; } .captions { z-index: 50; }
