@@ -48,3 +48,29 @@ export async function paddleSales(config, { env = process.env, days = 7, since: 
   }
   return { count: list.length, byCountry: by, orders };
 }
+
+// Cloudflare Web Analytics: the website's visits and page views over the last 7 days, with the top pages and countries.
+// Cookieless and anonymous, so these are counts, never people. Needs an API token with "Account Analytics: Read".
+export async function webVisits(config, { env = process.env, days = 7, fetch: get = fetch } = {}) {
+  if (!env.CLOUDFLARE_API_TOKEN || !env.CLOUDFLARE_ACCOUNT_ID) throw new Error("CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID not set");
+  const host = new URL(config.site).host, to = new Date(), from = new Date(to - days * 864e5);
+  const f = `filter: { datetime_geq: $from, datetime_lt: $to, requestHost: $host }`;
+  const query = `query ($account: string!, $from: Time!, $to: Time!, $host: string!) { viewer { accounts(filter: { accountTag: $account }) {
+    total: rumPageloadEventsAdaptiveGroups(limit: 1, ${f}) { count sum { visits } }
+    pages: rumPageloadEventsAdaptiveGroups(limit: 10, orderBy: [count_DESC], ${f}) { count dimensions { requestPath } }
+    countries: rumPageloadEventsAdaptiveGroups(limit: 10, orderBy: [count_DESC], ${f}) { count dimensions { countryName } }
+  } } }`;
+  const res = await get("https://api.cloudflare.com/client/v4/graphql", {
+    method: "POST", headers: { authorization: `Bearer ${env.CLOUDFLARE_API_TOKEN}`, "content-type": "application/json" },
+    body: JSON.stringify({ query, variables: { account: env.CLOUDFLARE_ACCOUNT_ID, from: from.toISOString(), to: to.toISOString(), host } }),
+  });
+  if (!res.ok) throw new Error(`Cloudflare HTTP ${res.status}`);
+  const j = await res.json();
+  if (j.errors?.length) throw new Error(`Cloudflare: ${j.errors[0].message}`);
+  const a = j.data?.viewer?.accounts?.[0] || {}, t = a.total?.[0];
+  return {
+    views: t?.count || 0, visits: t?.sum?.visits || 0,
+    pages: (a.pages || []).map(r => ({ key: r.dimensions.requestPath, views: r.count })),
+    countries: (a.countries || []).map(r => ({ key: r.dimensions.countryName, views: r.count })),
+  };
+}

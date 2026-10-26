@@ -1,6 +1,6 @@
-// Monday report: last week's sales by country, search clicks, Play rating and reviews, what's in season, and the
+// Monday report: last week's sales by country, website visits, search clicks, Play rating and reviews, what's in season, and the
 // three things to do this week. Each source that isn't connected yet shows as one "switch on" line.
-import { paddleSales, searchConsole, playReviews } from "../core/sources.mjs";
+import { paddleSales, searchConsole, playReviews, webVisits } from "../core/sources.mjs";
 import { inSeason } from "./seasons.mjs";
 import { pick } from "./search-opportunities.mjs";
 import { send } from "../core/mail.mjs";
@@ -9,11 +9,12 @@ import { writeText, outPath, today } from "../core/util.mjs";
 const money = m => Object.entries(m).map(([c, v]) => `${c} ${v.toFixed(2)}`).join(" + ");
 
 export async function gather(app, { env = process.env, fetchers = {} } = {}) {
-  const f = { paddle: paddleSales, searchConsole, play: playReviews, ...fetchers };
+  const f = { paddle: paddleSales, searchConsole, play: playReviews, webVisits, ...fetchers };
   const want = app.config.report?.sources || [];
   const data = {}, off = [];
   const tryIt = async (name, fn) => { if (!want.includes(name)) return; try { data[name] = await fn(); } catch (e) { off.push(`${name}: ${e.message}`); } };
   await tryIt("paddle", () => f.paddle(app.config, { env }));
+  await tryIt("webVisits", () => f.webVisits(app.config, { env }));
   await tryIt("searchConsole", () => f.searchConsole(app.config, { dimension: "page", env }));
   await tryIt("play", () => f.play(app.config, { env }));
   const focus = app.config.focus;
@@ -38,6 +39,10 @@ export function compose(app, items, { data, off }, date = new Date()) {
   if (data.paddle) {
     const rows = Object.entries(data.paddle.byCountry).sort((a, b) => b[1].sales - a[1].sales);
     s.push(`## Sales: ${data.paddle.count}\n\n` + (rows.map(([c, v]) => `- ${c}: ${v.sales} (${money(v.money)})`).join("\n") || "- none"));
+  }
+  if (data.webVisits) {
+    const w = data.webVisits, list = rows => rows.slice(0, 5).map(r => `${r.key} ${r.views}`).join(", ") || "none";
+    s.push(`## Website: ${w.visits} visits, ${w.views} page views\n\n- Top pages: ${list(w.pages)}\n- Countries: ${list(w.countries)}`);
   }
   if (data.searchConsole) {
     const rows = data.searchConsole, clicks = rows.reduce((a, r) => a + r.clicks, 0), views = rows.reduce((a, r) => a + r.impressions, 0);

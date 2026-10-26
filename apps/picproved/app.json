@@ -46,7 +46,7 @@
   { "name": "Lunar New Year travel", "months": [12, 1], "ids": ["cn-visa", "cn-visa-print", "vn-evisa", "kr-keta"] }
  ],
  "focus": { "name": "Indians in the UK", "from": "2026-10-24", "review": "2027-01-31", "country": "GB", "docs": ["in-", "sig-oci"], "target": 30, "else": "move the main effort to the UK passport photo" },
- "report": { "to": "env:REPORT_EMAIL", "sources": ["paddle", "searchConsole", "play"] },
+ "report": { "to": "env:REPORT_EMAIL", "sources": ["paddle", "webVisits", "searchConsole", "play"] },
  "competitors": [
   { "name": "PhotoAiD", "play": "online.passportphoto.visa.id.app" },
   { "name": "Smartphone iD", "play": null }
