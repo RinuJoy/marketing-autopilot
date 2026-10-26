@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// node bin/autopilot.mjs <engine> --app <name> [--all] [--live] [--days 90] [--only <video id>] [--music <folder>] [--voice <tts command>] [--clips <folder>] [--push]
+// node bin/autopilot.mjs <engine> --app <name> [--all] [--live] [--days 90] [--only <video or reel id>] [--music <folder>] [--voice <tts command>] [--clips <folder>] [--push]
 // Engines write to out/<app>/ and keep what they need to remember in state/<app>/. Nothing is posted or emailed
 // without --live.
 import { loadApp, listApps } from "../core/app.mjs";
 
-const ENGINES = ["check", "seasons", "post-bank", "publish", "rule-watch", "blocked-checklist", "launch-kit", "llms-txt", "indexnow", "search-ideas", "search-opportunities", "reply-drafts", "weekly-report", "video"];
+const ENGINES = ["check", "seasons", "post-bank", "publish", "rule-watch", "blocked-checklist", "launch-kit", "llms-txt", "indexnow", "search-ideas", "search-opportunities", "reply-drafts", "weekly-report", "video", "reel"];
 const args = process.argv.slice(2), engine = args[0];
 const flag = n => args.includes("--" + n);
 const opt = n => { const i = args.indexOf("--" + n); return i >= 0 ? args[i + 1] : undefined; };

@@ -145,7 +145,7 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
 
 // Sound: a music track (looped, levelled so tracks match, faded out over the last 1.5 s) when one is given, else
 // silence; with a voiceover, each line starts at its moment and the music sits well under it.
-function ffmpegArgs(file, secs, music, lines = []) {
+export function ffmpegArgs(file, secs, music, lines = []) {
   const fade = `afade=t=in:d=0.5,afade=t=out:st=${Math.max(0, secs - 1.5)}:d=1.5`;
   const bed = music ? `[1:a]loudnorm=I=${lines.length ? -28 : -18}:TP=-2:LRA=11,aresample=44100,aformat=channel_layouts=stereo,${fade}[m]` : "[1:a]anull[m]";
   const said = lines.map((l, i) => `[${i + 2}:a]aresample=44100,aformat=channel_layouts=stereo,adelay=${Math.round(l.at * 1000)}:all=1[v${i}]`);

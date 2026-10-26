@@ -1,0 +1,34 @@
+# UK baby passport photo rules, from GOV.UK "Photos for passports" (checked 26 Oct 2026).
+title: Baby's first UK passport: the photo rules for under-ones
+description: The UK passport photo rules for babies, from GOV.UK: lie them on a plain light sheet and take it from above; under-ones can have their eyes closed; under-sixes don't have to look at the camera; no toys, dummies or visible hands. Online it needs at least 600 x 750 pixels.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check your baby's photo: picproved.com/doc/uk-passport-baby
+description: Free while we launch, £5.99 after.
+tags: ukpassport, babypassport, newbornpassport, newmum, newdad, passportphoto
+end: picproved.com
+endSub: Check it before you send it
+endSay: Check yours at picproved dot com.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Kore
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+text: Baby's first UK passport?
+sub: The photo rules are different
+say: Baby's first UK passport? The photo rules are different.
+---
+show: photo face=44 bg=cream size=35x45mm mark=tick on=above
+text: Lie them on a plain sheet
+say: Lie them on a plain, light sheet, and take it from above.
+---
+show: list ✓ Under 1: eyes can be closed | ✓ Under 6: no need to look at the camera
+text: What's allowed
+say: Under one, their eyes can be closed. Under six, they don't have to look at the camera.
+---
+show: list ✗ No toys or dummies | ✗ No hands in the photo
+text: What's not
+say: No toys, no dummies, and no hands in the photo.
+---
+show: number value="600 × 750" unit="pixels, at least"
+text: Applying online?
+say: Online, it needs at least 600 by 750 pixels.
