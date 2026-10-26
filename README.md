@@ -63,6 +63,14 @@ Every key is optional: an engine whose key is missing says "not switched on" and
 4. To take it: say go, and a thread applies it in the app's repository (`git am <patch>` or the pushed branch), runs the
    tests and hands it to the next release. Nothing ships without that.
 
+## Customer support (Picproved)
+
+Support itself lives in the app's repository: `server/support-mail/` there is the Email Worker that forwards every
+email to support@picproved.com and sends one automatic reply with the common answers (`answers.js`), and
+`server/after-sale.js` sends the 3-day "Was your photo accepted?" email, refund and chargeback alerts and the daily
+sales summary. Here, `routines/daily-support.md` is the weekday routine that drafts replies to new support emails in
+Gmail for a person to check and send. It never sends anything itself.
+
 ## Where it runs
 
 GitHub Actions minutes are too tight, so the schedule runs as **Claude routines** (scheduled cloud tasks): each
