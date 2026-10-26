@@ -1,0 +1,34 @@
+# Story: Nigerian passport renewal from the UK. Facts as on picproved.com/living/nigerians-in-uk (checked Oct 2026):
+# NIS renewal page, NIS image compliance check, Nigeria High Commission London passport requirements.
+title: Renewing your Nigerian passport in the UK: the photo comes first
+description: Nigerian passport renewal from the UK starts on the NIS portal: verify your NIN, upload the photo (600 x 800 pixels, white background, under 2 MB) and run it through the NIS image compliance check before you pay. Adults renewing can use contactless renewal; under-18s and first passports book biometrics at the High Commission.
+description: Nigeria High Commission London: https://www.nigeriahc.org.uk/requirements-for-e-passport/
+description: Make yours: picproved.com/living/nigerians-in-uk
+description: Free while we launch, £5.99 after.
+description: Footage: Mikhail Nilov on Pexels.
+tags: NigeriansInUK, NigerianPassport, BritishNigerian, NIS, passportrenewal, naijainuk
+end: picproved.com/living/nigerians-in-uk
+endSub: Your NIS upload, checked first
+endSay: Make yours at picproved dot com.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: NIN=N I N; NIS=N I S
+---
+show: title
+clip: stock-laptop-ng
+text: Nigerian passport renewal?
+sub: From the UK
+say: Ada in Manchester is renewing her Nigerian passport. It all starts online, on the NIS portal.
+---
+show: photo face=19 bg=white size=600x800px mark=tick on=white
+text: The photo upload
+say: Upload a photo of 600 by 800 pixels, on a white background, under 2 MB.
+---
+show: list 1. Verify your NIN | 2. Upload the photo | 3. Run the image compliance check
+text: Before you pay
+say: Verify your NIN, upload the photo, and run it through the NIS image compliance check before you pay.
+---
+show: list ✓ Adults renewing: contactless | ✗ Not for under-18s or first passports
+text: Can you skip the visit?
+say: Adults renewing can use contactless renewal. Under-18s and first passports still need biometrics at the High Commission.
