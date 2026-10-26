@@ -171,7 +171,7 @@ function visual(s, rel, assets) {
   const face = n => assets.faces[n] || "";
   if (type === "photo") {
     const to = size(args.size), from = args.from ? size(args.from) : null, H0 = 700;
-    const px = d => { const w = Math.round(H0 * d.w / d.h); return w > 780 ? { w: 780, h: Math.round(780 * d.h / d.w) } : { w, h: H0 }; };
+    const px = d => { const w = Math.round(H0 * d.w / d.h); return w > 600 ? { w: 600, h: Math.round(600 * d.h / d.w) } : { w, h: H0 }; };
     const a = px(from || to), b = px(to), morph = from ? Math.max(1.2, rel(args.on) ?? s.secs * 0.4) : 0;
     const mark = (m, t, cls = "") => m ? `<b class="mark ${m === "tick" ? "ok" : "no"} ${cls}" ${at(t, "stamp")}>${MARK[m]}</b>` : "";
     const dims = (d, cls, t) => `<div class="dim dw ${cls}" ${at(t, "draw")}><span>${esc(dimLabel(d.w, d.unit))}</span></div><div class="dim dh ${cls}" ${at(t + 0.15, "draw")}><span>${esc(dimLabel(d.h, d.unit))}</span></div>`;

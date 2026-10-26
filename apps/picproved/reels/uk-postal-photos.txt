@@ -1,0 +1,31 @@
+# Story: renewing a UK passport by post, from GOV.UK "Photos for passports", printed photos (checked 26 Oct 2026).
+title: Renewing your UK passport by post? The printed photo rules
+description: On the paper form you need 2 identical printed photos, 45 mm high by 35 mm wide, not cut down from a bigger picture. Your head, crown to chin, must be 29 to 34 mm. Plain cream or light grey background, plain white photo paper with no border, and send them loose, not attached to the form.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Make prints that fit: picproved.com/doc/uk-passport-print
+description: Free while we launch, £5.99 after.
+tags: ukpassport, passportrenewal, passportphoto, over60s, ukpassportphoto
+end: picproved.com
+endSub: Print-ready, checked against GOV.UK
+endSay: Make prints that fit at picproved dot com.
+voice.kokoro: bm_george
+voice.google: en-GB-Chirp3-HD-Charon
+voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
+---
+show: photo face=30 bg=grey size=35x45mm mark=cross on=back label="Photos sent back"
+text: Grandad's photos came back
+sub: Renewing by post
+say: Grandad renewed his passport by post. His photos came back.
+---
+show: photo face=30 bg=cream size=35x45mm mark=tick on=bigger
+text: 45 by 35 mm, exactly
+say: Printed photos must be 45 millimetres high and 35 wide, not cut down from a bigger picture.
+---
+show: number value="29–34" unit="mm, crown to chin"
+text: Head size matters
+say: His head, from crown to chin, has to measure between 29 and 34 millimetres.
+---
+clip: clip-4-printing
+show: list ✓ Cream or light grey background | ✓ Two identical prints | ✗ No border | ✗ Don't attach them to the form
+text: Before you post it
+say: Cream or light grey background, two identical prints with no border, and send them loose, not attached to the form.

@@ -25,7 +25,7 @@ folder. Everything on screen is drawn as code (no screen recording, no video AI)
      - `list ✓ Allowed thing | ✗ Not allowed thing | 1. A step`: each line ticks in on the first of its words that is said
      - `number value="600 × 750" unit="pixels"`: counts up
      - `strike text="PHOTO CODE" stamp="Optional" on=<word>`: a ticket crossed out
-   - Faces are the fictional AI faces in `assets/`. Indian: `face-43` baby, `44` newborn, `45` woman, `47` man, `48` girl. Not Indian: `25` baby, `33` woman, `38` man.
+   - Faces are the fictional AI faces in `assets/`. Indian: `face-43` baby, `44` newborn, `45` woman, `47` man, `48` girl. Not Indian: `25` baby, `30` older bald man, `33` woman, `38` man, `42` Black woman.
    - Rinu's rule: UK reels never show Indian-origin faces or people, and Indian reels (OCI, Indian passport) show only Indian people. That covers stock and film clips too; a faceless clip (hands, people from behind) fits either.
      Never a real person's photo.
    - Keep each `say` to one or two short sentences: four scenes plus the end card come to about 20 to 25 seconds.
