@@ -89,6 +89,20 @@ test("weekly report lists what is off and the week's to-dos", () => {
   assert.match(text, /paddle: PADDLE_API_KEY not set/);
 });
 
+test("the report shows website visits from Cloudflare Web Analytics", async () => {
+  const { webVisits } = await import("../core/sources.mjs");
+  await assert.rejects(webVisits(config, { env: {} }), /CLOUDFLARE_API_TOKEN/);
+  let sent;
+  const fetch = async (url, o) => (sent = JSON.parse(o.body), { ok: true, json: async () => ({ data: { viewer: { accounts: [{
+    total: [{ count: 120, sum: { visits: 80 } }], pages: [{ count: 50, dimensions: { requestPath: "/doc/in-oci" } }], countries: [{ count: 90, dimensions: { countryName: "GB" } }],
+  }] } } }) });
+  const w = await webVisits({ ...config, site: "https://x.test/" }, { env: { CLOUDFLARE_API_TOKEN: "t", CLOUDFLARE_ACCOUNT_ID: "a" }, fetch });
+  assert.equal(sent.variables.host, "x.test");
+  assert.deepEqual(w, { views: 120, visits: 80, pages: [{ key: "/doc/in-oci", views: 50 }], countries: [{ key: "GB", views: 90 }] });
+  const text = compose({ name: "demo", config }, [item("a")], { data: { webVisits: w }, off: [] }, new Date("2026-10-12"));
+  assert.match(text, /## Website: 80 visits, 120 page views\n\n- Top pages: \/doc\/in-oci 50\n- Countries: GB 90/);
+});
+
 test("the focus line counts the target country's orders for its documents", () => {
   const focus = { name: "Indians in the UK", from: "2026-10-24", review: "2027-01-31", country: "GB", docs: ["in-", "sig-oci"], target: 30, else: "switch" };
   const orders = [{ country: "GB", doc: "in-oci" }, { country: "GB", doc: "sig-oci" }, { country: "GB", doc: "uk-passport-digital" }, { country: "US", doc: "in-oci" }];
@@ -130,4 +144,41 @@ test("a voiced scene grows to fit its line, and every Picproved scene has one", 
   assert.equal(fitLine(4, 4.1), 5);
   const { videos } = await import("../apps/picproved/videos.mjs");
   for (const v of videos) assert.ok(v.scenes.every(s => s.say), v.id);
+});
+
+test("an app's checkout is found when its folder name differs only in case", async () => {
+  const { mkdtempSync, mkdirSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join: j } = await import("node:path");
+  const { sourceDir } = await import("../core/app.mjs");
+  const base = mkdtempSync(j(tmpdir(), "src-"));
+  mkdirSync(j(base, "Picproved"));
+  const got = sourceDir({ id: "picproved", source: { path: j(base, "picproved") } }, {});
+  assert.equal(got, j(base, "Picproved"));
+});
+
+test("the report compares this week's Google search with the week before and lists indexing", async () => {
+  const { indexStatus } = await import("../core/sources.mjs");
+  const calls = [];
+  const fetch = async (url, o = {}) => {
+    calls.push(url);
+    if (url.endsWith("/sitemaps")) return { sitemap: [{ path: "https://x.test/sitemap.xml", lastDownloaded: "2026-10-25T10:00:00Z", errors: "0", contents: [{ type: "web", submitted: "646", indexed: "0" }] }] };
+    if (o.body.inspectionUrl.endsWith("/bad")) throw new Error("HTTP 403");
+    return { inspectionResult: { indexStatusResult: { coverageState: "Discovered - currently not indexed" } } };
+  };
+  const index = await indexStatus({ ...config, site: "https://x.test/", report: { watch: ["/baby/uk", "/bad"] } }, { env: {}, fetch });
+  assert.equal(calls.length, 3);
+  assert.deepEqual(index.sitemaps[0].submitted, 646);
+  assert.equal(index.pages[0].state, "Discovered - currently not indexed");
+  assert.match(index.pages[1].state, /not read \(HTTP 403\)/);
+  const searchWeek = { from: "2026-10-17", to: "2026-10-23", now: { clicks: 24, impressions: 436, ctr: 0.055, position: 18.2 }, before: { clicks: 10, impressions: 200, ctr: 0.05, position: 30 },
+    queries: [{ key: "asda passport photo", clicks: 0, impressions: 30, ctr: 0, position: 19.7 }] };
+  const rows = [{ key: "https://x.test/check", clicks: 3, impressions: 40, ctr: 0.075, position: 4.9 }];
+  const text = compose({ name: "demo", config }, [item("a")], { data: { searchConsole: rows, searchWeek, index }, off: [] }, new Date("2026-10-26"));
+  assert.match(text, /- Clicks: 24 \(10, \+140%\)/);
+  assert.match(text, /- Average position: 18\.2 \(30\.0, better\)/);
+  assert.match(text, /asda passport photo: 0 clicks, 30 views, position 19\.7/);
+  assert.match(text, /- \/check: 3 clicks/);
+  assert.match(text, /- \/sitemap\.xml: 646 pages sent, last read 2026-10-25/);
+  assert.match(text, /Ask Google to index 1 page .*: \/baby\/uk/);
 });
