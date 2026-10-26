@@ -2,7 +2,7 @@
  "from": "2026-10-27",
  "to": "2027-01-31",
  "title": "Picproved marketing to-do, 27 October 2026 to 31 January 2027",
- "intro": "One person, evenings, UK time. A weekday is about 30 minutes; Mondays 45; one Saturday a month 90 (scheduling the next month). Tick a box when it's done. The posts, captions and drafts named here are in /mnt/project-files/ (paths at the end). Posting slots that are already scheduled in YouTube Studio or Meta Business Suite need nothing on the day except a look at the comments.",
+ "intro": "One person, evenings, UK time. A weekday is about 30 minutes; Mondays 45; one Saturday a month 90 (scheduling the next month). Tick a box when it's done. The posts, captions and drafts named here are in /mnt/project-files/ (paths at the end). Posting slots that are already scheduled in YouTube Studio or Meta Business Suite need nothing on the day except a look at the comments. Decision 26 Oct: the daily routine stays UK-only; the US, UAE, Canada and Australia get Shorts, indexing and one global Quora answer a week (\"world on autopilot\"), with orders counted per country.",
  "rules": [
   "Every post says \"Free while we launch, £5.99 after.\" until Paddle is live, then the 90-day promise instead.",
   "Never \"guaranteed\" or \"100% accepted\". Never name a competitor in site copy. Disclose \"my family makes Picproved\" in every community post.",
@@ -71,7 +71,7 @@
   {
    "start": "2026-11-09",
    "theme": "Baby born in the UK: two photos",
-   "must": "Reddit post 2; media pitch to Eastern Eye, Asian Voice and Garavi Gujarat; 5 page titles live"
+   "must": "Reddit post 2; media pitch to Eastern Eye, Asian Voice and Garavi Gujarat; 5 page titles live; world-on-autopilot facts files requested"
   },
   {
    "start": "2026-11-16",
@@ -181,6 +181,11 @@
    "minutes": 5
   },
   {
+   "date": "2026-11-02",
+   "task": "World on autopilot: Search Console, request indexing of /living/indians-in-usa, /living/indians-in-uae, /living/indians-in-canada, /living/indians-in-australia",
+   "minutes": 5
+  },
+  {
    "date": "2026-11-03",
    "task": "Quora answer 1 (OCI photo from the UK)",
    "minutes": 20
@@ -231,6 +236,11 @@
    "minutes": 10
   },
   {
+   "date": "2026-11-12",
+   "task": "World on autopilot: ask Claude for facts-us-indians.md, facts-ae-indians.md and facts-au-indians.md (VFS USA, BLS UAE, VFS Australia, each linked), and the 5 global Quora answers and 6 country Shorts scripts built on them",
+   "minutes": 5
+  },
+  {
    "date": "2026-11-13",
    "task": "Say yes or no to the UK passport photo cost guide page (Claude builds it; it names no shops)",
    "minutes": 5
@@ -247,7 +257,7 @@
   },
   {
    "date": "2026-11-16",
-   "task": "Ask Claude to render the 8 December Shorts (posts-dec-jan.md §Shorts) with the Google voice, and listen to one for pronunciation",
+   "task": "Ask Claude to render the 8 December Shorts (posts-dec-jan.md §Shorts) plus the US, UAE and Australia versions of the OCI and passport Shorts (6, en-US and en-IN voices, from the facts files), and listen to one for pronunciation",
    "minutes": 10
   },
   {
@@ -291,6 +301,11 @@
    "minutes": 15
   },
   {
+   "date": "2026-11-25",
+   "task": "Global Quora answer A: 'What photo do I need for OCI from the USA?' (posts-dec-jan.md §World, written after the facts file)",
+   "minutes": 20
+  },
+  {
    "date": "2026-11-26",
    "task": "Thursday: Facebook Post 10 (Christmas flight booked? your photo checklist) from posts-dec-jan.md if not scheduled",
    "minutes": 5
@@ -314,6 +329,11 @@
    "date": "2026-12-02",
    "task": "Pick the Product Hunt day (a Tuesday to Thursday after Play is public; 8 Dec if the app is live) and tell 5 friends the day before, no upvote asks",
    "minutes": 10
+  },
+  {
+   "date": "2026-12-02",
+   "task": "Global Quora answer B: 'Indian passport renewal from the UAE through BLS: photo size and upload'",
+   "minutes": 20
   },
   {
    "date": "2026-12-03",
@@ -346,6 +366,11 @@
    "minutes": 30
   },
   {
+   "date": "2026-12-09",
+   "task": "Global Quora answer C: 'OCI photo from Australia (VFS Australia)'",
+   "minutes": 20
+  },
+  {
    "date": "2026-12-10",
    "task": "Submit Indie Hackers and BetaList; send the friends and family email from launch-kit.md",
    "minutes": 30
@@ -369,6 +394,11 @@
    "date": "2026-12-16",
    "task": "WhatsApp community message 2 (last OCI appointments before the holidays)",
    "minutes": 10
+  },
+  {
+   "date": "2026-12-16",
+   "task": "Global Quora answer D: 'Indian passport renewal from the USA by mail: the photo rules'",
+   "minutes": 20
   },
   {
    "date": "2026-12-17",
@@ -421,6 +451,11 @@
    "minutes": 10
   },
   {
+   "date": "2027-01-06",
+   "task": "Global Quora answer E: 'OCI or Indian passport from Canada (BLS): which photo?'",
+   "minutes": 20
+  },
+  {
    "date": "2027-01-07",
    "task": "Quora answers 2 and 3 refreshed",
    "minutes": 15
@@ -464,6 +499,11 @@
    "date": "2027-01-19",
    "task": "Count orders from Indians in the UK since 24 Oct (Monday report focus line); write the number in review-january.md",
    "minutes": 10
+  },
+  {
+   "date": "2027-01-19",
+   "task": "World on autopilot: read orders and clicks by country for the US, UAE, Canada and Australia in the Monday report; write them in review-january.md",
+   "minutes": 5
   },
   {
    "date": "2027-01-20",
@@ -782,6 +822,18 @@
      "caption": "posts-dec-jan.md Shorts #8"
     },
     {
+     "file": "us-in-oci.mp4 (world)",
+     "caption": "posts-dec-jan.md §World"
+    },
+    {
+     "file": "ae-in-passport.mp4 (world)",
+     "caption": "posts-dec-jan.md §World"
+    },
+    {
+     "file": "au-in-oci.mp4 (world)",
+     "caption": "posts-dec-jan.md §World"
+    },
+    {
      "file": "uk-in-oci.mp4 (repost, new title: The OCI mistake, again)",
      "caption": "uk-in-oci.txt"
     },
@@ -800,6 +852,18 @@
     {
      "file": "jan-03-hair-over-eyes.mp4",
      "caption": "posts-dec-jan.md Shorts #11"
+    },
+    {
+     "file": "us-in-passport.mp4 (world)",
+     "caption": "posts-dec-jan.md §World"
+    },
+    {
+     "file": "ae-in-oci.mp4 (world)",
+     "caption": "posts-dec-jan.md §World"
+    },
+    {
+     "file": "ca-in-oci.mp4 (world)",
+     "caption": "posts-dec-jan.md §World"
     },
     {
      "file": "jan-04-child-passport.mp4",
