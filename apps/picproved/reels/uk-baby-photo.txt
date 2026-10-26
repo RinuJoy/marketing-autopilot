@@ -4,6 +4,7 @@ description: The UK passport photo rules for babies, from GOV.UK: lie them on a 
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check your baby's photo: picproved.com/doc/uk-passport-baby
 description: Free while we launch, £5.99 after.
+description: Footage: Sarah Chai and William Fortunato on Pexels.
 tags: ukpassport, babypassport, newbornpassport, newmum, newdad, passportphoto
 end: picproved.com
 endSub: Check it before you send it
@@ -13,6 +14,7 @@ voice.google: en-GB-Chirp3-HD-Kore
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
+clip: stock-baby-bed
 text: Baby's first UK passport?
 sub: The photo rules are different
 say: Baby's first UK passport? The photo rules are different.
@@ -21,6 +23,7 @@ show: photo face=44 bg=cream size=35x45mm mark=tick on=above
 text: Lie them on a plain sheet
 say: Lie them on a plain, light sheet, and take it from above.
 ---
+clip: stock-baby-asleep
 show: list ✓ Under 1: eyes can be closed | ✓ Under 6: no need to look at the camera
 text: What's allowed
 say: Under one, their eyes can be closed. Under six, they don't have to look at the camera.
