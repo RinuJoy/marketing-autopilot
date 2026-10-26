@@ -37,6 +37,7 @@ export async function loadApp(name, { env = process.env } = {}) {
   let cache;
   return {
     name, config, dir, src,
+    adapter: async () => adapter,
     async items() {
       if (cache) return cache;
       const list = await adapter.items({ config, src });
