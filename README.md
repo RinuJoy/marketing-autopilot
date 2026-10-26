@@ -44,6 +44,7 @@ need in `state/<app>/` (committed, so next week can compare).
 | `search-ideas` | What people search about each item that no page answers yet | Open internet | Monthly |
 | `reply-drafts` | A draft reply for each unanswered Play review, never posted by itself | `GOOGLE_SERVICE_ACCOUNT` (Play Console) | Daily or weekly |
 | `video` | 30-second vertical Shorts made from the real app (screens in a phone, big rule text, QR end card), from `apps/<app>/videos.mjs`; `--only <id>` for one, `--music <folder>` for music, `--voice tools/say-kokoro.py` for an AI voiceover of each scene's `say` line, `--clips <folder>` for film clips behind a caption (`clip:` on a scene) | Playwright and ffmpeg (run it where they are installed) | When a new video is written |
+| `todo` | A day-by-day, tickable to-do list for one person from `apps/<app>/plan.json`: week themes, dated tasks, standing daily tasks, posting slots (fixed calendar first, then cycling queues) and milestone tasks | Nothing | When the plan changes |
 | `weekly-report` | Sales by country, the focus count, Google clicks, Play reviews, season, and the 3 things to do this week | `PADDLE_API_KEY`, `GOOGLE_SERVICE_ACCOUNT`, `BREVO_API_KEY`, `MAIL_FROM`, `REPORT_EMAIL` | Mondays |
 
 Every key is optional: an engine whose key is missing says "not switched on" and carries on.
