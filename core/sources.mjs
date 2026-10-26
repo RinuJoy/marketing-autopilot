@@ -5,12 +5,50 @@ import { gapi, SC, PLAY } from "./google.mjs";
 const day = n => new Date(Date.now() - n * 864e5).toISOString().slice(0, 10);
 
 // Search Console: rows by page or query over the last 7 days (data lags about 3 days).
+const scSite = (config, env) => env?.SEARCH_CONSOLE_SITE || `sc-domain:${new URL(config.site).host}`;
+const scQuery = (config, env, body) =>
+  gapi(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(scSite(config, env))}/searchAnalytics/query`, { scope: SC, method: "POST", env, body });
+const row = r => ({ key: r.keys?.[0], clicks: r.clicks, impressions: r.impressions, ctr: r.ctr, position: r.position });
+
 export async function searchConsole(config, { dimension = "page", days = 7, rowLimit = 500, env } = {}) {
-  const site = env?.SEARCH_CONSOLE_SITE || `sc-domain:${new URL(config.site).host}`;
-  const j = await gapi(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/searchAnalytics/query`, {
-    scope: SC, method: "POST", env, body: { startDate: day(days + 3), endDate: day(3), dimensions: [dimension], rowLimit },
+  const j = await scQuery(config, env, { startDate: day(days + 3), endDate: day(3), dimensions: [dimension], rowLimit });
+  return (j.rows || []).map(row);
+}
+
+// The week in search against the week before: totals (clicks, views, CTR, average position) and the top searches.
+// Each week is 7 full days ending 3 days ago, because Google's numbers take about that long to settle.
+export async function searchWeek(config, { env, top = 10 } = {}) {
+  const totals = async (from, to) => {
+    const r = (await scQuery(config, env, { startDate: day(from), endDate: day(to) })).rows?.[0];
+    return r ? row(r) : { clicks: 0, impressions: 0, ctr: 0, position: 0 };
+  };
+  const [now, before, queries] = await Promise.all([
+    totals(9, 3), totals(16, 10),
+    scQuery(config, env, { startDate: day(9), endDate: day(3), dimensions: ["query"], rowLimit: top }).then(j => (j.rows || []).map(row)),
+  ]);
+  return { from: day(9), to: day(3), now, before, queries };
+}
+
+// Indexing: what the sitemaps report (pages sent, pages Google says it indexed) and, for the pages that matter most
+// (app.json report.watch), Google's own verdict from URL Inspection. Each page that can't be read says why.
+export async function indexStatus(config, { env, fetch: get } = {}) {
+  const site = scSite(config, env), base = new URL(config.site);
+  const call = get || ((url, o) => gapi(url, { scope: SC, env, ...o }));
+  const maps = await call(`https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(site)}/sitemaps`);
+  const sitemaps = (maps.sitemap || []).map(m => {
+    const web = (m.contents || []).find(c => c.type === "web") || {};
+    return { path: m.path, submitted: Number(web.submitted || 0), indexed: Number(web.indexed || 0), errors: Number(m.errors || 0), warnings: Number(m.warnings || 0), read: m.lastDownloaded || "" };
   });
-  return (j.rows || []).map(r => ({ key: r.keys[0], clicks: r.clicks, impressions: r.impressions, ctr: r.ctr, position: r.position }));
+  const pages = [];
+  for (const p of config.report?.watch || ["/"]) {
+    const url = new URL(p, base).href;
+    try {
+      const j = await call("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect", { method: "POST", body: { inspectionUrl: url, siteUrl: site } });
+      const r = j.inspectionResult?.indexStatusResult || {};
+      pages.push({ url, state: r.coverageState || r.verdict || "unknown", crawled: (r.lastCrawlTime || "").slice(0, 10) });
+    } catch (e) { pages.push({ url, state: `not read (${e.message.slice(0, 80)})`, crawled: "" }); }
+  }
+  return { sitemaps, pages };
 }
 
 // Play: the latest reviews (the API keeps the last 7 days of reviews with text).

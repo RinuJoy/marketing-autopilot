@@ -156,3 +156,29 @@ test("an app's checkout is found when its folder name differs only in case", asy
   const got = sourceDir({ id: "picproved", source: { path: j(base, "picproved") } }, {});
   assert.equal(got, j(base, "Picproved"));
 });
+
+test("the report compares this week's Google search with the week before and lists indexing", async () => {
+  const { indexStatus } = await import("../core/sources.mjs");
+  const calls = [];
+  const fetch = async (url, o = {}) => {
+    calls.push(url);
+    if (url.endsWith("/sitemaps")) return { sitemap: [{ path: "https://x.test/sitemap.xml", lastDownloaded: "2026-10-25T10:00:00Z", errors: "0", contents: [{ type: "web", submitted: "646", indexed: "0" }] }] };
+    if (o.body.inspectionUrl.endsWith("/bad")) throw new Error("HTTP 403");
+    return { inspectionResult: { indexStatusResult: { coverageState: "Discovered - currently not indexed" } } };
+  };
+  const index = await indexStatus({ ...config, site: "https://x.test/", report: { watch: ["/baby/uk", "/bad"] } }, { env: {}, fetch });
+  assert.equal(calls.length, 3);
+  assert.deepEqual(index.sitemaps[0].submitted, 646);
+  assert.equal(index.pages[0].state, "Discovered - currently not indexed");
+  assert.match(index.pages[1].state, /not read \(HTTP 403\)/);
+  const searchWeek = { from: "2026-10-17", to: "2026-10-23", now: { clicks: 24, impressions: 436, ctr: 0.055, position: 18.2 }, before: { clicks: 10, impressions: 200, ctr: 0.05, position: 30 },
+    queries: [{ key: "asda passport photo", clicks: 0, impressions: 30, ctr: 0, position: 19.7 }] };
+  const rows = [{ key: "https://x.test/check", clicks: 3, impressions: 40, ctr: 0.075, position: 4.9 }];
+  const text = compose({ name: "demo", config }, [item("a")], { data: { searchConsole: rows, searchWeek, index }, off: [] }, new Date("2026-10-26"));
+  assert.match(text, /- Clicks: 24 \(10, \+140%\)/);
+  assert.match(text, /- Average position: 18\.2 \(30\.0, better\)/);
+  assert.match(text, /asda passport photo: 0 clicks, 30 views, position 19\.7/);
+  assert.match(text, /- \/check: 3 clicks/);
+  assert.match(text, /- \/sitemap\.xml: 646 pages sent, last read 2026-10-25/);
+  assert.match(text, /Ask Google to index 1 page .*: \/baby\/uk/);
+});
