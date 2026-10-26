@@ -1,7 +1,8 @@
 // Loads one app: its settings (apps/<name>/app.json) and its items, read by the app's own adapter.
 // An item is anything worth its own page, post or video: a document for Picproved, an away ground for Awayline.
 import { readFile, readdir } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { existsSync, readdirSync } from "node:fs";
+import { basename, dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { checkItem } from "./item.mjs";
 
@@ -14,9 +15,17 @@ export async function listApps() {
 
 // The app's own repository is read from APP_SOURCE_<NAME> (for example APP_SOURCE_PICPROVED), else from
 // app.json "source.path", relative to this repository. A missing checkout is an error, not an empty list.
+// GitHub clones keep the repository's own capitals (../Picproved), so a folder that differs only in case is used too.
 export function sourceDir(config, env = process.env) {
   const key = "APP_SOURCE_" + config.id.toUpperCase().replace(/[^A-Z0-9]/g, "_");
-  return resolve(ROOT, env[key] || config.source?.path || `../${config.id}`);
+  const dir = resolve(ROOT, env[key] || config.source?.path || `../${config.id}`);
+  if (existsSync(dir)) return dir;
+  const want = basename(dir).toLowerCase();
+  try {
+    const twin = readdirSync(dirname(dir)).find(n => n.toLowerCase() === want);
+    if (twin) return join(dirname(dir), twin);
+  } catch {}
+  return dir;
 }
 
 export async function loadApp(name, { env = process.env } = {}) {
