@@ -16,7 +16,7 @@ const sentencesOf = t => t.replace(/\s+/g, " ").split(/(?<=[.!?;])\s+(?=[A-Z0-9�
 
 export function extract(text = "") {
   const t = " " + String(text).replace(/ /g, " ").replace(/(\d)\s*[xX×]\s*(\d)/g, "$1 x $2") + " ";
-  const mm = [], px = [], kb = [], headMm = [], headPct = [], bg = new Set(), valid = new Set();
+  const mm = [], px = [], kb = [], docKb = [], headMm = [], headPct = [], bg = new Set(), valid = new Set();
 
   // Sizes: "35 x 45 mm", "35mm x 45mm", "3.5 x 4.5 cm", "2 x 2 inches", "600 x 600 pixels", "600 by 600 px".
   for (const m of t.matchAll(new RegExp(`${N}\\s*${LEN}?${X}${N}\\s*${LEN}?`, "gi"))) {
@@ -37,10 +37,18 @@ export function extract(text = "") {
   }
 
   // File sizes: "under 250 KB", "10 to 250 KB", "5 MB". MB counts as 1024 KB, as the app does.
+  // A limit that follows "PDF", "bio page" or "document" more closely than "photo" or "JPEG" is a document's (the
+  // India e-Visa page gives the photo 10 KB to 1 MB and the passport scan 10 to 300 KB), so it goes in docKb.
   const kbOf = (v, u) => /^m/i.test(u) ? Math.round(num(v) * 1024) : num(v);
+  const forDoc = at => {
+    const before = t.slice(Math.max(0, at - 200), at).toLowerCase();
+    const last = re => Math.max(-1, ...[...before.matchAll(re)].map(m => m.index));
+    return last(/\bpdf\b|bio ?page|documents?\b|scann?ed|certificates?\b/g) > last(/photo|picture|image|jpe?g\b|signature|thumb/g);
+  };
+  const add = (at, ...v) => (forDoc(at) ? docKb : kb).push(...v);
   for (const m of t.matchAll(new RegExp(`${N}\\s*(kb|kilobytes?|mb|megabytes?)?${TO}${N}\\s*(kb|kilobytes?|mb|megabytes?)\\b`, "gi")))
-    kb.push(kbOf(m[1], m[2] || m[4]), kbOf(m[3], m[4]));
-  for (const m of t.matchAll(new RegExp(`${N}\\s*(kb|kilobytes?|mb|megabytes?)\\b`, "gi"))) kb.push(kbOf(m[1], m[2]));
+    add(m.index, kbOf(m[1], m[2] || m[4]), kbOf(m[3], m[4]));
+  for (const m of t.matchAll(new RegExp(`${N}\\s*(kb|kilobytes?|mb|megabytes?)\\b`, "gi"))) add(m.index, kbOf(m[1], m[2]));
 
   for (const s of sentencesOf(t)) {
     const lower = s.toLowerCase();
@@ -65,12 +73,12 @@ export function extract(text = "") {
     }
   }
   return {
-    mm: pairs(mm), px: pairs(px), kb: sortNum(kb),
+    mm: pairs(mm), px: pairs(px), kb: sortNum(kb), docKb: sortNum(docKb),
     headMm: pairs(headMm), headPct: pairs(headPct), bg: [...bg].sort(), valid: [...valid].sort(),
   };
 }
 
-const KINDS = { mm: "print size", px: "pixel size", kb: "file size", headMm: "head size", headPct: "head or face share", bg: "background", valid: "how recent" };
+const KINDS = { mm: "print size", px: "pixel size", kb: "file size", docKb: "document file size", headMm: "head size", headPct: "head or face share", bg: "background", valid: "how recent" };
 const key = v => Array.isArray(v) ? v.join("x") : String(v);
 
 // What moved between two versions of a page: per kind, the values that went and the values that came.
@@ -85,5 +93,5 @@ export function diffFacts(before, after) {
 }
 
 export const kindName = k => KINDS[k] || k;
-export const show = (k, v) => k === "mm" ? `${v[0]}×${v[1]} mm` : k === "px" ? `${v[0]}×${v[1]} px` : k === "kb" ? `${v} KB`
+export const show = (k, v) => k === "mm" ? `${v[0]}×${v[1]} mm` : k === "px" ? `${v[0]}×${v[1]} px` : k === "kb" || k === "docKb" ? `${v} KB`
   : k === "headMm" ? `${v[0]}–${v[1]} mm` : k === "headPct" ? `${v[0]}–${v[1]}%` : String(v);

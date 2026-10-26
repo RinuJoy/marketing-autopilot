@@ -43,11 +43,13 @@ export function matchTarget(t, before, after, diff, bgKeys = []) {
   pair("px", "");
 
   if (t.kb && diff.kb) {
-    const gone = t.kb.map((v, i) => v > 0 && before.kb.includes(v) && !after.kb.includes(v) ? i : -1).filter(i => i >= 0);
+    // 1 MB is 1000 KB to some offices and 1024 KB to others, so a value within 3% counts as the same.
+    const near = (list, v) => list.some(x => Math.abs(x - v) <= Math.max(0.5, v * 0.03));
+    const gone = t.kb.map((v, i) => v > 0 && near(before.kb, v) && !near(after.kb, v) ? i : -1).filter(i => i >= 0);
     const add = [...diff.kb.added].sort((a, b) => a - b);
     if (gone.length && gone.length === add.length) {
       const next = [...t.kb];
-      const mb = v => v % 1024 ? null : v / 1024;
+      const mb = v => v % 1024 === 0 ? v / 1024 : v % 1000 === 0 ? v / 1000 : null;
       gone.forEach((i, n) => {
         const o = t.kb[i], w = add[n];
         next[i] = w;
