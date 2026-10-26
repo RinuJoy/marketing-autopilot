@@ -1,0 +1,1000 @@
+{
+ "from": "2026-10-27",
+ "to": "2027-01-31",
+ "title": "Picproved marketing to-do, 27 October 2026 to 31 January 2027",
+ "intro": "One person, evenings, UK time. A weekday is about 30 minutes; Mondays 45; one Saturday a month 90 (scheduling the next month). Tick a box when it's done. The posts, captions and drafts named here are in /mnt/project-files/ (paths at the end). Posting slots that are already scheduled in YouTube Studio or Meta Business Suite need nothing on the day except a look at the comments.",
+ "rules": [
+  "Every post says \"Free while we launch, £5.99 after.\" until Paddle is live, then the 90-day promise instead.",
+  "Never \"guaranteed\" or \"100% accepted\". Never name a competitor in site copy. Disclose \"my family makes Picproved\" in every community post.",
+  "AI label on every Short and Reel (the voice and the clips are AI-made).",
+  "Groups: ask the admin first; never the same post in two groups on one day; never a bot.",
+  "Open the official source the week you post a rule (facts-uk-indians.md has the links)."
+ ],
+ "daily": [
+  {
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "task": "Reply to every comment, message and review on YouTube, Facebook, Instagram and Play",
+   "minutes": 5
+  },
+  {
+   "days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "task": "Reddit: answer one OCI, VFS, passport or photo question on r/IndiansinUK, r/nri or r/AskUK (no link 9 times out of 10; stock replies in reddit.md §6)",
+   "minutes": 10
+  },
+  {
+   "days": [
+    2,
+    4
+   ],
+   "task": "One outreach email from press-and-partners.md (temple, society, adviser or shop), logged in outreach-log.md",
+   "minutes": 10
+  },
+  {
+   "days": [
+    1
+   ],
+   "task": "Read the Monday report email and note last week's orders, clicks and the 3 things to do",
+   "minutes": 10
+  },
+  {
+   "days": [
+    1
+   ],
+   "task": "Check Search Console for 2 minutes: any new query near page 1?",
+   "minutes": 5
+  }
+ ],
+ "weeks": [
+  {
+   "start": "2026-10-27",
+   "theme": "OCI before Christmas",
+   "must": "Reddit post 1 on r/IndiansinUK; 3 group admins asked; indexing requested for the 3 focus pages"
+  },
+  {
+   "start": "2026-11-02",
+   "theme": "Indian passport renewal: the 630×810 rule",
+   "must": "Quora answers 1 to 3; first temple and society emails"
+  },
+  {
+   "start": "2026-11-09",
+   "theme": "Baby born in the UK: two photos",
+   "must": "Reddit post 2; media pitch to Eastern Eye, Asian Voice and Garavi Gujarat; 5 page titles live"
+  },
+  {
+   "start": "2026-11-16",
+   "theme": "One family, three photos",
+   "must": "Quora 4 to 6; adviser and agent emails; 8 December Shorts rendered"
+  },
+  {
+   "start": "2026-11-23",
+   "theme": "Payments live: the 90-day promise",
+   "must": "December scheduled in one sitting (Sat 28 Nov); bios and pinned posts updated the day Paddle goes live"
+  },
+  {
+   "start": "2026-11-30",
+   "theme": "Will this photo pass? (rejection series)",
+   "must": "Reddit post 3 (newborn); Play test clock checked; Product Hunt day picked"
+  },
+  {
+   "start": "2026-12-07",
+   "theme": "Launch week: the app is public",
+   "must": "Product Hunt Tuesday 08:01 UK; 5 directories; Play link in every bio; friends email"
+  },
+  {
+   "start": "2026-12-14",
+   "theme": "Last OCI push before the holidays",
+   "must": "Reddit post 4 (family); WhatsApp group round 2; first Play reviews answered"
+  },
+  {
+   "start": "2026-12-21",
+   "theme": "Print at home over the holidays",
+   "must": "January scheduled (Sun 27 Dec); Pinterest pins from the 12 feed posts; rest"
+  },
+  {
+   "start": "2026-12-28",
+   "theme": "Renew before Easter and summer",
+   "must": "UK passport catch-all posts; Reddit post 2 refreshed; December numbers read"
+  },
+  {
+   "start": "2027-01-04",
+   "theme": "Passport renewal season",
+   "must": "Google Search ad test starts (£70, UK; stop if a sale costs over £4); Quora 7 and refreshed 1 to 3"
+  },
+  {
+   "start": "2027-01-11",
+   "theme": "Language test",
+   "must": "Hindi or Malayalam OCI video live after a native check; Hindi Play listing"
+  },
+  {
+   "start": "2027-01-18",
+   "theme": "What sold",
+   "must": "Ad test read; media follow-ups; orders counted by document and country"
+  },
+  {
+   "start": "2027-01-25",
+   "theme": "Decide",
+   "must": "End-January review: 30 orders from Indians in the UK or not; switch or stay; pick the next country tab"
+  }
+ ],
+ "dated": [
+  {
+   "date": "2026-10-27",
+   "task": "If not done on Sunday: schedule 26 Oct to 23 Nov in YouTube Studio and Meta Business Suite from calendar.md (AI label on every Short and Reel)",
+   "minutes": 90
+  },
+  {
+   "date": "2026-10-27",
+   "task": "Facebook Page: post and pin Post 1 (welcome) from facebook-posts.md",
+   "minutes": 5
+  },
+  {
+   "date": "2026-10-27",
+   "task": "Search Console: request indexing of /newborn-passport, /doc/uk-passport-digital and /living/indians-in-uk",
+   "minutes": 5
+  },
+  {
+   "date": "2026-10-28",
+   "task": "Reddit post 1 (OCI before Christmas) on r/IndiansinUK, from reddit.md. Read the sidebar rules first; leave the link out if they ban self-promotion",
+   "minutes": 15
+  },
+  {
+   "date": "2026-10-28",
+   "task": "Instagram bio: link picproved.com?utm_source=instagram, 'Free while we launch, £5.99 after' in the bio",
+   "minutes": 5
+  },
+  {
+   "date": "2026-10-29",
+   "task": "Message the admins of 3 WhatsApp or Facebook groups you're in (your town's Indian community, a parents' group, a Malayali/Tamil/Gujarati/Punjabi association) with the admin message in press-and-partners.md §1",
+   "minutes": 15
+  },
+  {
+   "date": "2026-10-30",
+   "task": "Quora: add 'Family business: Picproved' to your profile credentials; find the 3 questions for answers 1 to 3 in quora.md and follow them",
+   "minutes": 10
+  },
+  {
+   "date": "2026-10-31",
+   "task": "Post the group post (press-and-partners.md §1) in any group whose admin said yes. One group per day",
+   "minutes": 5
+  },
+  {
+   "date": "2026-11-01",
+   "task": "Sunday: check the Facebook question post (Post 5) went out; reply to every comment",
+   "minutes": 10
+  },
+  {
+   "date": "2026-11-02",
+   "task": "Send the coordinator the 5 page titles from last week's Search Console drafts if they aren't live yet (uk-passport-digital, uk-licence-online, uk-eta, /check, /pricing)",
+   "minutes": 5
+  },
+  {
+   "date": "2026-11-03",
+   "task": "Quora answer 1 (OCI photo from the UK)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-11-04",
+   "task": "Email 2 temples, gurdwaras or churches near you (press-and-partners.md §2)",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-05",
+   "task": "Quora answer 2 (Indian passport renewal in the UK)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-11-06",
+   "task": "Email 2 Indian student or professional societies (press-and-partners.md §3)",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-07",
+   "task": "Quora answer 3 (baby's first Indian passport in the UK)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-11-08",
+   "task": "Sunday: group post round 1 in a second group that said yes; note replies for next week's posts",
+   "minutes": 10
+  },
+  {
+   "date": "2026-11-09",
+   "task": "Paddle: check the website review status; if approved, run the Paddle live steps (paddle-live/audit.md) this week",
+   "minutes": 5
+  },
+  {
+   "date": "2026-11-10",
+   "task": "Reddit post 2 (Indian passport renewal, 630×810) on r/IndiansinUK",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-11",
+   "task": "Media: email the Eastern Eye, Asian Voice and Garavi Gujarat writers who covered travel or OCI recently (press-and-partners.md §5), one each, named",
+   "minutes": 30
+  },
+  {
+   "date": "2026-11-12",
+   "task": "Check the 5 retitled pages are live and request indexing for each",
+   "minutes": 10
+  },
+  {
+   "date": "2026-11-13",
+   "task": "Say yes or no to the UK passport photo cost guide page (Claude builds it; it names no shops)",
+   "minutes": 5
+  },
+  {
+   "date": "2026-11-14",
+   "task": "Saturday: 7-day follow-up to any temple or society email with no reply (one follow-up only)",
+   "minutes": 10
+  },
+  {
+   "date": "2026-11-15",
+   "task": "Sunday: Play closed test: count testers and days; chase friends to opt in if under 12",
+   "minutes": 10
+  },
+  {
+   "date": "2026-11-16",
+   "task": "Ask Claude to render the 8 December Shorts (posts-dec-jan.md §Shorts) with the Google voice, and listen to one for pronunciation",
+   "minutes": 10
+  },
+  {
+   "date": "2026-11-17",
+   "task": "Quora answer 4 (UK passport photo at home with a phone)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-11-18",
+   "task": "Email 2 OCI advisers, travel agents or solicitors serving the community (press-and-partners.md §4)",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-19",
+   "task": "Quora answer 5 (why was my passport photo rejected?)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-11-20",
+   "task": "Sign up for Qwoted or Featured.com and answer one reporter request a week from now on (press-and-partners.md §6)",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-21",
+   "task": "Quora answer 6 (passport photo app without a subscription)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-11-22",
+   "task": "Sunday: check the December Shorts and captions arrived; read them once",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-23",
+   "task": "Reddit post 4 draft check: r/nri rules on self-promotion",
+   "minutes": 5
+  },
+  {
+   "date": "2026-11-24",
+   "task": "Prepare the 'payments live' switch: the new bio lines and pinned-post edits in posts-dec-jan.md §Switch, ready to paste the day Paddle approves",
+   "minutes": 15
+  },
+  {
+   "date": "2026-11-26",
+   "task": "Thursday: Facebook Post 10 (Christmas flight booked? your photo checklist) from posts-dec-jan.md if not scheduled",
+   "minutes": 5
+  },
+  {
+   "date": "2026-11-28",
+   "task": "SATURDAY SITTING: schedule 24 Nov to 31 Dec in YouTube Studio (Mon/Wed/Fri 18:00) and Meta Business Suite (Tue/Thu/Sat 19:00, Sun 11:00) from the slots below and posts-dec-jan.md. AI label on everything",
+   "minutes": 90
+  },
+  {
+   "date": "2026-11-30",
+   "task": "Play: closed test 14 days with 12 testers done? Apply for production access in Play Console",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-01",
+   "task": "Reddit post 3 (baby's first Indian passport) on r/IndiansinUK or r/nri",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-02",
+   "task": "Pick the Product Hunt day (a Tuesday to Thursday after Play is public; 8 Dec if the app is live) and tell 5 friends the day before, no upvote asks",
+   "minutes": 10
+  },
+  {
+   "date": "2026-12-03",
+   "task": "Quora answer 7 (baby UK passport photo at home)",
+   "minutes": 20
+  },
+  {
+   "date": "2026-12-04",
+   "task": "WhatsApp community message 1 (posts-dec-jan.md §WhatsApp) to groups that said yes: 'Flying to India at Christmas? Check the photos now'",
+   "minutes": 10
+  },
+  {
+   "date": "2026-12-05",
+   "task": "Saturday: read the Play review and reply drafts from Monday's report; post the replies you agree with",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-07",
+   "task": "Launch kit day before: update directories.md text with the Play link; buy one credit yourself with a real card on the site and in the app",
+   "minutes": 30
+  },
+  {
+   "date": "2026-12-08",
+   "task": "PRODUCT HUNT at 08:01 UK (directories.md §Product Hunt): submit, post the maker comment, answer every comment today",
+   "minutes": 60
+  },
+  {
+   "date": "2026-12-09",
+   "task": "Submit AlternativeTo, SaaSHub and Uneed (directories.md)",
+   "minutes": 30
+  },
+  {
+   "date": "2026-12-10",
+   "task": "Submit Indie Hackers and BetaList; send the friends and family email from launch-kit.md",
+   "minutes": 30
+  },
+  {
+   "date": "2026-12-11",
+   "task": "Put the Play link in every bio and pinned post; post 'Picproved is on Google Play' (posts-dec-jan.md §Launch) on the Page and Instagram",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-12",
+   "task": "Saturday: answer every Product Hunt and Play comment from the week",
+   "minutes": 20
+  },
+  {
+   "date": "2026-12-15",
+   "task": "Reddit post 4 (one family, three photos) on r/nri",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-16",
+   "task": "WhatsApp community message 2 (last OCI appointments before the holidays)",
+   "minutes": 10
+  },
+  {
+   "date": "2026-12-17",
+   "task": "Group post round 2 (posts-dec-jan.md §Groups) in one group whose admin said yes",
+   "minutes": 10
+  },
+  {
+   "date": "2026-12-18",
+   "task": "Reply to every Play review so far (drafts come in the Monday report)",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-19",
+   "task": "Saturday: skim the week's YouTube Studio analytics: which hook held viewers past 3 seconds? Note the top 2 for January's scripts",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-22",
+   "task": "Pinterest: make a business account, pin the 12 feed posts with the captions from social-posts/README.md, each to picproved.com with utm_source=pinterest",
+   "minutes": 30
+  },
+  {
+   "date": "2026-12-27",
+   "task": "SUNDAY SITTING: schedule 1 to 31 Jan in YouTube Studio and Meta Business Suite from the slots below and posts-dec-jan.md §January",
+   "minutes": 90
+  },
+  {
+   "date": "2026-12-29",
+   "task": "Reddit post 2 refreshed (passport renewal before Easter and summer) on r/IndiansinUK; check the VFS links first",
+   "minutes": 15
+  },
+  {
+   "date": "2026-12-30",
+   "task": "Read December's numbers: orders by document and country (Paddle and Play), Search Console clicks by page, YouTube views by video. Write 5 lines in review-january.md",
+   "minutes": 20
+  },
+  {
+   "date": "2027-01-04",
+   "task": "Google Ads: one Search campaign, UK only, £70 budget, exact-match words from posts-dec-jan.md §Ads, landing page /doc/uk-passport-digital; conversion tracking on the thank-you page",
+   "minutes": 45
+  },
+  {
+   "date": "2027-01-05",
+   "task": "Quora answer 1 refreshed (edit the date and re-check the VFS checklist)",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-06",
+   "task": "WhatsApp community message 3 (new year: passport expiring before summer?)",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-07",
+   "task": "Quora answers 2 and 3 refreshed",
+   "minutes": 15
+  },
+  {
+   "date": "2027-01-08",
+   "task": "Ads check: pause any keyword with over £8 spent and no sale",
+   "minutes": 5
+  },
+  {
+   "date": "2027-01-11",
+   "task": "Hindi or Malayalam OCI video: ask a native speaker to listen to the script (posts-dec-jan.md §Language) before Claude renders it",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-12",
+   "task": "Play Console: add the Hindi store listing (text in posts-dec-jan.md §Play Hindi)",
+   "minutes": 20
+  },
+  {
+   "date": "2027-01-13",
+   "task": "Ads check: pause any keyword with over £8 spent and no sale",
+   "minutes": 5
+  },
+  {
+   "date": "2027-01-14",
+   "task": "Post the language-test video as a Short and Reel with the AI label; note its 3-day views against the English one",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-15",
+   "task": "Media follow-up: one email to each writer who didn't reply in November, with December's numbers if they're interesting",
+   "minutes": 20
+  },
+  {
+   "date": "2027-01-18",
+   "task": "Ad test read: cost per sale by keyword; stop the campaign if the average is over £4",
+   "minutes": 15
+  },
+  {
+   "date": "2027-01-19",
+   "task": "Count orders from Indians in the UK since 24 Oct (Monday report focus line); write the number in review-january.md",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-20",
+   "task": "Ask Claude for the end-January review doc: numbers by channel, country and document, and the switch-or-stay recommendation",
+   "minutes": 5
+  },
+  {
+   "date": "2027-01-22",
+   "task": "Reddit: r/IndiansinUK comment round on exam-season and renewal questions; no post this week",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-25",
+   "task": "Read the review doc; decide: stay on Indians in the UK, or move the main effort to the UK passport photo",
+   "minutes": 20
+  },
+  {
+   "date": "2027-01-26",
+   "task": "Pick the next country tab to switch on (US and Canada, UAE or Australia) or none; tell Claude which, and the February calendar follows",
+   "minutes": 10
+  },
+  {
+   "date": "2027-01-27",
+   "task": "Update app.json focus (the Monday report counts the new audience) with Claude",
+   "minutes": 5
+  },
+  {
+   "date": "2027-01-30",
+   "task": "SATURDAY SITTING: schedule February from the new calendar",
+   "minutes": 90
+  }
+ ],
+ "milestones": [
+  {
+   "id": "paddle-live",
+   "task": "THE DAY PADDLE GOES LIVE: buy one credit yourself; change every bio, pinned post and video description from 'Free while we launch, £5.99 after' to '£5.99 per person. Rejected? Tell us within 90 days. We redo it free and refund you.' (posts-dec-jan.md §Switch); post the uk-pp-price Short; tell the coordinator so the site copy changes"
+  },
+  {
+   "id": "play-public",
+   "task": "THE DAY THE APP IS PUBLIC ON PLAY: Play link in every bio and video description; the launch post (posts-dec-jan.md §Launch); directories within 3 days; Product Hunt the next Tuesday to Thursday"
+  },
+  {
+   "id": "first-review",
+   "task": "FIRST PLAY REVIEW OR COMMENT THAT MENTIONS A REJECTION: reply within a day, offer the free redo, and ask what the office said; it becomes next week's post"
+  }
+ ],
+ "calendar": [
+  {
+   "date": "2026-10-27",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Carousel, pin it",
+   "file": "01-phone-photos, 04-live-tips-hd, 03-background, 02-score, 06-print",
+   "caption": "social-posts/README.md Post A"
+  },
+  {
+   "date": "2026-10-28",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-in-passport.mp4",
+   "caption": "uk-in-passport.txt"
+  },
+  {
+   "date": "2026-10-29",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel (AI label)",
+   "file": "uk-in-apostille.mp4",
+   "caption": "instagram-captions.md #5"
+  },
+  {
+   "date": "2026-10-30",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-in-family.mp4",
+   "caption": "uk-in-family.txt"
+  },
+  {
+   "date": "2026-10-31",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Carousel",
+   "file": "poster-3-three-photos, poster-1-oci, poster-5-indian-passport",
+   "caption": "social-posts/README.md Post B"
+  },
+  {
+   "date": "2026-11-01",
+   "time": "11:00",
+   "where": "FB only",
+   "what": "Question post",
+   "file": "none",
+   "caption": "facebook-posts.md Post 5"
+  },
+  {
+   "date": "2026-11-02",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-in-newborn.mp4",
+   "caption": "uk-in-newborn.txt"
+  },
+  {
+   "date": "2026-11-03",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel (AI label)",
+   "file": "uk-in-passport.mp4",
+   "caption": "instagram-captions.md #2"
+  },
+  {
+   "date": "2026-11-04",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "pass-dark.mp4",
+   "caption": "pass-dark.txt"
+  },
+  {
+   "date": "2026-11-05",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel (AI label)",
+   "file": "uk-in-oci.mp4",
+   "caption": "instagram-captions.md #1"
+  },
+  {
+   "date": "2026-11-06",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-in-apostille.mp4",
+   "caption": "uk-in-apostille.txt"
+  },
+  {
+   "date": "2026-11-07",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel (AI label)",
+   "file": "uk-in-family.mp4",
+   "caption": "instagram-captions.md #3"
+  },
+  {
+   "date": "2026-11-08",
+   "time": "11:00",
+   "where": "FB only",
+   "what": "Picture",
+   "file": "05-documents.jpg",
+   "caption": "facebook-posts.md Post 7 (apostille)"
+  },
+  {
+   "date": "2026-11-09",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-pp-rejected.mp4",
+   "caption": "uk-pp-rejected.txt"
+  },
+  {
+   "date": "2026-11-10",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Single photo",
+   "file": "poster-4-baby",
+   "caption": "social-posts/README.md Post C"
+  },
+  {
+   "date": "2026-11-11",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "pass-glasses.mp4",
+   "caption": "pass-glasses.txt"
+  },
+  {
+   "date": "2026-11-12",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel (AI label)",
+   "file": "uk-pp-print-sheet.mp4",
+   "caption": "instagram-captions.md #4"
+  },
+  {
+   "date": "2026-11-13",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-pp-home.mp4",
+   "caption": "uk-pp-home.txt"
+  },
+  {
+   "date": "2026-11-14",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Single photo",
+   "file": "05-documents",
+   "caption": "social-posts/README.md Post D"
+  },
+  {
+   "date": "2026-11-15",
+   "time": "11:00",
+   "where": "FB only",
+   "what": "Picture",
+   "file": "02-checks.jpg",
+   "caption": "facebook-posts.md Post 3 (Indian passport)"
+  },
+  {
+   "date": "2026-11-16",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "pass-smile.mp4",
+   "caption": "pass-smile.txt"
+  },
+  {
+   "date": "2026-11-17",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Single photo",
+   "file": "poster-2-uk-online",
+   "caption": "social-posts/README.md Post G"
+  },
+  {
+   "date": "2026-11-18",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "uk-pp-print-sheet.mp4",
+   "caption": "uk-pp-print-sheet.txt"
+  },
+  {
+   "date": "2026-11-19",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Single photo",
+   "file": "poster-6-free",
+   "caption": "social-posts/README.md Post E"
+  },
+  {
+   "date": "2026-11-20",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "pass-blur.mp4",
+   "caption": "pass-blur.txt"
+  },
+  {
+   "date": "2026-11-21",
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel (AI label)",
+   "file": "runway/oci-poster-reel.mp4",
+   "caption": "social-posts/README.md Post F"
+  },
+  {
+   "date": "2026-11-22",
+   "time": "11:00",
+   "where": "FB only",
+   "what": "Picture",
+   "file": "06-print.jpg",
+   "caption": "facebook-posts.md Post 9 (print your own)"
+  },
+  {
+   "date": "2026-11-23",
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "file": "pass-tilt.mp4",
+   "caption": "pass-tilt.txt"
+  }
+ ],
+ "slots": [
+  {
+   "id": "youtube",
+   "from": "2026-11-24",
+   "days": [
+    1,
+    3,
+    5
+   ],
+   "time": "18:00",
+   "where": "YouTube",
+   "what": "Short",
+   "queue": [
+    {
+     "file": "dec-01-white-shirt.mp4",
+     "caption": "posts-dec-jan.md Shorts #1"
+    },
+    {
+     "file": "dec-02-twelve-tries.mp4",
+     "caption": "posts-dec-jan.md Shorts #2"
+    },
+    {
+     "file": "dec-03-eyes-closed-baby.mp4",
+     "caption": "posts-dec-jan.md Shorts #3"
+    },
+    {
+     "file": "dec-04-christmas-checklist.mp4",
+     "caption": "posts-dec-jan.md Shorts #4"
+    },
+    {
+     "file": "dec-05-booth-vs-phone-cost.mp4",
+     "caption": "posts-dec-jan.md Shorts #5"
+    },
+    {
+     "file": "dec-06-spouse-oci.mp4",
+     "caption": "posts-dec-jan.md Shorts #6"
+    },
+    {
+     "file": "dec-07-shadow-behind.mp4",
+     "caption": "posts-dec-jan.md Shorts #7"
+    },
+    {
+     "file": "dec-08-surrender-certificate.mp4",
+     "caption": "posts-dec-jan.md Shorts #8"
+    },
+    {
+     "file": "uk-in-oci.mp4 (repost, new title: The OCI mistake, again)",
+     "caption": "uk-in-oci.txt"
+    },
+    {
+     "file": "uk-pp-rejected.mp4 (repost)",
+     "caption": "uk-pp-rejected.txt"
+    },
+    {
+     "file": "jan-01-expires-before-summer.mp4",
+     "caption": "posts-dec-jan.md Shorts #9"
+    },
+    {
+     "file": "jan-02-headwear.mp4",
+     "caption": "posts-dec-jan.md Shorts #10"
+    },
+    {
+     "file": "jan-03-hair-over-eyes.mp4",
+     "caption": "posts-dec-jan.md Shorts #11"
+    },
+    {
+     "file": "jan-04-child-passport.mp4",
+     "caption": "posts-dec-jan.md Shorts #12"
+    },
+    {
+     "file": "jan-05-oci-hindi.mp4 (language test, native check first)",
+     "caption": "posts-dec-jan.md Shorts #13"
+    },
+    {
+     "file": "jan-06-print-kiosk.mp4",
+     "caption": "posts-dec-jan.md Shorts #14"
+    },
+    {
+     "file": "uk-in-passport.mp4 (repost)",
+     "caption": "uk-in-passport.txt"
+    },
+    {
+     "file": "uk-in-newborn.mp4 (repost)",
+     "caption": "uk-in-newborn.txt"
+    },
+    {
+     "file": "pass-dark.mp4 (repost)",
+     "caption": "pass-dark.txt"
+    },
+    {
+     "file": "uk-pp-home.mp4 (repost)",
+     "caption": "uk-pp-home.txt"
+    }
+   ]
+  },
+  {
+   "id": "meta",
+   "from": "2026-11-24",
+   "days": [
+    2,
+    4,
+    6
+   ],
+   "time": "19:00",
+   "where": "IG + FB",
+   "what": "Reel or post",
+   "queue": [
+    {
+     "file": "poster-1-oci (single)",
+     "caption": "posts-dec-jan.md Feed #1 Christmas checklist"
+    },
+    {
+     "file": "dec-01-white-shirt.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #2"
+    },
+    {
+     "file": "01-phone-photos + 02-score (carousel)",
+     "caption": "posts-dec-jan.md Feed #3 (switch version once Paddle is live)"
+    },
+    {
+     "file": "dec-04-christmas-checklist.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #4"
+    },
+    {
+     "file": "poster-5-indian-passport (single)",
+     "caption": "posts-dec-jan.md Feed #5"
+    },
+    {
+     "file": "dec-03-eyes-closed-baby.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #6"
+    },
+    {
+     "file": "launch image (Play badge over 01-phone-photos)",
+     "caption": "posts-dec-jan.md §Launch"
+    },
+    {
+     "file": "dec-06-spouse-oci.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #7"
+    },
+    {
+     "file": "poster-3-three-photos (single)",
+     "caption": "posts-dec-jan.md Feed #8"
+    },
+    {
+     "file": "dec-02-twelve-tries.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #9"
+    },
+    {
+     "file": "06-print (single)",
+     "caption": "posts-dec-jan.md Feed #10 holidays print"
+    },
+    {
+     "file": "dec-07-shadow-behind.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #11"
+    },
+    {
+     "file": "poster-2-uk-online (single)",
+     "caption": "posts-dec-jan.md Feed #12 new year renewal"
+    },
+    {
+     "file": "jan-01-expires-before-summer.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #13"
+    },
+    {
+     "file": "04-live-tips-hd (single)",
+     "caption": "posts-dec-jan.md Feed #14"
+    },
+    {
+     "file": "jan-02-headwear.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #15"
+    },
+    {
+     "file": "poster-4-baby (single)",
+     "caption": "posts-dec-jan.md Feed #16"
+    },
+    {
+     "file": "jan-04-child-passport.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #17"
+    },
+    {
+     "file": "jan-05-oci-hindi.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #18"
+    },
+    {
+     "file": "03-background (single)",
+     "caption": "posts-dec-jan.md Feed #19"
+    },
+    {
+     "file": "jan-06-print-kiosk.mp4 (Reel, AI label)",
+     "caption": "posts-dec-jan.md Feed #20"
+    },
+    {
+     "file": "05-documents (single)",
+     "caption": "posts-dec-jan.md Feed #21"
+    }
+   ]
+  },
+  {
+   "id": "facebook-sunday",
+   "from": "2026-11-24",
+   "days": [
+    0
+   ],
+   "time": "11:00",
+   "where": "FB only",
+   "what": "Text or picture post",
+   "queue": [
+    {
+     "file": "none (text post)",
+     "caption": "posts-dec-jan.md Sunday #1 question: who's flying to India in December?"
+    },
+    {
+     "file": "02-checks.jpg",
+     "caption": "posts-dec-jan.md Sunday #2 the 12 upload tries"
+    },
+    {
+     "file": "none (text post)",
+     "caption": "posts-dec-jan.md Sunday #3 question: which VFS centre?"
+    },
+    {
+     "file": "05-documents.jpg",
+     "caption": "posts-dec-jan.md Sunday #4 e-apostille"
+    },
+    {
+     "file": "none (text post)",
+     "caption": "posts-dec-jan.md Sunday #5 holidays thank-you"
+    },
+    {
+     "file": "07-price.jpg",
+     "caption": "posts-dec-jan.md Sunday #6 new year renewal"
+    },
+    {
+     "file": "none (text post)",
+     "caption": "posts-dec-jan.md Sunday #7 question: passport expiring in 2027?"
+    },
+    {
+     "file": "04-camera.jpg",
+     "caption": "posts-dec-jan.md Sunday #8 daylight tip"
+    },
+    {
+     "file": "none (text post)",
+     "caption": "posts-dec-jan.md Sunday #9 question: rejected photo stories"
+    },
+    {
+     "file": "01-hero.jpg",
+     "caption": "posts-dec-jan.md Sunday #10 three months in: thank you"
+    }
+   ]
+  }
+ ],
+ "files": [
+  "This list, the outreach log and the January review sheet: /mnt/project-files/picproved/marketing/ (todo-to-january.md, outreach-log.md, review-january.md)",
+  "Calendar to 23 Nov: /mnt/project-files/picproved/social-posts/calendar.md",
+  "Feed posts and captions A to G: /mnt/project-files/picproved/social-posts/README.md",
+  "Shorts (mp4 + .txt) and Reel captions: /mnt/project-files/picproved/videos/",
+  "December and January posts, Shorts scripts, Reddit, Quora, WhatsApp, launch and switch texts: /mnt/project-files/marketing-autopilot/picproved/outreach/posts-dec-jan.md",
+  "Reddit, Quora, Facebook, press and directory drafts: /mnt/project-files/marketing-autopilot/picproved/outreach/",
+  "The checked facts and official links: /mnt/project-files/marketing-autopilot/picproved/outreach/facts-uk-indians.md",
+  "Paddle live steps: /mnt/project-files/picproved/paddle-live/audit.md",
+  "The plan: https://claude.ai/artifact/1HUdiGKX2QyCjZPkNKFveg"
+ ]
+}

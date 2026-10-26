@@ -13,6 +13,7 @@ import { pick } from "../engines/search-opportunities.mjs";
 import { uncovered } from "../engines/search-ideas.mjs";
 import { draft } from "../engines/reply-drafts.mjs";
 import { compose, focusLine } from "../engines/weekly-report.mjs";
+import { build } from "../engines/todo.mjs";
 
 const item = (id, extra = {}) => ({ id, title: `Item ${id}`, summary: "Facts.", url: `https://x.test/doc/${id}`, country: "GB", countryName: "United Kingdom",
   facts: ["35×45 mm", "White background"], questions: [], sources: [{ label: "gov", url: "https://gov.test/a" }], tags: ["visa"], ...extra });
@@ -130,4 +131,23 @@ test("a voiced scene grows to fit its line, and every Picproved scene has one", 
   assert.equal(fitLine(4, 4.1), 5);
   const { videos } = await import("../apps/picproved/videos.mjs");
   for (const v of videos) assert.ok(v.scenes.every(s => s.say), v.id);
+});
+
+test("todo: calendar entries win, queues cycle, weeks and daily tasks land", () => {
+  const plan = {
+    title: "T", intro: "I", from: "2026-10-27", to: "2026-11-05",
+    daily: [{ days: [1, 2, 3, 4, 5], task: "Reply", minutes: 5 }],
+    weeks: [{ start: "2026-10-27", theme: "A", must: "a" }, { start: "2026-11-02", theme: "B", must: "b" }],
+    dated: [{ date: "2026-10-28", task: "Post on Reddit", minutes: 15 }],
+    calendar: [{ date: "2026-10-28", time: "18:00", where: "YouTube", what: "Short", file: "fixed.mp4", caption: "fixed.txt" }],
+    slots: [{ id: "yt", from: "2026-10-27", days: [1, 3, 5], time: "18:00", where: "YouTube", what: "Short", queue: [{ file: "q1.mp4", caption: "c1" }, { file: "q2.mp4", caption: "c2" }] }],
+  };
+  const { text, days, posts } = build(plan);
+  assert.equal(days, 10);
+  assert.ok(text.includes("## Week 1: A") && text.includes("## Week 2: B"));
+  assert.ok(text.includes("fixed.mp4") && !text.includes("Wed 28 Oct (20 min)\n\n- [ ] 18:00 YouTube: Short, q1"));
+  assert.ok(text.includes("q1.mp4") && text.includes("q2.mp4"));
+  assert.equal(posts, 4); // Wed 28 fixed, then Fri 30, Mon 2 and Wed 4 from the queue; nothing at weekends
+  assert.ok(text.includes("- [ ] Reply (5 min)"));
+  assert.ok(text.includes("Sat 31 Oct") && text.includes("Nothing. Rest."));
 });

@@ -4,7 +4,7 @@
 // without --live.
 import { loadApp, listApps } from "../core/app.mjs";
 
-const ENGINES = ["check", "seasons", "post-bank", "publish", "rule-watch", "launch-kit", "llms-txt", "indexnow", "search-ideas", "search-opportunities", "reply-drafts", "weekly-report", "video"];
+const ENGINES = ["check", "seasons", "post-bank", "publish", "rule-watch", "launch-kit", "llms-txt", "indexnow", "search-ideas", "search-opportunities", "reply-drafts", "weekly-report", "video", "todo"];
 const args = process.argv.slice(2), engine = args[0];
 const flag = n => args.includes("--" + n);
 const opt = n => { const i = args.indexOf("--" + n); return i >= 0 ? args[i + 1] : undefined; };
