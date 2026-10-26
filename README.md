@@ -21,7 +21,8 @@ Needs Node 22 or later and no packages. The apps' repositories sit next to this 
 npm test                                              # unit tests, plus every app's setup check
 node bin/autopilot.mjs check --all                    # is each app's setup healthy?
 node bin/autopilot.mjs post-bank --app picproved      # 90 days of posts per channel into out/picproved/posts/
-node bin/autopilot.mjs rule-watch --app picproved     # which official source pages changed since last week
+node bin/autopilot.mjs rule-watch --app picproved     # which official source pages changed since last week, with proposed fixes
+node bin/autopilot.mjs blocked-checklist --app picproved   # the pages the cloud can't open, as a checklist for your PC
 node bin/autopilot.mjs weekly-report --app picproved --live   # write and email the Monday report
 ```
 
@@ -36,7 +37,8 @@ need in `state/<app>/` (committed, so next week can compare).
 | `seasons` | The next 12 months of seasonal peaks and which items they bring forward | Nothing | Monthly |
 | `post-bank` | A post per item and channel, season first, each with its own tracking link; CSV per channel for bulk schedulers | Nothing | Monthly |
 | `publish` | Posts today's queued posts on channels marked `auto` that have an API (Bluesky now; YouTube once the video factory exists) | `BLUESKY_HANDLE`, `BLUESKY_APP_PASSWORD` | Daily |
-| `rule-watch` | Opens every cited source page and lists the sentences that changed | Open internet | Weekly |
+| `rule-watch` | Opens every cited source page (PDFs too, with `pdftotext`) and lists the sentences that changed. When a page's numbers change (size, pixels, head, background, file size, how recent) and match a value the app uses, it writes the fix as a patch with a plain-English summary in `state/<app>/rule-proposals/`, on a `rules/<date>-<id>` branch that `--push` pushes. Never merges, never bumps a version | Open internet; push access to the app's repository for `--push` | Weekly |
+| `blocked-checklist` | The official pages the cloud can't open, each with the values the app uses, as a checklist to open on your own computer (`out/<app>/blocked-checklist.html`); the first weekly report of each month emails it | Nothing | Monthly |
 | `launch-kit` | Every launch-day text: hour-by-hour plan, launch post, friends email, directory entries, press note | Nothing | Once, before launch |
 | `llms-txt` | `llms.txt` for AI assistants (ChatGPT, Perplexity, Gemini) to quote and link the site | Nothing | On each site publish |
 | `indexnow` | Sends new and changed pages to Bing, Yandex, Seznam and Naver | `INDEXNOW_KEY` and `<key>.txt` on the site | On each site publish |
@@ -47,6 +49,19 @@ need in `state/<app>/` (committed, so next week can compare).
 | `weekly-report` | Sales by country, the focus count, website visits, Google clicks, Play reviews, season, and the 3 things to do this week | `PADDLE_API_KEY`, `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` (Web Analytics read), `GOOGLE_SERVICE_ACCOUNT`, `BREVO_API_KEY`, `MAIL_FROM`, `REPORT_EMAIL` | Mondays |
 
 Every key is optional: an engine whose key is missing says "not switched on" and carries on.
+
+## When an official rule changes
+
+1. Monday's `rule-watch` finds the page changed, reads its numbers before and after (`core/rule-facts.mjs`) and matches
+   them to every item that cites the page (the adapter's `ruleTargets`). A value the app uses that went away and has
+   exactly one replacement becomes an edit (the adapter's `applyRule`: the field, the same number in the notes, and
+   `checked: "<date>"`).
+2. The edit is committed on `rules/<date>-<id>` in a throwaway worktree of the app's repository, and saved as
+   `state/<app>/rule-proposals/<date>-<id>.patch`, whose message holds the summary and the page's changed sentences.
+3. The weekly report lists it first under "This week", with the summary. Wording-only changes, PDFs it can't read and
+   numbers it can't match are listed as pages to read, with no patch.
+4. To take it: say go, and a thread applies it in the app's repository (`git am <patch>` or the pushed branch), runs the
+   tests and hands it to the next release. Nothing ships without that.
 
 ## Where it runs
 

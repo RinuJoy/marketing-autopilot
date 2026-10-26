@@ -4,7 +4,8 @@ import { paddleSales, searchConsole, playReviews, webVisits } from "../core/sour
 import { inSeason } from "./seasons.mjs";
 import { pick } from "./search-opportunities.mjs";
 import { send } from "../core/mail.mjs";
-import { writeText, outPath, today } from "../core/util.mjs";
+import { writeText, outPath, statePath, readJson, today } from "../core/util.mjs";
+import { blocked, html as checklistHtml } from "./blocked-checklist.mjs";
 
 const money = m => Object.entries(m).map(([c, v]) => `${c} ${v.toFixed(2)}`).join(" + ");
 
@@ -17,6 +18,8 @@ export async function gather(app, { env = process.env, fetchers = {} } = {}) {
   await tryIt("webVisits", () => f.webVisits(app.config, { env }));
   await tryIt("searchConsole", () => f.searchConsole(app.config, { dimension: "page", env }));
   await tryIt("play", () => f.play(app.config, { env }));
+  const rules = await readJson(statePath(app.name, "rule-proposals.json"), null);
+  if (rules) data.rules = rules;
   const focus = app.config.focus;
   if (focus && data.paddle) await tryIt("focus", () => f.paddle(app.config, { env, since: focus.from }));
   return { data, off };
@@ -62,6 +65,13 @@ export function compose(app, items, { data, off }, date = new Date()) {
     s.push(f.text);
     if (f.due) todo.unshift(`Decide the focus: ${f.n} of ${app.config.focus.target} ${app.config.focus.name} orders.`);
   }
+  const rules = data.rules, fresh = rules && (date - new Date(rules.date)) / 864e5 < 7;
+  if (fresh && (rules.proposals.length || rules.notes.length)) {
+    const p = rules.proposals.map(x => `- ${x.label}: ${x.ids.join(", ")}. ${x.branch ? `Branch ${x.branch} in the app's repository.` : x.patch ? `Patch ${x.patch} in marketing-autopilot.` : `No patch (${x.error}).`}\n  ${x.summary.split("\n").filter(l => /^- /.test(l)).slice(0, 6).join("\n  ")}`);
+    const n = rules.notes.map(x => `- ${x.label} (${x.url}): ${x.why}`);
+    s.push(`## Official rule changes\n\n` + [p.length ? `Proposed fixes (not merged; say "go" to fold them into the next release):\n\n${p.join("\n")}` : "", n.length ? `To read by hand:\n\n${n.join("\n")}` : ""].filter(Boolean).join("\n\n"));
+    if (rules.proposals.length) todo.unshift(`Check ${rules.proposals.length} proposed rule fix${rules.proposals.length === 1 ? "" : "es"} (${rules.proposals.flatMap(x => x.ids).slice(0, 4).join(", ")}) and say go.`);
+  }
   s.push(`## Season\n\nThis month: ${now.active.join("; ") || "nothing special"}.\nNext month: ${soon.active.join("; ") || "nothing special"}.`);
   if (soon.items.size) todo.push(`Get next month's ${soon.items.size} in-season items ready: ${[...soon.items.keys()].slice(0, 5).join(", ")}.`);
   if (off.length) s.push(`## Not switched on yet\n\n` + off.map(x => "- " + x).join("\n"));
@@ -69,13 +79,26 @@ export function compose(app, items, { data, off }, date = new Date()) {
   return s.join("\n\n");
 }
 
+// The first report of each month carries the checklist of official pages the cloud can't open.
+export const checklistDue = date => date.getUTCDate() <= 7;
+
 export async function run(app, { env = process.env, live = false, fetchers, date = new Date() } = {}) {
-  const text = compose(app, await app.items(), await gather(app, { env, fetchers }), date);
+  let text = compose(app, await app.items(), await gather(app, { env, fetchers }), date);
+  const attachments = [];
+  if (checklistDue(date)) {
+    const pages = await blocked(app);
+    if (pages.length) {
+      const page = checklistHtml(app, pages, today(date));
+      await writeText(outPath(app.name, "blocked-checklist.html"), page);
+      attachments.push({ name: `${app.name}-pages-to-check-${today(date)}.html`, content: page });
+      text += `\n\n## Pages to check by hand\n\n${pages.length} official pages block the cloud robot. The attached checklist lists each with the values the app uses: open it on your computer, tick Same or Changed, and paste the answers to Claude.`;
+    }
+  }
   const file = await writeText(outPath(app.name, `report-${today(date)}.md`), text + "\n");
   let mail = { sent: false, why: "dry run" };
   if (live) {
     const to = String(app.config.report?.to || "").replace(/^env:(.*)$/, (_, k) => env[k] || "");
-    mail = await send({ to, subject: `${app.config.name} weekly report`, text, env });
+    mail = await send({ to, subject: `${app.config.name} weekly report`, text, attachments, env });
   }
   return { summary: `report written${mail.sent ? " and emailed" : ` (not emailed: ${mail.why})`}`, text, files: [file], problems: [] };
 }

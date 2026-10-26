@@ -27,3 +27,42 @@ export async function items({ config, src }) {
     };
   });
 }
+
+// For rule-watch: every document's current values, by the official page it cites, so a changed page can be matched
+// to the documents that use it. head is a share of the photo height; kb is [min, max].
+export const ruleFile = "js/presets.js";
+export async function ruleTargets({ src }) {
+  const { PRESETS, SIG_PRESETS, BG } = await import(pathToFileURL(join(src, ruleFile)).href);
+  const targets = [...PRESETS, ...SIG_PRESETS].filter(p => p.src?.[1]).map(p => ({
+    id: p.id, url: p.src[1], label: p.src[0], file: ruleFile, doc: `${p.country} ${p.doc}`,
+    mm: p.mm || null, px: p.px || null, head: p.head || null, bg: p.bg || null, kb: p.kb || null, notes: p.notes || [], check: p.check || null,
+  }));
+  return { targets, bgKeys: Object.keys(BG) };
+}
+
+// Edits one document's line in js/presets.js: the changed fields, the same numbers in its notes, and checked: "<date>".
+// Each document sits on one line, so the edit never reaches another document.
+export function applyRule(source, { id, fields = {}, swap = [] }, date) {
+  const lines = source.split("\n"), i = lines.findIndex(l => l.includes(`{ id: "${id}"`));
+  if (i < 0) throw new Error(`${id} not found in ${ruleFile}`);
+  let line = lines[i];
+  const list = v => `[${v.map(x => typeof x === "string" ? JSON.stringify(x) : x).join(", ")}]`;
+  const set = (key, value) => {
+    const re = new RegExp(`\\b${key}: (?:r\\([^)]*\\)|\\[[^\\]]*\\]|null)`);
+    if (!re.test(line)) throw new Error(`${id} has no ${key} to change`);
+    line = line.replace(re, `${key}: ${value}`);
+  };
+  for (const [k, v] of Object.entries(fields)) {
+    if (k === "head") set("head", v.mm ? `r(${v.mm[0]}, ${v.mm[1]}, ${v.of})` : list(v.share.map(x => x.toFixed(2))).replace(/"/g, ""));
+    else set(k, list(v));
+  }
+  const notes = line.match(/notes: \[.*?\](?=, [a-zA-Z]+:| \})/);
+  if (notes) {
+    let n = notes[0];
+    for (const [o, w] of swap) n = n.split(o).join(w);
+    line = line.replace(notes[0], n);
+  }
+  line = /\bchecked: "/.test(line) ? line.replace(/checked: "[^"]*"/, `checked: "${date}"`) : line.replace(`{ id: "${id}", `, `{ id: "${id}", checked: "${date}", `);
+  lines[i] = line;
+  return lines.join("\n");
+}
