@@ -131,3 +131,14 @@ test("a voiced scene grows to fit its line, and every Picproved scene has one", 
   const { videos } = await import("../apps/picproved/videos.mjs");
   for (const v of videos) assert.ok(v.scenes.every(s => s.say), v.id);
 });
+
+test("an app's checkout is found when its folder name differs only in case", async () => {
+  const { mkdtempSync, mkdirSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join: j } = await import("node:path");
+  const { sourceDir } = await import("../core/app.mjs");
+  const base = mkdtempSync(j(tmpdir(), "src-"));
+  mkdirSync(j(base, "Picproved"));
+  const got = sourceDir({ id: "picproved", source: { path: j(base, "picproved") } }, {});
+  assert.equal(got, j(base, "Picproved"));
+});
