@@ -16,7 +16,8 @@ voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
 pronounce: JPEG=jay peg; ICAO=I K O
 ---
 show: title
-clip: stock-upload-frustrated
+clip: stock-laptop-in
+clipFrom: 8
 text: Indian passport photo won't upload?
 sub: Renewing from the UK
 say: Renewing your Indian passport from the UK, and the photo won't upload?
