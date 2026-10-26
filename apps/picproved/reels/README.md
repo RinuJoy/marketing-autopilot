@@ -16,6 +16,7 @@ folder. Everything on screen is drawn as code (no screen recording, no video AI)
    ```
 
    - `text` is the big words on screen, `sub` an optional smaller line, `say` the voiceover (also the captions).
+   - `clip: clip-1-airport` plays a film clip (an .mp4 in the `--clips` folder, such as a Runway clip) full screen behind the scene; `clipFrom: 2` starts it 2 seconds in. Picproved's clips are in `picproved/videos/clips/` in the project files.
    - `show` is one of:
      - `title` (the hook, big words only)
      - `photo face=<n> bg=cream|grey|light|white size=35x45mm [from=35x45mm] [mark=tick|cross] [on=<word>] [label="..."] [dims=off]`:

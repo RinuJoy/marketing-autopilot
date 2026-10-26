@@ -15,11 +15,13 @@ voice.google: en-GB-Chirp3-HD-Charon
 voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
 ---
 show: title
+clip: clip-2-passport-hands
 text: Renewing your UK passport online?
 sub: You don't need a photo code
 say: Renewing your UK passport online? You don't need a photo code.
 ---
 show: strike text="PHOTO CODE" stamp="Optional" on=booths
+clip: clip-4-printing
 text: Codes come with booth photos
 say: Codes come from booths and shops. You can use your own phone instead.
 ---

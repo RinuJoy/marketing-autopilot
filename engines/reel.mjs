@@ -7,6 +7,7 @@
 //   text: the big words on screen          sub: a smaller line under them
 //   show: what is drawn (see VISUALS)      say: the line read aloud, also shown as captions word by word
 //   secs: the least time the scene stays (optional)
+//   clip: a film clip (<name>.mp4 in the --clips folder) played full screen behind the words; clipFrom: seconds in
 // Scenes are timed to the voiceover: each lasts as long as its line takes to say, and list items, ticks and stamps land
 // on the word they belong to. Without --voice the reel is silent and timed at reading pace, captions included.
 // --voice <command> reads each line with a text-to-speech command (`<command> <out.wav> <voice> <text>`; .mjs and .py
@@ -18,7 +19,7 @@
 import { createRequire } from "node:module";
 import { spawn, execFileSync } from "node:child_process";
 import { readFile, readdir, mkdir, writeFile } from "node:fs/promises";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, mkdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { basename, join } from "node:path";
 import { ffmpegArgs } from "./video.mjs";
@@ -70,9 +71,9 @@ export function parseReel(text, id) {
   reel.description = reel.description.join("\n").trim();
   for (const b of blocks) {
     const s = {};
-    for (const line of b.split("\n")) { const m = line.match(/^(text|sub|say|show|secs):\s?(.*)$/); if (m) s[m[1]] = m[2].trim(); }
+    for (const line of b.split("\n")) { const m = line.match(/^(text|sub|say|show|secs|clip|clipFrom):\s?(.*)$/); if (m) s[m[1]] = m[2].trim(); }
     if (!Object.keys(s).length) continue;
-    reel.scenes.push({ ...s, show: parseShow(s.show), secs: s.secs ? Number(s.secs) : 0 });
+    reel.scenes.push({ ...s, show: parseShow(s.show), secs: s.secs ? Number(s.secs) : 0, clipFrom: s.clipFrom ? Number(s.clipFrom) : 0 });
   }
   return reel;
 }
@@ -193,8 +194,10 @@ function sceneHTML(s, i, assets, site) {
   const sub = s.sub ? `<p class="sub" data-fx="up" data-at="0.45">${esc(s.sub)}</p>` : "";
   if (s.end) return `<section class="scene end" id="s${i}"><div class="logo" data-fx="pop" data-at="0.05">${assets.logo}</div>
     <h1 class="site" data-fx="up" data-at="0.25">${esc(site)}</h1>${sub}${assets.qr ? `<div class="qr" data-fx="pop" data-at="0.6"><div>${assets.qr}</div><span>Scan to open</span></div>` : ""}</section>`;
-  if (s.show.type === "title") return `<section class="scene hook" id="s${i}"><div class="hookbox">${head}${sub}</div></section>`;
-  return `<section class="scene" id="s${i}"><header class="cap">${head}${sub}</header><div class="vis">${visual(s, rel, assets)}</div></section>`;
+  // A scene with a film clip plays it full screen behind the words, darkened at the top and bottom so they read.
+  const film = s.frames ? `<div class="film"><img class="frame" alt=""></div>` : "", cls = s.frames ? " has-clip" : "";
+  if (s.show.type === "title") return `<section class="scene hook${cls}" id="s${i}">${film}<div class="hookbox">${head}${sub}</div></section>`;
+  return `<section class="scene${cls}" id="s${i}">${film}<header class="cap">${head}${sub}</header><div class="vis">${visual(s, rel, assets)}</div></section>`;
 }
 
 export function stageHTML(scenes, { theme = "navy", assets, site }) {
@@ -252,6 +255,13 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
   .end .site { margin-top: 44px; font-size: 84px; }
   .qr { margin-top: 50px; width: 300px; padding: 18px 18px 10px; background: #fff; border-radius: 28px; }
   .qr div { width: 264px; height: 264px; } .qr span { display: block; color: #0b3a26; font-size: 30px; font-weight: 700; }
+  .film { position: absolute; top: 0; bottom: 0; left: -90px; right: -90px; overflow: hidden; background: #000; }
+  .film .frame { width: 100%; height: 100%; object-fit: cover; }
+  .film::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,12,22,.72) 0%, rgba(5,12,22,.25) 34%, rgba(5,12,22,0) 50%, rgba(5,12,22,.2) 62%, rgba(5,12,22,.78) 100%); }
+  .has-clip h1, .has-clip .sub { text-shadow: 0 4px 26px rgba(0,0,0,.55); }
+  .has-clip .sub { padding: 10px 28px; border-radius: 999px; background: rgba(5,12,22,.62); text-shadow: none; }
+  .has-clip .hookbox { top: 170px; height: 560px; }
+  .brandline, .bar { z-index: 50; } .captions { z-index: 50; }
   .captions { position: absolute; left: 80px; right: 80px; top: 1340px; height: 220px; display: flex; align-items: center; justify-content: center; text-align: center; }
   .chunk { position: absolute; opacity: 0; font-size: 64px; font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; text-wrap: balance; text-shadow: 0 4px 18px rgba(0,0,0,.45); }
   .chunk i { font-style: normal; opacity: .55; } .chunk i.on { opacity: 1; } .chunk i.now { color: ${th.accent}; }
@@ -261,7 +271,7 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
   ${scenes.map((s, i) => sceneHTML(s, i, assets, site)).join("")}
   <div class="captions">${caps.map((c, i) => `<div class="chunk" id="c${i}">${c.words.map(w => `<i>${esc(w.w)}</i>`).join(" ")}</div>`).join("")}</div>
   <script>
-  const S = ${JSON.stringify(scenes.map(s => ({ at: s.at, secs: s.secs })))}, C = ${JSON.stringify(caps.map(c => ({ s: c.s, e: c.e, w: c.words.map(w => w.s) })))}, T = ${total};
+  const S = ${JSON.stringify(scenes.map(s => ({ at: s.at, secs: s.secs, frames: s.frames || 0 })))}, C = ${JSON.stringify(caps.map(c => ({ s: c.s, e: c.e, w: c.words.map(w => w.s) })))}, T = ${total};
   const ease = x => x <= 0 ? 0 : x >= 1 ? 1 : 1 - Math.pow(1 - x, 3);
   const back = x => { x = Math.min(1, Math.max(0, x)); const c = 1.7; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
   const els = S.map((_, i) => document.getElementById("s" + i)), cs = C.map((_, i) => document.getElementById("c" + i));
@@ -277,7 +287,16 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
       e.textContent = to.replace(/\\d+/g, n => String(Math.round(+n * q))); },
   };
   const DUR = { word: 0.35, up: 0.45, pop: 0.5, slide: 0.4, draw: 0.5, stamp: 0.35, strike: 0.4, count: 1.1 };
-  window.render = t => {
+  // A clip scene shows frame n of its clip (/__clip/<scene>/<n>.jpg), waiting until it is drawn, with a slow push in.
+  const film = async (el, i, s, u) => {
+    const img = el.querySelector(".frame"), n = Math.min(s.frames - 1, Math.max(0, Math.floor(u * ${FPS})));
+    img.style.transform = "scale(" + (1.02 + 0.06 * Math.min(1, u / s.secs)) + ")";
+    if (img.dataset.n === String(n)) return;
+    img.dataset.n = n; img.src = "/__clip/" + i + "/" + n + ".jpg";
+    await img.decode();
+  };
+  window.render = async t => {
+    const wait = [];
     document.getElementById("bar").style.width = (t / T * 100) + "%";
     const g = document.getElementById("glow"); g.style.left = (90 + 160 * Math.sin(t / 3)) + "px"; g.style.top = (520 + 140 * Math.cos(t / 4)) + "px";
     S.forEach((s, i) => {
@@ -287,6 +306,7 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
       el.style.opacity = vis ? Math.min(inn, out) : 0;
       el.style.transform = vis ? "translateX(" + ((1 - inn) * 60 - (1 - out) * 60) + "px)" : "";
       if (!vis) return;
+      if (s.frames) wait.push(film(el, i, s, Math.max(0, u)));
       el.querySelectorAll("[data-fx]").forEach(e => FX[e.dataset.fx](e, (u - +e.dataset.at) / DUR[e.dataset.fx]));
       const ph = el.querySelector(".photo");
       if (ph) { const [aw, ah, bw, bh, m] = ph.dataset.size.split(",").map(Number), q = m ? ease((u - m) / 0.6) : 0;
@@ -299,6 +319,7 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
       cs[i].style.opacity = on ? 1 : 0;
       if (on) [...cs[i].children].forEach((w, j) => { const a = t >= c.w[j] - 0.02, b = a && (j === c.w.length - 1 || t < c.w[j + 1] - 0.02); w.className = a ? (b ? "on now" : "on") : ""; });
     });
+    await Promise.all(wait);
   };
   window.ready = Promise.all([...document.images].filter(i => i.src).map(i => i.decode())).then(() => document.fonts.ready);
   </script></body></html>`;
@@ -309,6 +330,19 @@ function sayCommand(cmd) {
   if (/\.(mjs|js)$/i.test(cmd)) return [process.execPath, [cmd]];
   if (/\.py$/i.test(cmd)) return [process.platform === "win32" ? "python" : "python3", [cmd]];
   return [cmd, []];
+}
+// A scene's clip as JPEG frames at the reel's frame rate, from clipFrom for as long as the scene (or the clip) lasts;
+// a clip shorter than its scene plays slower, down to half speed, then holds its last frame.
+function clipFrames(src, s, dir) {
+  const file = join(src, s.clip + ".mp4");
+  if (!existsSync(file)) return null;
+  const at = join(dir, `${s.clip}-${s.clipFrom || 0}-${s.secs}`);
+  if (!existsSync(join(at, "0.jpg"))) {
+    mkdirSync(at, { recursive: true });
+    const slow = Math.min(2, Math.max(1, s.secs / (probe(file) - (s.clipFrom || 0))));
+    execFileSync("ffmpeg", ["-v", "error", "-y", "-ss", String(s.clipFrom || 0), "-i", file, "-t", String(s.secs / slow), "-vf", `setpts=${slow.toFixed(3)}*PTS,fps=${FPS},scale=1260:-2`, "-q:v", "2", "-start_number", "0", join(at, "%d.jpg")]);
+  }
+  return { at, frames: readdirSync(at).filter(f => f.endsWith(".jpg")).length };
 }
 const probe = file => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", file]).toString());
 
@@ -342,7 +376,7 @@ export async function loadReels(app) {
   return Promise.all(names.map(async f => parseReel(await readFile(join(dir, f), "utf8"), f.replace(/\.txt$/, ""))));
 }
 
-export async function run(app, { only, music, voice } = {}) {
+export async function run(app, { only, music, voice, clips } = {}) {
   const all = await loadReels(app), list = all.filter(r => !only || r.id === only);
   if (!list.length) return { summary: only ? `no reel called ${only}` : "no reels in apps/" + app.name + "/reels", files: [], problems: [] };
   const assets = await assetsFor(app);
@@ -361,9 +395,20 @@ export async function run(app, { only, music, voice } = {}) {
       const voices = voice ? lines.map(s => speak(voice, r.voice[tool] ?? r.voice[""] ?? "", r.pronounce, s.say, said)) : [];
       const scenes = timeReel(r, voices, end), total = reelLength(scenes);
       if (total > 59) problems.push(`${r.id}: ${total}s, over a minute`);
+      for (const s of scenes.filter(s => s.clip)) {
+        const got = clips && clipFrames(clips, s, join(out, "clips"));
+        if (got) Object.assign(s, { film: got.at, frames: got.frames });
+        else problems.push(`${r.id}: no clip "${s.clip}"${clips ? "" : " (no --clips folder)"}, drawn without it`);
+      }
       const html = stageHTML(scenes, { theme: r.theme, assets, site });
       const page = await (await browser.newContext({ viewport: { width: W, height: H }, deviceScaleFactor: 1 })).newPage();
-      await page.setContent(html);
+      // The page asks for /__clip/<scene>/<n>.jpg: the clip's frames, cut out by ffmpeg.
+      await page.route("http://reel.local/**", async route => {
+        const m = new URL(route.request().url()).pathname.match(/^\/__clip\/(\d+)\/(\d+)\.jpg$/);
+        if (m) return route.fulfill({ contentType: "image/jpeg", body: await readFile(join(scenes[m[1]].film, m[2] + ".jpg")) });
+        route.fulfill({ contentType: "text/html", body: html });
+      });
+      await page.goto("http://reel.local/");
       await page.evaluate(() => window.ready);
       const file = join(out, r.id + ".mp4"), track = tracks.length ? tracks[all.indexOf(r) % tracks.length] : null;
       const spoken = voices.map((v, i) => ({ file: v.file, at: scenes[i].at + VOICE_IN }));
