@@ -58,3 +58,10 @@ test("every Picproved reel script is complete", async () => {
   assert.ok(files.length >= 3);
   for (const f of files) assert.deepEqual(checkReel(parseReel(readFileSync("apps/picproved/reels/" + f, "utf8"), f.slice(0, -4)), { faces, neverSay }), [], f);
 });
+
+test("a web address said aloud shows as one written word", () => {
+  const ws = spread("Check yours at picproved dot com.", 3);
+  const c = chunks(ws).flatMap(x => x.words.map(w => w.w));
+  assert.deepEqual(c, ["Check", "yours", "at", "picproved.com."]);
+  assert.equal(chunks(ws).at(-1).e, ws.at(-1).e);
+});

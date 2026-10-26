@@ -136,11 +136,23 @@ export function cueTimes(items, ws, secs, at = 0) {
   });
 }
 
+// A web address said aloud ("picproved dot com") reads as one written word on screen ("picproved.com").
+export function joinDots(ws) {
+  const out = [];
+  for (let i = 0; i < ws.length; i++) {
+    const [dot, tld] = [ws[i + 1], ws[i + 2]];
+    if (dot && tld && bare(dot.w) === "dot" && /^[a-z]{2,4}\b/i.test(tld.w) && /\w$/.test(ws[i].w)) {
+      out.push({ ...ws[i], w: `${ws[i].w}.${tld.w}`, e: tld.e }); i += 2;
+    } else out.push(ws[i]);
+  }
+  return out;
+}
+
 // Caption chunks: up to 4 words, or fewer at a full stop or comma, so they read in one or two short lines.
 export function chunks(ws) {
   const out = [];
   let cur = [];
-  for (const w of ws) {
+  for (const w of joinDots(ws)) {
     cur.push(w);
     if (cur.length >= 4 || /[.,?!:;]$/.test(w.w)) { out.push(cur); cur = []; }
   }
