@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Picproved">
+  <rect width="512" height="512" rx="116" fill="#0D1B2E"/>
+  <!-- viewfinder corners -->
+  <g fill="none" stroke="#3EE09A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 178V136a32 32 0 0 1 32-32h42"/>
+    <path d="M334 104h42a32 32 0 0 1 32 32v42"/>
+    <path d="M104 334v42a32 32 0 0 0 32 32h42"/>
+  </g>
+  <!-- head and shoulders -->
+  <clipPath id="frame"><rect x="126" y="126" width="260" height="260" rx="20"/></clipPath>
+  <g clip-path="url(#frame)" fill="#FFFFFF">
+    <ellipse cx="256" cy="226" rx="58" ry="68"/>
+    <path d="M150 400c6-66 50-96 106-96s100 30 106 96z"/>
+  </g>
+  <!-- approved badge -->
+  <circle cx="378" cy="378" r="74" fill="#3EE09A" stroke="#0D1B2E" stroke-width="20"/>
+  <path d="M344 380l24 24 46-50" fill="none" stroke="#0D1B2E" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

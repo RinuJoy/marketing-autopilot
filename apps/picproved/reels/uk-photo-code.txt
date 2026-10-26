@@ -1,0 +1,32 @@
+# UK online passport without a photo code, from GOV.UK "Photos for passports" (checked 26 Oct 2026): a code only comes
+# with a booth or shop photo; you can instead take one on your own device during the application.
+title: UK passport online: you don't need a photo code
+description: Renewing your UK passport online? A photo code only comes with a booth or shop photo. GOV.UK lets you take the photo on your own phone during the application instead: someone else takes it, plain light background, head, shoulders and upper body, no edits, and don't crop it.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+tags: ukpassport, passportrenewal, passportphoto, moneysavinguk
+end: picproved.com
+endSub: Check your photo before you upload
+endSay: Check it first at picproved dot com.
+theme: green
+voice.kokoro: bm_george
+voice.google: en-GB-Chirp3-HD-Charon
+voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
+---
+show: title
+text: Renewing your UK passport online?
+sub: You don't need a photo code
+say: Renewing your UK passport online? You don't need a photo code.
+---
+show: strike text="PHOTO CODE" stamp="Optional" on=booths
+text: Codes come with booth photos
+say: Codes come from booths and shops. You can use your own phone instead.
+---
+show: photo face=47 bg=grey size=4x5px dims=off mark=tick on=crop label="Don't crop it"
+text: Someone else takes it
+say: Someone else takes it, on a plain light wall. Head, shoulders, upper body. Don't crop it.
+---
+show: list ✗ No filters or edits | ✗ No glasses, if you can | ✓ Plain face, mouth closed
+text: And keep it real
+say: No filters or edits, no glasses if you can, and a plain face with your mouth closed.

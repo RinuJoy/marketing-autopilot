@@ -1,0 +1,32 @@
+# OCI photo for UK applicants, from /mnt/project-files/marketing-autopilot/picproved/outreach/facts-uk-indians.md
+# (VFS Global UK OCI checklist Oct 2025 + OCI portal FAQ).
+title: OCI photo from the UK: why your UK passport photo won't work
+description: OCI from the UK needs a square photo: two 2 x 2 inch prints for VFS UK, and a square JPEG upload (200 to 900 px, under 200 KB) on a light background, not bright white. The signature is its own wide file.
+description: VFS UK checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
+description: Make yours: picproved.com/oci-pack
+description: Free while we launch, £5.99 after.
+tags: OCI, OCIcard, IndiansInUK, BritishIndian, NRI
+end: picproved.com/oci-pack
+endSub: Photo and signature, made at home
+endSay: Make both at picproved dot com.
+voice.kokoro: bf_isabella
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: OCI=O.C.I.; JPEG=jay peg; VFS=V.F.S.
+---
+show: title
+text: UK passport photo for OCI?
+sub: It's the wrong shape
+say: Using your UK passport photo for OCI? It's the wrong shape.
+---
+show: photo face=45 bg=light from=35x45mm size=2x2in on=square
+text: OCI is square
+say: OCI wants a square. Two prints, 2 by 2 inches, for VFS.
+---
+show: list ✓ Square JPEG upload | ✓ Under 200 KB | ✗ Not bright white
+text: The upload
+say: The upload is a square JPEG, under 200 KB, on a light background, not bright white.
+---
+show: list ✓ Signature: its own wide file | ✓ Can't sign yet? Left thumb print
+text: Don't forget
+say: The signature is its own wide file. Kids who can't sign use a thumb print.
