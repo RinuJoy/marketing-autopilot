@@ -1,0 +1,38 @@
+# Why UK passport photos get rejected, from GOV.UK "Photos for passports" (checked 26 Oct 2026).
+title: 5 reasons UK passport photos get rejected
+description: The five mistakes behind most rejected UK passport photos, from the GOV.UK rules: a selfie at arm's length (someone else must take it), shadows on your face or behind you, glasses (only if you have to), hair over your eyes, and filters or edits (it must be unaltered, plain face, mouth closed).
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage: Mizuno K on Pexels.
+tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, travelhacks
+end: picproved.com
+endSub: Check your photo before you send it
+endSay: Check it first at picproved dot com.
+voice.kokoro: bf_isabella
+voice.google: en-GB-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: stock-selfie
+text: Passport photo rejected?
+sub: It's usually one of these 5
+say: UK passport photo rejected? It's usually one of these five things.
+---
+clip: stock-selfie
+clipFrom: 4
+show: list ✗ Selfie at arm's length
+text: Number 1
+say: One. A selfie at arm's length. Someone else has to take it.
+---
+show: list ✗ Shadows on your face | ✗ Shadow on the wall behind
+text: Number 2: shadows
+say: Two. Shadows, on your face or on the wall behind you. Face a window.
+---
+show: list ✗ Glasses on | ✗ Hair over your eyes
+text: Numbers 3 and 4
+say: Three, glasses. Take them off unless you have to. Four, hair over your eyes.
+---
+show: photo face=45 bg=light size=4x5px dims=off mark=tick on=closed label="No filters, no edits"
+text: Number 5: filters
+say: Five. Beauty filters or edits. Keep it unaltered, with a plain face and your mouth closed.
