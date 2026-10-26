@@ -1,0 +1,32 @@
+# Story: baby born in the UK to Indian parents. Facts as in videos.mjs uk-in-newborn (HCI London, children eligible;
+# VFS UK passport services; Passport Seva photo upload instructions Nov 2025).
+title: Baby born in the UK? The step before the Indian passport
+description: Indian parents in the UK: before your baby's Indian passport, register the birth at the High Commission of India within a year. That photo is a 35 x 35 mm square on a light background that isn't white. Then apply for the passport through VFS, where the upload is 630 x 810 pixels on white.
+description: HCI London: https://www.hcilondon.gov.in/page/children-eligible/
+description: Make both photos: picproved.com/newborn-passport
+description: Free while we launch, £5.99 after.
+tags: newbornpassport, IndiansInUK, BritishIndian, NRI, IndianPassport, newmum
+end: picproved.com/newborn-passport
+endSub: Both photos, made at home
+endSay: Make both at picproved dot com.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Kore
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: clip-3-baby-sheet
+text: Born in the UK?
+sub: Indian parents, read this first
+say: Priya and Arjun's baby was born in Leicester. They went straight for an Indian passport. Wrong first step.
+---
+show: list 1. Register the birth at the High Commission | 2. Then the passport through VFS
+text: Two steps, in order
+say: First, register the birth at the High Commission of India, within a year. Then apply for the passport through VFS.
+---
+show: photo face=44 bg=grey size=35x35mm mark=tick on=square
+text: Birth registration photo
+say: The birth registration photo is a 35 millimetre square, on a light background that isn't white.
+---
+show: photo face=44 bg=white size=630x810px from=35x35mm mark=tick on=white
+text: Passport photo is different
+say: The passport photo is different: 630 by 810 pixels, on white.

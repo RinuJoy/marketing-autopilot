@@ -1,0 +1,32 @@
+# Story: an old photo on a UK passport renewal, from GOV.UK "Photos for passports" (checked 26 Oct 2026).
+title: She used last year's photo for her UK passport. Here's why it got held up
+description: A new UK passport needs a new photo, even if you look exactly the same, and GOV.UK says it must have been taken in the last month. Online, it needs at least 600 x 750 pixels and between 50 KB and 10 MB. Get these wrong and your application is delayed.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage: Kateryna Hnidash on Pexels.
+tags: ukpassport, passportrenewal, passportphoto, ukpassportphoto, travelhacks
+end: picproved.com
+endSub: Check it before you send it
+endSay: Take a fresh one, and check it at picproved dot com.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Kore
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: stock-instant-photos
+text: She used last year's photo
+sub: UK passport renewal
+say: Grace renewed her passport with a photo from last summer. She looked exactly the same. It still got held up.
+---
+show: photo face=42 bg=light size=4x5px dims=off mark=cross on=month label="Taken last summer"
+text: Taken in the last month
+say: GOV.UK says your photo must have been taken in the last month.
+---
+show: list ✗ Old photo, same face | ✓ New photo for every new passport
+text: Even if you look the same
+say: You need a new photo for every new passport, even if you look exactly the same.
+---
+show: number value="600 × 750" unit="pixels, 50 KB to 10 MB"
+text: Applying online?
+say: Online, it needs at least 600 by 750 pixels, and between 50 KB and 10 MB.
