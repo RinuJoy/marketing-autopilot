@@ -1,0 +1,34 @@
+# Story: glasses in a UK passport photo, from GOV.UK "Photos for passports" (checked 27 Oct 2026).
+title: Keep your glasses on for a UK passport photo? Read this first
+description: GOV.UK says don't wear glasses in your passport photo unless you have to. If you must, they can't be tinted or sunglasses, and your eyes can't be covered by the frames, glare, a reflection or a shadow. The easiest fix is to take them off. Online, the photo needs at least 600 x 750 pixels and 50 KB to 10 MB.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage: Tima Miroshnichenko on Pexels.
+tags: ukpassport, passportphoto, glasses, passportrenewal, ukpassportphoto
+end: picproved.com
+endSub: Glare and frames checked before you send
+endSay: Check it first at picproved dot com.
+voice.kokoro: bm_george
+voice.google: en-GB-Chirp3-HD-Charon
+voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
+---
+show: title
+clip: stock-glasses
+text: Glasses on, or off?
+sub: UK passport photo
+say: Mark wears glasses all day, so he kept them on for his passport photo. It was sent back.
+---
+clip: stock-glasses
+clipFrom: 8
+show: list ✗ Glare on the lenses | ✗ Frames across your eyes | ✗ Tinted or sunglasses
+text: Why glasses fail
+say: GOV.UK says take them off unless you have to. If you must keep them: no glare, no reflections, and the frames can't cover your eyes.
+---
+show: photo face=38 bg=light size=4x5px dims=off mark=tick on=off label="Glasses off"
+text: The easiest fix
+say: The easiest fix: take them off. Thirty seconds without them, and nothing to get wrong.
+---
+show: number value="600 × 750" unit="pixels, 50 KB to 10 MB"
+text: Then check the file
+say: Then check the file. Online, it needs at least 600 by 750 pixels.

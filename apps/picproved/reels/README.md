@@ -26,6 +26,7 @@ folder. Everything on screen is drawn as code (no screen recording, no video AI)
      - `number value="600 × 750" unit="pixels"`: counts up
      - `strike text="PHOTO CODE" stamp="Optional" on=<word>`: a ticket crossed out
    - Faces are the fictional AI faces in `assets/`. Indian: `face-43` baby, `44` newborn, `45` woman, `47` man, `48` girl. Not Indian: `25` baby, `30` older bald man, `33` woman, `38` man, `42` Black woman. For other communities: `32` bearded South Asian man (Pakistani reels), `19` Black woman and `34` Black man (Nigerian reels).
+   - Stock clips so far (Pexels, credits in the clips folder's CREDITS.md): airport, passport-hands, printing, baby x3, selfie, upload-frustrated, laptop-in, instant-photos(-face), phone-pk, laptop-ng, glasses, toddler, toddler-run, suitcase. Match the clip's person to the reel's face. Hero shots worth Runway credits are listed in `runway-shots.md`.
    - Rinu's rule: UK reels never show Indian-origin faces or people, and Indian reels (OCI, Indian passport) show only Indian people. Reels for another community (Pakistani, Nigerian) show people from that community. That covers stock and film clips too; a faceless clip (hands, people from behind) fits either.
      Never a real person's photo.
    - Keep each `say` to one or two short sentences: four scenes plus the end card come to about 20 to 25 seconds.

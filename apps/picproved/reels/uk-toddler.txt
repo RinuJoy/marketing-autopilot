@@ -1,0 +1,34 @@
+# Story: a toddler's UK passport photo, from GOV.UK "Photos for passports" (checked 27 Oct 2026).
+title: Toddler won't sit still for a passport photo? 3 rules they don't have to follow
+description: GOV.UK's child rules: under-sixes don't have to look at the camera or keep a plain expression, under-ones can have their eyes closed. They must still be alone in the picture, with no toys or dummies, and if you steady their head your hand must not show. Sit them in front of a plain light wall, face a window and take a few.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check your child's photo: picproved.com
+description: Free while we launch, £5.99 after.
+description: Footage: George Pak and Ksenia Chernaya on Pexels.
+tags: ukpassport, childpassport, toddler, passportphoto, mumlife, dadlife
+end: picproved.com
+endSub: The child rules, checked before you send
+endSay: Check theirs at picproved dot com.
+voice.kokoro: bf_isabella
+voice.google: en-GB-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: stock-toddler
+text: Toddler won't sit still?
+sub: UK passport photo
+say: Leo is three and will not sit still. Good news: three of the adult rules don't apply to him.
+---
+show: list ✓ Under 6: no need to look at the camera | ✓ Under 6: any expression | ✓ Under 1: eyes can be closed
+text: What's allowed
+say: Under six, they don't have to look at the camera or keep a plain face. Under one, the eyes can even be closed.
+---
+clip: stock-toddler-run
+clipFrom: 4
+show: list ✗ Alone in the picture | ✗ No toys or dummies | ✗ Your hand must not show
+text: Still not allowed
+say: But they must be alone in the picture. No toys, no dummies, and if you steady their head, your hand must not show.
+---
+show: photo face=25 bg=light size=4x5px dims=off mark=tick on=wall label="Plain light wall"
+text: Plain wall, no shadows
+say: Sit them in front of a plain light wall, face a window, and take a few. One will do.
