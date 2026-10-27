@@ -1,0 +1,35 @@
+# Story: a white shirt on an Indian passport photo. Facts as on picproved.com/abroad/indian-passport-uk (checked 27 Oct 2026):
+# ICAO style since Sept 2025, white background, face 80 to 85%, glasses off, upload 630x810 JPEG under 250 KB, 12 attempts.
+title: Why Mum's Indian passport photo failed: the white kurta
+description: Indian passport photos sit on a pure white background, so a white kurta or shirt melts into it. Wear a dark or coloured top. The rest of the ICAO rules: glasses off, face 80 to 85% of the frame, and the upload exactly 630 x 810 pixels, a JPEG under 250 KB. The portal allows 12 attempts, so check it first.
+description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
+description: Make yours: picproved.com/nri-passport/gb
+description: Free while we launch, £5.99 after.
+description: Footage: Mikhail Nilov on Pexels.
+tags: IndianPassport, IndiansInUK, passportrenewal, VFS, NRI, BritishIndian
+end: picproved.com/nri-passport/gb
+endSub: Checked before you upload
+endSay: Make yours at picproved dot com.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: JPEG=jay peg; ICAO=I K O
+---
+show: title
+clip: stock-laptop-in
+clipFrom: 2
+text: The white kurta problem
+sub: Indian passport from the UK
+say: Mum's passport photo looked fine. Then it failed the upload check. The reason? Her white kurta.
+---
+show: list ✗ White kurta on a white background | ✓ Dark or coloured top
+text: Wear colour
+say: Indian passport photos sit on a pure white background. A white kurta melts into it. Wear a dark or coloured top.
+---
+show: photo face=45 bg=white size=35x45mm mark=tick on=off label="Glasses off, face 80 to 85%"
+text: ICAO rules since 2025
+say: Also: glasses off, and the face filling 80 to 85 percent of the frame.
+---
+show: number value="630 × 810" unit="pixels, JPEG under 250 KB"
+text: The upload size
+say: The upload is exactly 630 by 810 pixels, a JPEG under 250 KB. Twelve attempts, so check it first.
