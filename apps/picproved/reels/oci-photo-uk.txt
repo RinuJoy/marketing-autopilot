@@ -28,6 +28,8 @@ show: list ✓ Square JPEG upload | ✓ Under 200 KB | ✗ Not bright white
 text: The upload
 say: The upload is a square JPEG, under 200 KB, on a light background, not bright white.
 ---
+clip: runway-vfs-counter
+clipFrom: 3
 show: list ✓ Signature: its own wide file | ✓ Can't sign yet? Left thumb print
 text: Don't forget
 say: The signature is its own wide file. Kids who can't sign use a thumb print.

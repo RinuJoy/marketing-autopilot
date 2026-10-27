@@ -23,6 +23,7 @@ show: photo face=42 bg=light size=4x5px dims=off mark=cross on=month label="Take
 text: Taken in the last month
 say: GOV.UK says your photo must have been taken in the last month.
 ---
+clip: runway-letterbox
 show: list ✗ Old photo, same face | ✓ New photo for every new passport
 text: Even if you look the same
 say: You need a new photo for every new passport, even if you look exactly the same.

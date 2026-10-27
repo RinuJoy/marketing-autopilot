@@ -12,6 +12,7 @@ voice.kokoro: bm_george
 voice.google: en-GB-Chirp3-HD-Charon
 voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
 ---
+clip: runway-letterbox
 show: photo face=30 bg=grey size=35x45mm mark=cross on=back label="Photos sent back"
 text: Grandad's photos came back
 sub: Renewing by post

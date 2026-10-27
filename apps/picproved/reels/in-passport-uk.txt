@@ -26,6 +26,7 @@ show: photo face=45 bg=white size=630x810px mark=tick on=JPEG
 text: It has to be exact
 say: It must be exactly 630 by 810 pixels, a JPEG under 250 KB.
 ---
+clip: runway-white-shirt
 show: list ✓ Plain white background | ✗ No glasses | ✓ Face fills most of the frame
 text: ICAO rules since 2025
 say: Since 2025 it's ICAO style: a plain white background, no glasses, and your face filling most of the frame.
@@ -34,8 +35,8 @@ show: number value="12" unit="upload tries on the portal"
 text: Check it first
 say: And the portal only gives you 12 tries, so check it before you upload.
 ---
-clip: clip-2-passport-hands
-clipFrom: 1
+clip: runway-vfs-counter
+clipFrom: 2
 show: list ✓ Wear a dark top | ✓ Two matching prints for VFS
 text: Before your VFS visit
 say: Wear a dark top, and take two matching prints to VFS.

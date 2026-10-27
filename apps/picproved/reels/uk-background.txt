@@ -4,7 +4,6 @@ description: GOV.UK says a UK passport photo must be unaltered by computer softw
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check yours first: picproved.com/doc/uk-passport-digital
 description: Free while we launch, £5.99 after.
-description: Footage: Mizuno K on Pexels.
 tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, travelhacks
 end: picproved.com/doc/uk-passport-digital
 endSub: Background left alone, every rule checked
@@ -14,19 +13,21 @@ voice.google: en-GB-Chirp3-HD-Kore
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
-clip: stock-upload-frustrated
+clip: runway-tripod-wall
 text: She "fixed" the background
 sub: UK passport, online
-say: Nia's wall looked a bit grey, so an app swapped it for white. Her application got delayed.
+say: Emma's wall looked a bit grey, so an app swapped it for white. Her application got delayed.
 ---
 show: list ✗ Altered by software | ✓ Plain, light-coloured wall | ✓ Clear contrast with you
 text: GOV.UK's rule
 say: GOV.UK says the photo must be unaltered by computer software. A plain, light wall is all it needs, and you must stand out from it.
 ---
-show: compare face=42 bg=white,light mark=cross,tick Swapped background | Real wall
+show: compare face=33 bg=white,light mark=cross,tick Swapped background | Real wall
 text: Real wall wins
 say: A real, plain wall passes. A pasted-in background can fail the unaltered check.
 ---
+clip: runway-tripod-wall
+clipFrom: 2
 show: list ✓ Face a window | ✗ No shadows behind you
 text: Light, not edits
 say: Face a window so there are no shadows on your face or behind you. Fix the light, not the file.

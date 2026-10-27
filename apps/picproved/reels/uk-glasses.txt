@@ -25,6 +25,7 @@ show: list ✗ Glare on the lenses | ✗ Frames across your eyes | ✗ Tinted or
 text: Why glasses fail
 say: GOV.UK says take them off unless you have to. If you must keep them: no glare, no reflections, and the frames can't cover your eyes.
 ---
+clip: runway-glasses-off
 show: photo face=38 bg=light size=4x5px dims=off mark=tick on=off label="Glasses off"
 text: The easiest fix
 say: The easiest fix: take them off. Thirty seconds without them, and nothing to get wrong.

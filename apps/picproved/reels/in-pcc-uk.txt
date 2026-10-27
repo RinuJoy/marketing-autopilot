@@ -5,7 +5,6 @@ description: Indian citizens in the UK need a Police Clearance Certificate from 
 description: Official: https://www.passportindia.gov.in (Global Passport Seva for Indian missions abroad)
 description: Make yours: picproved.com/doc/in-pcc-uk
 description: Free while we launch, £5.99 after.
-description: Footage: Timur Weber on Pexels.
 tags: IndianPCC, PoliceClearance, IndiansInUK, CanadaPR, AustraliaPR, NRI
 end: picproved.com/doc/in-pcc-uk
 endSub: Every PCC photo rule checked
@@ -16,11 +15,12 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 pronounce: JPEG=jay peg
 ---
 show: title
-clip: stock-suitcase
+clip: runway-canada-desk
 text: Moving on from the UK?
 sub: Indian PCC
 say: Priya got her Canada invite. Then came the surprise: a Police Clearance Certificate from the High Commission of India.
 ---
+clip: runway-vfs-counter
 show: list 1. Apply on Global Passport Seva | 2. Upload the photo | 3. Hand in at VFS Global
 text: Three steps
 say: You apply on Global Passport Seva, upload a photo, then hand it in at VFS Global.
