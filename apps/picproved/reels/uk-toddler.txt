@@ -4,7 +4,7 @@ description: GOV.UK's child rules: under-sixes don't have to look at the camera 
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check your child's photo: picproved.com
 description: Free while we launch, £5.99 after.
-description: Footage: George Pak and Ksenia Chernaya on Pexels.
+description: Footage: Ksenia Chernaya on Pexels.
 tags: ukpassport, childpassport, toddler, passportphoto, mumlife, dadlife
 end: picproved.com
 endSub: The child rules, checked before you send
@@ -14,7 +14,7 @@ voice.google: en-GB-Chirp3-HD-Aoede
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
-clip: stock-toddler
+clip: runway-toddler-wall
 text: Toddler won't sit still?
 sub: UK passport photo
 say: Leo is three and will not sit still. Good news: three of the adult rules don't apply to him.

@@ -5,7 +5,6 @@ description: Indian passport photos sit on a pure white background, so a white k
 description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
 description: Make yours: picproved.com/nri-passport/gb
 description: Free while we launch, £5.99 after.
-description: Footage: Mikhail Nilov on Pexels.
 tags: IndianPassport, IndiansInUK, passportrenewal, VFS, NRI, BritishIndian
 end: picproved.com/nri-passport/gb
 endSub: Checked before you upload
@@ -16,8 +15,7 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 pronounce: JPEG=jay peg; ICAO=I K O
 ---
 show: title
-clip: stock-laptop-in
-clipFrom: 2
+clip: runway-upload-failed
 text: The white kurta problem
 sub: Indian passport from the UK
 say: Mum's passport photo looked fine. Then it failed the upload check. The reason? Her white kurta.
