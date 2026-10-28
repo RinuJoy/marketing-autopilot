@@ -16,9 +16,9 @@ pronounce: JPEG=jay peg; ICAO=I K O
 ---
 show: title
 clip: runway-upload-failed
-text: The white kurta problem
+text: Failed: the white kurta
 sub: Indian passport from the UK
-say: Mum's passport photo looked fine. Then it failed the upload check. The reason? Her white kurta.
+say: This Indian passport photo failed because of one thing: her white kurta.
 ---
 show: list ✗ White kurta on a white background | ✓ Dark or coloured top
 text: Wear colour

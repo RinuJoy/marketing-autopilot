@@ -15,9 +15,9 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
 clip: stock-instant-photos-face
-text: She used last year's photo
+text: Old photo = delayed passport
 sub: UK passport renewal
-say: Grace renewed her passport with a photo from last summer. She looked exactly the same. It still got held up.
+say: A photo from last summer held up Grace's passport. She looked exactly the same.
 ---
 show: photo face=42 bg=light size=4x5px dims=off mark=cross on=month label="Taken last summer"
 text: Taken in the last month

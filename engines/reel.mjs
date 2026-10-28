@@ -328,7 +328,8 @@ export function stageHTML(scenes, { theme = "navy", assets, site }) {
       el.style.transform = vis ? "translateX(" + ((1 - inn) * 60 - (1 - out) * 60) + "px)" : "";
       if (!vis) return;
       if (s.frames) wait.push(film(el, i, s, Math.max(0, u)));
-      el.querySelectorAll("[data-fx]").forEach(e => FX[e.dataset.fx](e, (u - +e.dataset.at) / DUR[e.dataset.fx]));
+      // The first scene's words are already on screen at frame 1: a scroller decides in the first second.
+      el.querySelectorAll("[data-fx]").forEach(e => FX[e.dataset.fx](e, i === 0 && e.closest("h1, .sub") ? 1 : (u - +e.dataset.at) / DUR[e.dataset.fx]));
       const ph = el.querySelector(".photo");
       if (ph) { const [aw, ah, bw, bh, m] = ph.dataset.size.split(",").map(Number), q = m ? ease((u - m) / 0.6) : 0;
         ph.style.width = aw + (bw - aw) * q + "px"; ph.style.height = ah + (bh - ah) * q + "px";

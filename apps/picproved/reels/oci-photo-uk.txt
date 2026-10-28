@@ -16,9 +16,9 @@ pronounce: JPEG=jay peg
 ---
 show: title
 clip: clip-1-airport
-text: UK passport photo for OCI?
-sub: It's the wrong shape
-say: Using your UK passport photo for OCI? It's the wrong shape.
+text: Wrong shape for OCI ✗
+sub: Your UK passport photo
+say: Your UK passport photo won't work for OCI. It's the wrong shape.
 ---
 show: photo face=45 bg=light from=35x45mm size=2x2in on=square
 text: OCI is square
