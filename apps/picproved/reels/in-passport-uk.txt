@@ -5,7 +5,7 @@ description: Renewing your Indian passport from the UK? The photo upload must be
 description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
 description: Make yours: picproved.com/nri-passport/gb
 description: Free while we launch, £5.99 after.
-description: Footage: Mizuno K on Pexels.
+description: Footage: Mikhail Nilov on Pexels.
 tags: IndianPassport, IndiansInUK, passportrenewal, VFS, NRI, BritishIndian
 end: picproved.com/nri-passport/gb
 endSub: Exact size, checked before you upload
@@ -18,9 +18,9 @@ pronounce: JPEG=jay peg; ICAO=I K O
 show: title
 clip: stock-laptop-in
 clipFrom: 8
-text: Indian passport photo won't upload?
-sub: Renewing from the UK
-say: Renewing your Indian passport from the UK, and the photo won't upload?
+text: 630 × 810. Not 600. Not 800.
+sub: Indian passport, from the UK
+say: Your Indian passport photo has to be exactly 630 by 810 pixels.
 ---
 show: photo face=45 bg=white size=630x810px mark=tick on=JPEG
 text: It has to be exact

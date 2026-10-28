@@ -15,9 +15,9 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
 clip: stock-baby-bed
-text: Baby's first UK passport?
-sub: The photo rules are different
-say: Baby's first UK passport? The photo rules are different.
+text: Your baby's eyes CAN be closed
+sub: UK passport, under one
+say: Under one? Their eyes can be closed in a UK passport photo.
 ---
 show: photo face=25 bg=cream size=35x45mm mark=tick on=above
 text: Lie them on a plain sheet
