@@ -1,5 +1,5 @@
 # Story: a swapped background on a UK online passport photo, from GOV.UK "Photos for passports" (checked 27 Oct 2026).
-title: She swapped the background on her UK passport photo. It was sent back
+title: Edited the background on your UK passport photo? Why it gets delayed
 description: GOV.UK says a UK passport photo must be unaltered by computer software, taken against a plain light-coloured background, in clear contrast to you, with no shadows on your face or behind you. A real plain wall passes; a pasted-in background can fail the unaltered check. Fix the light, not the file.
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check yours first: picproved.com/doc/uk-passport-digital
@@ -14,9 +14,9 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
 clip: runway-tripod-wall
-text: She "fixed" the background
+text: Edited background = delayed
 sub: UK passport, online
-say: Emma's wall looked a bit grey, so an app swapped it for white. Her application got delayed.
+say: Emma let an app swap her photo's grey wall for white. Her passport got delayed.
 ---
 show: list ✗ Altered by software | ✓ Plain, light-coloured wall | ✓ Clear contrast with you
 text: GOV.UK's rule

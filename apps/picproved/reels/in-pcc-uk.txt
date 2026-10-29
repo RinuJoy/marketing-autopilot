@@ -1,6 +1,6 @@
 # Story: Indian PCC from the UK. Facts as on picproved.com/doc/in-pcc-uk (checked 27 Oct 2026): Global Passport Seva
 # for missions abroad (same photo as an Indian passport), VFS Global UK appointment, 8 photos of 35x45 mm on a 6x4 print.
-title: Moving from the UK to Canada or Australia? You'll need an Indian PCC, and a photo
+title: Canada said yes. Then it asked for an Indian PCC from the UK
 description: Indian citizens in the UK need a Police Clearance Certificate from the High Commission of India for Canada or Australia PR, Gulf jobs or a long-term visa. Apply on Global Passport Seva, upload the photo (the Indian passport rules: 630 x 810 pixels, white background, no glasses, under 250 KB), then hand in at VFS Global. If VFS asks for prints, one 6 x 4 print holds eight 35 x 45 mm photos.
 description: Official: https://www.passportindia.gov.in (Global Passport Seva for Indian missions abroad)
 description: Make yours: picproved.com/doc/in-pcc-uk
@@ -16,9 +16,9 @@ pronounce: JPEG=jay peg
 ---
 show: title
 clip: runway-canada-desk
-text: Moving on from the UK?
+text: Canada said yes. Then: PCC
 sub: Indian PCC
-say: Priya got her Canada invite. Then came the surprise: a Police Clearance Certificate from the High Commission of India.
+say: Canada said yes to Priya. Then it asked for an Indian Police Clearance Certificate, from the High Commission of India.
 ---
 clip: runway-vfs-counter
 show: list 1. Apply on Global Passport Seva | 2. Upload the photo | 3. Hand in at VFS Global

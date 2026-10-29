@@ -1,5 +1,5 @@
 # Story: a toddler's UK passport photo, from GOV.UK "Photos for passports" (checked 27 Oct 2026).
-title: Toddler won't sit still for a passport photo? 3 rules they don't have to follow
+title: 3 UK passport photo rules your toddler can skip
 description: GOV.UK's child rules: under-sixes don't have to look at the camera or keep a plain expression, under-ones can have their eyes closed. They must still be alone in the picture, with no toys or dummies, and if you steady their head your hand must not show. Sit them in front of a plain light wall, face a window and take a few.
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check your child's photo: picproved.com
@@ -15,9 +15,9 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
 clip: runway-toddler-wall
-text: Toddler won't sit still?
+text: 3 rules your toddler can skip
 sub: UK passport photo
-say: Leo is three and will not sit still. Good news: three of the adult rules don't apply to him.
+say: Three adult passport photo rules don't apply to little ones. Leo is three, and he won't sit still.
 ---
 show: list ✓ Under 6: no need to look at the camera | ✓ Under 6: any expression | ✓ Under 1: eyes can be closed
 text: What's allowed
