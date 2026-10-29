@@ -1,6 +1,6 @@
 # Story: a white shirt on an Indian passport photo. Facts as on picproved.com/abroad/indian-passport-uk (checked 27 Oct 2026):
 # ICAO style since Sept 2025, white background, face 80 to 85%, glasses off, upload 630x810 JPEG under 250 KB, 12 attempts.
-title: Why Mum's Indian passport photo failed: the white kurta
+title: White top, white background: why this Indian passport photo failed
 description: Indian passport photos sit on a pure white background, so a white kurta or shirt melts into it. Wear a dark or coloured top. The rest of the ICAO rules: glasses off, face 80 to 85% of the frame, and the upload exactly 630 x 810 pixels, a JPEG under 250 KB. The portal allows 12 attempts, so check it first.
 description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
 description: Make yours: picproved.com/nri-passport/gb
@@ -16,9 +16,9 @@ pronounce: JPEG=jay peg; ICAO=I K O
 ---
 show: title
 clip: runway-upload-failed
-text: Failed: the white kurta
+text: White top + white wall = ✗
 sub: Indian passport from the UK
-say: This Indian passport photo failed because of one thing: her white kurta.
+say: White top, white background. That's why Mum's Indian passport photo failed.
 ---
 show: list ✗ White kurta on a white background | ✓ Dark or coloured top
 text: Wear colour

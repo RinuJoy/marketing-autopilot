@@ -1,5 +1,5 @@
 # Story: glasses in a UK passport photo, from GOV.UK "Photos for passports" (checked 27 Oct 2026).
-title: Keep your glasses on for a UK passport photo? Read this first
+title: Glasses in a UK passport photo? This one got sent back
 description: GOV.UK says don't wear glasses in your passport photo unless you have to. If you must, they can't be tinted or sunglasses, and your eyes can't be covered by the frames, glare, a reflection or a shadow. The easiest fix is to take them off. Online, the photo needs at least 600 x 750 pixels and 50 KB to 10 MB.
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check yours first: picproved.com/doc/uk-passport-digital
@@ -15,9 +15,9 @@ voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
 ---
 show: title
 clip: stock-glasses
-text: Glasses on, or off?
+text: His glasses got it sent back
 sub: UK passport photo
-say: Mark wears glasses all day, so he kept them on for his passport photo. It was sent back.
+say: Mark's passport photo came back because of his glasses. He wears them all day.
 ---
 clip: stock-glasses
 clipFrom: 8
