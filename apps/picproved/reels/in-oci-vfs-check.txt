@@ -1,0 +1,35 @@
+# OCI from the UK, the four things VFS checks besides the form. From facts-uk-indians.md (VFS Global UK OCI checklist
+# Oct 2025 + OCI portal FAQ): two 2x2 in prints under 6 months old, same photo as the upload; paper apostille on
+# certificates issued outside India (no e-apostille); biometrics at VFS for ages 12 to 70, allow 30 minutes extra.
+title: OCI before the India trip? 4 things VFS UK checks
+description: Applying for OCI from the UK before a trip to India? VFS UK wants two 2 x 2 inch prints, under 6 months old and the same photo you uploaded. Certificates issued outside India need a paper apostille (an e-apostille isn't accepted). Anyone aged 12 to 70 gives biometrics at VFS, so allow extra time.
+description: VFS UK checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
+description: OCI photo and signature: picproved.com/oci-pack
+description: Free while we launch, £5.99 after.
+tags: OCI, OCIcard, IndiansInUK, BritishIndian, NRI, IndiaTrip
+end: picproved.com/oci-pack
+endSub: Photo, prints and signature, made at home
+endSay: Send this to the family group before the VFS slot.
+voice.kokoro: hm_omega
+voice.google: en-IN-Chirp3-HD-Charon
+voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
+pronounce: JPEG=jay peg
+---
+show: title
+clip: clip-1-airport
+text: 4 things VFS checks ✗
+sub: OCI before the India trip
+say: Four things VFS UK checks for OCI. Number three catches people out.
+---
+show: photo face=47 bg=light from=35x45mm size=2x2in on=square
+text: 1 + 2. Square prints
+say: One: square prints, 2 by 2 inches. Two: under six months old, the same photo you uploaded.
+---
+show: strike small="Certificates issued outside India" text="E-APOSTILLE" code="VFS UK OCI checklist" stamp="Paper only" on=paper
+text: 3. The apostille
+say: Three: certificates from outside India need a paper apostille. An e-apostille isn't accepted.
+---
+clip: runway-vfs-counter
+show: number value="12 to 70" unit="years old: fingerprints at VFS"
+text: 4. Biometrics
+say: Four: ages twelve to seventy give fingerprints. Allow an extra half hour.
