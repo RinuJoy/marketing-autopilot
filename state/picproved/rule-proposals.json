@@ -1,0 +1,607 @@
+{
+ "date": "2026-11-02",
+ "proposals": [],
+ "notes": [
+  {
+   "url": "https://www.immigration.gov.lk/pages_e.php?id=7",
+   "label": "immigration.gov.lk",
+   "ids": [
+    "lk-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "1962 / +94 112 101 500 +94 011 2885 358 controller&#64;Immigration.gov.lk 82443253 Copyright &copy; 2022, Dep.",
+     "| Last Update : 2026-10-30 Top"
+    ],
+    "removed": [
+     "1962 / +94 112 101 500 +94 011 2885 358 controller&#64;Immigration.gov.lk 81617864 Copyright &copy; 2022, Dep.",
+     "| Last Update : 2026-10-26 Top"
+    ]
+   }
+  },
+  {
+   "url": "https://www.visaforchina.cn/MAN3_EN/qianzhengyewu/jichuzhishi/changjianwenti/164185152103256105.html",
+   "label": "visaforchina.cn",
+   "ids": [
+    "cn-visa"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "How to upload the photo when filling in the online application form?-FAQ Other Centers EN Sign In Create Account Visa Useful Links About us VIP Service Application form Appointment How to upload the photo when filling in the online application form?"
+    ],
+    "removed": [
+     "How to upload the photo when filling in the online application form?-FAQ Manchester Other Centers EN EN 中文 中文（新） EN（New） Sign In Create Account Visa Useful Links About us VIP Service Application form Appointment How to upload the photo when filling in the online application form?"
+    ]
+   }
+  },
+  {
+   "url": "https://www.visaforchina.cn/MES3_EN/tongzhigonggao/192521330380378112.html",
+   "label": "visaforchina.cn",
+   "ids": [
+    "cn-visa-print"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Visa applicant's photo requirements-News Other Centers EN Sign In Create Account Visa Useful Links About Us Service feedback Application form Appointment Visa applicant's photo requirements 2023-12-07 In accordance with the instruction from the Consular Department of the Ministry of Foreign Affairs of the P.R."
+    ],
+    "removed": [
+     "Visa applicant's photo requirements-News Medan Other Centers EN EN 中文 中文（新） EN（New） Sign In Create Account Visa Useful Links About Us Service feedback Application form Appointment Visa applicant's photo requirements 2023-12-07 In accordance with the instruction from the Consular Department of the Ministry of Foreign Affairs of the P.R."
+    ]
+   }
+  },
+  {
+   "url": "https://www.boca.gov.tw/cp-140-467-29b1d-2.html",
+   "label": "boca.gov.tw",
+   "ids": [
+    "tw-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…Passport Photos facebook twitter line Print Go Back Created：2025-06-13 Data Source：Bureau Of Consular Affairs Counter：307725 Updated：2025-06-13 The guidelines and standards of the Republic of China (Taiwan) for passport photographs are in accor…"
+    ],
+    "removed": [
+     "…Passport Photos facebook twitter line Print Go Back Created：2025-06-13 Data Source：Bureau Of Consular Affairs Counter：306997 Updated：2025-06-13 The guidelines and standards of the Republic of China (Taiwan) for passport photographs are in accor…"
+    ]
+   }
+  },
+  {
+   "url": "https://www.ica.gov.sg/photo-guidelines",
+   "label": "ica.gov.sg",
+   "ids": [
+    "sg-ica"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "ngs to Note Submit a new, coloured photograph for your application.",
+     "For hardcopy submission, print your photograph on a matte or semi-matte (non-reflective) finish.",
+     "Ensure your photograph meets ICA’s photo requirements, which follows International Standards Organisation and International Civil Aviation Organisation specifications.",
+     "Read the “Dos and Don’ts” below to ensure your photograph meets these requirements for a smooth application process.",
+     "Questions Answers Can I use a photograph taken with my mobile phone for passport or identity card applications requiring a photo ID?",
+     "We recommend downloading mobile apps specifically designed for passport or identity card photographs to help you take photographs in the required dimensions.",
+     "You can also use the image editing software on your computer to resize your digital photograph.",
+     "However, do not alter or enhance the photograph in any other way."
+    ],
+    "removed": [
+     "Printed photograph for hardcopy submission must be on a matte or semi matte finish (non-reflective photo).",
+     "Your photograph must meet ICA’s requirements.",
+     "ICA’s passport photo requirements are based on specifications by the International Standards Organisation (ISO) and the International Civil Aviation Organisation (ICAO).",
+     "Please refer to the “Dos and Don’ts” in the next section for details.",
+     "Failure to meet these requirements can delay your application or result in its rejection.",
+     "Q1: Can I use a photograph taken with my mobile phone for an application requiring photo ID, e.g.",
+     "passport or identity card application?",
+     "A1: We recommend that you download and use mobile apps that are specifically designed to take photographs for passport or identity card applications."
+    ]
+   }
+  },
+  {
+   "url": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+   "label": "ica.gov.sg: visa requirements",
+   "ids": [
+    "sg-visa"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "ormation Visa and Entry Information If you hold a travel document issued by one of the countries or places listed below, you will need a valid Singapore entry visa to travel to, and seek entry, into Singapore.",
+     "Things to Keep in Mind A visa does not guarantee entry.",
+     "A Singapore entry visa is a pre-entry permission.",
+     "It is not an immigration pass.",
+     "ICA officers at the checkpoint will determine if you can enter Singapore.",
+     "As a valid visa holder, you must adhere to all travel advisories and check the latest entry requirements] before you travel.",
+     "The SG Arrival Card is not a visa.",
+     "You must still submit your SG Arrival Card within 3 days before arriving in Singapore."
+    ],
+    "removed": [
+     "Possession of a valid visa does not guarantee entry into Singapore.",
+     "Please refer to entry requirements for more information.",
+     "Please note the following: SG Arrival Card is not a visa .",
+     "Please refer to SG Arrival Card e-Service for more information.",
+     "Valid visa holders are required to adhere to the latest travel requirements and advisories , where applicable.",
+     "The period of stay in Singapore is not tied to the validity of your visa.",
+     "The period of stay is determined by the duration of the Visit Pass issued to you in the form of electronic visit pass (e-Pass) at the checkpoint upon entry.",
+     "To extend the duration of stay, the applicant will have to apply for a Short-Term Visit Pass (STVP) extension."
+    ]
+   }
+  },
+  {
+   "url": "https://www.mfa.go.th/en/page/electronic-passport",
+   "label": "mfa.go.th",
+   "ids": [
+    "th-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…(TD) ISSUANCE OF EMERGENCY CERTIFICATE (EC) Protection of Thai Nationals วันที่นำเข้าข้อมูล วันที่ปรับปรุงข้อมูล | 159,981 view Electronic Passport - What is an e-Passport? - Why is an e-Passport better than a non-electronic Passport? - Application Process - Types of e-Passport and document required for application - Validity for e-Passports - e-Passport Pick-Up - Advice on your e-Passport maintenance What is an e-Passport? It is an electronic passport which contains technical specifications that comply with the standards set out by the International Civil Aviation Organization (ICAO). It differs from a non-electronic Passport via to the following characteristics: It contains biometric data such as finger prints and facial features in a contactless integrated circuit which is embedded in all e-Passports. It is readable by the automatic gates at immigration checkpoints which automatically verify that the embedded information matches that of the bearer. Why is an e-Passport better than a non-electronic Passport? e-Passports contain security features to prevent forgery which contribute to the international effort to counter transnational terrorist activities, illegal entry into the Kingdom, etc. e-Passports improve the verification process at Thai immigration checkpoints which facilitates traveling, entry into the Kingdom, and promotes tourism. e-Passports give the international community more confidence in Thai passports which boost the Kingdom&rsquo;s image and economy by attracting more investors and tourists. Thailand e-passports have been issued since August 2005. The previous model of Thai passport before August 2005 is still valid until expired date specified in the passport and extension of the pre-model of e-passports is not allowed. e-Passport Application Process The applicant must apply in person because the applicant&rsquo;s biometric data has to be captured via the following steps: Step 1 Take a queue number Present the valid Thai Citizenship I.D. Card with the 13-digit Personal Number to the Office&rsquo;s receptionist. If there is no 13-digit Personal Number, bring the House Registration together with other official documents. Take a queue number and fill in the applicant&rsquo;s first name and last name in English together with date and place of birth and personal contact&rsquo;s information. Step 2 Capture the applicant&rsquo;s biodata An Office&rsquo;s authorized personnel measures the applicant&rsquo;s height, captures the applicant&rsquo;s biometric data via taking the applicant&rsquo;s picture and fingerprints (print right and left index fingers separately twice using a scanner). Verify and sign to certify the applicant&rsquo;s information. Apply for postage service ( see e-Passport Pick-up) Step 3 Applicant fee payment Pay application fee and postage service fee. Obtain receipt and notification of the e-Passport pick-up date or notification of postage service. Application Fee e-Passport application fee : 1,000 Baht postage service (EMS ) fee : 35 Baht Validity for e-Passports To maintain the quality and usability of e-Passports, the ordinary e-Passports are valid for 5 years. No extension of validity will be granted and a new e-Passport will be issued when the current one expires. Amendments to e-Passport bearers&rsquo; information are not allowed (i.e. changes to the bearer&rsquo;s name or surname) as corrections will create problems because they will clash with the information already captured in the embedded microchip. Therefore, any amendments must first be reported to the Ministry of Interior before the bearer can apply for a new e-Passport. e-Passport Pick-Up Applicants in Bangkok can pick-up their e-Passports 2 working days after the application date. The Ministry of Foreign Affairs has set up an automatic gate simulation at the Chaengwattana building so that applicants can practice using their e-Passports on an automated machine. The Ministry therefore urges applicants to pick-up their e-Passports in person so that they can familiarize themselves with the automatic gate system. If necessary, applicants may designate a representative to pick-up their e-Passports and /or request that their e-Passports be express-mailed to them. Applicants outside of Bangkok are required to apply for postage service which will take 5 &ndash; 7 working days for the e-Passports being express-mailed to them through EMS. To pick-up e-Passports, applicants must bring their notifications of e-Passport pick-up date together with their Citizenship I.D.Cards and other applicable documents. Applicants who cannot come in person to pick-up their e-Passports can designate a representative to do the pick-up. The representative must bring: (1) the notification of e-Passport pick-up date (2) the Citizenship I.D.Cards of the applicant and the representative (3) a certified copy of the representative&rsquo;s Citizenship I.D.Card Advice on Your e-Passport Maintenance Do not make any marks, changes or amendments on the visa pages of your e-Passport. Do not peel, cut, append, punch holes or perform any other acts that would damage the cover of your e-Passport. Do not cut, bend, twist or perform any other acts that would crumple your e-Passport or change its shape. Do not keep your e-Passport near a magnetic field, an area with high electrical voltage, or an area with high radio frequency such as near cellular phones, televisions, or microwaves. Avoid placing a heavy object on top of your e-Passport. Keep your e-Passport in a cool, dry place. Avoid placing your e-Passport near objects that are higher than 50 degree Celsius in temperature, in direct sunlight for long periods of time, or in a place with high humidity. Do not allow your e-Passport near water or any places which contain chemicals or dust. The Ministry of Foreign Affairs will not be responsible for any of damages resulting from the aforementioned actions to your e-Passport. For further information, please refer to our website at www.mfa.go.th and www.consular.go.th or contact us by e-mail at [email&#160;protected] or call us at 02-981-7257 to 60 during official work hours. TOP Ministry of Foreign Affairs 443 Sri Ayudhya Road Bangkok 10400 Office Hours : Monday - Friday, 08.30 - 16.30 (Except public and offcial holidays) This website had been designed to be as accessible as possible to all and is certified by the WCAG 2.0 standard (Level AA) ** Best viewed with Chrome Version 76 up ** Subscribe Follow us: Visitor 5,050,619 Subscribe Sitemap Home Thailand and ASEAN Media Center - Information for Foreign Press - Filming in Thailand - Travel A…"
+    ],
+    "removed": [
+     "…(TD) ISSUANCE OF EMERGENCY CERTIFICATE (EC) Protection of Thai Nationals วันที่นำเข้าข้อมูล วันที่ปรับปรุงข้อมูล | 159,617 view Electronic Passport - What is an e-Passport? - Why is an e-Passport better than a non-electronic Passport? - Application Process - Types of e-Passport and document required for application - Validity for e-Passports - e-Passport Pick-Up - Advice on your e-Passport maintenance What is an e-Passport? It is an electronic passport which contains technical specifications that comply with the standards set out by the International Civil Aviation Organization (ICAO). It differs from a non-electronic Passport via to the following characteristics: It contains biometric data such as finger prints and facial features in a contactless integrated circuit which is embedded in all e-Passports. It is readable by the automatic gates at immigration checkpoints which automatically verify that the embedded information matches that of the bearer. Why is an e-Passport better than a non-electronic Passport? e-Passports contain security features to prevent forgery which contribute to the international effort to counter transnational terrorist activities, illegal entry into the Kingdom, etc. e-Passports improve the verification process at Thai immigration checkpoints which facilitates traveling, entry into the Kingdom, and promotes tourism. e-Passports give the international community more confidence in Thai passports which boost the Kingdom&rsquo;s image and economy by attracting more investors and tourists. Thailand e-passports have been issued since August 2005. The previous model of Thai passport before August 2005 is still valid until expired date specified in the passport and extension of the pre-model of e-passports is not allowed. e-Passport Application Process The applicant must apply in person because the applicant&rsquo;s biometric data has to be captured via the following steps: Step 1 Take a queue number Present the valid Thai Citizenship I.D. Card with the 13-digit Personal Number to the Office&rsquo;s receptionist. If there is no 13-digit Personal Number, bring the House Registration together with other official documents. Take a queue number and fill in the applicant&rsquo;s first name and last name in English together with date and place of birth and personal contact&rsquo;s information. Step 2 Capture the applicant&rsquo;s biodata An Office&rsquo;s authorized personnel measures the applicant&rsquo;s height, captures the applicant&rsquo;s biometric data via taking the applicant&rsquo;s picture and fingerprints (print right and left index fingers separately twice using a scanner). Verify and sign to certify the applicant&rsquo;s information. Apply for postage service ( see e-Passport Pick-up) Step 3 Applicant fee payment Pay application fee and postage service fee. Obtain receipt and notification of the e-Passport pick-up date or notification of postage service. Application Fee e-Passport application fee : 1,000 Baht postage service (EMS ) fee : 35 Baht Validity for e-Passports To maintain the quality and usability of e-Passports, the ordinary e-Passports are valid for 5 years. No extension of validity will be granted and a new e-Passport will be issued when the current one expires. Amendments to e-Passport bearers&rsquo; information are not allowed (i.e. changes to the bearer&rsquo;s name or surname) as corrections will create problems because they will clash with the information already captured in the embedded microchip. Therefore, any amendments must first be reported to the Ministry of Interior before the bearer can apply for a new e-Passport. e-Passport Pick-Up Applicants in Bangkok can pick-up their e-Passports 2 working days after the application date. The Ministry of Foreign Affairs has set up an automatic gate simulation at the Chaengwattana building so that applicants can practice using their e-Passports on an automated machine. The Ministry therefore urges applicants to pick-up their e-Passports in person so that they can familiarize themselves with the automatic gate system. If necessary, applicants may designate a representative to pick-up their e-Passports and /or request that their e-Passports be express-mailed to them. Applicants outside of Bangkok are required to apply for postage service which will take 5 &ndash; 7 working days for the e-Passports being express-mailed to them through EMS. To pick-up e-Passports, applicants must bring their notifications of e-Passport pick-up date together with their Citizenship I.D.Cards and other applicable documents. Applicants who cannot come in person to pick-up their e-Passports can designate a representative to do the pick-up. The representative must bring: (1) the notification of e-Passport pick-up date (2) the Citizenship I.D.Cards of the applicant and the representative (3) a certified copy of the representative&rsquo;s Citizenship I.D.Card Advice on Your e-Passport Maintenance Do not make any marks, changes or amendments on the visa pages of your e-Passport. Do not peel, cut, append, punch holes or perform any other acts that would damage the cover of your e-Passport. Do not cut, bend, twist or perform any other acts that would crumple your e-Passport or change its shape. Do not keep your e-Passport near a magnetic field, an area with high electrical voltage, or an area with high radio frequency such as near cellular phones, televisions, or microwaves. Avoid placing a heavy object on top of your e-Passport. Keep your e-Passport in a cool, dry place. Avoid placing your e-Passport near objects that are higher than 50 degree Celsius in temperature, in direct sunlight for long periods of time, or in a place with high humidity. Do not allow your e-Passport near water or any places which contain chemicals or dust. The Ministry of Foreign Affairs will not be responsible for any of damages resulting from the aforementioned actions to your e-Passport. For further information, please refer to our website at www.mfa.go.th and www.consular.go.th or contact us by e-mail at [email&#160;protected] or call us at 02-981-7257 to 60 during official work hours. TOP Ministry of Foreign Affairs 443 Sri Ayudhya Road Bangkok 10400 Office Hours : Monday - Friday, 08.30 - 16.30 (Except public and offcial holidays) This website had been designed to be as accessible as possible to all and is certified by the WCAG 2.0 standard (Level AA) ** Best viewed with Chrome Version 76 up ** Subscribe Follow us: Visitor 5,004,465 Subscribe Sitemap Home Thailand and ASEAN Media Center - Information for Foreign Press - Filming in Thailand - Travel A…"
+    ]
+   }
+  },
+  {
+   "url": "https://www.interior.gov.kh/",
+   "label": "Ministry of Interior (General Department of Identification)",
+   "ids": [
+    "kh-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…ការពារសុវត្ថិភាព ជូនប្រជាពលរដ្ឋ ក្នុងព្រះរាជាណាចក្រកម្ពុជា។ ទំនាក់ទំនង អាស័យដ្ឋាន: #275 ​ផ្លូវព្រះនរោត្តម, ក្រុងភ្នំពេញ [email&#160;protected] 023 721 905 - 023 726 052 - 023 721 190 ប្រព័ន្ធ​ផ្សព្វ​ផ្សាយ ទាញយកកម្មវិធីទូរស័ព្ទក្រសួងមហាផ្ទៃ ឆ្នាំ 2023 - 2026 © រក…"
+    ],
+    "removed": [
+     "…ការពារសុវត្ថិភាព ជូនប្រជាពលរដ្ឋ ក្នុងព្រះរាជាណាចក្រកម្ពុជា។ ទំនាក់ទំនង អាស័យដ្ឋាន: #275 ​ផ្លូវព្រះនរោត្តម, ក្រុងភ្នំពេញ cambodia@interior.gov.kh 023 721 905 - 023 726 052 - 023 721 190 ប្រព័ន្ធ​ផ្សព្វ​ផ្សាយ ទាញយកកម្មវិធីទូរស័ព្ទក្រសួងមហាផ្ទៃ ឆ្នាំ 2023 - 2026 © រក…"
+    ]
+   }
+  },
+  {
+   "url": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/applying-schengen-visa_en",
+   "label": "EU Home Affairs",
+   "ids": [
+    "schengen"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "See all Discover more International affairs International affairs Migration and internal security are key priorities for EU external relations, ensuring a coordinated and coherent approach by involving all relevant stakeholders.",
+     "Cooperation with external partners is key to address migration challenges and opportunities."
+    ],
+    "removed": [
+     "See all Discover more Funding Funding Learn about EU funds supporting projects on migration and home affairs: Asylum, Migration and Integration Fund (AMIF), Internal Security Fund (ISF) and Horizon Europe funding for security research."
+    ]
+   }
+  },
+  {
+   "url": "https://www.passport.gov.gr/en/diadikasia-ekdosis/documents/specificationphoto.html",
+   "label": "passport.gov.gr",
+   "ids": [
+    "gr-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…nical specifications of passport photograph: ΤΕΧΝΙΚΕΣ ΠΡΟΔΙΑΓΡΑΦΕΣ ΨΗΦΙΑΚΗΣ ΦΩΤΟΓΡΑΦΙΑΣ - PDF Document PDF, 0.79 MB, 108884 downloads, May 09, 2018 ΤΕΧΝΙΚΕΣ ΠΡΟΔΙΑΓΡΑΦΕΣ ΕΝΤΥΠΗΣ ΦΩΤΟΓΡΑΦΙΑΣ - PDF (Αφορά μόνο για τις περιπτώσεις υποβολής αίτησης στο εξωτερικό.) Document PDF, 419.05 KB, 106043 downloads, May 09, 2018 It has been read 1476661 times Tags: Passport Photograph Passport myphoto Previous article Administrative Fee (e-paravolo) Issuing a Passport In…"
+    ],
+    "removed": [
+     "…nical specifications of passport photograph: ΤΕΧΝΙΚΕΣ ΠΡΟΔΙΑΓΡΑΦΕΣ ΨΗΦΙΑΚΗΣ ΦΩΤΟΓΡΑΦΙΑΣ - PDF Document PDF, 0.79 MB, 108251 downloads, May 09, 2018 ΤΕΧΝΙΚΕΣ ΠΡΟΔΙΑΓΡΑΦΕΣ ΕΝΤΥΠΗΣ ΦΩΤΟΓΡΑΦΙΑΣ - PDF (Αφορά μόνο για τις περιπτώσεις υποβολής αίτησης στο εξωτερικό.) Document PDF, 419.05 KB, 105536 downloads, May 09, 2018 It has been read 1471995 times Tags: Passport Photograph Passport myphoto Previous article Administrative Fee (e-paravolo) Issuing a Passport In…"
+    ]
+   }
+  },
+  {
+   "url": "https://polisen.se/tjanster-tillstand/pass-och-nationellt-id-kort/",
+   "label": "polisen.se",
+   "ids": [
+    "se-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Svar p&aring; vanliga fr&aring;gor om pass och nationellt id-kort Statlig e-legitimation SverigeID Fr&aring;n den 1 december kan svenska medborgare och folkbokf&ouml;rda utan svenskt medborgarskap ans&ouml;ka om SverigeID.",
+     "Statlig e-legitimation &ndash; SverigeID Mer information Id-kort f&#xF6;r folkbokf&#xF6;rda utan svenskt medborgarskap Polisen utf&#xE4;rdar, fr&#xE5;n den , ett id-kort f&#xF6;r folkbokf&#xF6;rda utan svenskt medborgarskap.",
+     "F&#xF6;r barn och unga Boka tid och ge medgivande f&#xF6;r att ans&#xF6;ka om pass eller nationellt id-kort till ditt barn.",
+     "Bildst&ouml;d: Ans&ouml;ka om pass (framtaget av bildstod.se) (pdf, 272 kB) Granskad 27 oktober 2026 Dela sidan Facebook X LinkedIn E-post Kontakt Kontakta polisen Polisstationer Pressrum Jobb Bli polis Lediga jobb Polisens volont&#xE4;rer Om webbplatsen Tillg&#xE4;nglighetsredog&#xF6;relse Kakor/cookies Personuppgifter"
+    ],
+    "removed": [
+     "H&#xE4;r hittar du information, blanketter och annat du beh&#xF6;ver veta n&#xE4;r du ska skaffa nytt pass eller nationellt id-kort.",
+     "Svar p&aring; vanliga fr&aring;gor Statlig e-legitimation SverigeID Fr&aring;n den 1 december kan svenska medborgare och folkbokf&ouml;rda utan svenskt medborgarskap ans&ouml;ka om SverigeID.",
+     "Statlig e-legitimation &ndash; SverigeID Mer information F&#xF6;r barn och unga Boka tid och ge medgivande f&#xF6;r att ans&#xF6;ka om pass eller nationellt id-kort till ditt barn.",
+     "Provisoriskt pass Provisoriskt pass g&#xE5;r att ans&#xF6;ka om tidigast 72 timmar innan avresa.",
+     "Bildst&ouml;d: Ans&ouml;ka om pass (framtaget av bildstod.se) (pdf, 272 kB) Granskad Dela sidan Facebook X LinkedIn E-post Kontakt Kontakta polisen Polisstationer Pressrum Jobb Bli polis Lediga jobb Polisens volont&#xE4;rer Om webbplatsen Tillg&#xE4;nglighetsredog&#xF6;relse Kakor/cookies Personuppgifter"
+    ]
+   }
+  },
+  {
+   "url": "https://www.politiet.no/tjenester/pass-og-id-kort/huskeliste-dette-ma-du-ha-med-til-pass-og-id-kontoret",
+   "label": "politiet.no",
+   "ids": [
+    "no-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Hopp til hovedinnhold Nødnummer 112 Kontakt politiet Søk Meny Pass og ID-kort Huskeliste: Dette må du ha med til pass– og ID-kontoret Dette må du ha med deg til pass- og ID-kontoret når du møter opp."
+    ],
+    "removed": [
+     "Hopp til hovedinnhold Nødnummer 112 Kontakt politiet Søk Meny Nødnummer 112 Kontakt politiet Søk Meny Huskeliste: Dette må du ha med til pass– og ID-kontoret - Politiet.no Pass og ID-kort Huskeliste: Dette må du ha med til pass– og ID-kontoret Dette må du ha med deg til pass- og ID-kontoret når du møter opp."
+    ]
+   }
+  },
+  {
+   "url": "https://www.zh.ch/de/mobilitaet/pass-identitaetskarte/pass-kombi-beantragen.html",
+   "label": "zh.ch (cantonal passport office)",
+   "ids": [
+    "ch-passport"
+   ],
+   "kind": "unmapped",
+   "why": "Numbers changed, but none is a value the app uses with a single clear replacement.",
+   "facts": [
+    "document file size: was 93 KB, 94 KB, 97 KB, 98 KB, 102 KB, 110 KB, 120 KB; now 159 KB, 179 KB, 182 KB, 225 KB, 1024 KB"
+   ],
+   "sentences": {
+    "added": [
+     "Suche zurücksetzen Suche Schliessen Suchbegriff Lösche Eingabe Suchen Meist gesucht regierungsrat formulare offene stellen jobs adressaenderung lernfahrausweis quellensteuer Logo des Kantons Zürich Sie sind hier: Pass & Identitätskarte Ausgeblendete Navigationsebenen ...",
+     "Antrag stellen Damit Sie einen Pass, eine biometrische Identitätskarte mit Chip oder einen Pass kombiniert mit einer Identitätskarte («Kombi») bestellen können, müssen Sie zuerst einen Antrag einreichen.",
+     "Sie können kein eigenes Foto mitbringen.",
+     "Entweder sie werden von beiden Elternteilen begleitet oder die nicht anwesenden Elternteile erteilen ihre Zustimmung schriftlich mittels Zustimmungsformular (siehe unter «Merkblätter & Formulare»).",
+     "Die Begleitpersonen (Eltern etc.) müssen sich mit ihrem (ausländischen) Pass oder ihrer Identitätskarte ausweisen.",
+     "Download Gesuch Austauschpass PDF | 1 Seiten | deutsch | 159 KB Kontakt Passbüro Adresse Sihlquai 253 8005 Zürich Route (Google) Adresse kopieren Adresse wurde kopiert Adresse konnte nicht kopiert werden Vor Ort im Passbüro werden keine Ausweisanträge entgegengenommen."
+    ],
+    "removed": [
+     "Suche zurücksetzen Suche Schliessen Suchbegriff Lösche Eingabe Suchen Meist gesucht formulare offene stellen jobs adressaenderung lernfahrausweis quellensteuer jugendurlaub Logo des Kantons Zürich Sie sind hier: Pass & Identitätskarte Ausgeblendete Navigationsebenen ...",
+     "Antrag stellen Damit Sie einen Pass oder einen Pass kombiniert mit einer Identitätskarte («Kombi») bestellen können, müssen Sie zuerst einen Antrag einreichen.",
+     "Sie brauchen kein eigenes Foto mitzubringen.",
+     "Entweder sie werden von beiden Elternteilen begleitet oder die nicht anwesenden Elternteile erteilen ihre Zustimmung schriftlich mittels Zustimmungsformular (siehe unter «Merkblätter & Formulare»).Die Begleitpersonen (Eltern etc.) müssen sich mit ihrem (ausländischen) Pass oder ihrer Identitätskarte ausweisen.",
+     "Download Austauschpassgesuch PDF | 1 Seiten | Deutsch | 93 KB Kontakt Passbüro Adresse Sihlquai 253 8005 Zürich Route (Google) Adresse kopieren Adresse wurde kopiert Adresse konnte nicht kopiert werden Vor Ort im Passbüro werden keine Ausweisanträge entgegengenommen."
+    ]
+   }
+  },
+  {
+   "url": "https://www.pep.pt/faq/?lang=en",
+   "label": "pep.pt (Portuguese electronic passport)",
+   "ids": [
+    "pt-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Saltar para o conteúdo principal da página Justiça.gov.pt PDJ Organização JustiçaGovPt PDJ O Portal da Justi&#231;a/Plataforma Digital da Justi&#231;a (PDJ) junta a informa&#231;&#227;o, os servi&#231;os e os organismos da justi&#231;a num s&#243; local.",
+     "Atrav&#233;s da Plataforma Digital da Justi&#231;a pode utilizar comodamente todos os servi&#231;os online dispon&#237;veis sem necessidade de desloca&#231;&#245;es.",
+     "SGMJ A Secretaria-Geral do Minist&#233;rio da Justi&#231;a (SGMJ) apoia os gabinetes do Governo e os organismos da &#225;rea da Justi&#231;a, coordena os fundos europeus na Justi&#231;a, preserva a mem&#243;ria hist&#243;rica da Justi&#231;a e informa o Cidad&#227;o.",
+     "CEJ O Centro de Estudos Judici&#225;rios (CEJ) assegura a forma&#231;&#227;o inicial e cont&#237;nua de Ju&#237;zes e Magistrados do Minist&#233;rio P&#250;blico.",
+     "IGSJ A Inspe&#231;&#227;o-Geral dos Servi&#231;os de Justi&#231;a (IGSJ) &#233; o servi&#231;o do controlo setorial de todos os servi&#231;os e organismos dependentes do Minist&#233;rio da Justi&#231;a.",
+     "IGFEJ O Instituto de Gest&#227;o Financeira e Equipamentos da Justi&#231;a (IGFEJ) gere os recursos financeiros, patrimoniais e tecnol&#243;gicos do Minist&#233;rio da Justi&#231;a.",
+     "DGAJ A Dire&#231;&#227;o-Geral da Administra&#231;&#227;o da Justi&#231;a (DGAJ) &#233; um servi&#231;o do Minist&#233;rio da Justi&#231;a que tem por miss&#227;o assegurar o apoio ao funcionamento dos tribunais.",
+     "DGPJ A Dire&#231;&#227;o-Geral da Pol&#237;tica de Justi&#231;a (DGPJ) atua no &#226;mbito da pol&#237;tica de justi&#231;a, planeamento estrat&#233;gico, dos meios de resolu&#231;&#227;o alternativa de lit&#237;gios, das rela&#231;&#245;es internacionais e da informa&#231;&#227;o estat&#237;stica da Justi&#231;a."
+    ],
+    "removed": [
+     "justica.gov.pt / Registos / Identificação / Passaporte eletrónico Atendimento presencial: tire uma senha online para atendimento no próprio dia.",
+     "Encontre o balcão IRN Registo mais próximo nas plataformas SIGA.",
+     "Consulte as filas de espera .",
+     "Quem pode pedir Como pedir Quanto custa Onde pedir Quem pode pedir O Passaporte Eletrónico Português pode ser pedido por qualquer pessoa com um Cartão de Cidadão ou Bilhete de Identidade válido."
+    ]
+   }
+  },
+  {
+   "url": "https://www.uscis.gov/policy-manual/volume-7-part-a-chapter-4",
+   "label": "uscis.gov",
+   "ids": [
+    "us-uscis"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Read More Affected Sections 7 USCIS-PM A - Part A - Adjustment of Status Policies and Procedures 7 USCIS-PM B - Part B - 245(a) Adjustment 0 Page sub tree links Current as of October 27, 2026 Previous Next Was this page helpful?"
+    ],
+    "removed": [
+     "Read More Affected Sections 7 USCIS-PM A - Part A - Adjustment of Status Policies and Procedures 7 USCIS-PM B - Part B - 245(a) Adjustment 0 Page sub tree links Current as of October 23, 2026 Previous Next Was this page helpful?"
+    ]
+   }
+  },
+  {
+   "url": "https://www.gov.br/mre/pt-br/consulado-sao-francisco/electronic-visitor-visa-e-visa",
+   "label": "gov.br: Consulate General in San Francisco, e-Visa",
+   "ids": [
+    "br-evisa"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Voltar ao topo da página Rejeitar Fale Agora Refazer a busca Ajude a melhorar o gov.br Ao compartilhar sua opinião, você nos ajuda a identificar problemas e a melhorar a navegação para você.",
+     "Agora não Responder pesquisa Não exibir esta mensagem novamente."
+    ],
+    "removed": [
+     "Voltar ao topo da página Rejeitar Fale Agora Refazer a busca"
+    ]
+   }
+  },
+  {
+   "url": "https://www.gov.br/pf/pt-br/assuntos/passaporte/documentacao/lista-brasileiro",
+   "label": "gov.br (Polícia Federal)",
+   "ids": [
+    "br-passport",
+    "br-passport-child"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Voltar ao topo da página Rejeitar Fale Agora Refazer a busca Ajude a melhorar o gov.br Ao compartilhar sua opinião, você nos ajuda a identificar problemas e a melhorar a navegação para você.",
+     "Agora não Responder pesquisa Não exibir esta mensagem novamente."
+    ],
+    "removed": [
+     "Voltar ao topo da página Rejeitar Fale Agora Refazer a busca"
+    ]
+   }
+  },
+  {
+   "url": "https://moi.gov.jo/",
+   "label": "moi.gov.jo (Ministry of Interior)",
+   "ids": [
+    "jo-visa"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…اقتراحات والشكاوى الخطة الاستراتجية استبيان رضى متلقى الخدمة استبيان قياس رضا الشركاء طلب الحصول على معلومة اخر الاخبار وزير الداخلية يتلقى اتصالاً هاتفياً من نظيره اللبناني للتعزية بضحايا الحادث الإرهابي في الكرك 28.10.2026 تلقى معالي وزير الداخلية، مازن الفراية، من نائب رئيس مجلس الوزراء ووزير الداخلية في دولة الإمارات العربية المتحدة 28.10.2026 وزير الداخلية يلتقي السفير الإماراتي لبحث تعزيز التعاون الثنائي 28.10.2026 تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من نظيره العراقي تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من النائب الأول لرئيس مجلس الوزراء ووزير الداخلية الكويتي 24.10.2026 وزارة الداخلية تعزز الرقابة على تجارة الذهب والمجوهرات عبر مواقع التواصل الاجتماعي 21.10.2026 وزير الداخلية يزور ألوية بني كنانة والوسطية والأغوار الشمالية ومعبر وادي الأردن 20.10.2026 وزيرا الداخلية الأردني والقطري يبحثان التعاون المشترك 15.10.2026 وزارة الداخلية تفرج عن (442) موقوفا إداريا 4.10.2026 عقد وزيرا الداخلية مازن الفراية، والاتصال الحكومي محمد المومني، وبحضور مدير عام دائرة الإحصاءات العامة الدكتور حيدر فريحات، والمحافظين عبر تقنية الاتصال المرئي والمسموع، اجتماعا بمقر وزارة الداخلية، اليوم الإثنين لمتابعة وبحث الاستعدادات لتنفيذ التعداد العام للسكان والمساكن 2026، عاجل .... يجري وزير الداخلية، مازن الفراية، في هذه الأثناء جولة ميدانية في جسر الملك حسين 23.9.2026 وزير الداخلية يترأس اجتماعا للمجلس الأعلى للدفاع المدني وزارة الداخلية تفرج عن (374) موقوفا إداريا 16.9.2026 وزير الداخلية يترأس اجتماع اللجنة العليا للإصلاح والتأهيل 16.9.2026 وزيرا الداخلية وتطوير القطاع العام يتابعان تقييم الثقافة المؤسسية في وزارة الداخلية 14.9.2026 شارك وزير الداخلية، مازن الفراية، في أعمال منتدى التعاون العالمي للأمن العام، المنعقد حاليًا بمدينة ليانيونغانغ في جمهورية الصين الشعبية زار وزير الداخلية، مازن الفراية، اليوم الأربعاء، مركز حدود جابر، وتفقد المرافق العامة وساحة الشحن الجديدة 26.8.2026 وزارة الداخلية تفرج عن (436) موقوفا إداريا 24.8.2026 تفقد فريق حكومي ضم وزراء الصناعة والتجارة والتموين المهندس يعرب القضاة، والداخلية مازن الفراية والنقل الدكتور نضال القطامين اليوم الثلاثاء 4.8.2026 تدعو وزارة الداخلية جميع الأشخاص ممن يواجهون أي مشكلة تتعلق بحساباتهم الإلكترونية على خدمات الوزارة ولم يتمكنوا من حلها بالوسائل المتاحة الكترونيا تسهيلات جديدة للمستثمرين ورجال الأعمال السوريين بيان صادر عن وزارتي الداخلية والعدل حول الاشتباه بمواطن أردني بقتل مواطنة أمريكية في إيرلندا 15.7.2026 وصل وزير الداخلية، مازن الفراية، اليوم الأربعاء، إلى العاصمة السورية، دمشق، في أول زيارة رسمية 8.7.2026 إعلان اسماء المقبولين لبرنامج تدريب حديثي التخرج 8.7.2026 يجري وزير الداخلية، مازن الفراية، في هذه الأثناء، زيارة تفقدية لدار محافظة الكرك ومديرية أحوال وجوازات الكرك. 29.6.2026 يجري وزير الداخلية، مازن الفراية، في هذه الأثناء، زيارة إلى جسر الملك حسين 21.6.2026 افتتح وزير الداخلية، مازن الفراية، اليوم الثلاثاء، مبنى محافظة مأدبا الجديد قررت وزارة الداخلية، وبناءً على توصية من وزارة الصحة منع دخول جميع القادمين من جمهورية الكونغو الديمقراطية وجمهورية أوغندا إلى المملكة الأردنية الهاشمية 19.5.2026 وزير الداخلية يزور مركز حدود العمري ومديرية قضاء الأزرق 14.5.2026 إعلان تدعو وزارة الداخلية المذكورين بالجدول ادناه مراجعة وزارة الداخلية تمديد ساعات عمل حركة الشحن في مركز حدود الكرامة 4.5.2026 تعلن وزارة الداخلية عن حاجتها لتعبئة الوظائف الشاغرة التالية بوظيفة عقد محدد المدة بدوام كامل و ذلك ضمن الشروط و المواصفات المبينة ازاء كل وظيفة 2.4.2026 سمو الأمير الحسين بن عبدالله الثاني ولي العهد يؤكد خلال زيارته وزارة الداخلية 26.3.2026 تدعو وزارة الداخلية المذكورين بالجدول ادناه مراجعة وزارة الداخليةلإجراء المقابلة الشخصية وذلك حسب اليوم والتاريخ المبين ازاء اسم كل منهم 3.3.2026 وزير الداخلية يفتتح مكتب الخدمة المستعجلة في دائرة الأحوال المدنية والجوازات 23.2.2026 وزير الداخلية يستقبل المفوض السامي للأمم المتحدة لشؤون اللاجئين 3.2.2026 اعلان صادر عن وزارة الداخلية تدعو وزارة الداخلية، المرشحين الذين انطبقت عليهم شروط الاعلان المنشور سابقا 2.2.2026 وزير الداخلية، مازن الفراية، يقوم حاليا، بزيارة غير معلنة، لمركز حدود جابر 2.2.2026 وزير الداخلية يتفقد مديرية أحوال وجوازات إربد 1.2.2026 وزير الداخلية يلتقي سفير جمهورية أذربيجان 28.1.2026 وزير الداخلية يتابع خطط تطوير مركز حدود العمري 20.1.2026 يقوم وزير الداخلية، مازن الفراية، في هذه الأثناء، بزيارة إلى جسر الملك حسين 18.1.2026 في ذكرى الإسراء والمعراج نسأل المولى عزّ وجلّ أن يعيد هذه المناسبة المباركة على وطننا الغالي وزير الداخلية وسفير الإتحاد الأوروبي يتفقدان مصنع دير علا لإعادة تدوير البلاستيك 15.1.2026 وزير الداخلية يزور غرفة عمليات محافظة العاصمة، ويجتمع مع محافظ العاصمة 13.1.2026 علن وزارة الداخلية عن حاجتها لتعبئة الوظائف الشاغرة التالية بوظيفة 12.1.2026 وزير الداخلية يزور غرفة عمليات محافظة جرش ة 10.1.2026 وزير الداخلية يزور متصرفية لواء الرمثا ويوجّه بضرورة الاستعداد للظروف الجوية المتوقعة ويتفقد سد البويضة 8.1.2026 وزير الداخلية يلتقي رؤساء الادارة العامة في المحافظات 8.1.2026 وزارة الداخلية تقرر منح الأجانب القادمين إلى المملكة إقامة لمدة ثلاثة أشهر بدلا من شهر واحد 8.1.2026 خدمات الوزارة عرض الكل الخدمات الالكترونية دليل الخدمات خدمات أخرى الخدمات الالكترونية لمديرية المتابعة والتفتيش الطلبات الالكترونية للتأشيرات الطلبات الالكترونية للإقامات خدمة إلغاء قرار إبعاد خدمة الحصول على وثائق سفر اضطرارية خدمة استكمال اجراءات عقد الزواج خدمة استكمال اجراءات التنازل عن خادمة دليل الخدمات الالكترونية التأشيرة الالكترونية تأشيرة بقصد الزيارة تأشيرة بقصد المرور تأشيرة خروج وعودة تأشيرة بقصد الدراسة تأشيرة بقصد العمل إقامة سنوية بموجب وديعة بنكية إقامة سنوية أفراد عائلة/التحاق بعائل طلب تمديد إذن إقامة مؤقتة إقامة بقصد الدراسة طلب الحصول على معلومة استبيان رضى متلقى الخدمة انت تسأل الخدمات الالكترونية الخدمات الالكترونية لمديرية المتابعة والتفتيش الطلبات الالكترونية للتأشيرات الطلبات الالكترونية للإقامات خدمة إلغاء قرار إبعاد خدمة الحصول على وثائق سفر اضطرارية خدمة استكمال اجراءات عقد الزواج خدمة استكمال اجراءات التنازل عن خادمة دليل الخدمات دليل الخدمات الالكترونية خدمات أخرى التأشيرة الالكترونية تأشيرة بقصد الزيارة تأشيرة بقصد المرور تأشيرة خروج وعودة تأشيرة بقصد الدراسة تأشيرة بقصد العمل إقامة سنوية بموجب وديعة بنكية إقامة سنوية أفراد عائلة/التحاق بعائل طلب تمديد إذن إقامة مؤقتة إقامة بقصد الدراسة طلب الحصول على معلومة استبيان رضى متلقى الخدمة انت تسأل عرض الكل اخبار الوزارة 01/11/2026 إعلان صادر عن وزارة الداخلية بشأن الاختبار التنافسي تدعو وزارة الداخلية المرشحين الذين انطبقت عليهم شروط الاعلان لحضور الاختبار اقرأ المزيد 28/10/2026 وزير الداخلية يتلقى اتصالاً هاتفياً من نظيره اللبناني للتعزية بضحايا الحادث الإرهابي في الكرك اقرأ المزيد 28/10/2026 تلقى معالي وزير الداخلية، مازن الفراية، من نائب رئيس مجلس الوزراء ووزير الداخلية في دولة الإمارات العربية المتحدة، سمو الشيخ سيف بن زايد آل نهيان اقرأ المزيد 28/10/2026 وزير الداخلية يلتقي السفير الإماراتي لبحث تعزيز التعاون الثنائي التقى وزير الداخلية، مازن الفرايه، اليوم الأربعاء في مكتبه بمقر ا... اقرأ المزيد 01/11/2026 إعلان صادر عن وزارة الداخلية بشأن الاختبار التنافسي تدعو وزارة الداخلية المرشحين الذين انطبقت عليهم شروط الاعلان لحضور الاختبار اقرأ المزيد 28/10/2026 وزير الداخلية يتلقى اتصالاً هاتفياً من نظيره اللبناني للتعزية بضحايا الحادث الإرهابي في الكرك اقرأ المزيد 28/10/2026 تلقى معالي وزير الداخلية، مازن الفراية، من نائب رئيس مجلس الوزراء ووزير الداخلية في دولة الإمارات العربية المتحدة، سمو الشيخ سيف بن زايد آل نهيان اقرأ المزيد 28/10/2026 وزير الداخلية يلتقي السفير الإماراتي لبحث تعزيز التعاون الثنائي التقى وزير الداخلية، مازن الفرايه، اليوم الأربعاء في مكتبه بمقر الوزارة، سفير دولة الإمارات العربية المتحدة لدى المملكة الأردنية الهاشمية اقرأ المزيد عرض الكل محافظات المملكة محافظة العاصمة 9 محافظة اربد 10 محافظة البلقاء 11 محافظة الكرك 12 محافظة معان 13 محافظة الزرقاء 14 محافظة المفرق 15 محافظة الطفيلة 16 محافظة مادبا 17 محافظة جرش 18 محافظة عجلون 19 محافظة العقبة 20 تصفح الموقع نظام الخدمات الالكترونية لوزارة الداخلية الدول التي تحتاج إلى موافقة مسبقة الهيكل التنظيمي المحافظات والمراكز الإدارية الدستور الاردني القوانين الأنظمة التعليمات المكتبة الالكترونية بطاقة الخدمة الخاصة بالجالية السورية قائمة الجزاءات الموحدة لمجلس الأمن التابع للأمم المتحدة الدول التي تحتاج الى موافقة مسبقة &times; مدونة السلوك الوظيفي روابط مفيدة حق الحصول على معلومة نتائج استطلاع الرأي ميثاق مستوى الخدمة وسائل التواصل الاجتماعي معلومات الاتصال معلومات الاتصال الهاتف: +96265691141 الفاكس: +96265606908 العنوان: وزارة الداخلية - عرجان ص . ب. 100، عمان – الأردن ساعات العمل: من الأحد إلى الخميس، من الساعة الى الساعة اقرأ المزيد يدعم إنترنت إكسبلورر 10+, جوجل كروم, فايرفوكس, سفاري من الأفضل مشاهدة هذا الموقع من خلال شاشة 768 × 1366 البرنامج المطلوب للتصفح: Adobe Reader عدد زوار الموقع: 33739770 اخر تعديل: 09/11/2025 يرجى الاتصال على 065008080 أو إرسال بريد إلكتروني إلى ncc@nitc.gov.jo للإبلاغ عن أي مشكلة تقنية…"
+    ],
+    "removed": [
+     "…اقتراحات والشكاوى الخطة الاستراتجية استبيان رضى متلقى الخدمة استبيان قياس رضا الشركاء طلب الحصول على معلومة اخر الاخبار تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من نظيره العراقي تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من النائب الأول لرئيس مجلس الوزراء ووزير الداخلية الكويتي 24.10.2026 وزارة الداخلية تعزز الرقابة على تجارة الذهب والمجوهرات عبر مواقع التواصل الاجتماعي 21.10.2026 وزير الداخلية يزور ألوية بني كنانة والوسطية والأغوار الشمالية ومعبر وادي الأردن 20.10.2026 وزيرا الداخلية الأردني والقطري يبحثان التعاون المشترك 15.10.2026 وزارة الداخلية تفرج عن (442) موقوفا إداريا 4.10.2026 عقد وزيرا الداخلية مازن الفراية، والاتصال الحكومي محمد المومني، وبحضور مدير عام دائرة الإحصاءات العامة الدكتور حيدر فريحات، والمحافظين عبر تقنية الاتصال المرئي والمسموع، اجتماعا بمقر وزارة الداخلية، اليوم الإثنين لمتابعة وبحث الاستعدادات لتنفيذ التعداد العام للسكان والمساكن 2026، عاجل .... يجري وزير الداخلية، مازن الفراية، في هذه الأثناء جولة ميدانية في جسر الملك حسين 23.9.2026 وزير الداخلية يترأس اجتماعا للمجلس الأعلى للدفاع المدني وزارة الداخلية تفرج عن (374) موقوفا إداريا 16.9.2026 وزير الداخلية يترأس اجتماع اللجنة العليا للإصلاح والتأهيل 16.9.2026 وزيرا الداخلية وتطوير القطاع العام يتابعان تقييم الثقافة المؤسسية في وزارة الداخلية 14.9.2026 شارك وزير الداخلية، مازن الفراية، في أعمال منتدى التعاون العالمي للأمن العام، المنعقد حاليًا بمدينة ليانيونغانغ في جمهورية الصين الشعبية زار وزير الداخلية، مازن الفراية، اليوم الأربعاء، مركز حدود جابر، وتفقد المرافق العامة وساحة الشحن الجديدة 26.8.2026 وزارة الداخلية تفرج عن (436) موقوفا إداريا 24.8.2026 تفقد فريق حكومي ضم وزراء الصناعة والتجارة والتموين المهندس يعرب القضاة، والداخلية مازن الفراية والنقل الدكتور نضال القطامين اليوم الثلاثاء 4.8.2026 تدعو وزارة الداخلية جميع الأشخاص ممن يواجهون أي مشكلة تتعلق بحساباتهم الإلكترونية على خدمات الوزارة ولم يتمكنوا من حلها بالوسائل المتاحة الكترونيا تسهيلات جديدة للمستثمرين ورجال الأعمال السوريين بيان صادر عن وزارتي الداخلية والعدل حول الاشتباه بمواطن أردني بقتل مواطنة أمريكية في إيرلندا 15.7.2026 وصل وزير الداخلية، مازن الفراية، اليوم الأربعاء، إلى العاصمة السورية، دمشق، في أول زيارة رسمية 8.7.2026 إعلان اسماء المقبولين لبرنامج تدريب حديثي التخرج 8.7.2026 يجري وزير الداخلية، مازن الفراية، في هذه الأثناء، زيارة تفقدية لدار محافظة الكرك ومديرية أحوال وجوازات الكرك. 29.6.2026 يجري وزير الداخلية، مازن الفراية، في هذه الأثناء، زيارة إلى جسر الملك حسين 21.6.2026 افتتح وزير الداخلية، مازن الفراية، اليوم الثلاثاء، مبنى محافظة مأدبا الجديد قررت وزارة الداخلية، وبناءً على توصية من وزارة الصحة منع دخول جميع القادمين من جمهورية الكونغو الديمقراطية وجمهورية أوغندا إلى المملكة الأردنية الهاشمية 19.5.2026 وزير الداخلية يزور مركز حدود العمري ومديرية قضاء الأزرق 14.5.2026 إعلان تدعو وزارة الداخلية المذكورين بالجدول ادناه مراجعة وزارة الداخلية تمديد ساعات عمل حركة الشحن في مركز حدود الكرامة 4.5.2026 تعلن وزارة الداخلية عن حاجتها لتعبئة الوظائف الشاغرة التالية بوظيفة عقد محدد المدة بدوام كامل و ذلك ضمن الشروط و المواصفات المبينة ازاء كل وظيفة 2.4.2026 سمو الأمير الحسين بن عبدالله الثاني ولي العهد يؤكد خلال زيارته وزارة الداخلية 26.3.2026 تدعو وزارة الداخلية المذكورين بالجدول ادناه مراجعة وزارة الداخليةلإجراء المقابلة الشخصية وذلك حسب اليوم والتاريخ المبين ازاء اسم كل منهم 3.3.2026 وزير الداخلية يفتتح مكتب الخدمة المستعجلة في دائرة الأحوال المدنية والجوازات 23.2.2026 وزير الداخلية يستقبل المفوض السامي للأمم المتحدة لشؤون اللاجئين 3.2.2026 اعلان صادر عن وزارة الداخلية تدعو وزارة الداخلية، المرشحين الذين انطبقت عليهم شروط الاعلان المنشور سابقا 2.2.2026 وزير الداخلية، مازن الفراية، يقوم حاليا، بزيارة غير معلنة، لمركز حدود جابر 2.2.2026 وزير الداخلية يتفقد مديرية أحوال وجوازات إربد 1.2.2026 وزير الداخلية يلتقي سفير جمهورية أذربيجان 28.1.2026 وزير الداخلية يتابع خطط تطوير مركز حدود العمري 20.1.2026 يقوم وزير الداخلية، مازن الفراية، في هذه الأثناء، بزيارة إلى جسر الملك حسين 18.1.2026 في ذكرى الإسراء والمعراج نسأل المولى عزّ وجلّ أن يعيد هذه المناسبة المباركة على وطننا الغالي وزير الداخلية وسفير الإتحاد الأوروبي يتفقدان مصنع دير علا لإعادة تدوير البلاستيك 15.1.2026 وزير الداخلية يزور غرفة عمليات محافظة العاصمة، ويجتمع مع محافظ العاصمة 13.1.2026 علن وزارة الداخلية عن حاجتها لتعبئة الوظائف الشاغرة التالية بوظيفة 12.1.2026 وزير الداخلية يزور غرفة عمليات محافظة جرش ة 10.1.2026 وزير الداخلية يزور متصرفية لواء الرمثا ويوجّه بضرورة الاستعداد للظروف الجوية المتوقعة ويتفقد سد البويضة 8.1.2026 وزير الداخلية يلتقي رؤساء الادارة العامة في المحافظات 8.1.2026 وزارة الداخلية تقرر منح الأجانب القادمين إلى المملكة إقامة لمدة ثلاثة أشهر بدلا من شهر واحد 8.1.2026 خدمات الوزارة عرض الكل الخدمات الالكترونية دليل الخدمات خدمات أخرى الخدمات الالكترونية لمديرية المتابعة والتفتيش الطلبات الالكترونية للتأشيرات الطلبات الالكترونية للإقامات خدمة إلغاء قرار إبعاد خدمة الحصول على وثائق سفر اضطرارية خدمة استكمال اجراءات عقد الزواج خدمة استكمال اجراءات التنازل عن خادمة دليل الخدمات الالكترونية التأشيرة الالكترونية تأشيرة بقصد الزيارة تأشيرة بقصد المرور تأشيرة خروج وعودة تأشيرة بقصد الدراسة تأشيرة بقصد العمل إقامة سنوية بموجب وديعة بنكية إقامة سنوية أفراد عائلة/التحاق بعائل طلب تمديد إذن إقامة مؤقتة إقامة بقصد الدراسة طلب الحصول على معلومة استبيان رضى متلقى الخدمة انت تسأل الخدمات الالكترونية الخدمات الالكترونية لمديرية المتابعة والتفتيش الطلبات الالكترونية للتأشيرات الطلبات الالكترونية للإقامات خدمة إلغاء قرار إبعاد خدمة الحصول على وثائق سفر اضطرارية خدمة استكمال اجراءات عقد الزواج خدمة استكمال اجراءات التنازل عن خادمة دليل الخدمات دليل الخدمات الالكترونية خدمات أخرى التأشيرة الالكترونية تأشيرة بقصد الزيارة تأشيرة بقصد المرور تأشيرة خروج وعودة تأشيرة بقصد الدراسة تأشيرة بقصد العمل إقامة سنوية بموجب وديعة بنكية إقامة سنوية أفراد عائلة/التحاق بعائل طلب تمديد إذن إقامة مؤقتة إقامة بقصد الدراسة طلب الحصول على معلومة استبيان رضى متلقى الخدمة انت تسأل عرض الكل اخبار الوزارة 26/10/2026 الأمن العام : بعد عملية أمنيّة مشتركة، فرق التحقيق والمداهمة المتخصّصة تُلقي القبض على الإرهابيين الثلاثة اقرأ المزيد 24/10/2026 تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من نظيره العراقي معالي السيد ياسر المالكي، اقرأ المزيد 24/10/2026 تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من النائب الأول لرئيس مجلس الوزراء ووزير الداخلية الكويتي اقرأ المزيد 21/10/2026 وزارة الداخلية تعزز الرقابة على تجارة الذهب والمجوهرات عبر مواقع التواصل الاجتماعي حيث وجهت وزارة الداخلية، الجهات المعنية، للقيام بإجراءات رقابية اقرأ المزيد 26/10/2026 الأمن العام : بعد عملية أمنيّة مشتركة، فرق التحقيق والمداهمة المتخصّصة تُلقي القبض على الإرهابيين الثلاثة اقرأ المزيد 24/10/2026 تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من نظيره العراقي معالي السيد ياسر المالكي، اقرأ المزيد 24/10/2026 تلقى معالي وزير الداخلية، مازن الفراية، اتصالاً هاتفياً من النائب الأول لرئيس مجلس الوزراء ووزير الداخلية الكويتي اقرأ المزيد 21/10/2026 وزارة الداخلية تعزز الرقابة على تجارة الذهب والمجوهرات عبر مواقع التواصل الاجتماعي حيث وجهت وزارة الداخلية، الجهات المعنية، للقيام بإجراءات رقابية اقرأ المزيد عرض الكل محافظات المملكة محافظة العاصمة 9 محافظة اربد 10 محافظة البلقاء 11 محافظة الكرك 12 محافظة معان 13 محافظة الزرقاء 14 محافظة المفرق 15 محافظة الطفيلة 16 محافظة مادبا 17 محافظة جرش 18 محافظة عجلون 19 محافظة العقبة 20 تصفح الموقع نظام الخدمات الالكترونية لوزارة الداخلية الدول التي تحتاج إلى موافقة مسبقة الهيكل التنظيمي المحافظات والمراكز الإدارية الدستور الاردني القوانين الأنظمة التعليمات المكتبة الالكترونية بطاقة الخدمة الخاصة بالجالية السورية قائمة الجزاءات الموحدة لمجلس الأمن التابع للأمم المتحدة الدول التي تحتاج الى موافقة مسبقة &times; مدونة السلوك الوظيفي روابط مفيدة حق الحصول على معلومة نتائج استطلاع الرأي ميثاق مستوى الخدمة وسائل التواصل الاجتماعي معلومات الاتصال معلومات الاتصال الهاتف: +96265691141 الفاكس: +96265606908 العنوان: وزارة الداخلية - عرجان ص . ب. 100، عمان – الأردن ساعات العمل: من الأحد إلى الخميس، من الساعة الى الساعة اقرأ المزيد يدعم إنترنت إكسبلورر 10+, جوجل كروم, فايرفوكس, سفاري من الأفضل مشاهدة هذا الموقع من خلال شاشة 768 × 1366 البرنامج المطلوب للتصفح: Adobe Reader عدد زوار الموقع: 33621920 اخر تعديل: 09/11/2025 يرجى الاتصال على 065008080 أو إرسال بريد إلكتروني إلى ncc@nitc.gov.jo للإبلاغ عن أي مشكلة تقنية…"
+    ]
+   }
+  },
+  {
+   "url": "https://www.bahrain.bh/",
+   "label": "bahrain.bh (NPRA)",
+   "ids": [
+    "bh-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…opy; مملكة البحرين جميع الحقوق محفوظة إمكانية الوصول x النمط الداكن استمع لهذا المحتوى text_fields إعدادات النص الاثنين 02 نوفمبر 2026 سماء صافية الصغرى 24&deg; 32 °C العظمى 36&deg; الرطوبة 59 % شروق الشمس غروب الشمس الثلاثاء 03 نوفمبر 24&deg;-36&deg; الأربعاء 04 نوفمبر 24&deg;-35&deg; الخميس 05 نوفمبر 23&deg;-34&deg; الجمعة 06 نوفمبر 24&deg;-35&deg; السبت 07 نوفمبر 24&deg;-35&deg; الأحد 08 نوفمبر 24&deg;-35&deg; الاثنين 09 نوفمبر 24&deg;-35&deg; لمزيد من المعلومات : bahrainweather.gov.bh الرجاء الانتظار Complementary Content Deferred Modules ${title} ${badge…"
+    ],
+    "removed": [
+     "…opy; مملكة البحرين جميع الحقوق محفوظة إمكانية الوصول x النمط الداكن استمع لهذا المحتوى text_fields إعدادات النص الاثنين 26 أكتوبر 2026 غائم جزئياً الصغرى 24&deg; 31 °C العظمى 36&deg; الرطوبة 70 % شروق الشمس غروب الشمس الثلاثاء 27 أكتوبر 24&deg;-36&deg; الأربعاء 28 أكتوبر 24&deg;-36&deg; الخميس 29 أكتوبر 26&deg;-36&deg; الجمعة 30 أكتوبر 24&deg;-36&deg; السبت 31 أكتوبر 24&deg;-36&deg; الأحد 01 نوفمبر 24&deg;-36&deg; الاثنين 02 نوفمبر 24&deg;-36&deg; لمزيد من المعلومات : bahrainweather.gov.bh الرجاء الانتظار Complementary Content Deferred Modules ${title} ${badge…"
+    ]
+   }
+  },
+  {
+   "url": "https://www.cspd.gov.jo/EN/List/Services__Guide",
+   "label": "cspd.gov.jo",
+   "ids": [
+    "jo-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…ternet Explorer + 10, Google Chrome, Firebox, Safari Programs required for browsing: Adobe Reader Site visits number: 11913703 Last update: 28/10/2026 To report any technical problems, please call the National Call Center, phone number 06 5008080 or email ncc@ni…"
+    ],
+    "removed": [
+     "…ternet Explorer + 10, Google Chrome, Firebox, Safari Programs required for browsing: Adobe Reader Site visits number: 11865960 Last update: 25/10/2026 To report any technical problems, please call the National Call Center, phone number 06 5008080 or email ncc@ni…"
+    ]
+   }
+  },
+  {
+   "url": "https://cairo.gov.eg/en/news/news-eng/2021/f75e12a30a984aec80c66e5e19adab3f",
+   "label": "cairo.gov.eg",
+   "ids": [
+    "eg-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [],
+    "removed": [
+     "Source: Egypt Independent Health Minister: Comprehensive package to develop the Healthcare sector Read More Today&#x27;s Weather Warm during day, with high of 30&#xB0;C in Cairo.",
+     "Read More Ministry of Education denies imposing fees for exams in National identity subjects."
+    ]
+   }
+  },
+  {
+   "url": "https://ethioembassy.org.uk/?p=1961",
+   "label": "Embassy of Ethiopia, London",
+   "ids": [
+    "et-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Applications and payments are not accepted on this website.",
+     "News 𝗖𝗼𝗿𝗯𝗲𝘁𝘁𝗶 𝗚𝗲𝗼𝘁𝗵𝗲𝗿𝗺𝗮𝗹 𝘀𝗶𝗴𝗻𝘀 𝗱𝗿𝗶𝗹𝗹𝗶𝗻𝗴 𝗰𝗼𝗻𝘁𝗿𝗮𝗰𝘁 𝗮𝘁 𝗙𝗗𝗥𝗘 𝗘𝗺𝗯𝗮𝘀𝘀𝘆 𝗶𝗻 𝗟𝗼𝗻𝗱𝗼𝗻 Corbetti Geothermal PLC and its drilling contractor, Marriott Drilling, officially executed project contract agreements during a signing ceremony hosted at the Embassy of Ethiopia.",
+     "Representatives from Corbetti Geothermal, project developer Taranis Operations, financial partner PIDG (Private Infrastructure Development Group) / InfraCo Africa, and drilling contractor Marriott Drilling convened during the signing ceremony.",
+     "News 𝐄𝐭𝐡𝐢𝐨𝐩𝐢𝐚𝐧 𝐄𝐦𝐛𝐚𝐬𝐬𝐲 𝐂𝐞𝐥𝐞𝐛𝐫𝐚𝐭𝐞𝐬 𝐘𝐨𝐮𝐧𝐠 𝐋𝐞𝐚𝐝𝐞𝐫 𝐄𝐥 𝐒𝐡𝐚𝐝𝐝𝐚𝐢 𝐒𝐢𝐥𝐞𝐬𝐡𝐢 𝐟𝐨𝐫 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲 𝐋𝐞𝐚𝐝𝐞𝐫𝐬𝐡𝐢𝐩 𝐢𝐧 𝐭𝐡𝐞 𝐔𝐊 The Embassy of Ethiopia in the United Kingdom has recognised El Shaddai Sileshi, a young leader of Ethiopian heritage, for his involvement in youth representation and community initiatives in London."
+    ],
+    "removed": [
+     "When you come to the Embassy for your appointment, please ensure you bring your original Marriage Certificate, Birth Certificate, Passport and the confirmation information that was sent to you.",
+     "Any discrepancies or differences created in translations are not binding and have no legal effect for compliance or enforcement purposes."
+    ]
+   }
+  },
+  {
+   "url": "https://www.nia.gov.cn/",
+   "label": "nia.gov.cn (National Immigration Administration)",
+   "ids": [
+    "cn-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "08-26 新华社：国门之心 同心同行 08-21 通知公告 国家移民管理局2027年度公开遴选公务员...",
+     "10-26 国家移民管理局新闻发布会采访通知 10-18 国家移民管理机构2027年度考试录用公务...",
+     "09-21 政策文件 国务院关于出境入境管理的规定 07-31 《公安机关人民警察证使用管理规定》（公安...",
+     "07-07 国务院关于对外投资的规定 06-01 中华人民共和国反外国不当域外管辖条例 04-13 中共中央关于持之以恒推进全面从严治党若干重大问题的决定 习近平：关于《中共中央关于持之以恒推进全面从严治党若干重大问题的决定》的说明 党的二十届五中全会公报 三季度1.92亿人次出入境 免签入境外国人同比增长24.1% 全球公共安全合作论坛（连云港）2026年大会移民管理合作分论...",
+     "09-14 中共中央召开党外人士座谈会 习近平主持并发表 10-30 习近平同德国总统施泰因迈尔会谈 10-30 习近平会见瑞士联邦主席帕姆兰 10-30 习近平就西班牙高速列车追尾脱轨事故向西班牙国...",
+     "10-29 李强主持召开国务院党组会议 学习贯彻习近平总...",
+     "10-30 李强会见德国总统施泰因迈尔 10-30 李强签署国务院令 公布《事业单位登记管理条例...",
+     "10-26 李强主持召开国务院常务会议 研究统筹人口与经..."
+    ],
+    "removed": [
+     "08-26 新华社：国门之心 同心同行 08-21 通知公告 国家移民管理局新闻发布会采访通知 10-18 国家移民管理机构2027年度考试录用公务...",
+     "09-21 国家移民管理局 国家市场监督管理总局关于...",
+     "09-14 政策文件 国务院关于出境入境管理的规定 07-31 《公安机关人民警察证使用管理规定》（公安...",
+     "07-07 国务院关于对外投资的规定 06-01 中华人民共和国反外国不当域外管辖条例 04-13 以习近平同志为核心的党中央引领新时代全面从严治党纪实 党的十八大以来，以习近平同志为核心的党中央以强烈的历史担当和顽强的意志品质，推动新时代党的建设新的伟大工程向纵深发展，不断开辟百年大党管党治党、兴党强党新境界 三季度1.92亿人次出入境 免签入境外国人同比增长24.1% 全球公共安全合作论坛（连云港）2026年大会移民管理合作分论...",
+     "09-14 习近平同比利时国王菲利普就中比建交55周年互...",
+     "10-25 习近平向2026全球治理论坛（雄安）致信 10-23 习近平出席纪念中国工农红军长征胜利90周年大...",
+     "10-22 习近平总书记心中的伟大远征 10-21 李强主持召开国务院常务会议 研究统筹人口与经...",
+     "10-23 李强结束出访回到北京 10-22 李强会见俄罗斯总统普京 10-21 李强赴圣彼得堡举行中俄总理第三十一次定期会晤 10-21 政策文件 [更多] 国务院关于出境入境管理的规定 07-31 《公安机关人民警察证使用管理..."
+    ]
+   }
+  },
+  {
+   "url": "https://nepalpassport.gov.np/",
+   "label": "nepalpassport.gov.np",
+   "ids": [
+    "np-passport"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "हाम्रो आदर्श : गुणस्तरीय, पारदर्शी एवं सेवाग्राहीमैत्री सेवा हटलाइन : ९७७१५९७०३३० Notice: A passport reported as lost or stolen must not be used for travel, even if it is later recovered.",
+     "महानिर्देशक dg@nepalpassport.gov.np (+977)15970329 दिपक बन्जाडे निर्देशक/प्रवक्ता info@nepalpassport.gov.np (+977)9851352001 आनन्द चुवाई सूचना अधिकारी communication@nepalpassport.gov.np 9851424502 उपयोगी लिंकहरु परराष्ट्र मन्त्रालय गृह मन्त्रालय कन्सुलर सेवा विभाग अध्यागमन विभाग वैदेशिक रोजगार विभाग राष्ट्रिय परिचयपत्र तथा पञ्‍जिकरण विभाग विदेशमा रहेका नेपाली नियोगहरूको सह-प्रमाणीकरण ..."
+    ],
+    "removed": [
+     "हाम्रो आदर्श : गुणस्तरीय, पारदर्शी एवं सेवाग्राहीमैत्री सेवा Notice: A passport reported as lost or stolen must not be used for travel, even if it is later recovered.",
+     "यहाँ क्लिक गर्नुहोस ePassport को लागी आवेदन दिनुहोस् अनलाइन भुक्तानी फोटोहरु/भिडियोहरु सुझाव फारम राहदानीको स्थिति जाँच गर्नुहोस राहदानीको स्थिति विवरणसहित जाँच गर्नुहोस राहदानीको स्थिति विवरणसहित जाँच गर्नुहोस नागरिकता जन्म मिति ई.सं.",
+     "जन्म स्थान थर स्थिति जाँच गर्नुहोस सूचना केन्द्र सोधिने प्रश्नहरु मिडिया विज्ञप्ति समाचार र सुचना अधिकारीहरू सूची दिपक वि.क.",
+     "महानिर्देशक dg@nepalpassport.gov.np (+977)15970329 दिपक बन्जाडे निर्देशक/प्रवक्ता info@nepalpassport.gov.np (+977)9851352001 सोनु थापा सूचना अधिकारी communication@nepalpassport.gov.np 9851424502 उपयोगी लिंकहरु परराष्ट्र मन्त्रालय गृह मन्त्रालय कन्सुलर सेवा विभाग अध्यागमन विभाग वैदेशिक रोजगार विभाग राष्ट्रिय परिचयपत्र तथा पञ्‍जिकरण विभाग विदेशमा रहेका नेपाली नियोगहरूको सह-प्रमाणीकरण ..."
+    ]
+   }
+  },
+  {
+   "url": "https://www.gob.pe/en/110378-consulado-general-del-peru-en-chicago-solicitar-visa-de-turista-para-ingresar-al-peru",
+   "label": "gob.pe: Consulate General of Peru in Chicago, tourist visa",
+   "ids": [
+    "pe-visa"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "…o General del Perú en Santiago (C-Santiago) Sección Consular de la Embajada del Perú en la República de Kenia (C-Kenia) Sección Consular de la Embajada del Perú en la República de Costa Rica (C-Costa Rica) Consulado General del Perú en Milán (C-Milán) Sección Consular de la Embajada del Perú en Brasil (C-Brasilia) Sección Consular de la Embajada del Perú en el Reino d…"
+    ],
+    "removed": [
+     "…o General del Perú en Santiago (C-Santiago) Sección Consular de la Embajada del Perú en la República de Kenia (C-Kenia) Consulado General del Perú en Milán (C-Milán) Sección Consular de la Embajada del Perú en la República de Costa Rica (C-Costa Rica) Sección Consular de la Embajada del Perú en Brasil (C-Brasilia) Sección Consular de la Embajada del Perú en el Reino d…"
+    ]
+   }
+  },
+  {
+   "url": "https://mirex.gob.do/",
+   "label": "mirex.gob.do (Ministry of Foreign Affairs)",
+   "ids": [
+    "do-visa"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "CLICK AQUÍ ÚLTIMAS NOTICIAS Cancillería ONU califica de esencial apoyo del Gobierno dominicano a las operaciones de la Fuerza de Supresión de Pandillas en Haití República Dominicana facilita el traslado de 525 toneladas de equipos militares y suministros desde el Puerto de Haina hacia Haití.",
+     "noviembre 1, 2026 Noticias El canciller Víctor -Ito- Bisonó recibe las Copias de Estilo de las Cartas Credenciales de la nueva embajadora designada por el Reino de los Países Bajos Santo Domingo de Guzmán, República Dominicana.",
+     "– El ministro de Relaciones Exteriores, Víctor -Ito- Bisonó, recibió este lunes las Copias octubre 26, 2026 Noticias Canciller Bisonó reafirma compromiso de República Dominicana con esfuerzos internacionales para la estabilización de Haití Santo Domingo de Guzmán, República Dominicana."
+    ],
+    "removed": []
+   }
+  },
+  {
+   "url": "https://indianembassyberlin.gov.in/",
+   "label": "Embassy of India, Berlin: birth registration of a new born",
+   "ids": [
+    "in-birthreg-de"
+   ],
+   "kind": "wording",
+   "why": "The wording changed but no size, head, background, file-size or date number did.",
+   "facts": [],
+   "sentences": {
+    "added": [
+     "Welcome to Embassy of India, Berlin(Germany) Skip to main content &times; Embassy of India Berlin ***** NOTICE As per the recent amendments in OCI policy, OCI cardholders are required to update their passport details in the OCI system each time after issuance of a new passport.",
+     "Berlin Thursday, ***** &times; NOTICE 1.",
+     "Accordingly, Indian Consular Application Centre (ICAC) operated by Alankit Assignments Ltd., located at &ldquo;Sud Tower, 10th Floor, Eichhornstra&szlig;e 3, 10785 Berlin&rdquo; will NOT accept any applications (in person as well as postal) after 19.01.2026.",
+     "All the applications for Passport, Visa, OCI, Surrender Certificate, Attestation and other Miscellaneous Services will be accepted directly by the Embassy of India, Berlin located at Tiergartenstra&szlig;e 17, 10785 Berlin, Germany from 20.01.2026 onwards through Online Appointment only.",
+     "Check the relevant consular service details at Consular Services and accordingly book the appointment as directed.",
+     "Applicants must also ensure that they shall NOT transfer any fees to Alankit Assignment Ltd., for which services to be sought after 19.01.2026.",
+     "&times; Safety Advisory Several incidents have occurred in the last few years, as well as in last few months; where Indian nationals have drowned, while attempting to swim in lakes and rivers in Germany.",
+     "&times; Advisory for International Passengers All the International passengers arriving in India are required to fill the Air Suvidha Self Declaration Form (SDF) by using Air Suvidha 2.0 portal prior to boarding the flight."
+    ],
+    "removed": [
+     "Welcome to Embassy of India, Berlin(Germany) Skip to main content Several incidents have occurred in the last few years, as well as in last few months; where Indian nationals have drowned, while attempting to swim in lakes and rivers in Germany.",
+     "&times; Embassy of India Berlin ***** NOTICE As per the recent amendments in OCI policy, OCI cardholders are required to update their passport details in the OCI system each time after issuance of a new passport.",
+     "Berlin Thursday, ***** NOTICE 1.",
+     "Accordingly, Indian Consular Application Centre (ICAC) operated by Alankit Assignments Ltd., located at &ldquo;Sud Tower, 10th Floor, Eichhornstra&szlig;e 3, 10785 Berlin&rdquo; will NOT accept any applications (in person as well as postal) after 19.01.2026 .",
+     "Applicants must also ensure that they shall NOT transfer any fees to Alankit Assignment Ltd., for which services to be sought after 19.01.2026 .",
+     "All the International passengers arriving in India are required to fill the Air Suvidha Self Declaration Form (SDF) by using Air Suvidha 2.0 portal prior to boarding the flight.",
+     "The portal may be accessed at https://airsuvidha.civilaviation.gov.in/ Advisory on Fraud Calls Beware of fraudulent calls and messages claiming to be from the Embassy of India, Berlin or any other Indian authorities.",
+     "For any clarifications, Support Email id: indianvisaonline-boi@mha.gov.in Helpdesk: (+91) 82 7808 7808 Note : E-visa is directly dealt by New Delhi, Embassy/Consulates not responsible for E-visa E-visa : General guidelines : For complete information of the e-Visa process, visit the official website https://indianvisaonline.gov.in/evisa/tvoa.html ."
+    ]
+   }
+  },
+  {
+   "url": "https://www.gob.mx/pasaporte",
+   "label": "gob.mx (SRE)",
+   "ids": [
+    "mx-passport"
+   ],
+   "kind": "pdf",
+   "why": "A PDF changed and its text couldn't be read: open it and compare."
+  },
+  {
+   "url": "https://ica.gov.pg/uploads/media/post_file_6070572-6.-checklist---ordinary-png-passport-first-time-19-years-older-1-.pdf",
+   "label": "PNG Immigration and Citizenship Authority: passport checklist",
+   "ids": [
+    "pg-passport"
+   ],
+   "kind": "pdf",
+   "why": "A PDF changed and its text couldn't be read: open it and compare."
+  }
+ ]
+}
