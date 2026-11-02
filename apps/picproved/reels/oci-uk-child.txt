@@ -15,7 +15,7 @@ voice.google: en-IN-Chirp3-HD-Aoede
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 pronounce: JPEG=jay peg
 ---
-show: title
+show: photo face=48 bg=cream size=35x45mm mark=cross on=OCI label="UK passport photo"
 text: Her UK photo ✗ for OCI
 sub: UK-born child, first OCI
 say: Your child's UK passport photo won't work for OCI. Here's why.

@@ -6,7 +6,7 @@ description: GOV.UK says don't book travel until you have a valid passport, beca
 description: GOV.UK: https://www.gov.uk/renew-adult-passport
 description: Check your photo first: picproved.com/doc/uk-passport-digital
 description: Free while we launch, £5.99 after.
-description: Footage: Timur Weber on Pexels.
+description: Footage made with AI.
 tags: ukpassport, passportrenewal, christmastravel, traveltips, ukpassportphoto
 end: picproved.com
 endSub: Photo checked before you renew
@@ -16,12 +16,12 @@ voice.google: en-GB-Chirp3-HD-Charon
 voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
 ---
 show: title
-clip: stock-suitcase
+clip: runway-old-number
 text: Don't book flights yet ✗
 sub: Renewing a UK passport?
 say: Renewing your passport? Don't book those flights yet.
 ---
-show: strike small="Your old passport" text="Passport No." code="Not on the new one" stamp="Changes" on=different
+show: strike small="Your old passport" text="Passport No." code="123 456 789" stamp="Changes" on=different
 text: New passport, new number
 say: Your new passport gets a different number. GOV.UK says book travel only once you have it.
 ---

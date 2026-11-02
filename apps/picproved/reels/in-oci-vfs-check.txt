@@ -25,7 +25,7 @@ show: photo face=47 bg=light from=35x45mm size=2x2in on=square
 text: 1 + 2. Square prints
 say: One: square prints, 2 by 2 inches. Two: under six months old, the same photo you uploaded.
 ---
-show: strike small="Certificates issued outside India" text="E-APOSTILLE" code="VFS UK OCI checklist" stamp="Paper only" on=paper
+show: strike small="Certificates issued outside India" text="E-APOSTILLE" code="Birth · Marriage" stamp="Paper only" on=paper
 text: 3. The apostille
 say: Three: certificates from outside India need a paper apostille. An e-apostille isn't accepted.
 ---
