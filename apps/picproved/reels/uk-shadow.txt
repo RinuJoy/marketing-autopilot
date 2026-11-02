@@ -15,7 +15,7 @@ voice.google: en-GB-Chirp3-HD-Aoede
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
-clip: runway-tripod-wall
+clip: runway-shadow-wall
 text: This shadow = delay ✗
 sub: UK passport photo
 say: A shadow on the wall behind you is enough to hold up a passport.

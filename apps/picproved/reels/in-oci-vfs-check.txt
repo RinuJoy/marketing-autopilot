@@ -6,6 +6,7 @@ description: Applying for OCI from the UK before a trip to India? VFS UK wants t
 description: VFS UK checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
 description: OCI photo and signature: picproved.com/oci-pack
 description: Free while we launch, £5.99 after.
+description: Footage made with AI.
 tags: OCI, OCIcard, IndiansInUK, BritishIndian, NRI, IndiaTrip
 end: picproved.com/oci-pack
 endSub: Photo, prints and signature, made at home
@@ -16,7 +17,7 @@ voice.elevenlabs: JBFqnCBsd6RMkjVDRZzb
 pronounce: JPEG=jay peg
 ---
 show: title
-clip: clip-1-airport
+clip: runway-india-suitcase
 text: 4 things VFS checks ✗
 sub: OCI before the India trip
 say: Four things VFS UK checks for OCI. Number three catches people out.
