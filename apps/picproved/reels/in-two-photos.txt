@@ -1,0 +1,33 @@
+# One family, two Indian photo rules. From facts-uk-indians.md (VFS Global UK OCI checklist Oct 2025, OCI portal FAQ,
+# Passport Seva upload instructions Nov 2025): OCI is square, 2x2 in prints, square JPEG under 200 KB, light background
+# not bright white; Indian passport upload is 630x810 JPEG under 250 KB on white, face 80 to 85%, no glasses.
+title: Mum's Indian passport photo won't work for the kids' OCI
+description: Indian passport and OCI photos from the UK follow different rules. The Indian passport upload is 630 x 810 pixels, a JPEG under 250 KB, on a white background with the face filling 80 to 85% of the frame. OCI is square: two 2 x 2 inch prints for VFS UK and a square JPEG under 200 KB, on a light background that isn't bright white.
+description: VFS UK OCI checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
+description: Make both: picproved.com/oci-pack
+description: Free while we launch, £5.99 after.
+tags: OCI, OCIcard, IndianPassport, IndiansInUK, BritishIndian, NRI
+end: picproved.com/oci-pack
+endSub: Both photos, made at home
+endSay: Send this to the family group before the India trip.
+voice.kokoro: hf_beta
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: JPEG=jay peg
+---
+show: title
+text: One photo for both? ✗
+sub: Indian passport and OCI
+say: Using one photo for your passport and the kids' OCI? It won't pass both.
+---
+show: photo face=45 bg=white size=630x810px mark=tick on=white label="Indian passport"
+text: Passport: white
+say: Indian passport: 630 by 810 pixels, on white.
+---
+show: photo face=48 bg=light from=35x45mm size=2x2in on=square label="OCI"
+text: OCI: square
+say: OCI is square. Two 2 by 2 inch prints, on light, not bright white.
+---
+show: compare face=48 bg=white,light mark=cross,tick Bright white | Light, not white
+text: Same family, two rules
+say: So take one photo, then make two versions, one for each rule.

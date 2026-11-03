@@ -1,0 +1,31 @@
+# UK passport photo head size. From GOV.UK "Photos for passports" (checked 2 Nov 2026): printed photo 35 x 45 mm, head
+# 29 to 34 mm from bottom of chin to top of head, not cut down from a larger photo; digital at least 600 x 750 pixels.
+title: UK passport photo: the head size that gets it sent back
+description: GOV.UK says a printed passport photo is 35 x 45 mm with your head 29 to 34 mm from chin to crown, and it can't be cut down from a bigger photo. A head that's too small or too big can mean a delay. Online photos must be at least 600 x 750 pixels.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, 35x45
+end: picproved.com
+endSub: Head size checked before you send
+endSay: Send this to whoever is printing photos this week.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Charon
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+text: Head too small ✗
+sub: UK passport photo
+say: The most common print mistake? Your head is the wrong size.
+---
+show: number value="29 to 34" unit="mm, chin to the top of your head"
+text: The GOV.UK rule
+say: On a 35 by 45 print, your head must be 29 to 34 millimetres.
+---
+show: list ✗ Cut down from a bigger photo | ✗ Taken from across the room | ✓ Head and top of shoulders
+text: Why it fails
+say: You can't cut it down from a bigger photo. Fill the frame instead.
+---
+show: photo face=38 bg=cream size=35x45mm mark=tick on=fits label="29 to 34 mm"
+text: Online? 600 × 750
+say: Applying online? At least 600 by 750 pixels. Check it fits first.
