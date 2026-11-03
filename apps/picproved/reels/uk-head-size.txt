@@ -5,6 +5,7 @@ description: GOV.UK says a printed passport photo is 35 x 45 mm with your head 2
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check yours first: picproved.com/doc/uk-passport-digital
 description: Free while we launch, £5.99 after.
+description: Footage made with AI.
 tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, 35x45
 end: picproved.com
 endSub: Head size checked before you send
@@ -14,6 +15,7 @@ voice.google: en-GB-Chirp3-HD-Charon
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
+clip: canva-tripod-wall
 text: Head too small ✗
 sub: UK passport photo
 say: The most common print mistake? Your head is the wrong size.
