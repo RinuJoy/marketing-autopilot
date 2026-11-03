@@ -6,6 +6,7 @@ description: GOV.UK says your eyes must be open and visible, with no hair in fro
 description: Rules: https://www.gov.uk/photos-for-passports
 description: Check yours first: picproved.com/doc/uk-passport-digital
 description: Free while we launch, £5.99 after.
+description: Footage made with AI.
 tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, hairtips
 end: picproved.com
 endSub: Eyes and face checked before you send
@@ -15,6 +16,7 @@ voice.google: en-GB-Chirp3-HD-Leda
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
+clip: canva-hair-clips
 text: Fringe in her eyes ✗
 sub: UK passport photo
 say: Love your fringe? Your passport photo won't.

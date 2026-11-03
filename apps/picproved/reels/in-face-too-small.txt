@@ -17,7 +17,7 @@ voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 pronounce: JPEG=jay peg; ICAO=I K O
 ---
 show: title
-clip: runway-upload-failed
+clip: canva-far-phone
 text: "Face too small" ✗
 sub: Indian passport from the UK
 say: Indian passport photo keeps failing? Your face is probably too small.
