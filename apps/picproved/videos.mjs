@@ -150,7 +150,7 @@ const tags = { in: ["IndiansInUK", "BritishIndian", "NRI"], uk: ["ukpassport", "
 
 export const videos = [
   {
-    id: "uk-in-oci", voice: "en-IN-Chirp3-HD-Aoede", title: "OCI photo from the UK: why your UK passport photo won't work",
+    id: "uk-in-oci", voice: "en-IN-Chirp3-HD-Aoede", title: "OCI application from the UK: photo, signature and prints",
     description: `OCI from the UK: a square upload under 200 KB on a light (not bright white) background, two 2×2 inch prints for VFS UK, and a wide signature file.\nVFS UK OCI checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf\nMake yours: picproved.com/oci-pack\nFree while we launch, £5.99 after.`,
     tags: ["OCI", "OCIcard", ...tags.in],
     scenes: [
@@ -212,7 +212,7 @@ export const videos = [
     ],
   },
   {
-    id: "uk-pp-home", title: "UK passport photo at home in two minutes",
+    id: "uk-pp-home", title: "How to take a passport photo at home (UK rules)",
     description: `UK online passport photo rules and how to take it at home.\nOfficial rules: https://www.gov.uk/photos-for-passports\nCheck it before you upload: picproved.com/doc/uk-passport-digital\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "moneysavinguk"],
     scenes: [
@@ -238,8 +238,8 @@ export const videos = [
     ],
   },
   {
-    id: "uk-pp-print-sheet", title: "Print your own passport photos on one 6×4",
-    description: `Save a 6×4 print sheet with cut marks and print it at any photo kiosk.\npicproved.com/print-sheet\nFree while we launch, £5.99 after.`,
+    id: "uk-pp-print-sheet", title: "How to print passport size photos: 8 on one 6×4",
+    description: `How to print passport size photos at home: save a 6×4 sheet with 8 UK passport photos and cut marks, and print it at any photo kiosk.\npicproved.com/print-sheet\nFree while we launch, £5.99 after.`,
     tags: [...tags.uk, "moneysaving", "lifehack"],
     scenes: [
       { secs: 4.5, say: "Print your own passport photos on one 6 by 4.", title: "Print your own passport photos", sub: "One 6×4 print at any photo kiosk" },

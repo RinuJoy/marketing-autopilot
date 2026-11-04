@@ -69,6 +69,12 @@ test("llms.txt, launch kit, sitemap", () => {
   const k = kit(config, [item("a")]);
   assert.match(k.text, /- \[ \] \[AlternativeTo\]/);
   assert.deepEqual(k.problems, []);
+  // Signature specs and the Schengen visa don't inflate the counts, and a Play listing that isn't public stays out.
+  const many = [item("a", { country: "GB" }), item("b", { country: "EU" }), item("c", { country: "IN", counted: false })];
+  const k2 = kit({ ...config, stores: { play: "x.demo", playLive: false } }, many);
+  assert.match(k2.text, /Covers 2 items\./);
+  assert.doesNotMatch(k2.text, /play\.google/);
+  assert.match(kit({ ...config, stores: { play: "x.demo" } }, many).text, /play\.google\.com\/store\/apps\/details\?id=x\.demo/);
   assert.deepEqual(urlsFromSitemap("<urlset><url><loc>https://x.test/</loc></url><url><loc> https://x.test/a?b=1&amp;c=2 </loc></url></urlset>"), ["https://x.test/", "https://x.test/a?b=1&c=2"]);
 });
 

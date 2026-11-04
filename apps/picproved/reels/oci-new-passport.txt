@@ -1,0 +1,34 @@
+# Story: updating an OCI card after a new passport, from the OCI portal FAQ (Ministry of Home Affairs) and the VFS UK
+# "OCI miscellaneous" checklist as Picproved's /oci-pack/misc page lists it (checked Oct 2026). The policy changed in
+# October 2026 and VFS UK's page didn't mention it when checked, so the script tells people to check, not a fixed age.
+# Indian faces only.
+title: New passport? When to update your OCI card
+description: A 2026 change in OCI policy may ask cardholders to update their passport details on the OCI portal every time they get a new passport. VFS UK's page didn't mention it when we checked, so check the OCI portal after you renew. The OCI miscellaneous checklist: OCI card first and last page, the old passport with the U visa stamp, your new passport, a square photo and a signature file.
+description: OCI portal: https://ociservices.gov.in/onlineOCI/faq
+description: Checklist: picproved.com/oci-pack/misc
+description: Free while we launch, £5.99 after.
+tags: OCI, OCIcard, IndiansInUK, BritishIndian, NRI, passportrenewal
+end: picproved.com/oci-pack/misc
+endSub: The OCI update checklist, with photo and signature
+endSay: Get the checklist at picproved dot com.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Leda
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: runway-two-passports
+text: New passport? Check your OCI
+sub: Renewed your UK passport?
+say: Just renewed your British passport? Your OCI card still points at the old one.
+---
+show: list ✓ 2026 OCI policy change | ✓ Update passport details on the OCI portal | ✓ Check before you fly
+text: What changed
+say: A 2026 change in OCI policy may ask you to update your passport details every time you get a new passport. Check the OCI portal before you fly.
+---
+show: list ✓ OCI card, first and last page | ✓ Old passport with the U visa stamp | ✓ Your new passport
+text: What to have ready
+say: Have your OCI card, the old passport with the U visa stamp, and the new passport ready.
+---
+show: photo face=45 bg=light size=35x35mm mark=tick on=square label="Square, light, not white"
+text: A new square photo
+say: You'll also upload a square photo on a light background, not white, and a signature file.

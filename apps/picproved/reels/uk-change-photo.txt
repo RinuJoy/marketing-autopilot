@@ -1,0 +1,34 @@
+# Story: "can you change your passport photo?", from GOV.UK "Change your name or personal details on your passport"
+# (read 4 Nov 2026): a new passport is needed if you can't be recognised from your photo any more; small changes like
+# dyed hair or a beard don't need one; a countersignature is needed if your appearance changed; online £102, paper
+# £115.50. Non-Indian faces (UK rules).
+title: Can you change your passport photo? (UK)
+description: You can't swap the photo in a UK passport. GOV.UK says you need a new passport only if you can't be recognised from your photo any more, for example after plastic surgery, and then you need a countersignature. Dyed hair or a new beard is a slight change and needs no new passport. A new passport online costs £102, and it gets a new number, so don't book travel until it arrives.
+description: Rules: https://www.gov.uk/changing-passport-information
+description: New photo: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, travelhacks
+end: picproved.com/doc/uk-passport-digital
+endSub: A new photo, checked before you apply
+endSay: Check your new photo at picproved dot com.
+voice.kokoro: bm_george
+voice.google: en-GB-Chirp3-HD-Charon
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: runway-two-passports
+text: Can you change your passport photo?
+sub: UK passport
+say: Hate your passport photo? You can't swap it. But do you need a new passport?
+---
+show: list ✓ Dyed hair | ✓ A new beard | ✓ A slight change
+text: No new passport needed
+say: GOV.UK says a slight change, like dyed hair or a new beard, doesn't need a new passport.
+---
+show: list ✗ Can't be recognised from the photo | ✓ Apply for a new passport | ✓ Get a countersignature
+text: When you need one
+say: If you can't be recognised from your photo any more, you need a new passport, with a countersignature.
+---
+show: compare face=38 bg=light,light mark=cross,tick Old photo | New photo
+text: New passport, new number
+say: It's 102 pounds online, and the new passport has a new number. Don't book travel until it arrives.
