@@ -1,0 +1,35 @@
+# Story: the funny, real-footage version of uk-toddler. Facts from GOV.UK "Photos for passports" (checked 27 Oct
+# 2026). Real stock footage of a toddler (Pexels), no faces made up. Ends on Child mode's bouncing star: for the best
+# version, swap the last scene's visual for a screen recording of Child mode in the camera (Rinu, on the phone).
+title: How hard can a toddler's passport photo be?
+description: Under-sixes don't have to look at the camera or keep a plain expression, but they must be alone in the picture, with no toys or dummies, and no hand showing. Picproved's Child mode puts a bouncing star by the lens so they look your way.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Try Child mode: picproved.com/baby/uk
+description: Free while we launch, £5.99 after.
+description: Footage: George Pak and Ksenia Chernaya on Pexels.
+tags: ukpassport, childpassport, toddler, mumlife, dadlife, parenting, funny
+end: picproved.com/baby/uk
+endSub: Child mode: a bouncing star to look at
+endSay: Try Child mode at picproved dot com.
+voice.kokoro: bf_isabella
+voice.google: en-GB-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: stock-toddler
+text: How hard can it be?
+sub: A toddler's passport photo
+say: A toddler's passport photo. How hard can it be?
+---
+clip: stock-toddler-run
+show: title
+text: Take 1. Gone.
+say: Take one. Gone.
+---
+show: list ✓ Under 6: no need to look at the camera | ✓ Under 6: any expression | ✗ No toys, no dummies, no hands
+text: The good news
+say: The good news: under six, they don't have to look at the camera or keep a straight face. But no toys, and no hands in the shot.
+---
+show: photo face=25 bg=light size=35x45mm mark=tick on=star label="Child mode"
+text: A bouncing star by the lens
+say: Child mode puts a bouncing star by the lens. They look, you get the shot.

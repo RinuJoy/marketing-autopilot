@@ -22,6 +22,7 @@ export async function items({ config, src }) {
     ].filter(Boolean);
     return {
       id: p.id, title: meta.title, summary: meta.desc, url: `${config.site}doc/${p.id}`,
+      counted: !SIG_PRESETS.includes(p) && !!p.iso,
       country: p.iso || null, countryName: COUNTRY_NAME?.[p.iso] || p.country, language: "en",
       facts, questions, sources, tags: [p.kind || "signature", (p.region || "").toLowerCase().replace(/\s+/g, "-")].filter(Boolean),
     };

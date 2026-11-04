@@ -1,0 +1,34 @@
+# Story: make-up and earrings in a UK passport photo, from GOV.UK "Photos for passports" and HM Passport Office's
+# examiner guidance (as Picproved's /how-to/makeup-passport-photo and /how-to/earrings-passport-photo pages cite them,
+# checked Nov 2026). Non-Indian faces (UK rules).
+title: Can you wear makeup or earrings in a passport photo?
+description: Yes to both, for a UK passport. GOV.UK's photo rules don't ban make-up or jewellery: the photo must be a true likeness, with nothing covering your face and no reflections. What gets rejected is editing: beauty filters, skin smoothing and digitally enhanced faces. Big shiny earrings can catch the light, so pick small matt studs.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Make-up: picproved.com/how-to/makeup-passport-photo
+description: Earrings: picproved.com/how-to/earrings-passport-photo
+description: Free while we launch, £5.99 after.
+tags: ukpassport, passportphoto, makeup, grwm, earrings, passportmakeup
+end: picproved.com/how-to/makeup-passport-photo
+endSub: Make-up yes, filters no
+endSay: Check yours at picproved dot com.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Kore
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: stock-selfie
+text: Make-up in a passport photo?
+sub: UK passport
+say: Getting ready for your passport photo? Make-up and earrings are both fine.
+---
+show: list ✓ Foundation, eyeliner, lipstick | ✓ Small studs | ✗ Beauty filters or skin smoothing
+text: What's allowed
+say: Everyday make-up is allowed, and so are small earrings. Beauty filters and skin smoothing are not.
+---
+show: compare face=33 bg=light,light mark=cross,tick Big shiny hoops | Small matt studs
+text: Earrings that don't shine
+say: Big shiny earrings can catch the light, and reflections get photos rejected. Pick small matt studs.
+---
+show: list ✓ Matt, not shiny | ✓ Light from a window in front | ✗ Contouring that changes your face
+text: Keep it you
+say: Keep it matt, face a window, and skip anything that changes your face shape. It must still look like you.

@@ -1,0 +1,35 @@
+# Story: a white background without editing, from the State Department (no edited or filtered photos) and GOV.UK
+# (unaltered by software; HM Passport Office rejects digitally enhanced faces). Embed on /doc/us-passport and
+# /rejected/background. Shows non-Indian faces (US and UK rules).
+title: White background for a passport photo, without editing
+description: The US State Department doesn't accept edited or filtered passport photos, and GOV.UK says a UK passport photo must be unaltered by software. So make the white background real: a pale wall or a white sheet, light from a window in front of you, and a step away from the wall so there's no shadow.
+description: US rules: https://travel.state.gov/content/travel/en/passports/how-apply/photos.html
+description: UK rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/us-passport
+description: Free while we launch, £5.99 after.
+tags: passportphoto, whitebackground, uspassport, ukpassport, passportphotoathome, lifehack
+end: picproved.com/doc/us-passport
+endSub: Background left as taken, every rule checked
+endSay: Check yours at picproved dot com.
+voice.kokoro: af_heart
+voice.google: en-US-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: runway-tripod-wall
+text: White background, no editing
+sub: Passport photo at home
+say: Need a white background for your passport photo? Don't edit it in. The US now rejects edited photos.
+---
+show: list ✗ Edited or filtered | ✗ Pasted-in background | ✓ A real pale wall or sheet
+text: Make it real
+say: The State Department won't take an edited or filtered photo, and the UK wants it unaltered. So make the white real.
+---
+show: photo face=38 bg=white size=2x2in mark=tick on=sheet label="White sheet, pinned flat"
+text: A pale wall or a sheet
+say: Use a pale wall, or pin a white sheet flat behind you, with no creases.
+---
+clip: runway-shadow-wall
+show: list 1. Face a window | 2. Step half a metre from the wall | 3. No flash
+text: Light kills the shadow
+say: Face a window, step half a metre from the wall, and skip the flash. That's what makes it white.
