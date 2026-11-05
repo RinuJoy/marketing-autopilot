@@ -97,7 +97,7 @@ if (STEP === "estimate") {
   const per = (25000 * p.in + 3000 * p.out) / 1e6 + 0.01; // ~25k tokens of fetched pages, ~3k thinking + answer, a search
   console.log(`${presets.length} documents with a source link, model ${MODEL}. About ${money(per)} each, ${money(per * presets.length)} for all (standard price; real cost is logged per row).`);
 } else if (STEP === "run") {
-  if (A.fresh) fs.rmSync(RESULTS, { force: true });
+  if (A.fresh === true || A.fresh === "true") fs.rmSync(RESULTS, { force: true });
   const skip = done();
   let todo = presets.filter(p => !skip.has(p.id));
   if (A.limit) todo = todo.slice(0, Number(A.limit));
