@@ -1,0 +1,35 @@
+# Indian passport upload, face too small. From facts-uk-indians.md (Passport Seva upload instructions Nov 2025, VFS UK):
+# ICAO photos since 1 Sept 2025, white background, face 80 to 85% of the frame, no glasses; 630x810 JPEG under
+# 250 KB; 12 upload attempts.
+title: Indian passport photo from the UK: why "face too small" fails
+description: Since 1 September 2025 Indian missions accept only ICAO photos: white background, no glasses, and the face filling 80 to 85% of the frame. A photo taken from across the room shrinks the face. The upload must be exactly 630 x 810 pixels, a JPEG under 250 KB, and the portal allows 12 attempts, so check it first.
+description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
+description: Make yours: picproved.com/nri-passport/gb
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: IndianPassport, IndiansInUK, passportrenewal, PassportSeva, VFS, NRI
+end: picproved.com/nri-passport/gb
+endSub: Face size checked before you upload
+endSay: Send this to whoever is renewing next.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: JPEG=jay peg; ICAO=I K O
+---
+show: title
+clip: canva-far-phone
+text: "Face too small" ✗
+sub: Indian passport from the UK
+say: Indian passport photo keeps failing? Your face is probably too small.
+---
+show: number value="80 to 85" unit="% of the frame is your face"
+text: The ICAO rule
+say: Since September 2025, your face must fill 80 to 85 percent of the frame.
+---
+show: list ✗ Phone across the room | ✓ About an arm's length | ✓ Head and top of shoulders
+text: The fix
+say: Not across the room. An arm's length away: head and top of the shoulders.
+---
+show: number value="630 × 810" unit="pixels · white · no glasses"
+text: 12 tries only
+say: White background, no glasses, 630 by 810 pixels. Only twelve tries, so check first.

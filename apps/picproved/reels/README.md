@@ -50,3 +50,18 @@ Node 22+, ffmpeg and Playwright's Chromium. On Windows: `winget install Gyan.FFm
 
 Facts from the official page (cited in the description), "checked against the official rules", never "guaranteed".
 An AI voice means ticking "altered or synthetic content" on YouTube and the AI label on Instagram and TikTok.
+
+## Reach rules (Instagram, YouTube Shorts, Facebook Reels, checked 2 Nov 2026)
+
+What the three platforms say they rank on, and what each reel does about it:
+
+| Signal | Who says so | What the script does |
+|---|---|---|
+| Viewers choose to watch instead of swiping away | YouTube ("chose to view" vs "swiped away") | The first `say` line is the payoff, not backstory, and the first scene's words show on frame 1. Hook text 6 words or fewer. |
+| Watch time and percentage watched | YouTube, Instagram, Facebook | Four scenes plus the end card, 20 to 28 seconds. Each `say` one sentence. Numbered lists ("4 things") keep people to the end. |
+| Sends (shares by DM) per reach | Instagram, the strongest signal for people who don't follow you | `endSay` asks for a send or a tag ("Send this to whoever is renewing next"), and the caption repeats it. |
+| Likes and saves per reach | Instagram, Facebook | Save-worthy numbers on screen (630 × 810, 2 × 2 in, 12 to 70) and "Save this for…" in the caption. |
+| Original content | Instagram and Facebook demote reposts and watermarked clips | Code-drawn scenes, our own Runway clips and licensed stock; never another app's export or watermark. |
+| Freshness on Facebook | Facebook shows more same-day Reels | Post when the audience is up (FB+IG 10:00, Wed 12:00, YouTube 16:00 UK). |
+| Reaching non-followers on Instagram | Trial reels go to non-followers first | New reels go out as Trial Reels for the first week while the accounts have few followers. |
+| Comments | All three | A first comment that asks a one-word question ("Which document are you doing?"). |

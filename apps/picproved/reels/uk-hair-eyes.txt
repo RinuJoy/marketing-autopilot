@@ -1,0 +1,34 @@
+# UK passport photo, hair over the eyes. From GOV.UK "Photos for passports" (checked 2 Nov 2026): eyes open and
+# visible, "not have hair in front of your eyes", plain expression, mouth closed, no shadows, head covering only for
+# religious or medical reasons.
+title: Hair over your eyes? Why your UK passport photo can come back
+description: GOV.UK says your eyes must be open and visible, with no hair in front of them. You also need a plain expression with your mouth closed, and no shadows on your face. A head covering is only allowed for religious or medical reasons.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, hairtips
+end: picproved.com
+endSub: Eyes and face checked before you send
+endSay: Tag the friend with the fringe.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: canva-hair-clips
+text: Fringe in her eyes ✗
+sub: UK passport photo
+say: Love your fringe? Your passport photo won't.
+---
+show: list ✓ Eyes open and visible | ✗ Hair in front of your eyes
+text: GOV.UK rule
+say: GOV.UK says eyes open and visible, no hair in front of them.
+---
+show: list 1. Clip the fringe back | 2. Plain face, mouth closed | 3. No shadows
+text: The fix
+say: Clip it back for one photo. Plain face, mouth closed, no shadows.
+---
+show: photo face=42 bg=light size=35x45mm mark=tick on=clear label="Eyes clear"
+text: Head covering?
+say: Head coverings only for religious or medical reasons. Then check it.

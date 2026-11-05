@@ -1,0 +1,33 @@
+# Story: a shadow on the wall behind her. From GOV.UK "Photos for passports" (checked 2 Nov 2026): plain
+# light-coloured background, clear contrast, "not have any shadows on your face or behind you", taken in the last month.
+title: The shadow behind her held up her UK passport photo
+description: GOV.UK says your passport photo must not have any shadows on your face or behind you, and must be taken against a plain light-coloured background in clear contrast to you. The fix: stand a step away from the wall and face a window in daylight.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, phonephotography
+end: picproved.com
+endSub: Shadows checked before you send
+endSay: Send this to whoever is renewing next.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: runway-shadow-wall
+text: This shadow = delay ✗
+sub: UK passport photo
+say: A shadow on the wall behind you is enough to hold up a passport.
+---
+show: list ✗ Shadows on your face | ✗ Shadows behind you | ✓ Plain light wall
+text: GOV.UK rule
+say: GOV.UK says no shadows on your face or behind you.
+---
+show: list 1. Step away from the wall | 2. Face a window | 3. Flash off
+text: 10-second fix
+say: The fix: step away from the wall, face a window, flash off.
+---
+show: photo face=33 bg=cream size=35x45mm mark=tick on=clear label="No shadows"
+text: Clear contrast
+say: Clear contrast, nothing behind you. Then check it for shadows.
