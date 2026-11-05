@@ -43,15 +43,16 @@ Finish with one \`\`\`json block:
 "same" needs a quote. If you cannot reach any official page, say cannot_verify; do not guess.`;
 
 const tools = [
-  { type: "web_fetch_20260209", name: "web_fetch", max_uses: 4, max_content_tokens: 30000 },
-  { type: "web_search_20260209", name: "web_search", max_uses: 3 },
+  { type: "web_fetch_20260209", name: "web_fetch", max_uses: Number(A.fetches || 4), max_content_tokens: 30000 },
+  { type: "web_search_20260209", name: "web_search", max_uses: Number(A.searches || 3) },
 ];
 
 const done = () => fs.existsSync(RESULTS) ? new Set(fs.readFileSync(RESULTS, "utf8").split("\n").filter(Boolean).map(l => JSON.parse(l).id)) : new Set();
 
 function prompt(p) {
   const rule = Object.fromEntries(KEEP.filter(k => p[k] !== undefined).map(k => [k, p[k]]));
-  return `Document: ${p.country}, ${p.doc} (id ${p.id}).\nApp rule: ${JSON.stringify(rule)}\nOfficial source on file: ${p.src[0]} ${p.src[1]}\nToday is ${new Date().toISOString().slice(0, 10)}.`;
+  const extra = A.hint ? `\nExtra instruction: ${A.hint}` : "";
+  return `Document: ${p.country}, ${p.doc} (id ${p.id}).\nApp rule: ${JSON.stringify(rule)}\nOfficial source on file: ${p.src[0]} ${p.src[1]}\nToday is ${new Date().toISOString().slice(0, 10)}.${extra}`;
 }
 
 async function checkOne(c, p) {
@@ -98,6 +99,13 @@ if (STEP === "estimate") {
   console.log(`${presets.length} documents with a source link, model ${MODEL}. About ${money(per)} each, ${money(per * presets.length)} for all (standard price; real cost is logged per row).`);
 } else if (STEP === "run") {
   if (A.fresh === true || A.fresh === "true") fs.rmSync(RESULTS, { force: true });
+  // --redo cannot_verify (or a verdict list, or ids via --ids) drops those rows so they are checked again.
+  if (A.redo && fs.existsSync(RESULTS)) {
+    const drop = new Set(String(A.redo).split(","));
+    const ids = A.ids ? new Set(String(A.ids).split(",")) : null;
+    const keep = fs.readFileSync(RESULTS, "utf8").split("\n").filter(Boolean).filter(l => { const r = JSON.parse(l); return !(drop.has(r.verdict) && (!ids || ids.has(r.id))); });
+    fs.writeFileSync(RESULTS, keep.join("\n") + "\n");
+  }
   const skip = done();
   let todo = presets.filter(p => !skip.has(p.id));
   if (A.limit) todo = todo.slice(0, Number(A.limit));
