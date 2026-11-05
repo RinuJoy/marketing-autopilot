@@ -1,0 +1,36 @@
+# Story reel (fictional): dad trying to get a newborn to look at the camera. From GOV.UK "Photos for passports"
+# (checked 26 Oct 2026): under 1 eyes can be closed, under 6 needn't look at the camera, plain light sheet from above,
+# no hands, toys or dummies.
+title: 41 tries at 3am: what a UK baby passport photo really needs
+description: A story, not a real family. GOV.UK says a baby under one can have their eyes closed, and under-sixes don't have to look at the camera. Lie them on a plain light sheet and take it from above, with no hands, toys or dummies in the photo.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check your baby's photo: picproved.com/doc/uk-passport-baby
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: ukpassport, babypassport, newborn, passportphoto, newparents
+end: picproved.com/doc/uk-passport-baby
+endSub: Baby rules checked before you send
+endSay: Tag a new parent.
+voice.kokoro: bm_george
+voice.google: en-GB-Chirp3-HD-Charon
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: veo-story-3am
+text: 41 tries. 3 a.m.
+sub: Baby's first UK passport
+say: Forty-one tries at three a.m. to get the baby to look at the camera.
+---
+show: list ✓ Under 1: eyes can be closed | ✓ Under 6: no need to look at the camera
+text: He didn't need to
+say: He didn't need to. Under one, their eyes can be closed. Under six, they don't have to look at the camera.
+---
+clip: veo-story-white-sheet
+clipFrom: 3
+show: photo face=25 bg=cream size=35x45mm mark=tick on=above
+text: Lie them on a plain sheet
+say: Lie them on a plain, light sheet, and take it from above.
+---
+show: list ✗ No hands in the photo | ✗ No toys or dummies
+text: Keep out
+say: No hands, no toys, and no dummies in the photo.

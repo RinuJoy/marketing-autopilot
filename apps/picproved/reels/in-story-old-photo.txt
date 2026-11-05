@@ -1,0 +1,37 @@
+# Story reel (fictional): reusing a 2014 photo for an Indian passport renewal from the UK. Facts from facts-uk-indians.md
+# (Passport Seva upload instructions Nov 2025): 630x810 JPEG under 250 KB; ICAO style since 1 Sept 2025: plain white
+# background, no glasses, face filling most of the frame; 12 upload attempts.
+title: His Indian passport photo is from 2014. The rules changed in 2025
+description: A story, not a real person. Renewing your Indian passport from the UK? Since 1 September 2025 the photo is ICAO style: plain white background, no glasses, face filling most of the frame. The upload is exactly 630 x 810 pixels, a JPEG under 250 KB, and the portal gives you 12 tries.
+description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
+description: Make yours: picproved.com/nri-passport/gb
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: IndianPassport, PassportRenewal, IndiansInUK, NRI, PassportSeva
+end: picproved.com/nri-passport/gb
+endSub: Exact size, checked before you upload
+endSay: Make yours at picproved dot com.
+voice.kokoro: hm_omega
+voice.google: en-IN-Chirp3-HD-Charon
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: JPEG=jay peg; ICAO=I K O
+---
+show: title
+clip: veo-story-old-photo-cut
+text: Same face. New rules.
+sub: Indian passport, from the UK
+say: His passport photo is from 2014. The rules changed in 2025.
+---
+clip: veo-story-white-wall-man
+clipFrom: 3.5
+show: list ✓ Plain white background | ✗ No glasses | ✓ Face fills most of the frame
+text: ICAO style since 2025
+say: Now it's ICAO style: a plain white background, no glasses, and your face filling most of the frame.
+---
+show: photo face=47 bg=white size=630x810px mark=tick on=JPEG
+text: Exactly 630 × 810
+say: The upload must be exactly 630 by 810 pixels, a JPEG under 250 KB.
+---
+show: number value="12" unit="upload tries on the portal"
+text: Check it first
+say: And the portal gives you 12 tries, so check it first.
