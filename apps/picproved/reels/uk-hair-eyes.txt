@@ -16,7 +16,7 @@ voice.google: en-GB-Chirp3-HD-Leda
 voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
 ---
 show: title
-clip: canva-hair-clips
+clip: veo-fringe-open
 text: Fringe in her eyes ✗
 sub: UK passport photo
 say: Love your fringe? Your passport photo won't.
