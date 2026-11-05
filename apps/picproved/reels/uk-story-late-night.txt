@@ -1,0 +1,36 @@
+# Story reel (fictional): late-night online renewal, photo bounced for shadows. From GOV.UK "Photos for passports" (no
+# shadows on your face or behind you, plain light background) and "Renew or replace your adult passport" ("Do not book
+# travel until you have a valid passport"), both checked 2 Nov 2026.
+title: Photo rejected at 11pm, flight in the morning: the UK passport shadow rule
+description: A story, not a real person. Her UK passport photo bounced on the online form because of a shadow on her face and on the wall behind her. GOV.UK wants no shadows and a plain light background: stand a step in front of a plain wall and face a window. And GOV.UK says don't book travel until you have a valid passport.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: ukpassport, passportphoto, passportrenewal, ukpassportphoto, travel
+end: picproved.com/doc/uk-passport-digital
+endSub: Shadows checked before you send
+endSay: Check yours at picproved dot com.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Kore
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: veo-story-late-night
+text: Photo rejected. Flight in 10 hours.
+sub: UK passport, online
+say: Photo rejected at eleven at night. Her flight is in ten hours.
+---
+show: list ✗ Shadow on her face | ✗ Shadow on the wall behind
+text: Why it bounced
+say: A shadow on her face, and another on the wall behind her.
+---
+clip: veo-story-window-wall
+clipFrom: 4
+show: photo face=33 bg=light size=4x5px dims=off mark=tick on=window label="No shadows"
+text: The fix: face a window
+say: The fix: stand a step in front of a plain wall, and face a window.
+---
+show: list ✓ Renew first | ✓ Then book travel
+text: Next time
+say: And GOV.UK says don't book travel until you have a valid passport.

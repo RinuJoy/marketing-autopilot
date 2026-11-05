@@ -20,7 +20,7 @@ text: Canada said yes. Then: PCC
 sub: Indian PCC
 say: Canada said yes to Priya. Then it asked for an Indian Police Clearance Certificate, from the High Commission of India.
 ---
-clip: runway-vfs-counter
+clip: veo-counter-cut
 show: list 1. Apply on Global Passport Seva | 2. Upload the photo | 3. Hand in at VFS Global
 text: Three steps
 say: You apply on Global Passport Seva, upload a photo, then hand it in at VFS Global.

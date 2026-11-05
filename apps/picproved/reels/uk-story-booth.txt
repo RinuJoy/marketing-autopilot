@@ -1,0 +1,35 @@
+# Story reel (fictional): booth strip with a shadow behind her head. From GOV.UK "Photos for passports" (checked 26 Oct
+# 2026): no shadows on the face or behind; someone else takes it; plain light background; own-device photos: "Do not crop
+# your photo - it will be done for you". Don't say booths are bad: GOV.UK says booth photos are more likely to be approved.
+title: £8 in the photo booth and a shadow behind her head: check it first
+description: A story, not a real person. Whatever you use, GOV.UK wants no shadows on your face or on the wall behind you. Applying online? Someone else can take it on a phone, against a plain light wall, facing a window. Don't crop it: GOV.UK does that for you.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: ukpassport, passportphoto, photobooth, ukpassportphoto, passportrenewal
+end: picproved.com/doc/uk-passport-digital
+endSub: Shadows and size checked before you send
+endSay: Check yours at picproved dot com.
+voice.kokoro: bf_isabella
+voice.google: en-GB-Chirp3-HD-Leda
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: veo-story-booth
+text: £8. Four photos. One shadow.
+sub: UK passport photo
+say: Eight pounds in the booth, and a shadow behind her head on every photo.
+---
+show: list ✗ Shadows on your face | ✗ Shadow on the wall behind
+text: GOV.UK: no shadows
+say: GOV.UK says no shadows, on your face or on the wall behind you.
+---
+clip: veo-story-phone-window
+show: list ✓ Someone else takes it | ✓ Plain light wall | ✓ Face a window
+text: Applying online?
+say: Applying online? A friend can take it on a phone. Plain light wall, facing a window.
+---
+show: photo face=33 bg=light size=4x5px dims=off mark=tick on=crop label="Don't crop it"
+text: Don't crop it
+say: And don't crop it. GOV.UK does that for you.

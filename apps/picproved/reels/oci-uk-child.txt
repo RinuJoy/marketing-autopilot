@@ -1,0 +1,35 @@
+# OCI for a UK-born child, from facts-uk-indians.md (VFS Global UK OCI checklist Oct 2025 + OCI portal FAQ): square
+# 2x2 in prints, square JPEG under 200 KB, light background not bright white, face about 80%; a child who can't sign
+# gives a left thumb impression; biometrics only from age 12.
+title: OCI for your UK-born child: square, light, not white
+description: A UK-born child's OCI photo isn't their UK passport photo. OCI needs a square photo: two 2 x 2 inch prints for VFS UK and a square JPEG under 200 KB, on a light background that isn't bright white, with the face about 80% of the photo. A child who can't sign gives a left thumb impression, and biometrics only start at 12.
+description: VFS UK checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
+description: Make the child's OCI photo: picproved.com/oci-pack
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: OCI, OCIcard, IndiansInUK, BritishIndian, NRI, OCIforkids
+end: picproved.com/oci-pack
+endSub: Photo and thumb print file, made at home
+endSay: Save this for the kids' OCI.
+voice.kokoro: hf_beta
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: JPEG=jay peg
+---
+show: photo face=48 bg=cream size=35x45mm mark=cross on=OCI label="UK passport photo"
+clip: canva-child-chair
+text: Her UK photo ✗ for OCI
+sub: UK-born child, first OCI
+say: Your child's UK passport photo won't work for OCI. Here's why.
+---
+show: photo face=48 bg=light from=35x45mm size=2x2in on=square
+text: OCI is square
+say: OCI is square. Two prints, 2 by 2 inches.
+---
+show: compare face=48 bg=white,light mark=cross,tick Bright white | Light, not white
+text: The background
+say: Light background, but not bright white. Face about eighty percent.
+---
+show: list ✓ Can't sign yet? Left thumb print | ✓ Under 12: no fingerprints
+text: The easy bits
+say: Can't sign yet? A left thumb print. And under twelves skip the fingerprints.

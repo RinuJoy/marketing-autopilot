@@ -1,0 +1,34 @@
+# Story reel (fictional): family wedding trip booked before the UK-born kids' OCI. Facts from facts-uk-indians.md (VFS
+# Global UK OCI checklist Oct 2025 + OCI portal FAQ): square 2x2 in prints, light background not bright white, a child
+# who can't sign gives a left thumb impression, biometrics only from age 12.
+title: Wedding in India, tickets booked, kids have no OCI: the photo rules
+description: A story, not a real family. A UK-born child's UK passport photo won't work for OCI. OCI is square: two 2 x 2 inch prints on a light background that isn't bright white. A child who can't sign gives a left thumb impression, and under-12s don't give fingerprints.
+description: VFS UK checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
+description: Make the kids' OCI photos: picproved.com/oci-pack
+description: Free while we launch, £5.99 after.
+description: Footage made with AI.
+tags: OCI, OCIcard, IndiansInUK, BritishIndian, IndianWedding
+end: picproved.com/oci-pack
+endSub: Kids' OCI photos, made at home
+endSay: Send this to the family group.
+voice.kokoro: hf_beta
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+---
+show: title
+clip: veo-story-suitcase-kids
+text: Tickets booked. OCI isn't.
+sub: UK-born kids, wedding in India
+say: The wedding tickets are booked. The kids' OCI isn't.
+---
+show: photo face=48 bg=light from=35x45mm size=2x2in on=square
+text: Their UK photos won't do
+say: Their UK passport photos won't work. OCI is square, 2 by 2 inches.
+---
+show: compare face=48 bg=white,light mark=cross,tick Bright white | Light, not white
+text: The background
+say: On a light background, but not bright white.
+---
+show: list ✓ Can't sign yet? Left thumb print | ✓ Under 12: no fingerprints
+text: The easy bits
+say: Can't sign yet? A left thumb print. And under twelves skip the fingerprints.
