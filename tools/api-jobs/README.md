@@ -19,7 +19,8 @@ Never paste a key into a chat.
 | Job | Command | What you get | Cost (estimate) |
 |---|---|---|---|
 | Translation review, 19 languages | `translate-review.mjs estimate`, then `submit`, then `collect` | `<lang>.md` report + `<lang>.json` suggested fixes, `SUMMARY.md` | about $20 (Batch API, Opus 5.5, high effort) |
-| Rule check, 204 documents | `rule-check.mjs estimate`, then `run` | `REPORT.md`: changed rules with quotes, dead links, cannot-verify list | about $35 (web fetch + search) |
+| Apply translation fixes | `translate-apply.mjs --repo <picproved>` on a Picproved branch | edits js/lang/*.js, checks each change | free |
+| Rule check, 204 documents | `rule-check.mjs estimate`, then `run` | `REPORT.md`: changed rules with quotes, dead links, cannot-verify list | about $0.30 a document, ~$65 for all (web fetch + search) |
 
 All commands: `node tools/api-jobs/<job> <step> --repo <path to picproved>`.
 Options: `--model claude-fable-5-1` (about 2.5x the cost, the strongest model), `--langs hi,ta`, `--ids in-passport`, `--limit 10`.
