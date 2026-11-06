@@ -1,0 +1,39 @@
+# OCI photo requirements for any country, from the OCI portal FAQ (ociservices.gov.in, Ministry of Home Affairs):
+# square JPEG 200x200 to 900x900 px, under 200 KB, plain light-colour background (not white), no border, face about 80%;
+# signature three times as wide as tall. Prints follow the local mission, so the reel says to check it. No UK-only facts.
+title: OCI photo requirements: the same in every country
+description: The OCI photo you upload follows one rule set wherever you apply from, the US, Canada, the UK or Australia: a square JPEG, 200 x 200 to 900 x 900 pixels, under 200 KB, on a plain light background that isn't bright white, with no border and your face about 80% of the photo. The signature is its own file, three times as wide as it is tall. Printed copies follow your local Indian mission's checklist, so check it before you print.
+description: OCI portal FAQ: https://ociservices.gov.in/onlineOCI/faq
+description: Check yours: picproved.com/doc/in-oci
+description: Free while we launch, then £5.99 or US$7.99.
+tags: OCI, OCIcard, OCIphoto, NRI, IndianDiaspora
+end: picproved.com
+endSub: Square, light, under 200 KB
+endSay: Send this to whoever is filling in the OCI form.
+voice.kokoro: bf_isabella
+voice.google: en-IN-Chirp3-HD-Aoede
+voice.elevenlabs: Xb7hH8MSUJpSbSDYk0k2
+pronounce: JPEG=jay peg
+---
+show: title
+clip: clip-1-airport
+text: One OCI photo rule
+sub: US, Canada, UK, Australia
+say: Applying for OCI from anywhere? The photo rule is the same everywhere.
+---
+show: photo face=45 bg=light from=35x45mm size=2x2in on=square
+text: It's square
+say: It's square. Not a passport-shaped rectangle.
+---
+show: number value="200 to 900" unit="pixels, under 200 KB"
+text: The upload
+say: A JPEG from 200 to 900 pixels on each side, under 200 KB.
+---
+show: compare face=45 bg=white,light mark=cross,tick Bright white | Light, not white
+text: The background
+say: Plain light background, not bright white. No border, face about eighty percent.
+---
+clip: veo-counter-cut
+show: list ✓ Signature: its own wide file | ✓ Prints: check your mission
+text: Don't forget
+say: The signature is its own wide file. For prints, check your mission's list.
