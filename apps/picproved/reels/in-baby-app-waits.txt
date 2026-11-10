@@ -1,0 +1,41 @@
+# Indian-audience cut of baby-app-waits (HOLD until the baby release is live). Indian passport: white background and
+# open eyes are the safe choice (Passport Seva asks for them; missions abroad relax it under 1), as the app's own note says.
+title: Baby's Indian passport or OCI photo: the camera that waits for open eyes
+description: A baby won't hold still for a passport photo. Picproved's baby camera waits instead: hold your phone flat above your baby on a plain sheet, and it watches for up to 30 seconds, takes the photo by itself at a good moment and keeps the best three. For an Indian passport it waits for open eyes, which Passport Seva asks for.
+description: Baby's first Indian passport from abroad, step by step: picproved.com/newborn-passport
+description: From £5.99 per person. Your mission makes the final decision.
+description: Footage made with AI.
+tags: IndianPassport, OCI, NRI, IndiansInUK, newbornpassport, babypassport
+end: picproved.com/newborn-passport
+endSub: The camera that waits for your baby
+endSay: Send this to the new parents in your family.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Kore
+---
+show: title
+clip: gem-in-baby-eyes-closed
+text: Asleep again?
+sub: This camera waits for open eyes
+say: Asleep again? For an Indian passport, open eyes are the safe choice. So this camera waits for them.
+---
+clip: veo-in-sheet
+clipFrom: 1
+show: list 1. Plain white sheet, by a window | 2. Phone flat, above the baby
+text: Set up once
+say: Lay your baby on a plain white sheet by a window.
+---
+clip: veo-in-phone-above
+clipFrom: 2
+show: list ✓ Watches for up to 30 seconds | ✓ Takes the photo by itself
+text: Then just hold still
+say: Hold your phone flat above them. It watches for up to thirty seconds, and takes the photo by itself.
+---
+clip: shot-in-baby-best3
+show: clip
+text: Pick the best
+say: It keeps the best three. You tap the one to use.
+---
+clip: veo-in-tap-phone
+show: list ✓ Checked against the rules | ✓ Sized for passport or OCI
+text: Then it's checked
+say: Then it checks the photo against the rules, and sizes it for the passport or the OCI.
