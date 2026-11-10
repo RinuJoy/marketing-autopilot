@@ -14,7 +14,7 @@ voice.kokoro: hf_alpha
 voice.google: en-IN-Chirp3-HD-Kore
 ---
 show: title
-clip: clip-1-airport
+clip: gem-in-baby-good
 text: Baby born abroad?
 sub: Indian passport: the photo changes by country
 say: Baby born abroad to Indian parents? The passport photo you need depends on where you live.

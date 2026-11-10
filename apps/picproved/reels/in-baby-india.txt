@@ -3,6 +3,7 @@
 title: Baby under 4? The Passport Seva Kendra won't take the photo. You bring it
 description: In India a child under four isn't photographed at the Passport Seva Kendra: you bring a recent photo. It's 4.5 x 3.5 cm on a white background, with the face 80 to 85% of the photo, eyes open and clearly visible, no hair across the eyes and no shadows.
 description: Rules with sources, and how to take it at home: picproved.com/baby/india
+description: Footage made with AI.
 description: ₹149 for one person's photo. The passport office makes the final decision.
 tags: IndianPassport, PassportSeva, babypassport, passportphoto, newparents, IndianParents
 end: picproved.com/baby/india
@@ -12,6 +13,7 @@ voice.kokoro: hf_alpha
 voice.google: en-IN-Chirp3-HD-Kore
 ---
 show: title
+clip: gem-in-toddler-good
 text: Under 4? Bring the photo
 sub: Baby's Indian passport
 say: Baby under four? The Passport Seva Kendra won't take their photo. You bring it.
@@ -28,6 +30,8 @@ show: list ✓ Looking at the camera | ✓ Natural expression | ✗ No shadows
 text: Also on the sheet
 say: Looking at the camera, with a natural expression, and no shadows.
 ---
+clip: veo-in-sheet
+clipFrom: 1
 show: list 1. White sheet by a window | 2. Phone straight above | 3. Take a burst
 text: At home, in 3 steps
 say: Lay them on a white sheet by a window, hold the phone straight above, and take a burst.
