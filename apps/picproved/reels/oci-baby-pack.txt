@@ -15,7 +15,7 @@ voice.kokoro: hf_alpha
 voice.google: en-IN-Chirp3-HD-Aoede
 ---
 show: title
-clip: canva-two-passports
+clip: gem-in-baby-eyes-closed
 text: OCI for your baby?
 sub: 3 files before you open the form
 say: Applying for your baby's OCI? Make these three files before you open the form.
