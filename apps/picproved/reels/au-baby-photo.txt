@@ -4,7 +4,7 @@ title: Australian baby passport photo: don't edit the background
 description: Australia's passport photo guidelines rule out removing or replacing the background, so use a plain white or light grey sheet and leave the photo as it is. Under-threes can have their mouth open, but no one else and no toys can be in the photo. Two prints, 35 to 40 mm wide and 45 to 50 mm high.
 description: Rules with sources, and how to take it: picproved.com/baby/australia
 description: From A$10.99 per person. The Passport Office makes the final decision.
-description: Footage: Sarah Chai on Pexels.
+description: Footage: Sarah Chai on Pexels, and footage made with AI.
 tags: australianpassport, babypassport, newbornpassport, passportphoto, newparents, aussiemums
 end: picproved.com/baby/australia
 endSub: Checked before you print
@@ -18,6 +18,8 @@ text: Don't edit the background
 sub: Australian baby passport photo
 say: For an Australian baby passport photo, you can't remove or replace the background. So get it right in the room.
 ---
+clip: veo-sheet-window
+clipFrom: 1
 show: list ✓ Plain white or light grey sheet | ✓ By a window, in daylight
 text: Get it right in the room
 say: Lay them on a plain white or light grey sheet, by a window, in daylight.

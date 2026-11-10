@@ -28,6 +28,8 @@ show: number value="200" unit="KB: the signature file too"
 text: 2. The signature file
 say: Two. The signature file, also under 200 kilobytes. A baby can't sign, so ask your centre what they take instead.
 ---
+clip: veo-in-desk-booklets
+clipFrom: 1
 show: list ✓ Birth certificate | ✓ Baby's passport | ✓ Both parents' passports
 text: 3. PDFs under 500 KB
 say: Three. Each document as a PDF under 500 kilobytes. The birth certificate, the baby's passport, and both parents' passports.
