@@ -35,7 +35,7 @@ show: clip
 text: Pick the best
 say: It keeps the best three. You tap the one to use.
 ---
-clip: veo-in-tap-phone
-show: list ✓ Checked against the rules | ✓ Sized for passport or OCI
+clip: shot-in-baby-result
+show: clip
 text: Then it's checked
 say: Then it checks the photo against the rules, and sizes it for the passport or the OCI.
