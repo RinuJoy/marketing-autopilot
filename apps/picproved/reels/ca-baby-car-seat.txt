@@ -4,7 +4,7 @@ title: Canadian baby passport photo: the car seat trick, and the rule most paren
 description: Canada wants a baby's passport photo taken by a commercial photographer or studio: one taken or printed at home isn't accepted. A newborn can sit in a car seat with a white blanket over the seat behind their head. No hands in the photo, yours or the baby's, and no shadows around the ears. Two identical prints, 50 x 70 mm.
 description: Rules and a free check of the studio's photo: picproved.com/baby/canada
 description: The passport office makes the final decision.
-description: Footage: Sarah Chai on Pexels.
+description: Footage: Sarah Chai on Pexels, and footage made with AI.
 tags: canadapassport, babypassport, newbornpassport, passportphoto, newparents, canadianbaby
 end: picproved.com/baby/canada
 endSub: Check the studio's photo free
@@ -18,6 +18,8 @@ text: Canada: not at home
 sub: Baby passport photo
 say: A Canadian baby passport photo can't be taken at home. It has to come from a photographer or a studio.
 ---
+clip: veo-car-seat-blanket
+clipFrom: 1
 show: list ✓ A car seat is fine | ✓ White blanket behind the head
 text: The car seat trick
 say: A newborn can sit in a car seat, with a white blanket over the seat, behind their head.

@@ -4,7 +4,7 @@ title: US baby passport photo at home: no hands, not even yours
 description: For a US baby passport photo, no other person can be in the picture, and that includes a parent's hand. Lay your baby on a plain white or off-white sheet, or cover a car seat with one. For a passport it's fine if a baby's eyes aren't fully open. The photo is 2 x 2 inches.
 description: Rules with sources, and how to take it: picproved.com/baby/us
 description: From $7.99 per person. The passport agency makes the final decision.
-description: Footage: William Fortunato on Pexels.
+description: Footage: William Fortunato on Pexels, and footage made with AI.
 tags: uspassport, babypassport, newbornpassport, passportphoto, newparents, babypassportphoto
 end: picproved.com/baby/us
 endSub: Baby rules checked before you save
@@ -18,6 +18,8 @@ text: No hands. Not even yours.
 sub: US baby passport photo
 say: In a baby's US passport photo, nobody else can show. Not even your hand.
 ---
+clip: veo-car-seat-blanket
+clipFrom: 2
 show: list ✓ A plain white sheet | ✓ Or a car seat covered in white
 text: Where to lay them
 say: Lay them on a plain white sheet, or cover a car seat with one.
