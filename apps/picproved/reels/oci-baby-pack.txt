@@ -1,0 +1,37 @@
+# OCI for a baby: the three kinds of file. Facts as on picproved.com/oci-pack/minor and /abroad/oci-uk (OCI portal FAQ,
+# Ministry of Home Affairs: square JPEG 200x200 to 900x900 px, up to 200 KB, light background not white; signature JPEG
+# up to 200 KB; documents as PDFs under 500 KB). No thumb-print claim: the London checklist doesn't say.
+title: OCI for your baby: make these 3 files before you open the form
+description: Applying for a baby's OCI card from abroad? Make three things first. A square photo under 200 KB on a light background that isn't white. The signature file, also under 200 KB (ask your centre what a baby gives instead). And each document as a PDF under 500 KB. The document list changes by country.
+description: Free OCI pack for a child, with your country's list: picproved.com/oci-pack/minor
+description: From £5.99 per person for the photo. Your mission makes the final decision.
+description: Footage made with AI.
+tags: OCI, OCIcard, OCIforkids, NRI, IndiansAbroad, BritishIndian, IndianAmerican
+end: picproved.com/oci-pack/minor
+endSub: Free pack: photo, signature, PDFs
+endSay: Save this for the baby's OCI.
+pronounce: JPEG=jay peg
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Aoede
+---
+show: title
+clip: canva-two-passports
+text: OCI for your baby?
+sub: 3 files before you open the form
+say: Applying for your baby's OCI? Make these three files before you open the form.
+---
+show: photo face=43 bg=light size=2x2in mark=tick on=square
+text: 1. A square photo
+say: One. A square photo, under 200 kilobytes, on a light background that isn't white.
+---
+show: number value="200" unit="KB: the signature file too"
+text: 2. The signature file
+say: Two. The signature file, also under 200 kilobytes. A baby can't sign, so ask your centre what they take instead.
+---
+show: list ✓ Birth certificate | ✓ Baby's passport | ✓ Both parents' passports
+text: 3. PDFs under 500 KB
+say: Three. Each document as a PDF under 500 kilobytes. The birth certificate, the baby's passport, and both parents' passports.
+---
+show: list ✓ UK and USA | ✓ UAE and Canada | ✓ Australia and more
+text: Your country's own list
+say: The full list changes by country. The free OCI pack shows the one for where you live.

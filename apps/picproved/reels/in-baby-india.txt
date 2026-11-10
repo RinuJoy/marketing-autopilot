@@ -1,0 +1,33 @@
+# Baby's passport photo in India. Facts as on picproved.com/baby/india (Passport Seva: apply for a passport; Passport
+# Seva guidelines for photographs of minors below 4 years, checked 10 Nov 2026).
+title: Baby under 4? The Passport Seva Kendra won't take the photo. You bring it
+description: In India a child under four isn't photographed at the Passport Seva Kendra: you bring a recent photo. It's 4.5 x 3.5 cm on a white background, with the face 80 to 85% of the photo, eyes open and clearly visible, no hair across the eyes and no shadows.
+description: Rules with sources, and how to take it at home: picproved.com/baby/india
+description: ₹149 for one person's photo. The passport office makes the final decision.
+tags: IndianPassport, PassportSeva, babypassport, passportphoto, newparents, IndianParents
+end: picproved.com/baby/india
+endSub: Made at home for ₹149
+endSay: Send this to a new parent.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Kore
+---
+show: title
+text: Under 4? Bring the photo
+sub: Baby's Indian passport
+say: Baby under four? The Passport Seva Kendra won't take their photo. You bring it.
+---
+show: photo face=43 bg=white size=35x45mm mark=tick on=white
+text: 35 × 45 mm, on white
+say: It's 35 by 45 millimetres, on a white background.
+---
+show: list ✓ Face 80 to 85% of the photo | ✓ Eyes open and clear | ✓ No hair across the eyes
+text: What Passport Seva asks
+say: The face fills 80 to 85 percent of the photo. Eyes open, and no hair across them.
+---
+show: list ✓ Looking at the camera | ✓ Natural expression | ✗ No shadows
+text: Also on the sheet
+say: Looking at the camera, with a natural expression, and no shadows.
+---
+show: list 1. White sheet by a window | 2. Phone straight above | 3. Take a burst
+text: At home, in 3 steps
+say: Lay them on a white sheet by a window, hold the phone straight above, and take a burst.

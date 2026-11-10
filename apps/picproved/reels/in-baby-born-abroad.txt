@@ -1,0 +1,36 @@
+# Indian passport for a baby born abroad: the photo by country. Facts as on picproved.com/newborn-passport (HCI London
+# birth registration; CGI Dubai passport guide + BLS UAE; BLS Canada passport checklist; VFS Australia photo
+# specifications; indiancitizenshiponline.nic.in Section 4(1), register within one year).
+title: Baby born abroad to Indian parents? The passport photo changes by country
+description: Indian parents abroad: your baby's first Indian passport starts with registering the birth within one year. The photo depends on where you live. UK: a 35 mm square on a light background that isn't white for the birth registration. UAE: 51 x 51 mm on white, and bring it with you. Canada: two 35 x 45 mm prints. Australia: 630 x 810 pixels on white.
+description: Steps and sources for each country: picproved.com/newborn-passport
+description: From £5.99 per person. Your mission makes the final decision.
+description: Footage made with AI.
+tags: IndianPassport, NRI, IndiansAbroad, newbornpassport, IndiansInUK, IndiansInUAE, IndiansInCanada
+end: picproved.com/newborn-passport
+endSub: Every step, with its source
+endSay: Send this to the new parents in your family.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Kore
+---
+show: title
+clip: clip-1-airport
+text: Baby born abroad?
+sub: Indian passport: the photo changes by country
+say: Baby born abroad to Indian parents? The passport photo you need depends on where you live.
+---
+show: photo face=44 bg=grey size=35x35mm mark=tick on=square
+text: UK: a 35 mm square first
+say: In the UK, the birth registration comes first, with a 35 millimetre square photo, on a light background that isn't white.
+---
+show: photo face=44 bg=white size=51x51mm from=35x35mm mark=tick on=white
+text: UAE: 51 × 51 mm, white
+say: In the UAE, it's 51 by 51 millimetres on white. Bring it with you. The centres don't photograph newborns.
+---
+show: list ✓ Canada: two 35 × 45 mm prints | ✓ Australia: 630 × 810 pixels, white
+text: Canada and Australia
+say: Canada asks for two prints, 35 by 45 millimetres. Australia asks for 630 by 810 pixels, on white.
+---
+show: list 1. Register the birth within a year | 2. Then apply for the passport
+text: Everywhere: register first
+say: Wherever you live, register the birth within one year. Then apply for the passport.

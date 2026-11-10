@@ -1,0 +1,32 @@
+# Newborn passport photo rules in four countries. Facts as on picproved.com/baby/newborn (checked 10 Nov 2026):
+# GOV.UK rules for digital photos (under 1 eyes needn't be open), travel.state.gov passport photos (eyes needn't be
+# fully open), passports.govt.nz (eyes open), Australian Passport Office (mouth may be open under 3).
+title: Baby asleep in the passport photo: pass or fail? 4 countries
+description: Newborn passport photo rules change by country. UK: a baby under one can have their eyes closed. USA: for a passport the eyes needn't be fully open. New Zealand asks for eyes open. Australia lets under-threes have their mouth open. Every one of them wants the baby alone: no hands, toys or dummies.
+description: Rules by country, with each passport office's page: picproved.com/baby/newborn
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage: William Fortunato on Pexels.
+tags: babypassport, newbornpassport, passportphoto, newparents, newborn, babypassportphoto
+end: picproved.com/baby/newborn
+endSub: Newborn rules, country by country
+endSay: Send this to a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: stock-baby-asleep
+text: Asleep. Pass or fail?
+sub: Newborn passport photo
+say: Baby asleep in the passport photo. Pass or fail? It depends on the passport.
+---
+show: list ✓ UK: under 1, eyes can be closed | ✓ USA: eyes needn't be fully open
+text: Sleepy is fine here
+say: For a UK passport, a baby under one can have their eyes closed. For a US passport, they needn't be fully open.
+---
+show: list ✗ New Zealand: eyes open | ✓ Australia: under 3, mouth can be open
+text: Not the same everywhere
+say: New Zealand asks for eyes open. Australia lets under threes have their mouth open.
+---
+show: list ✗ No hands | ✗ No toys or dummies | ✗ Nobody else in the photo
+text: Every country agrees
+say: And every country agrees. The baby alone. No hands, no toys, no dummies.

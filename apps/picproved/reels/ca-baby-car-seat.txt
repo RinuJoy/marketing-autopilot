@@ -1,0 +1,31 @@
+# Canadian baby passport photo. Facts as on picproved.com/baby/canada (Canada.ca passport photo requirements, checked
+# 10 Nov 2026): commercial photographer only, car seat with a white blanket, no hands, 2 prints 50x70 mm.
+title: Canadian baby passport photo: the car seat trick, and the rule most parents miss
+description: Canada wants a baby's passport photo taken by a commercial photographer or studio: one taken or printed at home isn't accepted. A newborn can sit in a car seat with a white blanket over the seat behind their head. No hands in the photo, yours or the baby's, and no shadows around the ears. Two identical prints, 50 x 70 mm.
+description: Rules and a free check of the studio's photo: picproved.com/baby/canada
+description: The passport office makes the final decision.
+description: Footage: Sarah Chai on Pexels.
+tags: canadapassport, babypassport, newbornpassport, passportphoto, newparents, canadianbaby
+end: picproved.com/baby/canada
+endSub: Check the studio's photo free
+endSay: Send this to a new parent in Canada.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: stock-baby-bed
+text: Canada: not at home
+sub: Baby passport photo
+say: A Canadian baby passport photo can't be taken at home. It has to come from a photographer or a studio.
+---
+show: list ✓ A car seat is fine | ✓ White blanket behind the head
+text: The car seat trick
+say: A newborn can sit in a car seat, with a white blanket over the seat, behind their head.
+---
+show: list ✗ No hands, yours or theirs | ✗ No shadows around the ears
+text: Check before you leave
+say: No hands in the photo, yours or the baby's. And no shadows around the ears.
+---
+show: photo face=25 bg=white size=50x70mm mark=tick on=prints
+text: 50 × 70 mm, two prints
+say: You need two identical prints, 50 by 70 millimetres. Check the studio's photo free before you send it.
