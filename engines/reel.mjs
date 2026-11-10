@@ -34,6 +34,7 @@ export const VISUALS = {
   list: "✓ item | ✗ item | 1. item: lines that tick in as they are said",
   number: "value=\"600 × 750\" unit=\"pixels\": a number that counts up",
   strike: "text=\"PHOTO CODE\" stamp=\"Optional\" [on=<word>]: a ticket crossed out (on that word) and stamped",
+  clip: "nothing drawn over the film: the clip itself is the picture, such as an app screen (the scene needs clip:)",
 };
 const BG = { cream: "#efe8d6", grey: "#d9dcdf", light: "#e7edf3", white: "#ffffff", blue: "#2f5fd0" };
 const THEMES = {
@@ -90,6 +91,7 @@ export function checkReel(r, { faces = null, neverSay = [] } = {}) {
     if (!VISUALS[s.show.type]) p.push(`${name}: no visual "${s.show.type}" (${Object.keys(VISUALS).join(", ")})`);
     if (!s.say) p.push(`${name}: no say line`);
     for (const f of [s.show.args.face].filter(Boolean)) if (faces && !faces.includes(f)) p.push(`${name}: no face ${f} in assets`);
+    if (s.show.type === "clip" && !s.clip) p.push(`${name}: show: clip needs a clip: line`);
     if (["list", "compare"].includes(s.show.type) && !s.show.items.length) p.push(`${name}: ${s.show.type} with no items`);
     for (const b of String(s.show.args.bg || "").split(",").filter(Boolean)) if (!BG[b]) p.push(`${name}: no background "${b}" (${Object.keys(BG).join(", ")})`);
   }
@@ -169,6 +171,7 @@ const MARK = { tick: "✓", cross: "✗", x: "✗" };
 function visual(s, rel, assets) {
   const { type, args, items } = s.show, at = (t, fx, extra = "") => `data-fx="${fx}" data-at="${Math.max(0, t).toFixed(2)}"${extra}`;
   const face = n => assets.faces[n] || "";
+  if (type === "clip") return "";
   if (type === "photo") {
     const to = size(args.size), from = args.from ? size(args.from) : null, H0 = 700;
     const px = d => { const w = Math.round(H0 * d.w / d.h); return w > 600 ? { w: 600, h: Math.round(600 * d.h / d.w) } : { w, h: H0 }; };

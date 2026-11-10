@@ -1,0 +1,33 @@
+# New newborn features (HOLD until the baby release is live): best frames from a short video, and the retake that
+# offers the better earlier photo back. Wording as in the app (bs.clip, clip.reading, qa.earlier, qa.useEarlier).
+title: Baby passport photo from a 10 second video
+description: Can't get the shot? Film your baby for ten seconds instead. Picproved finds the best moments in the video and offers them as photos. And if a retake comes out worse, it offers your better earlier photo back, so a good one is never lost.
+description: Baby passport photo rules by country: picproved.com/baby/newborn
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage: William Fortunato on Pexels.
+tags: babypassport, newbornpassport, passportphoto, newparents, babypassportphoto
+end: picproved.com/baby/newborn
+endSub: Photo, or a 10 second video
+endSay: Tag a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: stock-baby-asleep
+text: Can't get the shot?
+sub: Film 10 seconds instead
+say: Can't get the shot? Film your baby for ten seconds instead.
+---
+clip: shot-baby-video
+show: clip
+text: From a short video
+say: It finds the best moments in your video, and offers them as photos.
+---
+clip: shot-baby-earlier
+show: clip
+text: Nothing lost
+say: And if a retake comes out worse, it offers your better earlier photo back.
+---
+show: list ✗ No hands | ✗ No toys or dummies | ✓ Plain light sheet
+text: Still the same rules
+say: The rules don't change. A plain light sheet, no hands, no toys, no dummies.
