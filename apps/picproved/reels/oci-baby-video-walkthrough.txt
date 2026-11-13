@@ -1,0 +1,45 @@
+# Walkthrough of the baby video feature for an OCI photo (the cropped-frame fix went live in v3.8.167 on 13 Nov 2026, so this can be posted).
+# Rinu, 13 Nov: don't show the scoring points; show where it happens in the app. Facts as in js/moment.js on main
+# v3.8.166 (best moments found on the phone, top 3) and the OCI portal FAQ: square JPEG up to 200 KB, light background, not white.
+title: OCI photo for a baby from a 10 second video
+description: OCI for your baby and they won't stay still? Film about 10 seconds from above. The app looks through the video for the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
+description: OCI photo: a square JPEG under 200 KB on a plain light background that is not pure white. For the printed copy, follow your mission's checklist. picproved.com/oci-pack/minor
+description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. Your mission makes the final decision.
+description: Babies, footage and voiceover made with AI.
+tags: OCI, OCIcard, IndiansAbroad, NRI, babypassport
+end: picproved.com/oci-pack/minor
+endSub: Stays on your phone. Free to check
+endSay: Send this to the new parents in your family.
+pronounce: JPEG=jay peg
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Aoede
+---
+show: title
+clip: veo-in-wriggle
+text: OCI photo for your baby?
+sub: Film 10 seconds
+say: OCI photo for your baby, and they won't stay still? Film them.
+---
+clip: veo-in-sheet
+show: list ✓ Plain light sheet | ✓ Feet to the window | ✓ Phone flat above
+text: Set up
+say: Plain light sheet, feet towards the window, phone flat above. Film about ten seconds.
+---
+clip: shot-in-walk-video
+show: clip
+say: Tap "Use a photo or video" and choose the clip. The app looks for the moments with open eyes, a calm face, and your baby looking at the phone.
+---
+clip: shot-in-baby-best3
+show: clip
+text: You pick from the best three
+say: It shows you the best three, with a note under each. Tap the one you like.
+---
+show: photo face=43 bg=light size=2x2in mark=tick on=square
+text: Square, under 200 KB
+sub: Light background, not white
+say: For OCI, the photo is a square JPEG under 200 kilobytes, on a plain light background that is not pure white. The app sizes it for you.
+---
+clip: veo-in-sofa-tap
+show: list ✓ Never uploaded | ✓ Free to check
+text: Stays on your phone
+say: Nothing leaves your phone, and checking is free.

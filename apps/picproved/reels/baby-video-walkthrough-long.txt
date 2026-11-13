@@ -1,0 +1,89 @@
+# The full walkthrough of the baby photo and video flow, about 2 min 45 s (the cropped-frame fix went live in
+# v3.8.167 on 13 Nov 2026, so this can be posted). Rinu, 13 Nov: no scoring points on screen or in the voice; show the app's own screens. Facts as in js/moment.js, js/baby.js and the bs.* texts on main v3.8.166. UK and US parts show
+# the non-Indian AI baby; the OCI line shows no face.
+title: Baby passport photo at home: photo or video, step by step, with UK, US and OCI rules
+description: A full walkthrough of taking a baby's passport or OCI photo at home with Picproved, using a photo or a short video.
+description: From a video, the app finds the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
+description: Everything runs on your phone. The photo and the video are never uploaded. Checking is free; from £5.99 per person to save the finished photo. picproved.com
+description: The score is an estimate. The passport office or mission makes the final decision. Canada accepts studio photos only.
+description: Babies, footage and voiceover made with AI.
+tags: babypassport, passportphoto, OCI
+end: picproved.com
+endSub: The score is an estimate. The office decides
+endSay: The link is below.
+pronounce: JPEG=jay peg
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-uk-wriggle
+text: Baby passport photo at home
+sub: The full walkthrough
+say: A baby passport photo is the hardest photo you will ever take. They wriggle, they yawn, they look at everything except the phone.
+---
+clip: veo-uk-yawn
+show: clip
+text: A photo, or a short video
+say: Here is how to get it at home in a few minutes, with a photo or with a short video.
+---
+clip: shot-baby-age
+show: clip
+text: 1. Tell the app the age
+say: Start by choosing the document, then the age: under one, one to five, or six and over. The app then applies the rule your passport office has for that age.
+---
+clip: veo-uk-smooth-sheet
+show: list ✓ Plain white or light sheet | ✓ Creases smoothed out
+text: 2. Set up
+say: Lay the baby on their back on a plain white or light sheet, and smooth out the creases.
+---
+clip: veo-sheet-window
+show: list ✓ Daylight, lamps off | ✓ Feet towards the window
+text: Light
+say: Use daylight from a window with the lamps off, and point the baby's feet at the window so both cheeks get the same light.
+---
+clip: veo-toy-away
+show: list ✗ No toys or dummy | ✗ No hat | ✗ No hands
+text: Nothing else in the picture
+say: Nothing else in the picture: no toys, no dummy, no hat, and no hands. To steady the head, slide your hand under the sheet.
+---
+clip: veo-phone-above
+show: clip
+text: 3. The camera that waits
+sub: Watches for up to 30 seconds
+say: Option one. Hold the phone flat above the baby, any way round. The camera watches for up to thirty seconds.
+---
+clip: shot-baby-camera
+show: clip
+say: It takes the photo by itself when the eyes are open, the mouth is closed and the baby is facing the phone, and it keeps the best three.
+---
+clip: shot-uk-walk-video
+show: clip
+say: Option two. Tap "Use a photo or video" and choose a clip you filmed. Ten seconds is plenty. The app looks through it for the moments with open eyes, a calm face, and your baby looking at the phone.
+---
+clip: shot-baby-best3
+show: clip
+text: Pick the best photo
+say: A moment with a parent leaning in is left out. You see the best three with a note under each, like eyes open, calm face. Tap the one you like.
+---
+clip: shot-baby-result
+show: clip
+text: 5. Turned upright and checked
+say: It doesn't matter which way the baby was lying. The photo is turned upright, then checked like any other: size, head position, background, light and hands.
+---
+clip: shot-baby-earlier
+show: clip
+say: And if a retake comes out worse, the app offers your better earlier photo back.
+---
+clip: card-rules
+show: clip
+say: The rules change by country. UK passport: under one, the eyes may be closed. US passport: the background can't be edited, so the sheet must be plain white or off-white.
+---
+clip: veo-in-square-print
+show: list ✓ Square JPEG | ✓ Under 200 KB | ✓ Light background, not white
+text: OCI card
+say: O C I card: a square JPEG under 200 kilobytes, on a plain light background that is not pure white.
+---
+clip: veo-uk-sofa-tap
+show: list ✓ Never uploaded | ✓ Free to check
+text: Stays on your phone
+say: Everything runs on your phone. The photo and the video are never uploaded. Checking is free, and you pay only to save the finished photo.

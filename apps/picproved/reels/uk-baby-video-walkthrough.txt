@@ -1,0 +1,44 @@
+# Walkthrough of the baby video feature for UK parents (the cropped-frame fix went live in v3.8.167 on 13 Nov 2026, so this can be posted).
+# Rinu, 13 Nov: don't show the scoring points; show where it happens in the app (clip.reading and bp.* screens).
+# Facts as in js/moment.js on main v3.8.166: best moments found on the phone, top 3 offered. UK rule from gov.uk/photos-for-passports.
+title: Baby passport photo from a 10 second video
+description: Baby won't keep still? Film about 10 seconds from above and let the app find the photo. It looks through the video for the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
+description: UK baby passport: under 1 the eyes may be closed. No hands, toys or dummies. picproved.com/baby/uk
+description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. HM Passport Office makes the final decision.
+description: Babies, footage and voiceover made with AI.
+tags: babypassport, passportphoto, newbornpassport, ukpassport, newparents
+end: picproved.com/baby/uk
+endSub: Stays on your phone. Free to check
+endSay: Send this to a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-uk-wriggle
+text: Baby won't keep still?
+sub: Film 10 seconds instead
+say: Baby won't keep still for the passport photo? Film them instead.
+---
+clip: veo-uk-smooth-sheet
+show: list ✓ Plain light sheet | ✓ Feet to the window | ✓ Film from above
+text: Set up
+say: Lay your baby on a plain light sheet, feet towards the window, and film from above for about ten seconds.
+---
+clip: shot-uk-walk-video
+show: clip
+say: Tap "Use a photo or video" and choose the clip. The app looks through it for the moments with open eyes, a calm face, and your baby looking at the phone.
+---
+clip: shot-baby-best3
+show: clip
+text: You pick from the best three
+say: It shows you the best three, with a note under each. Tap the one you like.
+---
+clip: shot-baby-result
+show: clip
+text: Then the passport checks
+say: Then it runs the passport checks. For a UK baby passport, under ones may have their eyes closed, but no hands, toys or dummies.
+---
+clip: veo-uk-sofa-tap
+show: list ✓ Never uploaded | ✓ Free to check
+text: Stays on your phone
+say: It all happens on your phone. The video is never uploaded, and checking is free.
