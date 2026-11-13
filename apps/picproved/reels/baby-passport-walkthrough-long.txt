@@ -1,14 +1,15 @@
+# Passports version (UK, US and other countries; Rinu, 13 Nov: two videos, passports and OCI).
 # The full walkthrough of the baby photo and video flow, about 2 min 45 s (the cropped-frame fix went live in
 # v3.8.167 on 13 Nov 2026, so this can be posted). Rinu, 13 Nov: no scoring points on screen or in the voice; show the app's own screens. Facts as in js/moment.js, js/baby.js and the bs.* texts on main v3.8.166. UK and US parts show
 # the non-Indian AI baby; the OCI line shows no face.
-title: Baby passport photo at home: photo or video, step by step, with UK, US and OCI rules
-description: A full walkthrough of taking a baby's passport or OCI photo at home with Picproved, using a photo or a short video.
+title: Baby passport photo at home: photo or video, step by step (UK, US and more)
+description: A full walkthrough of taking a baby's passport photo at home with Picproved, using a photo or a short video.
 description: From a video, the app finds the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
 description: Everything runs on your phone. The photo and the video are never uploaded. Checking is free; from £5.99 per person to save the finished photo. picproved.com
-description: The score is an estimate. The passport office or mission makes the final decision. Canada accepts studio photos only.
+description: The score is an estimate. The passport office makes the final decision. Canada accepts studio photos only.
 description: Babies, footage and voiceover made with AI.
-tags: babypassport, passportphoto, OCI
-end: picproved.com
+tags: babypassport, passportphoto, newbornpassport
+end: picproved.com/baby/newborn
 endSub: The score is an estimate. The office decides
 endSay: The link is below.
 pronounce: JPEG=jay peg
@@ -73,14 +74,14 @@ clip: shot-baby-earlier
 show: clip
 say: And if a retake comes out worse, the app offers your better earlier photo back.
 ---
-clip: card-rules
+clip: card-rules-passports
 show: clip
 say: The rules change by country. UK passport: under one, the eyes may be closed. US passport: the background can't be edited, so the sheet must be plain white or off-white.
 ---
-clip: veo-in-square-print
-show: list ✓ Square JPEG | ✓ Under 200 KB | ✓ Light background, not white
-text: OCI card
-say: O C I card: a square JPEG under 200 kilobytes, on a plain light background that is not pure white.
+clip: veo-car-seat-blanket
+show: list ✓ Australia | ✓ Ireland | ✓ New Zealand | ✓ India
+text: More countries built in
+say: Australia, Ireland, New Zealand, India and more are built in. The app shows your country's rule before you start.
 ---
 clip: veo-uk-sofa-tap
 show: list ✓ Never uploaded | ✓ Free to check
