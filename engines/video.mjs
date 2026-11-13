@@ -145,9 +145,11 @@ function stageHTML({ scenes, theme, font, logo, qr }) {
 
 // Sound: a music track (looped, levelled so tracks match, faded out over the last 1.5 s) when one is given, else
 // silence; with a voiceover, each line starts at its moment and the music sits well under it.
+// How loud the music sits under a voice, in LUFS: -28 unless MUSIC_LUFS says otherwise (-34 is clearly quieter).
+const UNDER = Number(process.env.MUSIC_LUFS) || -28;
 export function ffmpegArgs(file, secs, music, lines = []) {
   const fade = `afade=t=in:d=0.5,afade=t=out:st=${Math.max(0, secs - 1.5)}:d=1.5`;
-  const bed = music ? `[1:a]loudnorm=I=${lines.length ? -28 : -18}:TP=-2:LRA=11,aresample=44100,aformat=channel_layouts=stereo,${fade}[m]` : "[1:a]anull[m]";
+  const bed = music ? `[1:a]loudnorm=I=${lines.length ? UNDER : -18}:TP=-2:LRA=11,aresample=44100,aformat=channel_layouts=stereo,${fade}[m]` : "[1:a]anull[m]";
   const said = lines.map((l, i) => `[${i + 2}:a]aresample=44100,aformat=channel_layouts=stereo,adelay=${Math.round(l.at * 1000)}:all=1[v${i}]`);
   const mix = lines.length ? [...said, `${lines.map((_, i) => `[v${i}]`).join("")}amix=inputs=${lines.length}:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=7,aresample=44100[vo]`,
     "[m][vo]amix=inputs=2:normalize=0:duration=first[a]"] : ["[m]anull[a]"];

@@ -1,0 +1,45 @@
+# Walkthrough of the baby video feature for passports (UK, US and other countries; Rinu, 13 Nov: two Shorts, this
+# one and the OCI one) (the cropped-frame fix went live in v3.8.167 on 13 Nov 2026, so this can be posted).
+# Rinu, 13 Nov: don't show the scoring points; show where it happens in the app (clip.reading and bp.* screens).
+# Facts as in js/moment.js on main v3.8.166: best moments found on the phone, top 3 offered. Rules as in the app's bs.note.* lines (GB, US, AU, IE, NZ), each from the passport office's own page.
+title: Baby passport photo from a 10 second video (UK, US and more)
+description: Baby won't keep still? Film about 10 seconds from above and let the app find the photo. It looks through the video for the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
+description: The rules change by country. UK: under 1 the eyes may be closed. US: a plain white or off-white sheet, because the background can't be edited. Australia, Ireland, New Zealand and more are built in. Rules by country: picproved.com/baby/newborn
+description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. The passport office makes the final decision.
+description: Android app on Google Play: https://play.google.com/store/apps/details?id=app.picproved
+description: Babies, footage and voiceover made with AI.
+tags: babypassport, passportphoto, newbornpassport, ukpassport, uspassport
+end: picproved.com/baby/newborn
+endSub: Stays on your phone. Free to check
+endSay: Send this to a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-uk-wriggle
+text: Baby won't keep still?
+sub: Film 10 seconds instead
+say: Baby won't keep still for the passport photo? Film them instead.
+---
+clip: veo-uk-smooth-sheet
+show: list ✓ Plain light sheet | ✓ Feet to the window | ✓ Film from above
+text: Set up
+say: Lay your baby on a plain light sheet, feet towards the window, and film from above for about ten seconds.
+---
+clip: shot-uk-walk-video
+show: clip
+say: Tap "Use a photo or video" and choose the clip. The app looks through it for the moments with open eyes, a calm face, and your baby looking at the phone.
+---
+clip: shot-uk-walk-pick
+show: clip
+say: It shows you the best three, with a note under each. Tap the one you like.
+---
+clip: veo-car-seat-blanket
+show: list ✓ UK: under 1, eyes may be closed | ✓ US: plain white sheet, no edits | ✓ Australia, Ireland, NZ and more
+text: Checked for your country
+say: Then it checks the photo against your country's rules. In the UK, under ones may have their eyes closed. In the US, the sheet must be plain white, because the background can't be edited. Australia, Ireland, New Zealand and more are built in.
+---
+clip: veo-uk-sofa-tap
+show: list ✓ Never uploaded | ✓ Free to check
+text: Stays on your phone
+say: It all happens on your phone. The video is never uploaded, and checking is free.
