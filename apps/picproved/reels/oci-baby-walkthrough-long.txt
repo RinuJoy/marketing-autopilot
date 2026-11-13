@@ -7,6 +7,7 @@ description: From a video, the app finds the moments with open eyes, a calm face
 description: Everything runs on your phone. The photo and the video are never uploaded. Checking is free; from £5.99 per person to save the finished photo. picproved.com/oci-pack/minor
 description: OCI photo: a square JPEG under 200 KB on a plain light background that is not pure white. For the printed copy, follow your mission's checklist.
 description: The score is an estimate. Your mission makes the final decision.
+description: Android app on Google Play: https://play.google.com/store/apps/details?id=app.picproved
 description: Babies, footage and voiceover made with AI.
 tags: OCI, OCIcard, IndiansAbroad, NRI, babypassport
 end: picproved.com/oci-pack/minor

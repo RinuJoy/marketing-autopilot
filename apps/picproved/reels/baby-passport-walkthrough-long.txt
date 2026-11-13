@@ -7,6 +7,7 @@ description: A full walkthrough of taking a baby's passport photo at home with P
 description: From a video, the app finds the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
 description: Everything runs on your phone. The photo and the video are never uploaded. Checking is free; from £5.99 per person to save the finished photo. picproved.com
 description: The score is an estimate. The passport office makes the final decision. Canada accepts studio photos only.
+description: Android app on Google Play: https://play.google.com/store/apps/details?id=app.picproved
 description: Babies, footage and voiceover made with AI.
 tags: babypassport, passportphoto, newbornpassport
 end: picproved.com/baby/newborn

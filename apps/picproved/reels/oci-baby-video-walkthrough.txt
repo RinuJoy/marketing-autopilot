@@ -5,6 +5,7 @@ title: OCI photo for a baby from a 10 second video
 description: OCI for your baby and they won't stay still? Film about 10 seconds from above. The app looks through the video for the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
 description: OCI photo: a square JPEG under 200 KB on a plain light background that is not pure white. For the printed copy, follow your mission's checklist. picproved.com/oci-pack/minor
 description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. Your mission makes the final decision.
+description: Android app on Google Play: https://play.google.com/store/apps/details?id=app.picproved
 description: Babies, footage and voiceover made with AI.
 tags: OCI, OCIcard, IndiansAbroad, NRI, babypassport
 end: picproved.com/oci-pack/minor

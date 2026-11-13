@@ -6,6 +6,7 @@ title: Baby passport photo from a 10 second video (UK, US and more)
 description: Baby won't keep still? Film about 10 seconds from above and let the app find the photo. It looks through the video for the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
 description: The rules change by country. UK: under 1 the eyes may be closed. US: a plain white or off-white sheet, because the background can't be edited. Australia, Ireland, New Zealand and more are built in. Rules by country: picproved.com/baby/newborn
 description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. The passport office makes the final decision.
+description: Android app on Google Play: https://play.google.com/store/apps/details?id=app.picproved
 description: Babies, footage and voiceover made with AI.
 tags: babypassport, passportphoto, newbornpassport, ukpassport, uspassport
 end: picproved.com/baby/newborn
