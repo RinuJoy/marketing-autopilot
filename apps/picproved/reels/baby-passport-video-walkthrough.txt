@@ -1,13 +1,14 @@
-# Walkthrough of the baby video feature for UK parents (the cropped-frame fix went live in v3.8.167 on 13 Nov 2026, so this can be posted).
+# Walkthrough of the baby video feature for passports (UK, US and other countries; Rinu, 13 Nov: two Shorts, this
+# one and the OCI one) (the cropped-frame fix went live in v3.8.167 on 13 Nov 2026, so this can be posted).
 # Rinu, 13 Nov: don't show the scoring points; show where it happens in the app (clip.reading and bp.* screens).
-# Facts as in js/moment.js on main v3.8.166: best moments found on the phone, top 3 offered. UK rule from gov.uk/photos-for-passports.
-title: Baby passport photo from a 10 second video
+# Facts as in js/moment.js on main v3.8.166: best moments found on the phone, top 3 offered. Rules as in the app's bs.note.* lines (GB, US, AU, IE, NZ), each from the passport office's own page.
+title: Baby passport photo from a 10 second video (UK, US and more)
 description: Baby won't keep still? Film about 10 seconds from above and let the app find the photo. It looks through the video for the moments with open eyes, a calm face and the baby looking at the phone, and shows you the best 3 to pick from.
-description: UK baby passport: under 1 the eyes may be closed. No hands, toys or dummies. picproved.com/baby/uk
-description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. HM Passport Office makes the final decision.
+description: The rules change by country. UK: under 1 the eyes may be closed. US: a plain white or off-white sheet, because the background can't be edited. Australia, Ireland, New Zealand and more are built in. Rules by country: picproved.com/baby/newborn
+description: The video stays on your phone. Checking is free; from £5.99 per person to save the photo. The passport office makes the final decision.
 description: Babies, footage and voiceover made with AI.
-tags: babypassport, passportphoto, newbornpassport, ukpassport, newparents
-end: picproved.com/baby/uk
+tags: babypassport, passportphoto, newbornpassport, ukpassport, uspassport
+end: picproved.com/baby/newborn
 endSub: Stays on your phone. Free to check
 endSay: Send this to a new parent.
 voice.kokoro: bf_emma
@@ -32,10 +33,10 @@ clip: shot-uk-walk-pick
 show: clip
 say: It shows you the best three, with a note under each. Tap the one you like.
 ---
-clip: shot-baby-result
-show: clip
-text: Then the passport checks
-say: Then it runs the passport checks. For a UK baby passport, under ones may have their eyes closed, but no hands, toys or dummies.
+clip: veo-car-seat-blanket
+show: list ✓ UK: under 1, eyes may be closed | ✓ US: plain white sheet, no edits | ✓ Australia, Ireland, NZ and more
+text: Checked for your country
+say: Then it checks the photo against your country's rules. In the UK, under ones may have their eyes closed. In the US, the sheet must be plain white, because the background can't be edited. Australia, Ireland, New Zealand and more are built in.
 ---
 clip: veo-uk-sofa-tap
 show: list ✓ Never uploaded | ✓ Free to check
