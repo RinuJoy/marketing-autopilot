@@ -28,9 +28,8 @@ clip: shot-uk-walk-video
 show: clip
 say: Tap "Use a photo or video" and choose the clip. The app looks through it for the moments with open eyes, a calm face, and your baby looking at the phone.
 ---
-clip: shot-baby-best3
+clip: shot-uk-walk-pick
 show: clip
-text: You pick from the best three
 say: It shows you the best three, with a note under each. Tap the one you like.
 ---
 clip: shot-baby-result
