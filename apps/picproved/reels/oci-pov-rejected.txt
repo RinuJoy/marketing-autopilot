@@ -1,0 +1,28 @@
+# Viral batch 14 Nov 2026 (POV format). Facts as in oci-photo-uk.txt (VFS Global UK OCI checklist Oct 2025 + OCI
+# portal FAQ): square JPEG, 200 to 900 px, under 200 KB, light background, not bright white.
+title: POV: your OCI photo upload failed again
+description: Check these three before you try again: is it square, is it under 200 KB, and is the background light but not bright white? OCI wants a square JPEG (200 to 900 px, under 200 KB).
+description: VFS UK checklist: https://www.vfsglobal.com/one-pager/india/uk/oci/english/pdf/OCI_Checklist_2025_October.pdf
+description: Make yours: picproved.com/oci-pack
+description: From £5.99 per person. Your mission makes the final decision.
+description: Footage made with AI.
+tags: OCI, OCIcard, IndiansAbroad, NRI, pov, ociphoto
+end: picproved.com/oci-pack
+endSub: OCI photo and signature, sized
+endSay: Send this to whoever is doing OCI next.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Aoede
+pronounce: JPEG=jay peg
+---
+show: title
+clip: runway-upload-failed
+text: POV: OCI photo failed. Again.
+say: Your OCI photo upload failed. Again.
+---
+show: list ✗ Not square | ✗ Over 200 KB | ✗ Bright white background
+text: Check these 3
+say: Check three things. Is it square? Is it under 200 KB? Is the background bright white?
+---
+show: photo face=45 bg=light from=35x45mm size=2x2in on=square
+text: Square. Light. Under 200 KB.
+say: OCI wants a square JPEG, under 200 KB, on a light background that is not bright white.

@@ -1,0 +1,35 @@
+# Viral batch 14 Nov 2026 (quiz format, drives comments and sends). Facts from GOV.UK "Photos for passports" as in
+# uk-baby-photo.txt.
+title: Pass or fail? 3 baby passport photos (UK)
+description: Guess before the answer. Fast asleep, under one: pass, eyes can be closed for a UK passport. Holding a toy: fail. A hand behind the head: fail, no hands in the photo.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check your baby's photo: picproved.com/baby/uk
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage: William Fortunato on Pexels, and footage made with AI.
+tags: babypassport, ukpassport, passportphoto, newparents, quiz, newbornpassport
+end: picproved.com/baby/uk
+endSub: Check your baby's photo
+endSay: How many did you get? Send it to a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: stock-baby-asleep
+text: Pass or fail? Guess all 3
+sub: UK baby passport photo
+say: Three baby passport photos. Pass or fail? Guess before I say.
+---
+clip: stock-baby-asleep
+show: list ✓ Fast asleep, under 1: PASS
+text: Photo 1
+say: Fast asleep, under one. Pass. Their eyes can be closed.
+---
+clip: veo-toy-away
+show: list ✗ Holding a toy: FAIL
+text: Photo 2
+say: Holding a toy. Fail. No toys, and no dummies.
+---
+clip: veo-uk-wriggle
+show: list ✗ A hand in the shot: FAIL
+text: Photo 3
+say: A hand in the shot. Fail. Nobody's hands can show.

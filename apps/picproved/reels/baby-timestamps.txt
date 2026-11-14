@@ -1,0 +1,34 @@
+# Viral batch 14 Nov 2026 (timestamp trend, Later 13 Nov 2026). Rules as in baby-eyes-by-country.txt; app wording as
+# in baby-app-video.txt.
+title: A baby passport photo, in timestamps
+description: 9:02 attempt one, a yawn. 9:10 attempt twelve, a hand in the shot. 9:31 gave up. 9:32 filmed ten seconds instead. 9:33 done: the app found the best moments and checked the photo.
+description: Baby passport photo rules by country: picproved.com/baby/newborn
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage made with AI.
+tags: babypassport, newbornpassport, passportphoto, newparents, dayinthelife, parenting
+end: picproved.com/baby/newborn
+endSub: Newborn rules, country by country
+endSay: Send this to a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-uk-yawn
+text: 9:02. Attempt 1.
+sub: Baby passport photo
+say: Nine oh two. Baby passport photo, attempt one.
+---
+clip: veo-uk-wriggle
+show: list 9:10 Attempt 12: hand in the shot | 9:31 Gave up
+text: It gets worse
+say: Nine ten. Attempt twelve. A hand in the shot. Nine thirty one. Gave up.
+---
+clip: shot-uk-walk-video
+show: clip
+text: 9:32. Filmed 10 seconds.
+say: Nine thirty two. Filmed ten seconds instead.
+---
+clip: shot-baby-result
+show: clip
+text: 9:33. Done.
+say: Nine thirty three. Done. Checked against the rules.

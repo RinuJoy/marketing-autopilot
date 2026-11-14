@@ -1,0 +1,33 @@
+# Viral batch 14 Nov 2026 (numbered myths). Facts from GOV.UK "Photos for passports" as in uk-photo-code.txt,
+# uk-baby-photo.txt and uk-story-late-night.txt.
+title: 3 UK passport photo myths people still believe
+description: Myth 1: you need a photo code. You don't: GOV.UK lets you take the photo on your own phone. Myth 2: a baby's eyes must be open. Under one, they can be closed. Myth 3: any wall will do. It needs a plain light background and no shadows.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check yours first: picproved.com/doc/uk-passport-digital
+description: From £5.99 per person. The passport office makes the final decision.
+tags: ukpassport, passportphoto, passportrenewal, myths, uktravel, hmpo
+end: picproved.com/doc/uk-passport-digital
+endSub: Check your photo first
+endSay: Send this to whoever is renewing next.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+theme: green
+---
+show: title
+clip: clip-2-passport-hands
+text: 3 passport photo myths
+sub: UK passport
+say: Three UK passport photo myths people still believe.
+---
+show: strike text="PHOTO CODE" stamp="Optional" on=don't
+text: Myth 1: you need a code
+say: You need a photo code. You don't. You can take it on your own phone.
+---
+clip: stock-baby-asleep
+show: list ✗ Myth 2: baby's eyes must be open | ✓ Under 1: they can be closed
+text: Myth 2
+say: A baby's eyes must be open. Under one, they can be closed.
+---
+show: list ✗ Myth 3: any wall will do | ✓ Plain, light, no shadows
+text: Myth 3
+say: Any wall will do. It needs a plain light background, and no shadows.

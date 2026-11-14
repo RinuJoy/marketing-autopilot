@@ -1,0 +1,34 @@
+# Viral batch 14 Nov 2026 (quiz format on our best-performing topic). Facts as in in-passport-uk.txt (VFS Global UK
+# passport services, Passport Seva photo upload instructions Nov 2025).
+title: Indian passport renewal in the UK: which photo size uploads?
+description: Only one of these uploads: 600 x 800, 630 x 810 or 800 x 1000. It must be exactly 630 x 810 pixels, a JPEG under 250 KB, on a plain white background with no glasses. The portal allows 12 upload attempts, so check it first.
+description: VFS UK: https://visa.vfsglobal.com/one-pager/india/uk/passport-services/english/
+description: Make yours: picproved.com/nri-passport/gb
+description: From £5.99 per person.
+description: Footage: Mikhail Nilov on Pexels.
+tags: indianpassport, passportrenewal, IndiansInUK, NRI, VFS, passportphoto
+end: picproved.com/nri-passport/gb
+endSub: Sized to 630 × 810 for you
+endSay: Save this for your renewal.
+voice.kokoro: hf_alpha
+voice.google: en-IN-Chirp3-HD-Aoede
+pronounce: JPEG=jay peg
+---
+show: title
+clip: stock-laptop-in
+clipFrom: 8
+text: Only one of these uploads
+sub: Indian passport, from the UK
+say: Indian passport renewal from the UK. Only one of these photo sizes will upload.
+---
+show: list ✗ 600 × 800 | ✗ 800 × 1000 | ✓ 630 × 810
+text: Guess first
+say: Not 600 by 800. Not 800 by 1000. It is exactly 630 by 810 pixels.
+---
+show: list ✓ JPEG under 250 KB | ✓ Plain white background | ✗ No glasses
+text: And these
+say: A JPEG under 250 KB, a plain white background, and no glasses.
+---
+show: number value="12" unit="upload tries on the portal"
+text: Check it first
+say: And you only get 12 tries. So check it first.

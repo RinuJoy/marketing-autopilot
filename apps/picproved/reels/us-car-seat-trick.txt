@@ -1,0 +1,29 @@
+# Viral batch 14 Nov 2026 ("did you know you could just..." hack format). Facts as in us-baby-photo.txt
+# (travel.state.gov passport photos; 8 FAM 402.1).
+title: The car seat trick for a US baby passport photo
+description: Cover the car seat with a plain white sheet and sit your baby in it. Nobody else can be in the picture, and that includes a parent's hand. For a passport it's fine if a baby's eyes aren't fully open. The photo is 2 x 2 inches.
+description: Rules with sources, and how to take it: picproved.com/baby/us
+description: From $7.99 per person. The passport agency makes the final decision.
+description: Footage made with AI.
+tags: babypassport, uspassport, passportphoto, newparents, parentinghack, newbornpassport
+end: picproved.com/baby/us
+endSub: US baby photo, step by step
+endSay: Send this to a new parent.
+voice.kokoro: af_heart
+voice.google: en-US-Chirp3-HD-Leda
+---
+show: title
+clip: veo-car-seat-blanket
+text: The car seat trick
+sub: US baby passport photo
+say: The car seat trick for a baby's US passport photo.
+---
+clip: veo-car-seat-blanket
+clipFrom: 3
+show: list ✓ White sheet over the car seat | ✓ Baby sits in it | ✗ No hands showing
+text: How it works
+say: Cover the car seat with a plain white sheet, and sit them in it. No hands showing. Not even yours.
+---
+show: photo face=25 bg=white size=2x2in mark=tick on=inches
+text: 2 × 2 inches, white
+say: The photo is 2 by 2 inches, on white. And their eyes needn't be fully open.
