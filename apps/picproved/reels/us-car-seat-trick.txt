@@ -20,7 +20,7 @@ say: The car seat trick for a baby's US passport photo.
 ---
 clip: veo-car-seat-blanket
 clipFrom: 3
-show: list ✓ White sheet over the car seat | ✓ Baby sits in it | ✗ No hands showing
+show: list ✓ White sheet over the car seat | ✓ Baby sits in it | ✓ No hands in the photo
 text: How it works
 say: Cover the car seat with a plain white sheet, and sit them in it. No hands showing. Not even yours.
 ---

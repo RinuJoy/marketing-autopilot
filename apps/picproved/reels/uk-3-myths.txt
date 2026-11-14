@@ -14,7 +14,7 @@ voice.google: en-GB-Chirp3-HD-Leda
 theme: green
 ---
 show: title
-clip: clip-2-passport-hands
+clip: stock-instant-photos
 text: 3 passport photo myths
 sub: UK passport
 say: Three UK passport photo myths people still believe.

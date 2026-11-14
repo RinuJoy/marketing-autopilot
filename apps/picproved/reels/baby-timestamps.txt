@@ -19,7 +19,7 @@ sub: Baby passport photo
 say: Nine oh two. Baby passport photo, attempt one.
 ---
 clip: veo-uk-wriggle
-show: list 9:10 Attempt 12: hand in the shot | 9:31 Gave up
+show: list ✗ 9:10 Attempt 12: hand in the shot | ✗ 9:31 Gave up
 text: It gets worse
 say: Nine ten. Attempt twelve. A hand in the shot. Nine thirty one. Gave up.
 ---
