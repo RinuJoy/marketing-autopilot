@@ -1,0 +1,34 @@
+# Viral batch 14 Nov 2026 (expectation vs reality format). Facts from GOV.UK "Photos for passports" as in
+# uk-baby-photo.txt and uk-photo-code.txt: no hands in a baby's photo; you can take the photo on your own device.
+title: Baby passport photo in a booth: expectation vs reality
+description: Expectation: one click. Reality: you holding them up to the lens, hands everywhere. Hands in the photo mean it fails. At home: a sheet on the floor, the phone above, nobody holding them. GOV.UK lets you take the photo on your own phone.
+description: Rules: https://www.gov.uk/photos-for-passports
+description: Check your baby's photo: picproved.com/baby/uk
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage made with AI.
+tags: babypassport, ukpassport, passportphoto, expectationvsreality, newparents, photobooth
+end: picproved.com/baby/uk
+endSub: Check your baby's photo
+endSay: Send this to a parent heading for the booth.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-story-booth
+text: A baby in a photo booth?
+sub: Expectation vs reality
+say: A baby in a photo booth. Expectation: one click. Reality: you, holding them up to the lens.
+---
+show: list ✗ Your hands in the photo | ✗ You in the photo
+text: Why it fails
+say: And your hands in the photo mean it fails.
+---
+clip: veo-uk-smooth-sheet
+show: list ✓ Sheet on the floor | ✓ Phone above | ✓ Nobody holding them
+text: At home instead
+say: At home: a sheet on the floor, the phone above, and nobody holding them.
+---
+clip: shot-uk-walk-pick
+show: clip
+text: Checked before you send it
+say: Then check it against the UK rules before you send it.

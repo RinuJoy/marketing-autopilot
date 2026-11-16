@@ -1,0 +1,33 @@
+# Viral batch 14 Nov 2026 (POV format). Facts from GOV.UK "Photos for passports" as in uk-baby-photo.txt: under one,
+# eyes can be closed; no hands. App wording as in baby-app-video.txt.
+title: POV: baby passport photo, attempt 47
+description: Every parent knows this one. They yawn, they look away, your hand gets in the shot. Film ten seconds instead and let the app find the photo. For a UK passport a baby under one can even have their eyes closed.
+description: Baby passport photo rules by country: picproved.com/baby/newborn
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage made with AI.
+tags: babypassport, newbornpassport, passportphoto, newparents, pov, ukpassport
+end: picproved.com/baby/newborn
+endSub: Newborn rules, country by country
+endSay: Send this to a new parent.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-uk-wriggle
+text: POV: attempt 47
+sub: Baby passport photo
+say: Baby passport photo. Attempt forty seven.
+---
+clip: veo-uk-yawn
+show: list ✗ Yawned | ✗ Looked away | ✗ Your hand got in
+text: Every single time
+say: They yawned. They looked away. Then your hand got in the shot.
+---
+clip: shot-uk-walk-video
+show: clip
+text: Film 10 seconds instead
+say: So stop pressing the button. Film ten seconds, and let the app find the photo.
+---
+show: photo face=25 bg=cream size=35x45mm mark=tick on=closed
+text: Under 1: eyes can be closed
+say: And for a UK passport, under one, their eyes can even be closed.

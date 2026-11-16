@@ -1,0 +1,32 @@
+# Viral batch 14 Nov 2026 ("5 stages of being..." trend, Later 13 Nov 2026). Rules as in baby-eyes-by-country.txt:
+# every country wants the baby alone, no hands, toys or dummies.
+title: The 5 stages of taking a baby passport photo
+description: Confident. Bargaining with a toy. Attempt thirty. Reading the rules at midnight. Then filming ten seconds and letting the app pick. The actual rules: no toys in the shot, no hands, a plain light sheet.
+description: Baby passport photo rules by country: picproved.com/baby/newborn
+description: From £5.99 per person. The passport office makes the final decision.
+description: Footage made with AI.
+tags: babypassport, newbornpassport, passportphoto, newparents, parenting, momlife
+end: picproved.com/baby/newborn
+endSub: Newborn rules, country by country
+endSay: Send this to someone at stage three.
+voice.kokoro: bf_emma
+voice.google: en-GB-Chirp3-HD-Leda
+---
+show: title
+clip: veo-uk-yawn
+text: 5 stages. Baby passport photo.
+say: The five stages of a baby passport photo.
+---
+clip: veo-toy-away
+show: list 1. Confident | 2. Bargaining with a toy | 3. Attempt thirty
+text: It starts well
+say: Confident. Then bargaining with a toy. Then attempt thirty.
+---
+clip: shot-uk-walk-pick
+show: list 4. Midnight, reading the rules | 5. Filming 10 seconds instead
+text: Then you learn
+say: Midnight, reading the rules. And finally, filming ten seconds and letting the app pick.
+---
+show: list ✗ No toys in the shot | ✗ No hands | ✓ Plain light sheet
+text: The actual rules
+say: The actual rules. No toys in the shot, no hands, and a plain light sheet.
